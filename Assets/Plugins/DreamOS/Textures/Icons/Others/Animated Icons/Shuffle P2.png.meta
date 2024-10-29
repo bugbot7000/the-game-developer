@@ -107,6 +107,6 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Textures/Icons/Others/Animated Icons/Shuffle
+  assetPath: Assets/Plugins/DreamOS/Textures/Icons/Others/Animated Icons/Shuffle
     P2.png
   uploadId: 686219

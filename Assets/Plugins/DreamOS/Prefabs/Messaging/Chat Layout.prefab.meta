@@ -10,5 +10,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Prefabs/Messaging/Chat Layout.prefab
+  assetPath: Assets/Plugins/DreamOS/Prefabs/Messaging/Chat Layout.prefab
   uploadId: 686219

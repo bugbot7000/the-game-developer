@@ -16,5 +16,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/_Demo Assets/Unity Standard Assets/CrossPlatformInput/Scripts/TiltInput.cs
+  assetPath: Assets/Plugins/DreamOS/_Demo Assets/Unity Standard Assets/CrossPlatformInput/Scripts/TiltInput.cs
   uploadId: 686219

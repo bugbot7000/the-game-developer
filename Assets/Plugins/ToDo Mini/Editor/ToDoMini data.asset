@@ -12,30 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a606916b18b974bb94d44eb8800f1c, type: 3}
   m_Name: ToDoMini data
   m_EditorClassIdentifier: 
-  displayDensity: 0
+  displayDensity: 1
   keepCompletedTasks: 1
   showCompletedTasks: 0
   items:
-  - task: New computer model
+  - task: '[PRIORITY] Wiki'
     isComplete: 0
-  - task: Figure out 4:3 resolution
+  - task: '[PRIORITY] Chat character'
+    isComplete: 0
+  - task: '[PRIORITY] File Explorer'
+    isComplete: 0
+  - task: Add web browser, no home page, locked website
+    isComplete: 1
+  - task: Get the game in
+    isComplete: 1
+  - task: '[AFTER PROTOTYPE] Would like downloaded notes to be add to notes forever...'
     isComplete: 0
   - task: How do I make custom games?
-    isComplete: 0
+    isComplete: 1
   - task: how do I start with the computer focused?
     isComplete: 0
-  - task: was thinking a black and white shader was easy, but if not, I'll just have
-      to black and white everythiny myself...
-    isComplete: 0
   - task: How it saves automatically is kinda annoying so I need to remove that...
+      has to do with the Dream OS Manager class
     isComplete: 0
   - task: That said, I should make it easy to load state for testing... I think?
     isComplete: 0
   - task: Need to nix all those apps though...
-    isComplete: 0
-  - task: But beyond  that,  my first step is probably making a ZX Spectrum like
-      game... but do I want to learn actual ZX spectrum for that? Probably should
-      jsu research
-    isComplete: 0
+    isComplete: 1
   - task: I probably need to make my own "code editor" app...
+    isComplete: 0
+  - task: Damn, I think I don't have a file explorer?
+    isComplete: 0
+  - task: Not really a fan of how I need to remove apps  from three different places
+      (desktop, quick bar, side bar) for it really to be gone?
+    isComplete: 0
+  - task: probably should disable note editing...
     isComplete: 0

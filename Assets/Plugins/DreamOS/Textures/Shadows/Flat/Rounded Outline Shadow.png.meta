@@ -124,6 +124,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Textures/Shadows/Flat/Rounded Outline
-    Shadow.png
+  assetPath: Assets/Plugins/DreamOS/Textures/Shadows/Flat/Rounded Outline Shadow.png
   uploadId: 686219

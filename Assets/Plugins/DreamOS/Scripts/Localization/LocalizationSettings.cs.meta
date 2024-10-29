@@ -14,5 +14,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Scripts/Localization/LocalizationSettings.cs
+  assetPath: Assets/Plugins/DreamOS/Scripts/Localization/LocalizationSettings.cs
   uploadId: 686219

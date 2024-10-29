@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f751a1e1edde242be719dda955ddfd, type: 3}
+  m_Name: Email Failing
+  m_EditorClassIdentifier: 
+  mailFolder: 1
+  subject: GAMES601 - Imminent Failure
+  from: jsc6141@ztu.edu
+  fromName: Jason S
+  to: rla4312@ztu@.edu
+  time: 5:11 PM
+  date: 1 Dic, 2016
+  contactImage: {fileID: 0}
+  useCustomContent: 0
+  mailContent: 'Dear Rose, Eren and Kento,
+
+
+    I''m deeply worried about your team.
+    You have not only failed to upload the final deliverable to Game Hub and have
+    consistently missed the last couple weeks of class, but also have password protected
+    your devlog website and set the previous builds of your game to private (except
+    the first one, for some reason...).
+
+
+    While there is still time before the
+    semester closes, I need at least one of you to reach out to me and send a build
+    of the game so that I can give you feedback before the final showcase. If you
+    do not, I will have no choice but to fail all of you.
+
+
+    The door to my office
+    is always open.
+
+
+    Jason '
+  customContentPrefab: {fileID: 0}
+  attachments: []
+  subjectKey: SampleMail1Subject
+  contentKey: SampleMail1Content

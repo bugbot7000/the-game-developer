@@ -18,5 +18,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Scripts/UI Elements/ContextMenuContent.cs
+  assetPath: Assets/Plugins/DreamOS/Scripts/UI Elements/ContextMenuContent.cs
   uploadId: 686219

@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f751a1e1edde242be719dda955ddfd, type: 3}
+  m_Name: Email Build 0
+  m_EditorClassIdentifier: 
+  mailFolder: 0
+  subject: GAMES601 - Group 5 Proof Of Concept
+  from: rla4312@ztu@.edu
+  fromName: Rose A.
+  to: jsc6141@ztu.edu
+  time: 11:28 AM
+  date: 10 Sept, 2016
+  contactImage: {fileID: 0}
+  useCustomContent: 0
+  mailContent: 'Dear professor,
+
+
+    As indicated, we have uploaded our group''s
+    proof of concept to Game Hub. Please read the attached readme for instructions
+    on how to play. You can find our group devlog at the website <b>thedevelopers.com</b>.
+
+
+    Best
+    regards,
+
+    Rose'
+  customContentPrefab: {fileID: 0}
+  attachments:
+  - attachmentTitle: README
+    attachmentType: 1
+    musicAttachment: {fileID: 0}
+    pictureAttachment: {fileID: 0}
+    videoAttachment: {fileID: 0}
+    noteAttachment: 'WASD: Move
+
+      J: Cast spell
+
+      K: Switch between Enlarge
+      and Reduce spells
+
+      
+
+      Enlarge: Double the size of an object
+
+      Reduce:
+      Halves the size of an object
+
+      
+
+      Your goal is to reach and use
+      your magic on the blue square at the end of the level.'
+  subjectKey: SampleMail1Subject
+  contentKey: SampleMail1Content

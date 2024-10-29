@@ -28,5 +28,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Editor/Scripts/AppCreator.cs
+  assetPath: Assets/Plugins/DreamOS/Editor/Scripts/AppCreator.cs
   uploadId: 686219

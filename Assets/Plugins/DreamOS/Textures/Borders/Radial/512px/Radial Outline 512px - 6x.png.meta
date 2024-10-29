@@ -131,6 +131,6 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Textures/Borders/Radial/512px/Radial
-    Outline 512px - 6x.png
+  assetPath: Assets/Plugins/DreamOS/Textures/Borders/Radial/512px/Radial Outline
+    512px - 6x.png
   uploadId: 686219

@@ -14,5 +14,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Scripts/Notification/NotificationItem.cs
+  assetPath: Assets/Plugins/DreamOS/Scripts/Notification/NotificationItem.cs
   uploadId: 686219

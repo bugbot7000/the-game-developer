@@ -11,5 +11,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Prefabs/Messaging/Beginning Indicator.prefab
+  assetPath: Assets/Plugins/DreamOS/Prefabs/Messaging/Beginning Indicator.prefab
   uploadId: 686219

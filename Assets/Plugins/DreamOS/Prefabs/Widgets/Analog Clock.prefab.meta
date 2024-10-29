@@ -11,5 +11,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Prefabs/Widgets/Analog Clock.prefab
+  assetPath: Assets/Plugins/DreamOS/Prefabs/Widgets/Analog Clock.prefab
   uploadId: 686219

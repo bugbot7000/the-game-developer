@@ -11,5 +11,5 @@ AssetOrigin:
   productId: 253244
   packageName: DreamOS - Complete OS UI
   packageVersion: 3.2.2
-  assetPath: Assets/DreamOS - Complete OS UI/Animations/Apps/Music Player/NextAndPrevButton.controller
+  assetPath: Assets/Plugins/DreamOS/Animations/Apps/Music Player/NextAndPrevButton.controller
   uploadId: 686219
