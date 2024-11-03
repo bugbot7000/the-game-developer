@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f751a1e1edde242be719dda955ddfd, type: 3}
+  m_Name: Email_Sent_Data_Discrepancy
+  m_EditorClassIdentifier: 
+  mailFolder: 1
+  subject: "Re: Data Discrepancy Issue \u2013 Initial Findings"
+  from: eren.m@formworks.com
+  fromName: Eren M.
+  to: carlos.e@formworks.com
+  time: 1:15 PM
+  date: 2 Nov, 2024
+  contactImage: {fileID: 0}
+  useCustomContent: 0
+  mailContent: "Hi Carlos,\r\n\r\nAfter reviewing the logs and tracing the inputs,
+    it looks like the discrepancy stems from the scheduled batch job running 30 minutes
+    earlier than expected last Thursday. This caused the daily data import to overlap
+    with a maintenance script we were testing in the sandbox environment, which might
+    have led to the out-of-sync figures. I\u2019ll confirm once I can reproduce this
+    in the staging environment.\r\n\r\nLet me know if you\u2019d like a more detailed
+    breakdown or screenshots of the logs. I\u2019ll keep you posted as I dig further.\r\n\r\nBest,\nEren"
+  customContentPrefab: {fileID: 0}
+  attachments: []
+  subjectKey: SampleMail1Subject
+  contentKey: SampleMail1Content

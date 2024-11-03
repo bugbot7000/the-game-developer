@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f751a1e1edde242be719dda955ddfd, type: 3}
+  m_Name: Email_Inbox_Code_Freeze
+  m_EditorClassIdentifier: 
+  mailFolder: 0
+  subject: "Code Freeze Reminder \u2013 Year-End Tax Filing Prep"
+  from: lisa.g@formworks.com
+  fromName: Lisa G.
+  to: eren.m@formworks.com
+  time: 10:11 AM
+  date: 3 Nov, 2024
+  contactImage: {fileID: 0}
+  useCustomContent: 0
+  mailContent: "Hi Eren,\r\n\r\nJust a reminder that our code freeze for the tax
+    season\u2019s end-of-year update is in effect next Monday. Please have all final
+    patches related to tax return processing, standard deduction adjustments, and
+    1099 data uploads submitted for review by then. Anything involving core filing
+    calculations or tax document generation needs to be flagged for additional testing
+    (yes, again).\r\n\r\nOnce we\u2019re through this, we\u2019ll be shifting focus
+    to the 2024 tax updates. As always, thanks for your patience with these yearly
+    cycle tasks\u2014almost there.\r\n\r\nBest,\r\nLisa"
+  customContentPrefab: {fileID: 0}
+  attachments: []
+  subjectKey: SampleMail1Subject
+  contentKey: SampleMail1Content

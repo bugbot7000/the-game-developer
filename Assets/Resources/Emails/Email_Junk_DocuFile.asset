@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f751a1e1edde242be719dda955ddfd, type: 3}
+  m_Name: Email_Junk_DocuFile
+  m_EditorClassIdentifier: 
+  mailFolder: 2
+  subject: "Streamline Document Organization \u2013 Try DocuFile Pro\u2122 FREE for
+    30 Days!"
+  from: sales@docufilepro.com
+  fromName: "The DocuFile Pro\u2122 Team"
+  to: eren.m@formworks.com
+  time: 6:35 AM
+  date: 4 Nov, 2024
+  contactImage: {fileID: 0}
+  useCustomContent: 0
+  mailContent: "Is your team spending too much time organizing files? DocuFile Pro\u2122
+    is the complete solution for document management, automatic categorization, and
+    secure storage\u2014all in one place. With our easy-to-navigate dashboard, you
+    can keep every file organized, searchable, and ready for audit season without
+    the hassle.\r\n\r\nFor a limited time, we\u2019re offering a 30-day FREE trial
+    of DocuFile Pro\u2122\u2014no credit card needed! Say goodbye to cluttered folders
+    and lost files and discover document management made easy.\r\n\r\nAct now! Sign
+    up today and see how DocuFile Pro\u2122 can transform your workflow."
+  customContentPrefab: {fileID: 0}
+  attachments: []
+  subjectKey: SampleMail1Subject
+  contentKey: SampleMail1Content

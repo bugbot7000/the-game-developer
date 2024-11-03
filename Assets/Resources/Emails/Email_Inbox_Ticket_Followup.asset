@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f751a1e1edde242be719dda955ddfd, type: 3}
+  m_Name: Email_Inbox_Ticket_Followup
+  m_EditorClassIdentifier: 
+  mailFolder: 0
+  subject: "Follow-up on EIC Calculation Error \u2013 Ticket #10456"
+  from: carlos.e@formworks.com
+  fromName: Carlos E.
+  to: eren.m@formworks.com
+  time: 2:15 PM
+  date: 4 Nov, 2024
+  contactImage: {fileID: 0}
+  useCustomContent: 0
+  mailContent: "Hey Carlos,\r\n\r\nThe support team over at Comply Inc. got back
+    to us again about that Earned Income Credit (EIC) calculation discrepancy. They\u2019ve
+    asked if we could \u201Creconfirm the eligibility thresholds\u201D and provide
+    a line-by-line breakdown of our calculation flow. I know you reviewed this last
+    month, but they\u2019re pushing for more documentation and clarification on the
+    initial glitch.\r\n\r\nIf you could resend the query logs and summarize the original
+    issue in layman's terms, I\u2019ll follow up with them. They\u2019re looking
+    for reassurance that the fix will carry through into next year\u2019s filings.
+    Appreciate it\u2014let\u2019s get this off our plate ASAP.\r\n\r\nThanks,\r\nCarlos"
+  customContentPrefab: {fileID: 0}
+  attachments: []
+  subjectKey: SampleMail1Subject
+  contentKey: SampleMail1Content

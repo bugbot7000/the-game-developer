@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f751a1e1edde242be719dda955ddfd, type: 3}
+  m_Name: Email_Sent_Additional_Resources
+  m_EditorClassIdentifier: 
+  mailFolder: 1
+  subject: "Request for Additional Resources \u2013 Year-End Reporting"
+  from: eren.m@formworks.com
+  fromName: Eren M.
+  to: lisa.g@formworks.com
+  time: 4:15 PM
+  date: 3 Nov, 2024
+  contactImage: {fileID: 0}
+  useCustomContent: 0
+  mailContent: "Hi Lisa,\r\n\r\nAs we prepare for the end-of-year reporting, I wanted
+    to request additional server capacity for the data processing load in the next
+    few weeks. The holiday season tends to spike transaction volume, and I\u2019d
+    like to ensure we have enough capacity to handle any surges without risking delays.\r\n\r\nLet
+    me know if we can reallocate resources from any low-priority projects, or if
+    there\u2019s a possibility to get temporary provisioning on cloud servers. Happy
+    to discuss this further if you need more details.\r\n\r\nThanks,\nEren"
+  customContentPrefab: {fileID: 0}
+  attachments: []
+  subjectKey: SampleMail1Subject
+  contentKey: SampleMail1Content
