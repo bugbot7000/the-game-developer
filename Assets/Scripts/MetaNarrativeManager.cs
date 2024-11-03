@@ -22,18 +22,11 @@ public class MetaNarrativeManager : MonoBehaviour
     }
     #endregion
 
-    // We assume there will be a single MessagingManager in the scene.
-    MessagingManager messaging;
-
-    void Start()
-    {
-        messaging = FindAnyObjectByType<MessagingManager>();
-    }
+    [SerializeField] MessagingManager messaging;
     
-    [Button, DisableInEditorMode]
+    [Button, DisableInEditorMode, PropertySpace(8)]
     public void TriggerBillStorytellerSequence(string id)
     {
-        Debug.Log("creating storyteller");
         messaging.CreateStoryTeller("Test", id);
     }
 }

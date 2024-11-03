@@ -16,67 +16,36 @@ MonoBehaviour:
   useDynamicMessages: 0
   useStoryTeller: 1
   messageList:
-  - messageContent: If you want to create text sequences, you can enable <b>StoryTeller</b>
-      feature.
+  - messageContent: I'm an online friend Eren is chatting with!
     objectType: 0
     messageAuthor: 1
     sentTime: 8:00 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: ExampleStoryTeller_1
-  - messageContent: It is possible to create StoryTeller items that leads the player
-      to a different path depending on their choice.
-    objectType: 0
-    messageAuthor: 1
-    sentTime: 8:00 AM
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: ExampleStoryTeller_2
-  - messageContent: You can basically use <b>'Call After'</b> to call another item
-      with IDs.
-    objectType: 0
-    messageAuthor: 1
-    sentTime: 8:00 AM
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: ExampleStoryTeller_3
-  - messageContent: To call an item by using an external script or a scripting tool,
-      you can use <b>MessagingManager.CreateStoryTeller("Chat ID", "StoryTeller ID");</b>.
-    objectType: 0
-    messageAuthor: 1
-    sentTime: 8:00 AM
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: ExampleStoryTeller_4
-  - messageContent: If you want to see a live demonstration, you can type <b>SEQ_0</b>.
-      As long as the 'Debug StoryTeller' option is enabled, you can test items by
-      typing IDs.
-    objectType: 0
-    messageAuthor: 1
-    sentTime: 8:00 AM
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: ExampleStoryTeller_5
   dynamicMessages: []
   storyTeller:
   - itemID: SEQ_0
     messageAuthor: 1
-    messageContent: Hey, how are you?
+    messageContent: Hey, did you ever look more into that game you told me about?
     messageLatency: 1
     messageTimer: 1.5
     replies:
     - replyID: 0_Pretty Bad
-      replyBrief: Pretty bad
-      replyContent: I feel pretty bad these days...
-      replyFeedback: Really? What happened?
+      replyBrief: I'm doing it now
+      replyContent: I'm doing it now, I found the wiki page we used. I had forgotten
+        how wild it was that our programmer wanted to program the website by hand
+        instead of using one of the platforms that already exist...
+      replyFeedback: Really?!? Though to be honest yeah, there are programmers like
+        that...
       feedbackLatency: 1
       feedbackTimer: 1.5
-      callAfter: SEQ_1
+      callAfter: 
       briefKey: SEQ0_R1B
       contentKey: SEQ0_R1C
       feedbackKey: SEQ0_R1F
     - replyID: 0_Not Bad
-      replyBrief: Not bad
+      replyBrief: Got distracted with my email
       replyContent: Eh not bad, what about you?
       replyFeedback: same
       feedbackLatency: 1
@@ -86,7 +55,7 @@ MonoBehaviour:
       contentKey: SEQ0_R2C
       feedbackKey: SEQ0_R2F
     - replyID: 0_Feeling Great
-      replyBrief: Feeling great
+      replyBrief: Work has me busy
       replyContent: Pretty great, what about you?
       replyFeedback: Well, that makes both of us!
       feedbackLatency: 1
