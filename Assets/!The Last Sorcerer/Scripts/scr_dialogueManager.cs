@@ -1,27 +1,25 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class scr_dialogueManager : MonoBehaviour
 {
     public Text nameText;
-    public Text dialogueText; //This text type is from Legacy, and seems kind of ugly
+    public Text dialogueText; 
     public TextMesh exampleText;
-    public Vector3 nameAnchor;
-    public Vector3 dialogueAnchor;
-    public Vector3 offscreenTextAnchor;
+    public CanvasGroup canvasGroup;
 
     private Queue<string> sentences;
 
     private void Start()
     {
         sentences = new Queue<string>();
+        canvasGroup.alpha = 0;
     }
 
     public void StartDialogue(scr_dialogueScript dialogue)
     {
+        canvasGroup.alpha = 1;
 
         nameText.text = dialogue.name;
 
@@ -31,8 +29,6 @@ public class scr_dialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-        nameText.GetComponent<RectTransform>().anchoredPosition = nameAnchor;
-        dialogueText.GetComponent<RectTransform>().anchoredPosition = dialogueAnchor;
 
         DisplayNextSentence();
     }
@@ -51,8 +47,6 @@ public class scr_dialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        Debug.Log("Dialogue ended");
-        nameText.GetComponent<RectTransform>().anchoredPosition = offscreenTextAnchor;
-        dialogueText.GetComponent<RectTransform>().anchoredPosition = offscreenTextAnchor;
+        canvasGroup.alpha = 0;
     }
 }
