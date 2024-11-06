@@ -40,4 +40,10 @@ MonoBehaviour:
     pageContent: {fileID: 1958891694494868, guid: c5623678cf6fc0b4dbe792e0bfb971e5, type: 3}
     pageSize: 20
     titleKey: 
+  - pageTitle: The Last Sorcerer Wiki - Search
+    pageURL: wiki.thelastsorcerer.com/search
+    pageIcon: {fileID: 21300000, guid: 3789b437c7afd9e4e945dba629fefde4, type: 3}
+    pageContent: {fileID: 1958891694494868, guid: e5f0df6967332b9409f222b59a2b02ef, type: 3}
+    pageSize: 20
+    titleKey: 
   dlFiles: []
