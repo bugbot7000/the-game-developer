@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
-using TMPro;
 
 public class enemyAI_Script : MonoBehaviour
 {
@@ -57,7 +52,7 @@ public class enemyAI_Script : MonoBehaviour
     }
     void Pursue()
     {
-        //Debug.Log("Pursuing");
+        // Debug.Log("Pursuing");
         agent.SetDestination(player.position);
     }
     void Attack()
@@ -115,6 +110,8 @@ public class enemyAI_Script : MonoBehaviour
         {
             collision.gameObject.GetComponent<scr_playerController>().health -= dmg;
             damageOnCollide = false;
+            dmgTxt.text = "> RECIEVED " + dmg.ToString() + " DAMAGE";
+            Invoke(nameof(ResetDevLogText), 0.5f);
         }
     }
 
