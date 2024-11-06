@@ -27,6 +27,6 @@ public class MetaNarrativeManager : MonoBehaviour
     [Button, DisableInEditorMode, PropertySpace(8)]
     public void TriggerBillStorytellerSequence(string id)
     {
-        messaging.CreateStoryTeller("Test", id);
+        messaging.CreateStoryTeller("Phantom", id);
     }
 }

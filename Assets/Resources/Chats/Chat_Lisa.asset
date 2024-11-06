@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ca2ddbf6e022748a2db98a0c813735, type: 3}
+  m_Name: Chat_Lisa
+  m_EditorClassIdentifier: 
+  saveConversation: 0
+  useDynamicMessages: 0
+  useStoryTeller: 0
+  messageList:
+  - messageContent: Nov 3.
+    objectType: 1
+    messageAuthor: 1
+    sentTime: 3:03 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Eren, are you available?
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 2:00 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Coming out of a meeting, I'm here now
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 2:45 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Where are we on the tax form validation updates for Q4?
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 2:50 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Finalizing the rule set for 1099 and W-2 forms
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 2:50 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: There were some discrepancies with the new IRS requirements that
+      required rechecking
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 2:53 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: ' Have the new rules been tested yet?'
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 2:55 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Not fully
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 2:55 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "I\u2019ll need another day to run them through the test cases"
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 2:56 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "There were a few edge cases we hadn\u2019t accounted for, so
+      I\u2019m adjusting those now"
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 2:57 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Make sure to document any adjustments
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 2:59 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: We need this stable by Friday!
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 3:01 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Noted
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 3:01 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "I\u2019ll send you the documentation by end of day tomorrow"
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 3:01 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "Good! Let\u2019s avoid last-minute issues this time."
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 3:03 PM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  dynamicMessages: []
+  storyTeller: []

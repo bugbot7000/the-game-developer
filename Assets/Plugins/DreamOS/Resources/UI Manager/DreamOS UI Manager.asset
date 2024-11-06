@@ -34,7 +34,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5df41e9c90ab71046b3c011329051759, type: 3}
   highlightedColorDark: {r: 0, g: 0.5882353, b: 1, a: 1}
   highlightedColorSecondaryDark: {r: 1, g: 1, b: 1, a: 1}
-  primaryColorDark: {r: 1, g: 1, b: 1, a: 1}
+  primaryColorDark: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   secondaryColorDark: {r: 0.22352941, g: 0.27058825, b: 0.31764707, a: 1}
   windowBGColorDark: {r: 0.078431375, g: 0.11764706, b: 0.15686275, a: 0.9411765}
   backgroundColorDark: {r: 0.11764706, g: 0.15686275, b: 0.19607843, a: 0.78431374}

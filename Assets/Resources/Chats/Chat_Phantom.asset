@@ -10,19 +10,90 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73ca2ddbf6e022748a2db98a0c813735, type: 3}
-  m_Name: Test Chat
+  m_Name: Chat_Phantom
   m_EditorClassIdentifier: 
   saveConversation: 0
   useDynamicMessages: 0
   useStoryTeller: 1
   messageList:
-  - messageContent: I'm an online friend Eren is chatting with!
+  - messageContent: hey S@v@g3__Scribe :p
     objectType: 0
     messageAuthor: 1
-    sentTime: 8:00 AM
+    sentTime: 
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
-    messageKey: ExampleStoryTeller_1
+    messageKey: 
+  - messageContent: phantom? why are you messaging my work account...
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: wait a moment, how did you even find my work account?!?
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: was bored at work, wasn't that hard to find you.
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: well... i guess i don't mind
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: but i'll ignore you ofc if i'm busy
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: sounds reasonable
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: you won't get into trouble if IT sees these messages?
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: trust me, i've seen the managers at this company have much more
+      "risky" conversations on their corporate accounts...
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: sounds like a story for next time we play!
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Nov. 4
+    objectType: 1
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
   dynamicMessages: []
   storyTeller:
   - itemID: SEQ_0
