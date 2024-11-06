@@ -683,6 +683,11 @@ namespace Michsky.DreamOS
             if (url == webLibrary.homePage.pageURL || url == webLibrary.noConnectionPage.pageURL || url == webLibrary.notFoundPage.pageURL)
                 return;
 
+            // FIXME: This returns if the page has already been favorited, but the only reason I need this as the DreamOSDataManager is deactivated 
+            for (int i = 0; i < favoritePages.Count; i++)
+                if (favoritePages[i].url == url)
+                    return;
+                
             // Cache value
             bool value;
 
