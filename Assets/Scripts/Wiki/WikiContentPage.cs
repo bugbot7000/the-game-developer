@@ -3,25 +3,31 @@ using TMPro;
 
 public class WikiContentPage : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI titleTMP;
-    [SerializeField] TextMeshProUGUI contentTMP;
+    [SerializeField] TextMeshProUGUI date;
+    [SerializeField] TextMeshProUGUI title;
+    [SerializeField] TextMeshProUGUI subtitle;
+    [SerializeField] TextMeshProUGUI content;
 
     void Start()
     {
-        if (WikiPageSearchManager.Instance.WikiPageExists())
+        if (WikiPageSearchManager.Instance.CheckIfWikiPageExists())
         {
-            UpdatePageContent(WikiPageSearchManager.Instance.GetLastSearchedPage());
+            UpdatePageContent(WikiPageSearchManager.Instance.LastFoundPage);
         }
         else
         {
-            titleTMP.SetText("Not Found");
-            contentTMP.SetText($"No results were found for your search term '{WikiPageSearchManager.Instance.LastSearchTerm}'.\nPlease try again with another search term.");
+            date.SetText("");
+            title.SetText("Not Found");
+            subtitle.SetText("");
+            content.SetText($"No results were found for your search term '{WikiPageSearchManager.Instance.LastSearchTerm}'.\nPlease try again with another search term.");
         }
     }
     
     public void UpdatePageContent(WikiPage wikiPage)
     {
-        titleTMP.SetText(wikiPage.Title);
-        contentTMP.SetText(wikiPage.Content);
+        date.SetText(wikiPage.Date);
+        title.SetText(wikiPage.Title);
+        subtitle.SetText(wikiPage.Subtitle);
+        content.SetText(wikiPage.Content);
     }
 }

@@ -23,20 +23,25 @@ public class WikiPageSearchManager : MonoBehaviour
 
     [SerializeField] WikiIndex index;
 
-    public string LastSearchTerm { get; private set; }
+    public string LastSearchTerm  { get; private set; }
+    public WikiPage LastFoundPage { get; private set; }
 
-    public bool WikiPageExists()
+    public bool CheckIfWikiPageExists()
     {
-        return index.WikiPages.ContainsKey(LastSearchTerm);
+        foreach (WikiPage page in index.WikiPages)
+        {
+            if (page.Keywords.Contains(LastSearchTerm))
+            {
+                LastFoundPage = page;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void SetSearchTerm(string term)
     {
-        LastSearchTerm = term.ToLower().Trim().Replace(" ", "-");
-    }
-
-    public WikiPage GetLastSearchedPage()
-    {
-        return index.WikiPages[LastSearchTerm];
+        LastSearchTerm = term.ToLower().Trim();
     }
 }

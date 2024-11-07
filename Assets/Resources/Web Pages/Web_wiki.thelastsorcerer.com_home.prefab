@@ -62,7 +62,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6d020bd27fe294f889f0b1a2ed8244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  searchBar: {fileID: 0}
 --- !u!1 &265887258679820820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1538,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2962609249989556397}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4622951
+  m_Size: 0.69071037
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2391,22 +2390,21 @@ MonoBehaviour:
   m_text: '<b>Welcome to "The Last Sorcerer" wiki!</b>
 
 
-    We''ll be using this
-    website to document the development process for our GAMES602 project. Besides
-    containing documentation and design documents, this wiki will contain our progress,
-    tasks list, builds of the game and devlogs!
+    We are "The Developers"
+    and we will be using this website to document the development process for our
+    GAMES602 project. Besides containing documentation and design documents, this
+    wiki will contain our progress, tasks list, builds of the game and devlogs!
 
 
-    Use the search button at the
-    top of the website to find pages.
+    Use
+    the search button at the top of the website to find pages.
 
 
-    <i>TODO: Add an index page.
+    <i>TODO: Add
+    an index page.
 
-    BUG:
-    It seems like search only works by exact match?
-
-    At least it is case-insensitive...
+    BUG: It seems like the search only returns pages based on
+    keywords or key phrases? Don''t forget to set them everyone!
 
     </i>'
   m_isRightToLeft: 0
