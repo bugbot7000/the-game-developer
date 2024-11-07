@@ -71,6 +71,9 @@ namespace Michsky.DreamOS
 
         void Update()
         {
+            if (sliderIndicators.Count == 0)
+                return;
+            
             if (sliderTimerBar <= sliderTimer && !isInTransition && currentIndicator.gameObject.activeInHierarchy)
             {
                 sliderTimerBar += Time.deltaTime;
@@ -122,6 +125,28 @@ namespace Michsky.DreamOS
                     sliderIndicators.Add(siComp);
                 }
             }
+        }
+
+        public void AddGameToLibrary(GameItem gameItem)
+        {
+            int i = games.Count;
+
+            games.Add(gameItem);
+
+            // Cache the index
+            int index = i;
+
+            // Spawn library object
+            GameObject go = Instantiate(libraryPreset, new Vector3(0, 0, 0), Quaternion.identity);
+            go.transform.SetParent(libraryParent, false);
+            go.gameObject.name = games[i].gameTitle;
+
+            // Get item component
+            GameHubLibraryItem itemComp = go.GetComponent<GameHubLibraryItem>();
+            itemComp.gameIndex = index;
+            itemComp.SetIcon(games[i].gameIcon);
+            itemComp.SetBanner(games[i].gameBanner);
+            itemComp.playButton.onClick.AddListener(delegate { LaunchGame(itemComp.gameIndex); });            
         }
 
         public void LaunchGame(int index)
@@ -220,6 +245,9 @@ namespace Michsky.DreamOS
 
         public void UpdateSliderInfo()
         {
+            if (sliderIndicators.Count == 0)
+                return;            
+            
             sliderBanner.sprite = games[currentIndicator.gameIndex].gameBanner;
             sliderIcon.sprite = games[currentIndicator.gameIndex].gameIcon;
 
@@ -240,6 +268,9 @@ namespace Michsky.DreamOS
 
         public void ResetSlider()
         {
+            if (sliderIndicators.Count == 0)
+                return;
+            
             sliderTimerBar = 0;
             if (currentIndicator != null) { currentIndicator.bar.fillAmount = 0; }
 

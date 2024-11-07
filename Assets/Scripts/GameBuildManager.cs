@@ -1,8 +1,9 @@
 using UnityEngine;
 
 using Sirenix.OdinInspector;
+using Michsky.DreamOS;
 
-[TypeInfoBox("Handles activating and de-activating the corresponding build game object depending on which games is being run.")]
+[TypeInfoBox("Handles activating and de-activating the corresponding build game object depending on which games is being run, besides adding builds as they are downloaded.")]
 public class GameBuildManager : MonoBehaviour
 {
     #region Singleton
@@ -20,10 +21,18 @@ public class GameBuildManager : MonoBehaviour
         }
     }
     #endregion    
-
-    int enabledBuild = -1;
     
     [SerializeField] GameObject[] gamePrefabs;
+    [SerializeField] GameHubManager.GameItem[] builds;
+
+    GameHubManager gameHubManager;
+
+    int enabledBuild = -1;
+
+    void Start()
+    {
+        gameHubManager = FindAnyObjectByType<GameHubManager>();
+    }
 
     public void EnableGameBuild(int build)
     {
@@ -37,5 +46,11 @@ public class GameBuildManager : MonoBehaviour
         gamePrefabs[enabledBuild].SetActive(false);
 
         enabledBuild = -1;
+    }
+
+    [Button]
+    public void AddGameBuildToHub(int buildIndex)
+    {
+        gameHubManager.AddGameToLibrary(builds[buildIndex]);
     }
 }
