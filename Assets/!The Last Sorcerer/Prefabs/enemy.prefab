@@ -184,7 +184,7 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: 0, z: 0}
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   player: {fileID: 0}
   timeBetweenAttacks: 2
   alreadyAttacked: 0

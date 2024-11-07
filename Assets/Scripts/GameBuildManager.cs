@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 
 using Sirenix.OdinInspector;
@@ -22,28 +24,24 @@ public class GameBuildManager : MonoBehaviour
     }
     #endregion    
     
-    [SerializeField] GameObject[] gamePrefabs;
+    [SerializeField, SceneObjectsOnly] GameObject[] gamePrefabs;
     [SerializeField] GameHubManager.GameItem[] builds;
+    [SerializeField] GameHubManager gameHubManager;
 
-    GameHubManager gameHubManager;
+    List<GameObject> addedBuilds = new List<GameObject>();
 
     int enabledBuild = -1;
 
-    void Start()
-    {
-        gameHubManager = FindAnyObjectByType<GameHubManager>();
-    }
-
     public void EnableGameBuild(int build)
     {
-        gamePrefabs[build].SetActive(true);
+        addedBuilds[build].SetActive(true);
 
         enabledBuild = build;
     }
 
     public void DisableGameBuild()
     {
-        gamePrefabs[enabledBuild].SetActive(false);
+        addedBuilds[enabledBuild].SetActive(false);
 
         enabledBuild = -1;
     }
@@ -51,6 +49,10 @@ public class GameBuildManager : MonoBehaviour
     [Button]
     public void AddGameBuildToHub(int buildIndex)
     {
-        gameHubManager.AddGameToLibrary(builds[buildIndex]);
+        if (!addedBuilds.Contains(gamePrefabs[buildIndex]))
+        {
+            gameHubManager.AddGameToLibrary(builds[buildIndex]);
+            addedBuilds.Add(gamePrefabs[buildIndex]);
+        }
     }
 }
