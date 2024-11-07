@@ -23,7 +23,7 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: phantom? why are you messaging my work account...
+  - messageContent: phantom? why are you messaging my work account :v
     objectType: 0
     messageAuthor: 0
     sentTime: 
@@ -37,14 +37,14 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: was bored at work, wasn't that hard to find you.
+  - messageContent: was bored at work, wasn't that hard to find you :p
     objectType: 0
     messageAuthor: 1
     sentTime: 
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: well... i guess i don't mind
+  - messageContent: well... i guess i don't mind :)
     objectType: 0
     messageAuthor: 0
     sentTime: 
@@ -73,7 +73,7 @@ MonoBehaviour:
     imageMessage: {fileID: 0}
     messageKey: 
   - messageContent: trust me, i've seen the managers at this company have much more
-      "risky" conversations on their corporate accounts...
+      "risky" conversations on their corporate accounts... :s
     objectType: 0
     messageAuthor: 0
     sentTime: 
@@ -94,158 +94,163 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
+  - messageContent: hey, did you ever look more into that game you told me about?
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: that one I worked on forever ago for school?
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: that one
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: sigh... it brings back memories
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: we had a little website at <b>wiki.thelastsorcerer.com</b>
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: apparently it's still up but i've been too busy to look at it
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: lemme know when you do look at it!
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Nov 7.
+    objectType: 1
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
   dynamicMessages: []
   storyTeller:
   - itemID: SEQ_0
     messageAuthor: 1
-    messageContent: Hey, did you ever look more into that game you told me about?
+    messageContent: i got curious and started looking at the website too... it's
+      interesting
     messageLatency: 1
     messageTimer: 1.5
     replies:
-    - replyID: 0_Pretty Bad
-      replyBrief: I'm doing it now
-      replyContent: I'm doing it now, I found the wiki page we used. I had forgotten
-        how wild it was that our programmer wanted to program the website by hand
-        instead of using one of the platforms that already exist...
-      replyFeedback: Really?!? Though to be honest yeah, there are programmers like
-        that...
+    - replyID: 0_HandProgram
+      replyBrief: had forgotten I tried to hand program it
+      replyContent: 'i was eager to show off my web development skills and didn''t
+        like any of the solutions available, so i tried to make my own '
+      replyFeedback: really?!? though to be honest yeah, sounds like something a
+        young programmer would do
       feedbackLatency: 1
       feedbackTimer: 1.5
-      callAfter: 
+      callAfter: SEQ_1
       briefKey: SEQ0_R1B
       contentKey: SEQ0_R1C
       feedbackKey: SEQ0_R1F
-    - replyID: 0_Not Bad
-      replyBrief: Got distracted with my email
-      replyContent: Eh not bad, what about you?
-      replyFeedback: same
+    - replyID: 0_Nolstalgia
+      replyBrief: it makes me feel nolstalgic
+      replyContent: It's been 8 years since all this happened... I have a lot of
+        mixed feelings but at least now I just feel nolstalgic
+      replyFeedback: yeah, as someone who has looked at his old forum posts, I totally
+        get that
       feedbackLatency: 1
       feedbackTimer: 1
-      callAfter: SEQ_2
+      callAfter: SEQ_1
       briefKey: SEQ0_R2B
       contentKey: SEQ0_R2C
       feedbackKey: SEQ0_R2F
-    - replyID: 0_Feeling Great
-      replyBrief: Work has me busy
-      replyContent: Pretty great, what about you?
-      replyFeedback: Well, that makes both of us!
-      feedbackLatency: 1
-      feedbackTimer: 1.5
-      callAfter: SEQ_3
-      briefKey: SEQ0_R3B
-      contentKey: SEQ0_R3C
-      feedbackKey: SEQ0_R3F
     messageKey: SEQ0_1
   - itemID: SEQ_1
-    messageAuthor: 0
-    messageContent: It's just...
+    messageAuthor: 1
+    messageContent: Have you found anything you can play?
     messageLatency: 1.5
     messageTimer: 0
     replies:
-    - replyID: 1_I feel tired
-      replyBrief: I feel tired
-      replyContent: I don't know, I just I feel tired
-      replyFeedback: Since when?
+    - replyID: 1_Not yet
+      replyBrief: Not yet
+      replyContent: not yet, but I'm on it - I remember we used to have silly names
+        like <b>Gladius</b> for our builds
+      replyFeedback: that is a wild name, just version numbers for me please. lemme
+        know when you find something!
       feedbackLatency: 1
       feedbackTimer: 1.5
-      callAfter: SEQ_1_1
+      callAfter: 
       briefKey: SEQ1_R1B
       contentKey: SEQ1_R1C
       feedbackKey: SEQ1_R1F
-    - replyID: 1_My stomach hurts
-      replyBrief: My stomach hurts
-      replyContent: My stomach hurts a lot
-      replyFeedback: Then you gotta see a doctor asap
+    - replyID: 1_I'm on it
+      replyBrief: I'm on it
+      replyContent: not yet, but I'm on it - I remember we used to have silly names
+        like <b>Gladius</b> for our builds
+      replyFeedback: that is a wild name, just version numbers for me please. lemme
+        know when you find something!
       feedbackLatency: 1
       feedbackTimer: 1.5
       callAfter: 
       briefKey: SEQ1_R2B
       contentKey: SEQ1_R2C
       feedbackKey: SEQ1_R2F
-    - replyID: 1_I can't sleep
-      replyBrief: I can't sleep
-      replyContent: I can't sleep nowadays, not sure why
-      replyFeedback: Oh, I hope it's nothing important!
-      feedbackLatency: 1
-      feedbackTimer: 1.5
-      callAfter: 
-      briefKey: SEQ1_R3B
-      contentKey: SEQ1_R3C
-      feedbackKey: SEQ1_R3F
     messageKey: SEQ1_1
   - itemID: SEQ_2
     messageAuthor: 1
-    messageContent: We should hang out some time
+    messageContent: did you find a build?
     messageLatency: 1
     messageTimer: 1.5
     replies:
     - replyID: 2_Sure
-      replyBrief: Sure
-      replyContent: Sure, why not :)
-      replyFeedback: Great! Let me know when you're available :)
+      replyBrief: yeah but it kinda sucks
+      replyContent: yeah but it's the first one so it still sucks haha i remember
+        being pretty proud though since I was still new at programming games
+      replyFeedback: aw yeah that's a mood, looking back at how much you've grown
       feedbackLatency: 1
       feedbackTimer: 1.5
-      callAfter: 
+      callAfter: SEQ_3
       briefKey: SEQ2_R1B
       contentKey: SEQ2_R1C
       feedbackKey: SEQ2_R1F
     - replyID: 2_I'm busy
-      replyBrief: I'm busy
-      replyContent: I don't think we can, I'm pretty busy nowadays :/
-      replyFeedback: Ahh too bad. Maybe some other time then.
+      replyBrief: yeah, it's kinda fun
+      replyContent: there isn't that much going on yet but I always felt we started
+        from a solid base
+      replyFeedback: glad to hear that!
       feedbackLatency: 1
       feedbackTimer: 1.5
-      callAfter: 
+      callAfter: SEQ_3
       briefKey: SEQ2_R2B
       contentKey: SEQ2_R2C
       feedbackKey: SEQ2_R2F
-    - replyID: 2_Nope
-      replyBrief: Nope
-      replyContent: Nope, I'll pass, I don't wanna hang out with you.
-      replyFeedback: Ouch :'/
-      feedbackLatency: 1
-      feedbackTimer: 1.5
-      callAfter: 
-      briefKey: SEQ2_R3B
-      contentKey: SEQ2_R3C
-      feedbackKey: SEQ2_R3F
     messageKey: SEQ2_1
   - itemID: SEQ_3
-    messageAuthor: 1
-    messageContent: Sooo, you wanna catch up?
+    messageAuthor: 0
+    messageContent: it's also giving me ideas for new keywords... I think Kento always
+      put NPC names as keywords on his pages
     messageLatency: 1
     messageTimer: 1.5
-    replies:
-    - replyID: 3_Sure
-      replyBrief: Sure
-      replyContent: Sure, why not :)
-      replyFeedback: Great! Let me know when you're available :)
-      feedbackLatency: 1
-      feedbackTimer: 1.5
-      callAfter: 
-      briefKey: SEQ3_R1B
-      contentKey: SEQ3_R1C
-      feedbackKey: SEQ3_R1F
-    - replyID: 3_I'm busy
-      replyBrief: I'm busy
-      replyContent: I don't think we can, I'm pretty busy nowadays :/
-      replyFeedback: Ahh too bad. Maybe some other time then.
-      feedbackLatency: 1
-      feedbackTimer: 1.5
-      callAfter: 
-      briefKey: SEQ3_R2B
-      contentKey: SEQ3_R2C
-      feedbackKey: SEQ3_R2F
-    - replyID: 3_Nope
-      replyBrief: Nope
-      replyContent: Nope, I'll pass, I don't wanna hang out with you.
-      replyFeedback: Ouch :'/
-      feedbackLatency: 1
-      feedbackTimer: 1.5
-      callAfter: 
-      briefKey: SEQ3_R3B
-      contentKey: SEQ3_R3C
-      feedbackKey: SEQ3_R3F
+    replies: []
     messageKey: SEQ3_1
   - itemID: SEQ_1_1
     messageAuthor: 1

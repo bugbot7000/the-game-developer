@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 
 using Michsky.DreamOS;
@@ -23,10 +25,18 @@ public class MetaNarrativeManager : MonoBehaviour
     #endregion
 
     [SerializeField] MessagingManager messaging;
+
+    List<string> visitedSequences = new List<string>();
     
     [Button, DisableInEditorMode, PropertySpace(8)]
-    public void TriggerBillStorytellerSequence(string id)
+    public void TriggerStorytellerSequence(string id)
     {
+        visitedSequences.Add(id);
         messaging.CreateStoryTeller("Phantom", id);
+    }
+
+    public bool HasVisitedSequence(string id)
+    {
+        return visitedSequences.Contains(id);
     }
 }

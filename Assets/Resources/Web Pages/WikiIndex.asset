@@ -22,11 +22,15 @@ MonoBehaviour:
       concept artist.\r\n\r\nEren M: I am very excited to be working on this project!
       I used to work on websites but doing games sounds like is a lot more fun. Excited
       to see what Kento comes up with and so appreciative for Rose's guidance and
-      expertise! :)) (R: Needs to be more abaout you. Also needs to be in the 3rd
+      expertise! :)) (R: Needs to be more about you. Also needs to be in the 3rd
       person)\r\n\r\nKento I: Developer, dreamer, brother, son, artist, philosopher,
       gamer, friend, writer, revolutionary, creator of worlds. Can one's identity
       truly be captured in just a few nouns in a biography? There is so much more
       to me than that---and I aim to bring it all into The Last Sorcerer."
+    ActivatesChat: 1
+    ChatID: SEQ_0
+    ContainsBuild: 0
+    BuildIndex: 0
     Keywords:
     - the developers
     - developers
@@ -44,11 +48,28 @@ MonoBehaviour:
       ancient and mysterious powers for the good of the world? (K: What do you think?)
       (R: I think we should include what kind of game it is. Like, its an adventure
       game)'
+    ActivatesChat: 1
+    ChatID: SEQ_0
+    ContainsBuild: 0
+    BuildIndex: 0
     Keywords:
     - the last sorcerer
     - last sorcerer
     - pitch
     - concept
+  - Date: Sep. 20th
+    Title: Gladius Build
+    Subtitle: Game Build
+    Content: 'This is the very first build of the next great adventure game. I have
+      named it gladius, because just like that ancient sword, we are slicing through
+      all of the discourse that has surrounded "adventure" titles and getting to
+      the core of what players really want: adventure.'
+    ActivatesChat: 0
+    ChatID: 
+    ContainsBuild: 1
+    BuildIndex: 0
+    Keywords:
+    - gladius
   - Date: Sep. 21st
     Title: Kento's Dev Log
     Subtitle: Making sacrifices...
@@ -58,6 +79,10 @@ MonoBehaviour:
       onto the <b>Asterion</b> build, I decided I wanted the player to start inside
       the maze. We''ll later learn this is the place they were imprisoned, which
       begs the question: WHY were they imprisoned?'
+    ActivatesChat: 0
+    ChatID: 
+    ContainsBuild: 0
+    BuildIndex: 0
     Keywords:
     - old man
   - Date: Sep 28th
@@ -69,12 +94,16 @@ MonoBehaviour:
       the story began, the Paladins of the White Sea blinded the eye of Kaos in an
       effort to defeat Dirac, defeating the dark lord at the cost of wounding Soltrice
       - and the world - in turn. There can be no magic without chaos. (R: We should
-      include this somehow in the Astereion build)'
+      include this somehow in the Asterion build)'
+    ActivatesChat: 0
+    ChatID: 
+    ContainsBuild: 0
+    BuildIndex: 0
     Keywords:
     - soltrice
   - Date: Sep. 29th
     Title: Asterion Build
-    Subtitle: Preliminary Level Design
+    Subtitle: Game Build
     Content: 'K: Asterion, perhaps more commonly known as the Minotaur. The ferocious
       beast that guarded the labyrinth of Crete in Greek myth. Technically, a labyrinth
       differes from a maze in that a labyrinth has but a single path to the center.
@@ -88,8 +117,6 @@ MonoBehaviour:
       not. The consequence of going right when you should have gone left is getting
       lost... and what fun is an advenutre if you can''t get lost in it?
 
-      
-
       E:
       In this build, I included the labyrinth as Kento requested. (K: It''s a maze)
       It wasn''t too difficult to code, but I did stay up really late getting it
@@ -98,6 +125,10 @@ MonoBehaviour:
       ideas look really cool, and I don''t know exactly how we''re going to get all
       of the pixel art working the way she wants, but I know that some helpful stranger
       on YouTube must have the answers. '
+    ActivatesChat: 0
+    ChatID: 
+    ContainsBuild: 1
+    BuildIndex: 1
     Keywords:
     - asterion
   - Date: Sep. 30th
@@ -107,5 +138,9 @@ MonoBehaviour:
       immortalized by Kento's little joke NPC. Inside jokes are fine, but did that
       little jab have to go into the PUBLIC facing build? I respect Kento's talent,
       but sometimes I question his maturity.
+    ActivatesChat: 0
+    ChatID: 
+    ContainsBuild: 0
+    BuildIndex: 1
     Keywords:
     - clove

@@ -22,6 +22,14 @@ public class WikiPage
     public string Subtitle;
     [FoldoutGroup("$ID"), TextArea(1, 5)]
     public string Content;
+    [FoldoutGroup("$ID"), HorizontalGroup("$ID/Chat")]
+    public bool ActivatesChat;
+    [FoldoutGroup("$ID"), HorizontalGroup("$ID/Chat"), ShowIf("@ActivatesChat")]
+    public string ChatID;
+    [FoldoutGroup("$ID"), HorizontalGroup("$ID/Build")]
+    public bool ContainsBuild;
+    [FoldoutGroup("$ID"), HorizontalGroup("$ID/Build"), ShowIf("@ContainsBuild")]
+    public int BuildIndex;
     [FoldoutGroup("$ID")]
     public List<string> Keywords;
 

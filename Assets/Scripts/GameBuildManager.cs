@@ -24,10 +24,12 @@ public class GameBuildManager : MonoBehaviour
     }
     #endregion    
     
+    [SerializeField] List<string> chatOnBuild = new List<string>();
     [SerializeField, SceneObjectsOnly] GameObject[] gamePrefabs;
     [SerializeField] GameHubManager.GameItem[] builds;
     [SerializeField] GameHubManager gameHubManager;
 
+    List<int> addedBuildIndices = new List<int>();
     List<GameObject> addedBuilds = new List<GameObject>();
 
     int enabledBuild = -1;
@@ -37,6 +39,16 @@ public class GameBuildManager : MonoBehaviour
         addedBuilds[build].SetActive(true);
 
         enabledBuild = build;
+
+        if (!string.IsNullOrWhiteSpace(chatOnBuild[build]))
+        {
+            if (!MetaNarrativeManager.Instance.HasVisitedSequence(chatOnBuild[build]))
+            {
+                MetaNarrativeManager.Instance.TriggerStorytellerSequence(chatOnBuild[build]);
+            }
+
+            chatOnBuild[build] = "";
+        }
     }
 
     public void DisableGameBuild()
@@ -46,6 +58,11 @@ public class GameBuildManager : MonoBehaviour
         enabledBuild = -1;
     }
 
+    public bool HasGameBeenAdded(int index)
+    {
+        return addedBuildIndices.Contains(index);
+    }
+
     [Button]
     public void AddGameBuildToHub(int buildIndex)
     {
@@ -53,6 +70,7 @@ public class GameBuildManager : MonoBehaviour
         {
             gameHubManager.AddGameToLibrary(builds[buildIndex]);
             addedBuilds.Add(gamePrefabs[buildIndex]);
+            addedBuildIndices.Add(buildIndex);
         }
     }
 }
