@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6479185951462133532}
   - component: {fileID: 681196298059164627}
   - component: {fileID: 1373288206841002456}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -63,6 +63,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -172,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee0b6038ec67864ca479c12fd7ec536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmgTxt: {fileID: 0}
   agent: {fileID: 0}
   health: 3
   slamSpd: 15
@@ -180,7 +184,7 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: 0, z: 0}
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   player: {fileID: 0}
   timeBetweenAttacks: 2
   alreadyAttacked: 0
