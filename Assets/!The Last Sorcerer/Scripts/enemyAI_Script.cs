@@ -11,7 +11,8 @@ public class enemyAI_Script : MonoBehaviour
     public float health, slamSpd, dmg;
     public bool damageOnCollide = false;
     public Vector3 spawnPoint;
-    public LayerMask whatIsPlayer;
+    public Vector3 patrolTarget;
+    public LayerMask whatIsPlayer; //Set this on summon to change it to enemies, also change layer to 'familiar layer'
     public Transform player;
 
     public float timeBetweenAttacks;
@@ -20,12 +21,16 @@ public class enemyAI_Script : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    public bool bodyguard = false;
+    public GameObject ward;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("player").transform;
         spawnPoint = gameObject.transform.position;
+        patrolTarget = spawnPoint;
         //dmgTxt = GameObject.Find("Dev Log").GetComponent<Text>();
     }
 
@@ -40,19 +45,27 @@ public class enemyAI_Script : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) { Patrol(); }
 
 
-        if (health <= 0) { gameObject.SetActive(false); }
+        //if (health <= 0) { gameObject.SetActive(false); }
         //Debug.Log(agent.destination);
         //if (agent.destination == gameObject.transform.position) { Debug.Log("Reached destination"); }
     }
 
-    void Patrol()
+    void Patrol() //we need to set this continuously when we summon, so that the summons follow the player. Bool check and Update?
     {
         //Debug.Log("Patrolling");
-        agent.SetDestination(spawnPoint);
+        if (bodyguard)
+        {
+            patrolTarget = ward.transform.position;
+        }
+        agent.SetDestination(patrolTarget);
     }
-    void Pursue()
+    void Pursue() //We need to change this so it understands how to purseu multiple targets 
     {
         // Debug.Log("Pursuing");
+        Collider[] potentialTargets = Physics.OverlapSphere(transform.position, sightRange, whatIsPlayer);
+        player = potentialTargets[0].gameObject.transform;
+        Debug.Log(potentialTargets);
+
         agent.SetDestination(player.position);
     }
     void Attack()
@@ -92,11 +105,20 @@ public class enemyAI_Script : MonoBehaviour
         damageOnCollide = true;
     }
 
+    //private void PauseAttack()
+    //{
+    //    Rigidbody body = GetComponent<Rigidbody>();
+    //    body.linearVelocity = Vector3.zero;
+    //}
+
     public void TakeDamage(float dmgTaken)
     {
         health -= dmgTaken;
-        dmgTxt.text = "> DEALT " + dmgTaken.ToString() + " DAMAGE";
-        Invoke(nameof(ResetDevLogText), 0.5f);
+        if (dmgTxt != null)
+        {
+            dmgTxt.text = "> DEALT " + dmgTaken.ToString() + " DAMAGE";
+            Invoke(nameof(ResetDevLogText), 0.5f);
+        }
     }
 
     public void ResetDevLogText()
@@ -104,14 +126,33 @@ public class enemyAI_Script : MonoBehaviour
         dmgTxt.text = ">";
     }
 
+    // Old attack
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player") && damageOnCollide == true)
+    //    {
+    //        collision.gameObject.GetComponent<scr_playerController>().health -= dmg;
+    //        damageOnCollide = false;
+    //        if (dmgTxt != null) 
+    //        {
+    //            dmgTxt.text = "> RECIEVED " + dmg.ToString() + " DAMAGE";
+    //            Invoke(nameof(ResetDevLogText), 0.5f);
+    //        }
+
+    //    }
+    //}
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") && damageOnCollide == true)
+        if (collision.gameObject.GetComponent<scr_health>() != null && damageOnCollide == true)
         {
-            collision.gameObject.GetComponent<scr_playerController>().health -= dmg;
+            collision.gameObject.GetComponent<scr_health>().TakeDamage(dmg);
             damageOnCollide = false;
-            dmgTxt.text = "> RECIEVED " + dmg.ToString() + " DAMAGE";
-            Invoke(nameof(ResetDevLogText), 0.5f);
+            if (dmgTxt != null)
+            {
+                dmgTxt.text = "> RECIEVED " + dmg.ToString() + " DAMAGE";
+                Invoke(nameof(ResetDevLogText), 0.5f);
+            }
+
         }
     }
 
