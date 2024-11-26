@@ -63,12 +63,17 @@ public class scr_spells : MonoBehaviour
 
         //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
         pushedBody.AddForce(direction.normalized * pushForce, ForceMode.Impulse);
-        if (pushedObject.CompareTag("Enemy")) 
+        //if (pushedObject.CompareTag("Enemy")) 
+        //{
+        //    //pushedObject.GetComponent<enemyAI_Script>().health -= pushDamage;
+        //    pushedObject.GetComponent<enemyAI_Script>().TakeDamage(pushDamage);
+        //    //TriggerDialogue();
+        //    //Invoke(nameof(ExitDialogue), 0.5f);
+        //}
+
+        if (pushedObject.GetComponent<scr_health>() != null)
         {
-            //pushedObject.GetComponent<enemyAI_Script>().health -= pushDamage;
-            pushedObject.GetComponent<enemyAI_Script>().TakeDamage(pushDamage);
-            //TriggerDialogue();
-            //Invoke(nameof(ExitDialogue), 0.5f);
+            pushedObject.GetComponent<scr_health>().TakeDamage(pushDamage);
         }
         pushedObject = null; //Probably don't need this
 
@@ -84,11 +89,14 @@ public class scr_spells : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<scr_dialogueManager>().StartDialogue(dmgTxt);
+        //FindObjectOfType<scr_dialogueManager>().StartDialogue(dmgTxt);
+        Object.FindFirstObjectByType<scr_dialogueManager>().StartDialogue(dmgTxt);
     }
 
     public void ExitDialogue()
     {
-        FindObjectOfType<scr_dialogueManager>().EndDialogue();
+        //FindObjectOfType<scr_dialogueManager>().EndDialogue();
+        Object.FindFirstObjectByType<scr_dialogueManager>().EndDialogue();
+
     }
 }

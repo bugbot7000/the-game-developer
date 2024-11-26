@@ -20,9 +20,13 @@ public class scr_playerController : MonoBehaviour
     //public GameObject firePointL;
     public GameObject activeFirePoint;
     public GameObject equippedSpell;
+    public GameObject equippedFamiliar;
     //public GameObject spellA;
     //public GameObject spellB;
     public GameObject currentAttack;
+    public GameObject[] currentFamiliars;
+    public bool spellOnCooldown;
+    public float cooldownTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +72,7 @@ public class scr_playerController : MonoBehaviour
         //    else if (equippedSpell == spellB) { equippedSpell = spellA; }
         //}
         if (Input.GetKeyDown(KeyCode.J) && !dashing) { Attack(equippedSpell); }
+        if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar); }
 
         if (currentAttack != null)
         {
@@ -103,6 +108,30 @@ public class scr_playerController : MonoBehaviour
             }
             
         }
+    }
+
+    void Summon(GameObject familiar) //We need a way to keep track of how many summons we have, and to know when they die. Check each familiar slot and proceed if empty?
+                                     //How do we decide which to assign the spawn to?
+    {
+        if (!spellOnCooldown) 
+        { 
+            var copy = Instantiate(familiar, activeFirePoint.transform.position, Quaternion.identity);
+            if (copy.GetComponent<enemyAI_Script>() != null) 
+            {
+                Debug.Log("Summoned enemy");
+                copy.GetComponent<enemyAI_Script>().whatIsPlayer = LayerMask.GetMask("Enemies");
+                copy.GetComponent<enemyAI_Script>().bodyguard = true;
+                copy.GetComponent<enemyAI_Script>().ward = this.gameObject;
+                copy.layer = gameObject.layer;
+            }
+            spellOnCooldown = true;
+            Invoke(nameof(ResetCooldown), cooldownTime);
+        }
+    }
+
+    void ResetCooldown()
+    {
+        spellOnCooldown = false;
     }
 
     void Dash()
