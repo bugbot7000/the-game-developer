@@ -57,10 +57,7 @@ namespace Michsky.DreamOS
         }
 
         public static bool ContainsJsonKey(DataCategory cat, string key)
-        {
-            // FIXME: There is probably a smarter way to handle this...
-            return false;
-            
+        {            
             string tempPath = GetTempDataPath(cat);
 
             string json = File.ReadAllText(tempPath);
