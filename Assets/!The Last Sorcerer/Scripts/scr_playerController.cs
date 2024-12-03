@@ -27,6 +27,9 @@ public class scr_playerController : MonoBehaviour
     public GameObject[] currentFamiliars;
     public bool spellOnCooldown;
     public float cooldownTime;
+
+    public GameObject familiar1, familiar2, familiar3;
+    public bool openFamiliarSlot = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +68,8 @@ public class scr_playerController : MonoBehaviour
             //activeFirePoint = firePointD;
             rotationSetting = new Vector3(0, 180f, 0f);
         }
+    
+
 
         //if (Input.GetKeyDown(KeyCode.K))
         //{
@@ -95,6 +100,73 @@ public class scr_playerController : MonoBehaviour
         if (health <= 0f) { Death(); }
     }
 
+    public void SlotMyFamiliar(GameObject familiar)
+    {
+
+        
+            if (familiar1 == null)
+            {
+                familiar1 = familiar;
+                return;
+            }
+            else if (familiar2 == null)
+            {
+                familiar2 = familiar;
+                return;
+            }
+            else if (familiar3 == null)
+            {
+                familiar3 = familiar;
+                return;
+            }
+            else
+            {
+                return;
+            }
+        
+
+    }
+
+    public bool CheckForOpenFamiliarSlots()
+    {
+
+            if (familiar1 == null || familiar2 == null || familiar3 == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+    }
+
+    public void DestroyFamiliar()
+    {
+        if (familiar1 != null)
+        {
+            Destroy(familiar1);
+            familiar1 = null;
+            return;
+        }
+        else if (familiar2 != null)
+        {
+            Destroy(familiar2);
+            familiar2 = null;
+            return;
+        }
+        else if (familiar3 != null)
+        {
+            Destroy(familiar1);
+            familiar3 =null;
+            return;
+        }
+        else
+        {
+            return;
+        }
+    }
+
     void Attack(GameObject castSpell)
     {
         if (currentAttack == null)
@@ -114,7 +186,8 @@ public class scr_playerController : MonoBehaviour
                                      //How do we decide which to assign the spawn to?
     {
         if (!spellOnCooldown) 
-        { 
+        {
+            if (!CheckForOpenFamiliarSlots()) { DestroyFamiliar(); }
             var copy = Instantiate(familiar, activeFirePoint.transform.position, Quaternion.identity);
             if (copy.GetComponent<enemyAI_Script>() != null) 
             {
@@ -124,6 +197,7 @@ public class scr_playerController : MonoBehaviour
                 copy.GetComponent<enemyAI_Script>().ward = this.gameObject;
                 copy.layer = gameObject.layer;
             }
+            SlotMyFamiliar(copy);
             spellOnCooldown = true;
             Invoke(nameof(ResetCooldown), cooldownTime);
         }

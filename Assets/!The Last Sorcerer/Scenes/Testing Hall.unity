@@ -150,6 +150,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 954637380081146297, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
+      propertyPath: cooldownTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 954637380081146297, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: equippedSpell
       value: 
       objectReference: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
