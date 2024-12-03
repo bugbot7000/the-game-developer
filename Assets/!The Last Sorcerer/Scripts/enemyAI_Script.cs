@@ -6,10 +6,10 @@ public class enemyAI_Script : MonoBehaviour
 {
     public Text dmgTxt;
 
-
     public NavMeshAgent agent;
     public float health, slamSpd, dmg;
     public bool damageOnCollide = false;
+    public bool large;
     public Vector3 spawnPoint;
     public Vector3 patrolTarget;
     public LayerMask whatIsPlayer; //Set this on summon to change it to enemies, also change layer to 'familiar layer'

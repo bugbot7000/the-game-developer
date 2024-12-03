@@ -118,25 +118,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1018933919 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7564253004826170319, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
-  m_PrefabInstance: {fileID: 8633122884709834716}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1018933921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018933919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232ccd6981efde24688595b25d385151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 4
-  dmgTxt: {fileID: 0}
 --- !u!1001 &8633122884709834716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -156,7 +137,7 @@ PrefabInstance:
     - target: {fileID: 954637380081146297, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: equippedSpell
       value: 
-      objectReference: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
+      objectReference: {fileID: 4121033437667739710, guid: 9742a29b796f01d488d367537a6d9195, type: 3}
     - target: {fileID: 954637380081146297, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: equippedFamiliar
       value: 
@@ -208,10 +189,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7564253004826170319, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1018933921}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
