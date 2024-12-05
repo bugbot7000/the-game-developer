@@ -361,6 +361,7 @@ MonoBehaviour:
   mSpd: 8
   dashSpd: 14
   dashCooldown: 0.3
+  pitCheckObj: {fileID: 8524601803316210857}
   defaultSpd: 8
   dTime: 0.5
   health: 12

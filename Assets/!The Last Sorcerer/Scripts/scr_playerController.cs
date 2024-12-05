@@ -11,6 +11,7 @@ public class scr_playerController : MonoBehaviour
     public float mSpd;
     public float dashSpd;
     public float dashCooldown;
+    public GameObject pitCheckObj;
     public float defaultSpd;
     public float dTime = 0.5f;
     public float health;
@@ -118,6 +119,11 @@ public class scr_playerController : MonoBehaviour
                 }
             }
         }
+        if(PitCheck() && dashing) //Checks for pits when dashing so we don't fall and die
+        {
+            body.constraints = RigidbodyConstraints.FreezePosition;
+        }
+
         //if (Input.GetKeyDown(KeyCode.I)) { SwitchSpell(equippedSpell); }
         if (health <= 0f) { Death(); }
     }
@@ -255,6 +261,17 @@ public class scr_playerController : MonoBehaviour
         body.constraints = RigidbodyConstraints.FreezeRotationX;
         body.constraints = RigidbodyConstraints.FreezeRotationZ;
         dashing = false;
+    }
+
+    private bool PitCheck() //Checks for pits. Uses default layer for now. CHANGE IF WE MAKE A GROUND LAYER.
+    {
+        LayerMask layerMask = LayerMask.GetMask("Default");
+
+        if (Physics.Raycast(pitCheckObj.transform.position, -Vector3.up, 8f, layerMask))
+        {
+            return false;
+        }
+        else { return true; }
     }
 
     private void SwitchSpell(GameObject currentSpell) // not currently in use
