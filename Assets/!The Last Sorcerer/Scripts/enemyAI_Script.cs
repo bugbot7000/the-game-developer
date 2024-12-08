@@ -24,6 +24,17 @@ public class enemyAI_Script : MonoBehaviour
     public bool bodyguard = false;
     public GameObject ward;
 
+    public GameObject hitbox;
+
+    public Animator animator;
+
+    public enum EnemyType
+    {
+        Zombie,
+        Ogre
+    }
+    public EnemyType type;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +42,8 @@ public class enemyAI_Script : MonoBehaviour
         player = GameObject.Find("player").transform;
         spawnPoint = gameObject.transform.position;
         patrolTarget = spawnPoint;
+        hitbox.SetActive(false);
+        animator = GetComponent<Animator>();
         //dmgTxt = GameObject.Find("Dev Log").GetComponent<Text>();
     }
 
@@ -73,7 +86,7 @@ public class enemyAI_Script : MonoBehaviour
         //Debug.Log("Attacking");
         agent.SetDestination(transform.position);
 
-        if (!alreadyAttacked) 
+        if (!alreadyAttacked && type == EnemyType.Zombie) 
         {
             damageOnCollide = true;
             //transform.LookAt(player);
@@ -92,17 +105,39 @@ public class enemyAI_Script : MonoBehaviour
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+        if (!alreadyAttacked && type == EnemyType.Ogre)
+        {
+            Rigidbody body = GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.FreezePosition;
+            hitbox.SetActive(true);
+            animator.SetBool("isAttacking", true);
+            Debug.Log("Attacking");
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
         //damageOnCollide = true;
         //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, slamSpd);
     }
 
     private void ResetAttack()
     {
-        Rigidbody body = GetComponent<Rigidbody>();
-        body.linearVelocity = Vector3.zero;
-        Debug.Log("Resetting attack");
+        if (type == EnemyType.Zombie)
+        {
+            Rigidbody body = GetComponent<Rigidbody>();
+            body.linearVelocity = Vector3.zero;
+            Debug.Log("Resetting attack");
+            damageOnCollide = true;
+        }
+        if(type == EnemyType.Ogre)
+        {
+            animator.SetBool("isAttacking", false);
+            hitbox.SetActive(false);
+            Rigidbody body = GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.None;
+            body.constraints = RigidbodyConstraints.FreezeRotationX;
+            body.constraints = RigidbodyConstraints.FreezeRotationZ;
+        }
         alreadyAttacked = false;
-        damageOnCollide = true;
     }
 
     //private void PauseAttack()
