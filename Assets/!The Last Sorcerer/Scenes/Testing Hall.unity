@@ -136,12 +136,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1373288206841002456, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+      propertyPath: large
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373288206841002456, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
       propertyPath: dmgTxt
       value: 
       objectReference: {fileID: 887869182}
     - target: {fileID: 1373288206841002456, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
       propertyPath: sightRange
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373288206841002456, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+      propertyPath: attackRange
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1373288206841002456, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
       propertyPath: spawnPoint.x
@@ -372,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb3d826741f90a4ca2b5e75bb80ab2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 3
+  dmg: 1
 --- !u!136 &1313305460
 CapsuleCollider:
   m_ObjectHideFlags: 0
