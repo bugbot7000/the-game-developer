@@ -28,6 +28,10 @@ public class enemyAI_Script : MonoBehaviour
 
     public Animator animator;
 
+    private Vector3 rotationSetting;
+    private Vector3 velocity;
+    private Vector3 previousPosition;
+
     public enum EnemyType
     {
         Zombie,
@@ -45,6 +49,8 @@ public class enemyAI_Script : MonoBehaviour
         hitbox.SetActive(false);
         animator = GetComponent<Animator>();
         //dmgTxt = GameObject.Find("Dev Log").GetComponent<Text>();
+        previousPosition = spawnPoint;
+        rotationSetting = new Vector3(0, 0, 0);
     }
 
     // Update is called once per frame
@@ -61,6 +67,70 @@ public class enemyAI_Script : MonoBehaviour
         //if (health <= 0) { gameObject.SetActive(false); }
         //Debug.Log(agent.destination);
         //if (agent.destination == gameObject.transform.position) { Debug.Log("Reached destination"); }
+
+        //Vector3 currentPosition = transform.position;
+        //Vector3 direction = currentPosition - previousPosition;
+        //direction.Normalize();
+
+        //if (direction.x > 0)
+        //{
+        //    //activeFirePoint = firePointR;
+        //    rotationSetting = new Vector3(0, 90f, 0); //In 3D we rotate on the Y, not Z
+        //}
+        //else if (direction.x < 0)
+        //{
+        //    //activeFirePoint = firePointL;
+        //    rotationSetting = new Vector3(0, -90f, 0);
+        //}
+        //else if (direction.z > 0 && direction.x == 0)
+        //{
+        //    //activeFirePoint = firePointU;
+        //    rotationSetting = new Vector3(0, 0, 0);
+        //}
+        //else if (direction.z < 0 && direction.x == 0)
+        //{
+        //    //activeFirePoint = firePointD;
+        //    rotationSetting = new Vector3(0, 180f, 0f);
+        //}
+
+        //previousPosition = currentPosition;
+
+        Vector3 direction;
+
+
+        if (playerInSightRange && playerInAttackRange) 
+        { 
+            direction = player.position - transform.position;
+            float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+
+            if (angle > 45 && angle <= 135)
+            {
+                //Face up
+                //spriteRenderer.flipX = false; // Hypothetical sprite code
+                rotationSetting = new Vector3(0, 180, 0);
+            }
+            else if(angle > -135 && angle <= -45)
+            {
+                //Face down
+                rotationSetting = new Vector3(0, 0, 0);
+            }
+            else if (angle > -45 && angle <= 45)
+            {
+                //Face right
+                rotationSetting = new Vector3(0, -90, 0);
+            }
+            else
+            {
+                //Face left
+                //spriteRenderer.flipX = true; 
+                rotationSetting = new Vector3(0, 90, 0);
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        transform.eulerAngles = rotationSetting;
     }
 
     void Patrol() //we need to set this continuously when we summon, so that the summons follow the player. Bool check and Update?

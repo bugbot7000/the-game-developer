@@ -58,7 +58,19 @@ public class scr_spells : MonoBehaviour
         Debug.Log(direction);
 
         //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
-        pushedBody.AddForce(direction.normalized * pushForce, ForceMode.Impulse);
+        //pushedBody.AddForce(direction.normalized * pushForce, ForceMode.Impulse);
+        if (pushedObject.GetComponent<enemyAI_Script>() != null)
+        {
+            if (pushedBody.GetComponent<enemyAI_Script>().large == false)
+            {
+                pushedBody.AddForce(direction.normalized * pushForce, ForceMode.Impulse);
+            }
+            else if (pushedBody.GetComponent<enemyAI_Script>().large == true)
+            {
+                pushedBody.AddForce(direction.normalized * pushForce * 0.2f, ForceMode.Impulse);
+            }
+        }
+        else { pushedBody.AddForce(direction.normalized * pushForce, ForceMode.Impulse); }
         //if (pushedObject.CompareTag("Enemy")) 
         //{
         //    //pushedObject.GetComponent<enemyAI_Script>().health -= pushDamage;
