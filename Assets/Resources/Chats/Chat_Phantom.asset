@@ -222,3 +222,29 @@ MonoBehaviour:
       contentKey: 
       feedbackKey: 
     messageKey: SEQ3_1
+  - itemID: HINT_0
+    messageAuthor: 1
+    messageContent: Did you find anything?
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: H0
+      replyBrief: it's nolstalgic to look at...
+      replyContent: it's nolstalgic to look at... I thought I could program my own
+        wiki site
+      replyFeedback: Ah, the energy of youth...
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: HINT_1
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: HINT_1
+    messageAuthor: 0
+    messageContent: i'm remembering how we used funny names like gladius to name
+      the builds
+    messageLatency: 1
+    messageTimer: 1.5
+    replies: []
+    messageKey: SEQ3_1

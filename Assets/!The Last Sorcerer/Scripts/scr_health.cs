@@ -18,11 +18,16 @@ public class scr_health : MonoBehaviour
     void Update()
     {
         if (health <= 0) { 
-            Destroy(gameObject);
             if (gameObject.CompareTag("Player"))
             {
-                Debug.Log("Plyer died");
-                // PUT RELOAD CODE HERE
+                dmgTxt.text = "> RESPAWNING";
+                Invoke(nameof(ResetDevLogText), 0.5f);    
+                transform.position = GameObject.Find("RESPAWN").transform.position;
+                health = 20;
+            }
+            else
+            {
+                Destroy(gameObject);
             }
         }
     }

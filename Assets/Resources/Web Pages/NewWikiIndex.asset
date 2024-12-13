@@ -45,7 +45,8 @@ MonoBehaviour:
     ChatID: 
     ContainsBuild: 0
     BuildIndex: 0
-    Keywords: []
+    Keywords:
+    - kento
   - Date: 'Week of 9/5/16 '
     Title: Eren's Devlog #0
     Subtitle: "Can\u2019t wait to finally get to work on this in class! (\u2312\u25BD\u2312)\u2606"
@@ -99,13 +100,18 @@ MonoBehaviour:
       choose different components and combine them in different ways to create spells,
       would be both simpler to understand and easier to implement. I still prefer
       my own esoteric system, as I feel it conveys the narrative much better, but
-      Eren convinced me to try and give it a shot at least. I suppose that\u2019s
-      what he and I will be working on for the next while. \r"
+      Eren convinced me to try and give it a shot at least for the sake of <i>teamwork</i>.
+      I suppose that\u2019s what he and I will be working on for the next while.
+      \r"
     ActivatesChat: 0
     ChatID: 
     ContainsBuild: 0
     BuildIndex: 0
-    Keywords: []
+    Keywords:
+    - nostralia
+    - reyalita
+    - disappearance
+    - modular
   - Date: 'Week of 9/19/16 '
     Title: Eren's Devlog #1
     Subtitle: "We\u2019ve added Rose to our team! (\u2312\u25BD\u2312)\u2606"
@@ -128,13 +134,15 @@ MonoBehaviour:
       spell combination system works and I\u2019m able to trigger different effects
       on the enemies based on the component parts of said spells. +\uFF61\uFF9F\u03C6(\u309D\u03C9\u30FB\uFF40\u25CB)+\uFF61\uFF9F\r\n\rAll
       in all, we\u2019re on a pretty good track, I think. At least with more of a
-      distributed workload we won\u2019t all get overwhelmed with work now\u2026
+      distributed <i>workload</i> we won\u2019t all get overwhelmed with work now\u2026
       \r"
     ActivatesChat: 0
     ChatID: 
     ContainsBuild: 0
     BuildIndex: 0
-    Keywords: []
+    Keywords:
+    - distributed
+    - teamwork
   - Date: 'Week of 9/19/16 '
     Title: devlog 1
     Subtitle: rose
@@ -161,7 +169,8 @@ MonoBehaviour:
     ChatID: 
     ContainsBuild: 0
     BuildIndex: 0
-    Keywords: []
+    Keywords:
+    - rose
   - Date: 'Week of 10/17/16 '
     Title: Third Devlog - Kento
     Subtitle: Why does magic grace the world? Because I toiled to make it so.
@@ -180,48 +189,57 @@ MonoBehaviour:
       it when we can put it in now? Besides, I decided to capitulate and implement
       her modular magic idea. This team is a two-way street, after all. \r\nI did
       manage to get through to her in the end, so all\u2019s well that ends well.
-      Our advisor is super on board with the idea too, and I\u2019m excited to knock
-      his socks off. \r"
+      Our <i>advisor</i> is super on board with the idea too, and I\u2019m excited
+      to knock his socks off. \r"
     ActivatesChat: 0
     ChatID: 
     ContainsBuild: 0
     BuildIndex: 0
-    Keywords: []
+    Keywords:
+    - deadline
+    - maze
+    - voiceover
+    - workload
   - Date: Week of 10/17/16
     Title: Eren's Devlog #2
     Subtitle: "Mid-semester deadline next week! \u0669(\u25D5\u203F\u25D5\uFF61)\u06F6"
     Content: "I\u2019ve been implementing everything that Kento and Rose have been
-      coming up with into our latest build of the maze level, as well as programming
-      all the intricacies of the player\u2019s movement (dashing, dodging, etc) and
-      it\u2019s shaping up to be a really cool experience so far. (\u272F\u25E1\u272F)
-      Kento\u2019s transformed Rose\u2019s modular magic concept into a whole intricate
-      system, and after grumbling about it to me for a good lil\u2019 bit, I think
-      he\u2019s come around and grown to really like it.\r\nBuuut, that does bring
-      me to programming the boss\u2019s attacks.  I could program it just fine with
-      the placeholder asset we\u2019ve been using, but I won\u2019t know the timings
-      of the animations Rose is using on the actual sprite until she\u2019s finished
-      with them, and I would likely have to redo all my programming work. We talked
-      about that during our last meeting, but that caused Kento and Rose to get into
-      a big argument (which I still feel really bad about). (U \u2022\u0301 .\u032B
-      \u2022\u0300 U)\r\nIt really won\u2019t take me that long to implement all
-      the assets once Rose is finished with them, but I\u2019m a little worried about
-      Kento\u2019s pushiness. I don\u2019t really mind it since I\u2019m usually
-      happy to help him out, but Rose isn\u2019t used to the way Kento works, and
-      neither of them seem willing to change how they do things\u2026 I hope it doesn\u2019t
-      blow up into a full-fledged fight. \r\n\r\n<i>Addendum 10/19:</i> I happened
-      to overhear one of Kento\u2019s conversations with our advisor, who was worried
-      that we\u2019re overscoping for the mid-semester deadline. Our advisor thought
-      we\u2019re doing too much, especially with the art, but Kento reassured him
-      that Rose was doing alright. It\u2019s a little unlike Kento to be so in-touch
-      with Rose\u2019s workflow, especially since they\u2019ve been fighting,  but
-      I guess they talked about it outside the meeting because Rose has been slowly
-      working away at the necessary assets in the meantime. \r\nI\u2019m just glad
-      everything turned out okay. ( \u02D9\u25BF\u02D9 )\r"
+      coming up with into our latest build of the maze level (which we are calling
+      <i>Asterion</i>), as well as programming all the intricacies of the player\u2019s
+      movement (dashing, dodging, etc) and it\u2019s shaping up to be a really cool
+      experience so far. (\u272F\u25E1\u272F) Kento\u2019s transformed Rose\u2019s
+      modular magic concept into a whole intricate system, and after grumbling about
+      it to me for a good lil\u2019 bit, I think he\u2019s come around and grown
+      to really like it.\r\nBuuut, that does bring me to programming the boss\u2019s
+      attacks.  I could program it just fine with the placeholder asset we\u2019ve
+      been using, but I won\u2019t know the timings of the animations Rose is using
+      on the actual sprite until she\u2019s finished with them, and I would likely
+      have to redo all my programming work. We talked about that during our last
+      meeting, but that caused Kento and Rose to get into a big <i>argument</i> (which
+      I still feel really bad about). (U \u2022\u0301 .\u032B \u2022\u0300 U)\r\nIt
+      really won\u2019t take me that long to implement all the assets once Rose is
+      finished with them, but I\u2019m a little worried about Kento\u2019s pushiness.
+      I don\u2019t really mind it since I\u2019m usually happy to help him out, but
+      Rose isn\u2019t used to the way Kento works, and neither of them seem willing
+      to change how they do things\u2026 I hope it doesn\u2019t blow up into a full-fledged
+      fight. \r\n\r\n<i>Addendum 10/19:</i> I happened to overhear one of Kento\u2019s
+      conversations with our advisor, who was worried that we\u2019re overscoping
+      for the mid-semester deadline. Our advisor thought we\u2019re doing too much,
+      especially with the art, but Kento reassured him that Rose was doing alright.
+      It\u2019s a little unlike Kento to be so in-touch with Rose\u2019s workflow,
+      especially since they\u2019ve been fighting,  but I guess they talked about
+      it outside the meeting because Rose has been slowly working away at the necessary
+      assets in the meantime. \r\nI\u2019m just glad everything turned out okay.
+      ( \u02D9\u25BF\u02D9 )\r"
     ActivatesChat: 0
     ChatID: 
     ContainsBuild: 0
     BuildIndex: 0
-    Keywords: []
+    Keywords:
+    - boss
+    - overscoping
+    - adjustment
+    - advisor
   - Date: Week of 10/17/16
     Title: devlog 2
     Subtitle: rose
@@ -245,4 +263,117 @@ MonoBehaviour:
     ChatID: 
     ContainsBuild: 0
     BuildIndex: 0
-    Keywords: []
+    Keywords:
+    - tired
+    - midsemester
+    - race
+    - argument
+  - Date: 'Week of 9/19/16 '
+    Title: The Developers
+    Subtitle: Working Team Name
+    Content: '<i>Rose:</i> Rose is a two-time Ingenious Developer Festival award
+      nominee in the Student Game category, and her work has been covered by GameBros,
+      Trapezoid, and other media outlets. Last year, she interned with Feldspar Studios
+      as a concept artist.
+
+
+      <i>Eren:</i> I am very excited to be working on
+      this project! I used to work on websites but doing games sounds like is a lot
+      more fun. Excited to see what Kento comes up with and so appreciative for Rose''s
+      guidance and expertise! :)) (R: Needs to be more about you. Also needs to be
+      in the 3rd person)
+
+
+      <i>Kento:</i> Developer, dreamer, brother, son,
+      artist, philosopher, gamer, friend, writer, revolutionary, creator of worlds.
+      Can one''s identity truly be captured in just a few nouns in a biography? There
+      is so much more to me than that---and I aim to bring it all into The Last Sorcerer.'
+    ActivatesChat: 1
+    ChatID: HINT_0
+    ContainsBuild: 0
+    BuildIndex: 0
+    Keywords:
+    - the developers
+    - developers
+    - developer
+    - team
+  - Date: Week of 9/19/16
+    Title: The Last Sorcerer
+    Subtitle: Game Pitch
+    Content: 'The Last Sorcerer (E: why not a wizard?) is a story about resdiscovering
+      magic in a world once ruled by powerful spellcasters. As you uncover the history
+      of the golden age of magic, nefarious secrets come to light. Will you use these
+      ancient and mysterious powers for the good of the world? (K: What do you think?)
+      (R: I think we should include what kind of game it is. Like, its an adventure
+      game)'
+    ActivatesChat: 1
+    ChatID: HINT_0
+    ContainsBuild: 0
+    BuildIndex: 0
+    Keywords:
+    - the last sorcerer
+    - last sorcerer
+    - game
+    - pitch
+    - concept
+  - Date: Week of 10/17/16
+    Title: Soltrice
+    Subtitle: Lore
+    Content: 'The great giant, whose eyes are the three suns of Nyxos (the planet
+      on which the game takes place). His third eye is called Kaos, and governs all
+      forces of discord; desire, insurrection, and magic. A thousand years before
+      the story began, the Paladins of the White Sea blinded the eye of Kaos in an
+      effort to defeat Dirac, defeating the dark lord at the cost of wounding Soltrice
+      - and the world - in turn. There can be no magic without chaos. (R: We should
+      include this somehow in the Asterion build)'
+    ActivatesChat: 0
+    ChatID: 
+    ContainsBuild: 0
+    BuildIndex: 0
+    Keywords:
+    - soltrice
+  - Date: Week of 10/17/16
+    Title: Asterion Build
+    Subtitle: Game Build
+    Content: 'K: Asterion, perhaps more commonly known as the Minotaur. The ferocious
+      beast that guarded the labyrinth of Crete in Greek myth. Technically, a labyrinth
+      differes from a maze in that a labyrinth has but a single path to the center.
+      In a maze, however, there are "dead ends." This creates a parallel to our adventure
+      game; the harbingers of the genre are labyrinths: there is one right answer,
+      one path forward: "defeat the boss and move on," "you can''t progress past
+      this area," "there are still things to do in this part of the map"... the player
+      is not truly "adventuring." These modern games keep telling players where to
+      go and what to do all the time. On the other hand, The Last Wizard is a maze.
+      The player can tread off the beaten trail. It may be a "dead end," or it may
+      not. The consequence of going right when you should have gone left is getting
+      lost... and what fun is an advenutre if you can''t get lost in it?
+
+      E:
+      In this build, I included the labyrinth as Kento requested. (K: It''s a maze)
+      It wasn''t too difficult to code, but I did stay up really late getting it
+      done. In addition, we have some enemies that chase around the player. We''ve
+      started talking about what kind of art style we''d like to go with. Rose''s
+      ideas look really cool, and I don''t know exactly how we''re going to get all
+      of the pixel art working the way she wants, but I know that some helpful stranger
+      on YouTube must have the answers. '
+    ActivatesChat: 0
+    ChatID: 
+    ContainsBuild: 1
+    BuildIndex: 1
+    Keywords:
+    - asterion
+  - Date: 'Week of 9/5/16 '
+    Title: Gladius Build
+    Subtitle: Game Build
+    Content: "K: This is the very first build of the next great adventure game. I
+      have named it gladius, because just like that ancient sword, we are slicing
+      through all of the discourse that has surrounded \"adventure\" titles and getting
+      to the core of what players really want: adventure.\n(E: This is just me trying
+      to remember how to use the engine (\xB4\uFF61\u2022 \u03C9 \u2022\uFF61`) but
+      it's fun!)"
+    ActivatesChat: 0
+    ChatID: 
+    ContainsBuild: 1
+    BuildIndex: 0
+    Keywords:
+    - gladius

@@ -548,7 +548,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2962609249989556397}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.72753626
+  m_Size: 0.5594203
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -708,10 +708,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b>Welcome to "The Last Sorcerer" wiki!</b>
+  m_text: 'Welcome to <b>"The Last Sorcerer"</b> wiki!
 
 
-    We are "The Developers"
+    We are <b>"The Developers"</b>
     and we will be using this website to document the development process for our
     GAMES602 project. Besides containing documentation and design documents, this
     wiki will contain our progress, tasks list, builds of the game and devlogs!
