@@ -8,12 +8,12 @@ public class scr_dialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<scr_dialogueManager>().StartDialogue(dialogue);
+        FindFirstObjectByType<scr_dialogueManager>().StartDialogue(dialogue);
     }
 
     public void ExitDialogue()
     {
-        FindObjectOfType<scr_dialogueManager>().EndDialogue();
+        FindFirstObjectByType<scr_dialogueManager>().EndDialogue();
     }
 
     private void OnTriggerEnter(Collider other)
