@@ -8,6 +8,7 @@ public class scr_playerController : MonoBehaviour
     public float mSpd;
     public float dashSpd;
     public float dashCooldown;
+    public GameObject pitCheckObj;
     public float defaultSpd;
     public float dTime = 0.5f;
     public float health;
@@ -21,8 +22,8 @@ public class scr_playerController : MonoBehaviour
     public GameObject activeFirePoint;
     public GameObject equippedSpell;
     public GameObject equippedFamiliar;
-    //public GameObject spellA;
-    //public GameObject spellB;
+    public GameObject spell2;
+    public GameObject spell1;
     public GameObject currentAttack;
     public GameObject[] currentFamiliars;
     public bool spellOnCooldown;
@@ -76,7 +77,18 @@ public class scr_playerController : MonoBehaviour
         //    if (equippedSpell == spellA) { equippedSpell = spellB; }
         //    else if (equippedSpell == spellB) { equippedSpell = spellA; }
         //}
-        if (Input.GetKeyDown(KeyCode.J) && !dashing) { Attack(equippedSpell); }
+        if (Input.GetKeyDown(KeyCode.J) && !dashing) 
+        {
+            equippedSpell = spell1;
+            Attack(equippedSpell); 
+        }
+
+        if (Input.GetKeyDown(KeyCode.I) && !dashing)
+        {
+            equippedSpell = spell2;
+            Attack(equippedSpell);
+        }
+
         if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar); }
 
         if (currentAttack != null)
@@ -90,13 +102,32 @@ public class scr_playerController : MonoBehaviour
         {
             if (currentAttack.GetComponent<scr_spells>().PullSpell)
             {
-                if (Input.GetKeyUp(KeyCode.J))
+                currentAttack.gameObject.transform.position = activeFirePoint.transform.position;
+                if (Input.GetKeyUp(KeyCode.I))
                 {
+                    Destroy(currentAttack.gameObject);
+                    currentAttack = null;
+                }
+                else if (Input.GetKeyUp(KeyCode.J)) 
+                { 
+                    currentAttack.GetComponent<scr_spells>().Push(currentAttack.GetComponent<scr_spells>().pulled);
                     Destroy(currentAttack.gameObject);
                     currentAttack = null;
                 }
             }
         }
+        if(PitCheck() && !dashing) //Checks for pits when walking so we don't fall and die
+        {
+            body.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+
+        }
+        else if (!PitCheck() && !dashing) //But allows us to dash over them
+        {
+            body.constraints = RigidbodyConstraints.None;
+            body.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        }
+
+        //if (Input.GetKeyDown(KeyCode.I)) { SwitchSpell(equippedSpell); }
         if (health <= 0f) { Death(); }
     }
 
@@ -172,10 +203,12 @@ public class scr_playerController : MonoBehaviour
         if (currentAttack == null)
         {
             var copy = Instantiate(castSpell, activeFirePoint.transform.position, Quaternion.identity);
-            //copy.transform.eulerAngles = rotationSetting;
+            copy.transform.eulerAngles = rotationSetting;
             currentAttack = copy;
             if (copy.GetComponent<scr_spells>().PushSpell)
             {
+                //Vector3 spellScale = copy.transform.localScale;
+                //copy.transform.localScale = new Vector3(spellScale.x + spellScale.x, spellScale.y + spellScale.y, spellScale.z); //enlarges the spell, code may be useful later
                 Destroy(copy, dTime);
             }
             
@@ -211,6 +244,7 @@ public class scr_playerController : MonoBehaviour
     void Dash()
     {
         dashing = true;
+        body.constraints = RigidbodyConstraints.FreezePositionY;
         Debug.Log("Dash");
         //body.MovePosition(body.position + velocity * dashSpd * Time.deltaTime);
         //body.MovePosition(body.position);
@@ -228,11 +262,30 @@ public class scr_playerController : MonoBehaviour
     {
         body.constraints = RigidbodyConstraints.FreezePosition;
         body.constraints = RigidbodyConstraints.None;
-        body.constraints = RigidbodyConstraints.FreezeRotationX;
-        body.constraints = RigidbodyConstraints.FreezeRotationZ;
+        body.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         dashing = false;
     }
 
+    private bool PitCheck() //Checks for pits. Uses default layer for now. CHANGE IF WE MAKE A GROUND LAYER.
+    {
+        LayerMask layerMask = LayerMask.GetMask("Default");
+
+        if (Physics.Raycast(pitCheckObj.transform.position, -Vector3.up, 8f, layerMask))
+        {
+            return false;
+        }
+        else 
+        {
+            //Debug.Log("OVER PIT");
+            return true;
+        }
+    }
+
+    private void SwitchSpell(GameObject currentSpell) // not currently in use
+    {
+        if (currentSpell == spell1){ currentSpell = spell2; }
+        else if (currentSpell == spell2){ currentSpell = spell1 ; }
+    }
     void Death()
     {
         Debug.Log("YOU DIED");
