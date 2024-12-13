@@ -119,9 +119,15 @@ public class scr_playerController : MonoBehaviour
                 }
             }
         }
-        if(PitCheck() && dashing) //Checks for pits when dashing so we don't fall and die
+        if(PitCheck() && !dashing) //Checks for pits when walking so we don't fall and die
         {
-            body.constraints = RigidbodyConstraints.FreezePosition;
+            body.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+
+        }
+        else if (!PitCheck() && !dashing) //But allows us to dash over them
+        {
+            body.constraints = RigidbodyConstraints.None;
+            body.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         }
 
         //if (Input.GetKeyDown(KeyCode.I)) { SwitchSpell(equippedSpell); }
@@ -200,7 +206,7 @@ public class scr_playerController : MonoBehaviour
         if (currentAttack == null)
         {
             var copy = Instantiate(castSpell, activeFirePoint.transform.position, Quaternion.identity);
-            //copy.transform.eulerAngles = rotationSetting;
+            copy.transform.eulerAngles = rotationSetting;
             currentAttack = copy;
             if (copy.GetComponent<scr_spells>().PushSpell)
             {
@@ -241,6 +247,7 @@ public class scr_playerController : MonoBehaviour
     void Dash()
     {
         dashing = true;
+        body.constraints = RigidbodyConstraints.FreezePositionY;
         Debug.Log("Dash");
         //body.MovePosition(body.position + velocity * dashSpd * Time.deltaTime);
         //body.MovePosition(body.position);
@@ -258,8 +265,7 @@ public class scr_playerController : MonoBehaviour
     {
         body.constraints = RigidbodyConstraints.FreezePosition;
         body.constraints = RigidbodyConstraints.None;
-        body.constraints = RigidbodyConstraints.FreezeRotationX;
-        body.constraints = RigidbodyConstraints.FreezeRotationZ;
+        body.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         dashing = false;
     }
 
@@ -271,7 +277,11 @@ public class scr_playerController : MonoBehaviour
         {
             return false;
         }
-        else { return true; }
+        else 
+        {
+            //Debug.Log("OVER PIT");
+            return true;
+        }
     }
 
     private void SwitchSpell(GameObject currentSpell) // not currently in use

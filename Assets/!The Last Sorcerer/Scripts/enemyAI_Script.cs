@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class enemyAI_Script : MonoBehaviour
 {
@@ -14,6 +16,9 @@ public class enemyAI_Script : MonoBehaviour
     public Vector3 patrolTarget;
     public LayerMask whatIsPlayer; //Set this on summon to change it to enemies, also change layer to 'familiar layer'
     public Transform player;
+
+    public GameObject sprite;
+    public SpriteRenderer spriteRenderer;
 
     public float timeBetweenAttacks;
     public bool alreadyAttacked;
@@ -47,10 +52,17 @@ public class enemyAI_Script : MonoBehaviour
         spawnPoint = gameObject.transform.position;
         patrolTarget = spawnPoint;
         hitbox.SetActive(false);
-        animator = GetComponent<Animator>();
+        if (type != EnemyType.Zombie)
+        {
+            animator = transform.parent.GetComponent<Animator>();
+        }
         //dmgTxt = GameObject.Find("Dev Log").GetComponent<Text>();
         previousPosition = spawnPoint;
         rotationSetting = new Vector3(0, 0, 0);
+
+        if (sprite != null) { spriteRenderer = sprite.GetComponent<SpriteRenderer>(); }
+
+
     }
 
     // Update is called once per frame
@@ -68,20 +80,23 @@ public class enemyAI_Script : MonoBehaviour
         //Debug.Log(agent.destination);
         //if (agent.destination == gameObject.transform.position) { Debug.Log("Reached destination"); }
 
-        //Vector3 currentPosition = transform.position;
-        //Vector3 direction = currentPosition - previousPosition;
-        //direction.Normalize();
+        Vector3 currentPosition = transform.position;
+        Vector3 direction = currentPosition - previousPosition;
+        direction.Normalize();
 
-        //if (direction.x > 0)
-        //{
-        //    //activeFirePoint = firePointR;
-        //    rotationSetting = new Vector3(0, 90f, 0); //In 3D we rotate on the Y, not Z
-        //}
-        //else if (direction.x < 0)
-        //{
-        //    //activeFirePoint = firePointL;
-        //    rotationSetting = new Vector3(0, -90f, 0);
-        //}
+        if (direction.x > 0)
+        {
+            //activeFirePoint = firePointR;
+            rotationSetting = new Vector3(0, 0, 0); //In 3D we rotate on the Y, not Z
+            if (spriteRenderer != null) { spriteRenderer.flipX = false; }
+
+        }
+        else if (direction.x < 0)
+        {
+            //activeFirePoint = firePointL;
+            rotationSetting = new Vector3(0, 180f, 0);
+            if (spriteRenderer != null) { spriteRenderer.flipX = true; }
+        }
         //else if (direction.z > 0 && direction.x == 0)
         //{
         //    //activeFirePoint = firePointU;
@@ -93,39 +108,94 @@ public class enemyAI_Script : MonoBehaviour
         //    rotationSetting = new Vector3(0, 180f, 0f);
         //}
 
-        //previousPosition = currentPosition;
+        previousPosition = currentPosition;
 
-        Vector3 direction;
+        //Vector3 direction;
 
 
-        if (playerInSightRange && playerInAttackRange) 
-        { 
-            direction = player.position - transform.position;
-            float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+        //if (playerInSightRange && playerInAttackRange) 
+        //{ 
+        //    direction = player.position - transform.position;
+        //    float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
 
-            if (angle > 45 && angle <= 135)
-            {
-                //Face up
-                //spriteRenderer.flipX = false; // Hypothetical sprite code
-                rotationSetting = new Vector3(0, 180, 0);
-            }
-            else if(angle > -135 && angle <= -45)
-            {
-                //Face down
-                rotationSetting = new Vector3(0, 0, 0);
-            }
-            else if (angle > -45 && angle <= 45)
-            {
-                //Face right
-                rotationSetting = new Vector3(0, -90, 0);
-            }
-            else
-            {
-                //Face left
-                //spriteRenderer.flipX = true; 
-                rotationSetting = new Vector3(0, 90, 0);
-            }
+        //    if (angle > 45 && angle <= 135)
+        //    {
+        //        //Face up
+        //        //spriteRenderer.flipX = false; // Hypothetical sprite code
+        //        rotationSetting = new Vector3(0, 180, 0);
+        //    }
+        //    else if (angle > -135 && angle <= -45)
+        //    {
+        //        //Face down
+        //        rotationSetting = new Vector3(0, 0, 0);
+        //    }
+        //if (angle > -45 && angle <= 45)
+        //{
+        //    //Face right
+        //    rotationSetting = new Vector3(0, -90, 0);
+        //}
+        //else
+        //{
+        //    //Face left
+        //    //spriteRenderer.flipX = true; 
+        //    rotationSetting = new Vector3(0, 90, 0);
+        //}
+        //}
+
+        //if (PitCheck())
+        //{
+        //    Rigidbody body = GetComponent<Rigidbody>();
+
+        //    agent.enabled = false;
+        //    body.isKinematic = false;
+        //    body.useGravity = true;
+        //}
+        //else 
+        //{
+        //    Debug.Log("GROUND BENEATH US");
+
+        //    agent.enabled = true;
+        //}
+    }
+
+    private bool PitCheck() // We may need to rethink this for enemies who can jump
+    {
+        LayerMask layerMask = LayerMask.GetMask("Default");
+
+        if (Physics.Raycast(gameObject.transform.position, -Vector3.up, 8f, layerMask))
+        {
+            return false;
         }
+        else
+        {
+            Debug.Log("OVER PIT");
+            return true;
+        }
+    }
+
+    public void StunSelf()
+    {
+        agent.enabled = false;
+        StartCoroutine(RestoreAgentAfterWait());
+    }
+    public IEnumerator RestoreAgentAfterWait()
+    {
+        Debug.Log("STARTED COROUTINE");
+        //Debug.Log(agent.GetComponent<enemyAI_Script>().agent);
+
+
+        yield return new WaitForSeconds(3);
+        Debug.Log("WAITED");
+
+        LayerMask layerMask = LayerMask.GetMask("Default");
+
+        if (Physics.Raycast(transform.position, Vector3.down, 8f, layerMask))
+        {
+            Debug.Log("RESTORED AGENT");
+
+            agent.enabled = true;
+        }
+
     }
 
     private void FixedUpdate()
@@ -140,21 +210,30 @@ public class enemyAI_Script : MonoBehaviour
         {
             patrolTarget = ward.transform.position;
         }
-        agent.SetDestination(patrolTarget);
+        if (agent.enabled)
+        {
+            agent.SetDestination(patrolTarget);
+        }
     }
     void Pursue() //We need to change this so it understands how to purseu multiple targets 
     {
         // Debug.Log("Pursuing");
         Collider[] potentialTargets = Physics.OverlapSphere(transform.position, sightRange, whatIsPlayer);
         player = potentialTargets[0].gameObject.transform;
-        Debug.Log(potentialTargets);
+        //Debug.Log(potentialTargets);
 
-        agent.SetDestination(player.position);
+        if (agent.enabled)
+        {
+            agent.SetDestination(player.position);
+        }
     }
     void Attack()
     {
         //Debug.Log("Attacking");
-        agent.SetDestination(transform.position);
+        if (agent.enabled)
+        {
+            agent.SetDestination(transform.position);
+        }
 
         if (!alreadyAttacked && type == EnemyType.Zombie) 
         {
@@ -178,7 +257,9 @@ public class enemyAI_Script : MonoBehaviour
         if (!alreadyAttacked && type == EnemyType.Ogre)
         {
             Rigidbody body = GetComponent<Rigidbody>();
-            body.constraints = RigidbodyConstraints.FreezePosition;
+            //body.constraints = RigidbodyConstraints.FreezePosition;
+            body.constraints = RigidbodyConstraints.FreezeRotation;
+
             hitbox.SetActive(true);
             animator.SetBool("isAttacking", true);
             Debug.Log("Attacking");

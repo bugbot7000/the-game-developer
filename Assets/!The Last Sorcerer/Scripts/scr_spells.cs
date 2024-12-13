@@ -67,7 +67,9 @@ public class scr_spells : MonoBehaviour
             }
             else if (pushedBody.GetComponent<enemyAI_Script>().large == true)
             {
-                pushedBody.AddForce(direction.normalized * pushForce * 0.2f, ForceMode.Impulse);
+                pushedObject.GetComponent<enemyAI_Script>().StunSelf();
+
+                pushedBody.AddForce(direction.normalized * pushForce * 0.1f, ForceMode.Impulse);
             }
         }
         else { pushedBody.AddForce(direction.normalized * pushForce, ForceMode.Impulse); }
@@ -104,16 +106,48 @@ public class scr_spells : MonoBehaviour
         }
         else if (pulledObject.GetComponent<enemyAI_Script>().large == true)
         {
+            pulledObject.GetComponent <enemyAI_Script>().StunSelf();
             Rigidbody pulledBody = pulledObject.GetComponent<Rigidbody>();
 
             // Get direction from your postion toward the object you wish to push
             var direction = pulledBody.transform.position - player.transform.position;
 
             //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
-            pulledBody.AddForce(-direction.normalized * pushForce, ForceMode.Impulse);
+            pulledBody.AddForce(-direction.normalized * pushForce *0.5f, ForceMode.Impulse);
+            //StartCoroutine(pulledObject.GetComponent<enemyAI_Script>().RestoreAgentAfterWait());
         }
 
     }
+
+    //IEnumerator RestoreAgent(GameObject agent)// Doesn't work because the spell is destroyed before the routine finishes
+    //{
+    //    Debug.Log("STARTED COROUTINE");
+    //    //Debug.Log(agent.GetComponent<enemyAI_Script>().agent);
+
+
+    //    yield return new WaitForSeconds(1f);
+    //    Debug.Log("WAITED");
+
+    //    LayerMask layerMask = LayerMask.GetMask("Default");
+
+    //    if (Physics.Raycast(agent.transform.position, -Vector3.up, 8f, layerMask))
+    //    {
+    //        Debug.Log("RESTORED AGENT");
+
+    //        agent.GetComponent<enemyAI_Script>().agent.enabled = true;
+    //    }
+
+    //}
+
+    //public void RestorreAgent(GameObject agent)
+    //{
+    //    LayerMask layerMask = LayerMask.GetMask("Default");
+
+    //    if (Physics.Raycast(agent.transform.position, -Vector3.up, 8f, layerMask))
+    //    {
+    //        agent.GetComponent<enemyAI_Script>().agent.enabled = true;
+    //    }
+    //}
 
     public void TriggerDialogue()
     {

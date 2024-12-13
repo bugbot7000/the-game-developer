@@ -17,7 +17,14 @@ public class scr_health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0) { Destroy(gameObject); }
+        if (health <= 0) { 
+            Destroy(gameObject);
+            if (gameObject.CompareTag("Player"))
+            {
+                Debug.Log("Plyer died");
+                // PUT RELOAD CODE HERE
+            }
+        }
     }
 
     public void TakeDamage(float dmgTaken)
