@@ -20,7 +20,7 @@ public class WikiPage
     public string Title;
     [FoldoutGroup("$ID")]
     public string Subtitle;
-    [FoldoutGroup("$ID"), TextArea(1, 5)]
+    [FoldoutGroup("$ID"), TextArea(1, 35)]
     public string Content;
     [FoldoutGroup("$ID"), HorizontalGroup("$ID/Chat")]
     public bool ActivatesChat;

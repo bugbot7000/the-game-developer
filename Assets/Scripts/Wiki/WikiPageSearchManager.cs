@@ -23,6 +23,7 @@ public class WikiPageSearchManager : MonoBehaviour
 
     [SerializeField] WikiIndex index;
 
+    public WikiIndex Index => index;
     public string LastSearchTerm  { get; private set; }
     public WikiPage LastFoundPage { get; private set; }
 

@@ -285,6 +285,38 @@ namespace Michsky.DreamOS
             }
         }
 
+       /*
+        public void SetSelectedLayout()
+        {
+            // HOW DO ISET THIS UP?
+            if (selectedLayout != null && selectedLayout.name == itemButton.gameObject.name) { return; }
+            if (selectedLayout != null && selectedLayout.gameObject.activeInHierarchy) { selectedLayout.Hide(); }
+
+            int indexHelper = 0;
+            for (int s = 0; s < createdLayoutPresets.Count; s++)
+            {
+                if (createdLayoutPresets[s].name == itemButton.gameObject.name)
+                {
+                    selectedLayout = createdLayoutPresets[s];
+                    indexHelper = s;
+                    currentLayout = s;
+                    break;
+                }
+            }
+
+            selectedLayout.gameObject.SetActive(true);
+
+            ChatLayoutPreset slPreset = selectedLayout.GetComponent<ChatLayoutPreset>();
+            slPreset.Show();
+
+            if (isStoryTellerOpen && stIndexHelper != indexHelper && storyTellerAnimator != null) { HideStorytellerPanel(); }
+            else if (isStoryTellerOpen && stIndexHelper == indexHelper && storyTellerAnimator != null) { ShowStorytellerPanel(); }
+
+            itemPreset.EnableNotificationBadge(false);
+            latestPerson = itemPreset.nameText.text;            
+        }
+        */
+
         public void CreateMessageFromInput()
         {
             CreateCustomMessageFromInput(null, true);

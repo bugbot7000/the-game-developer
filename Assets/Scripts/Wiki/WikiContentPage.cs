@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Sirenix.OdinInspector;
 
 public class WikiContentPage : MonoBehaviour
 {
@@ -67,5 +68,20 @@ public class WikiContentPage : MonoBehaviour
         buttonText.SetText("Build added to Game Hub");
 
         GameBuildManager.Instance.AddGameBuildToHub(currentPage.BuildIndex);
+    }
+
+    [Button]
+    public void LoadWikiPageByName(string name)
+    {
+        foreach (WikiPage page in WikiPageSearchManager.Instance.Index.WikiPages)
+        {
+            if (page.Title == name)
+            {
+                UpdatePageContent(page);
+                return;
+            }
+        }
+
+        Debug.LogWarning($"[WikiContentPage] Could not find page with title '{name}'");   
     }
 }

@@ -18,6 +18,6 @@ public class WikiHomePage : MonoBehaviour
 
         WikiPageSearchManager.Instance.SetSearchTerm(content);
 
-        webBrowserManager.OpenPage($"wiki.thelastsorcerer.com/search");
+        webBrowserManager.OpenPage($"wiki.eren.local/search");
     }
 }

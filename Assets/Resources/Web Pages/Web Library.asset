@@ -35,15 +35,21 @@ MonoBehaviour:
     titleKey: NoConnectionTitle
   webPages:
   - pageTitle: The Last Sorcerer Wiki
-    pageURL: wiki.thelastsorcerer.com
+    pageURL: wiki.eren.local
     pageIcon: {fileID: 21300000, guid: 3789b437c7afd9e4e945dba629fefde4, type: 3}
     pageContent: {fileID: 1958891694494868, guid: c5623678cf6fc0b4dbe792e0bfb971e5, type: 3}
     pageSize: 20
     titleKey: 
   - pageTitle: The Last Sorcerer Wiki - Search
-    pageURL: wiki.thelastsorcerer.com/search
+    pageURL: wiki.eren.local/search
     pageIcon: {fileID: 21300000, guid: 3789b437c7afd9e4e945dba629fefde4, type: 3}
     pageContent: {fileID: 1958891694494868, guid: e5f0df6967332b9409f222b59a2b02ef, type: 3}
+    pageSize: 20
+    titleKey: 
+  - pageTitle: Ralia's Lament on Vapor
+    pageURL: www.vapor.com/ralias-lament
+    pageIcon: {fileID: 21300000, guid: 3789b437c7afd9e4e945dba629fefde4, type: 3}
+    pageContent: {fileID: 1958891694494868, guid: c92aa99424f40dd4fb967906a75c7acb, type: 3}
     pageSize: 20
     titleKey: 
   dlFiles: []

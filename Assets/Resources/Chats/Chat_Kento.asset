@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ca2ddbf6e022748a2db98a0c813735, type: 3}
+  m_Name: Chat_Carlos 1
+  m_EditorClassIdentifier: 
+  saveConversation: 0
+  useDynamicMessages: 0
+  useStoryTeller: 0
+  messageList:
+  - messageContent: "I can\u2019t fucking believe it. "
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:06 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: 'Look at this. '
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:09 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: 'She stole OUR game, Eren. '
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:10 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Are you sure? It looks a lot different than what we made.
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 11:11 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "Because she put a fancy new coat of paint on it. \r\n"
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:15 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: 'All of the mechanics are the same. '
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:17 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: 'I guarantee you she stole the source code from the last build
+      we made. '
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:18 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "There\u2019s no way for us to check, though. \r"
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 11:18 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: 'Not with that attitude. '
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:20 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: 'I managed to pirate it. You should be able to decompile it and
+      check. '
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:21 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: The audacity of this bitch.
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:22 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "Kento, I feel like you\u2019re jumping the gun again\u2026"
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 11:24 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "Rose is a perfectly capable solo developer. \r"
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 11:24 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "Just because she released something similar to what we worked
+      on together doesn\u2019t automatically mean she stole it. "
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 11:26 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: 'Just take a look. Hell, play it if you want. '
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:27 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "You\u2019ll see what I mean. "
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:28 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  dynamicMessages: []
+  storyTeller: []

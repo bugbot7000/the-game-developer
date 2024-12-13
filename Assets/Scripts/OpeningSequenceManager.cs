@@ -1,13 +1,15 @@
-using System.Collections;
-
 using UnityEngine;
 
+using System.Collections;
+
 using DG.Tweening;
+using Michsky.DreamOS;
 
 public class OpeningSequenceManager : MonoBehaviour
 {
     //ralia's lament should have some dialogue...
     
+    [SerializeField] bool skipOpening;
     [SerializeField] CanvasGroup fade;
     [SerializeField] Canvas dreamOS;
     [SerializeField] Canvas titleScreen;
@@ -16,10 +18,26 @@ public class OpeningSequenceManager : MonoBehaviour
     [SerializeField] RectTransform fullScreenRawImage;
     [SerializeField] RectTransform mouseCursor;
     [SerializeField] RectTransform topBar;
+    [SerializeField] WindowManager messaging;
+    [SerializeField] WindowManager webBrowser;
 
-    void Start()
+    IEnumerator Start()
     {
-        fade.DOFade(0.0f, 2.0f).SetEase(Ease.OutCubic).OnComplete(() => fade.blocksRaycasts = false);
+        yield return null;
+
+        if (skipOpening)
+        {
+            Debug.Log("[OpeningSequenceManager] Skipping opening sequence.");
+
+            dreamOS.gameObject.SetActive(true);
+            titleScreen.gameObject.SetActive(false);
+            fade.gameObject.SetActive(false);
+            fullScreenRawImage.parent.gameObject.SetActive(false);
+        }
+        else
+        {
+            fade.DOFade(0.0f, 2.0f).SetEase(Ease.OutCubic).OnComplete(() => fade.blocksRaycasts = false);
+        }
     }
 
     public void StartGame()
@@ -31,6 +49,8 @@ public class OpeningSequenceManager : MonoBehaviour
                 dreamOS.gameObject.SetActive(true);
                 raliasLamentBuild.SetActive(true);
                 titleScreen.gameObject.SetActive(false);
+                messaging.OpenWindow();
+                webBrowser.OpenWindow();                
             })
             .AppendInterval(2.0f)
             .Append(fade.DOFade(0.0f, 2.0f).SetEase(Ease.OutCubic))
@@ -38,10 +58,6 @@ public class OpeningSequenceManager : MonoBehaviour
                 fade.blocksRaycasts = false;
                 notificationAndCloseGameSequence();
             });
-
-        // instead of making it a build...
-        // then when we minimize it it goes to a window
-        // game should start with chat open, and steam open
     }
 
     void notificationAndCloseGameSequence()
@@ -56,6 +72,7 @@ public class OpeningSequenceManager : MonoBehaviour
             .AppendInterval(1.5f)
             .Append(fullScreenRawImage.DOScale(Vector3.zero, 1.0f).SetEase(Ease.InOutQuint))
             .AppendCallback(() => topBar.gameObject.SetActive(false))
-            .AppendCallback(() => mouseCursor.gameObject.SetActive(false));
+            .AppendCallback(() => mouseCursor.gameObject.SetActive(false))
+            .AppendCallback(() => raliasLamentBuild.SetActive(false));
     }
 }
