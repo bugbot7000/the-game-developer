@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73ca2ddbf6e022748a2db98a0c813735, type: 3}
-  m_Name: Chat_Carlos 1
+  m_Name: Chat_Kento
   m_EditorClassIdentifier: 
   saveConversation: 0
   useDynamicMessages: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: Are you sure? It looks a lot different than what we made.
+  - messageContent: are you sure? it looks a lot different than what we made
     objectType: 0
     messageAuthor: 0
     sentTime: 11:11 AM
@@ -66,7 +66,7 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "There\u2019s no way for us to check, though. \r"
+  - messageContent: "there\u2019s no way for us to check, tho\r"
     objectType: 0
     messageAuthor: 0
     sentTime: 11:18 AM
@@ -95,22 +95,22 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "Kento, I feel like you\u2019re jumping the gun again\u2026"
+  - messageContent: "kento, I feel like you\u2019re jumping the gun again\u2026"
     objectType: 0
     messageAuthor: 0
     sentTime: 11:24 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "Rose is a perfectly capable solo developer. \r"
+  - messageContent: "rose is a perfectly capable solo developer\r"
     objectType: 0
     messageAuthor: 0
     sentTime: 11:24 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "Just because she released something similar to what we worked
-      on together doesn\u2019t automatically mean she stole it. "
+  - messageContent: "just because she released something similar to what we worked
+      on together doesn\u2019t automatically mean she stole it!! "
     objectType: 0
     messageAuthor: 0
     sentTime: 11:26 AM

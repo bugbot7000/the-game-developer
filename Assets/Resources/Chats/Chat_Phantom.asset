@@ -16,7 +16,7 @@ MonoBehaviour:
   useDynamicMessages: 0
   useStoryTeller: 1
   messageList:
-  - messageContent: hey S@v@g3__Scribe :p
+  - messageContent: Hey S@v@g3__Scribe!
     objectType: 0
     messageAuthor: 1
     sentTime: 
@@ -37,7 +37,7 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: was bored at work, wasn't that hard to find you :p
+  - messageContent: Was bored at work, wasn't that hard to find you.
     objectType: 0
     messageAuthor: 1
     sentTime: 
@@ -58,14 +58,14 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: sounds reasonable
+  - messageContent: Sounds reasonable.
     objectType: 0
     messageAuthor: 1
     sentTime: 
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: you won't get into trouble if IT sees these messages?
+  - messageContent: You won't get into trouble if IT sees these messages?
     objectType: 0
     messageAuthor: 1
     sentTime: 
@@ -80,7 +80,7 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: sounds like a story for next time we play!
+  - messageContent: Sounds like a story for next time we play!
     objectType: 0
     messageAuthor: 1
     sentTime: 
@@ -94,188 +94,131 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: hey, did you ever look more into that game you told me about?
-    objectType: 0
-    messageAuthor: 1
-    sentTime: 
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
-  - messageContent: that one I worked on forever ago for school?
-    objectType: 0
-    messageAuthor: 0
-    sentTime: 
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
-  - messageContent: that one
-    objectType: 0
-    messageAuthor: 1
-    sentTime: 
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
-  - messageContent: sigh... it brings back memories
-    objectType: 0
-    messageAuthor: 0
-    sentTime: 
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
-  - messageContent: we had a little website at <b>wiki.thelastsorcerer.com</b>
-    objectType: 0
-    messageAuthor: 0
-    sentTime: 
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
-  - messageContent: apparently it's still up but i've been too busy to look at it
-    objectType: 0
-    messageAuthor: 0
-    sentTime: 
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
-  - messageContent: lemme know when you do look at it!
-    objectType: 0
-    messageAuthor: 1
-    sentTime: 
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
-  - messageContent: Nov 7.
-    objectType: 1
-    messageAuthor: 1
-    sentTime: 
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
   dynamicMessages: []
   storyTeller:
   - itemID: SEQ_0
     messageAuthor: 1
-    messageContent: i got curious and started looking at the website too... it's
-      interesting
+    messageContent: Oh, you're checking out that new game?
     messageLatency: 1
     messageTimer: 1.5
     replies:
     - replyID: 0_HandProgram
-      replyBrief: had forgotten I tried to hand program it
-      replyContent: 'i was eager to show off my web development skills and didn''t
-        like any of the solutions available, so i tried to make my own '
-      replyFeedback: really?!? though to be honest yeah, sounds like something a
-        young programmer would do
+      replyBrief: kinda yeah
+      replyContent: kinda yeah
+      replyFeedback: What do you think?
       feedbackLatency: 1
       feedbackTimer: 1.5
       callAfter: SEQ_1
       briefKey: SEQ0_R1B
       contentKey: SEQ0_R1C
       feedbackKey: SEQ0_R1F
-    - replyID: 0_Nolstalgia
-      replyBrief: it makes me feel nolstalgic
-      replyContent: It's been 8 years since all this happened... I have a lot of
-        mixed feelings but at least now I just feel nolstalgic
-      replyFeedback: yeah, as someone who has looked at his old forum posts, I totally
-        get that
-      feedbackLatency: 1
-      feedbackTimer: 1
-      callAfter: SEQ_1
-      briefKey: SEQ0_R2B
-      contentKey: SEQ0_R2C
-      feedbackKey: SEQ0_R2F
     messageKey: SEQ0_1
   - itemID: SEQ_1
-    messageAuthor: 1
-    messageContent: Have you found anything you can play?
-    messageLatency: 1.5
-    messageTimer: 0
+    messageAuthor: 0
+    messageContent: it's, uh...
+    messageLatency: 1
+    messageTimer: 1.5
     replies:
     - replyID: 1_Not yet
-      replyBrief: Not yet
-      replyContent: not yet, but I'm on it - I remember we used to have silly names
-        like <b>Gladius</b> for our builds
-      replyFeedback: that is a wild name, just version numbers for me please. lemme
-        know when you find something!
+      replyBrief: (Tell him about your old game)
+      replyContent: "remember that game i worked on for grad school\r"
+      replyFeedback: 'Yeah? '
       feedbackLatency: 1
       feedbackTimer: 1.5
-      callAfter: 
+      callAfter: SEQ_2
       briefKey: SEQ1_R1B
       contentKey: SEQ1_R1C
       feedbackKey: SEQ1_R1F
-    - replyID: 1_I'm on it
-      replyBrief: I'm on it
-      replyContent: not yet, but I'm on it - I remember we used to have silly names
-        like <b>Gladius</b> for our builds
-      replyFeedback: that is a wild name, just version numbers for me please. lemme
-        know when you find something!
-      feedbackLatency: 1
-      feedbackTimer: 1.5
-      callAfter: 
-      briefKey: SEQ1_R2B
-      contentKey: SEQ1_R2C
-      feedbackKey: SEQ1_R2F
     messageKey: SEQ1_1
   - itemID: SEQ_2
     messageAuthor: 1
-    messageContent: did you find a build?
+    messageContent: The Last Sorcerer, or something like that?
     messageLatency: 1
     messageTimer: 1.5
     replies:
     - replyID: 2_Sure
-      replyBrief: yeah but it kinda sucks
-      replyContent: yeah but it's the first one so it still sucks haha i remember
-        being pretty proud though since I was still new at programming games
-      replyFeedback: aw yeah that's a mood, looking back at how much you've grown
+      replyBrief: that's the one
+      replyContent: "that's the one, we never finished it though :(\nthe group fell
+        apart\r\n\rand kento thinks this new game is a ripoff\r"
+      replyFeedback: Huh...
       feedbackLatency: 1
       feedbackTimer: 1.5
       callAfter: SEQ_3
       briefKey: SEQ2_R1B
       contentKey: SEQ2_R1C
       feedbackKey: SEQ2_R1F
-    - replyID: 2_I'm busy
-      replyBrief: yeah, it's kinda fun
-      replyContent: there isn't that much going on yet but I always felt we started
-        from a solid base
-      replyFeedback: glad to hear that!
-      feedbackLatency: 1
-      feedbackTimer: 1.5
-      callAfter: SEQ_3
-      briefKey: SEQ2_R2B
-      contentKey: SEQ2_R2C
-      feedbackKey: SEQ2_R2F
     messageKey: SEQ2_1
   - itemID: SEQ_3
-    messageAuthor: 0
-    messageContent: it's also giving me ideas for new keywords... I think Kento always
-      put NPC names as keywords on his pages
-    messageLatency: 1
-    messageTimer: 1.5
-    replies: []
-    messageKey: SEQ3_1
-  - itemID: SEQ_1_1
     messageAuthor: 1
-    messageContent: Take care, drink some water.
+    messageContent: "Do you think he\u2019s right? "
     messageLatency: 1
     messageTimer: 1.5
     replies:
-    - replyID: 1-1_Will do
-      replyBrief: Will do
-      replyContent: Yeah, will do
-      replyFeedback: 
+    - replyID: 3_I
+      replyBrief: "\u2026i don\u2019t know"
+      replyContent: "\u2026i don\u2019t know\nthey are like... really similar. but
+        it just doesn't feel the same... y'know??"
+      replyFeedback: "How long\u2019s it been since you looked at your old project? "
       feedbackLatency: 1
       feedbackTimer: 1.5
-      callAfter: 
-      briefKey: SEQ1-1_R1B
-      contentKey: SEQ1-1_R1C
+      callAfter: SEQ_4
+      briefKey: 
+      contentKey: 
       feedbackKey: 
-    - replyID: 1-1_Nope
-      replyBrief: Nope
-      replyContent: Nope, I don't like water
-      replyFeedback: Why is that? Water is a must for your health.
+    messageKey: SEQ3_1
+  - itemID: SEQ_4
+    messageAuthor: 1
+    messageContent: 'I remember you were working on it for a while after graduation. '
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 4
+      replyBrief: "It\u2019s been a while"
+      replyContent: "it\u2019s been a couple years\ni took this job at formworks
+        right after we gave up on it\r"
+      replyFeedback: "\u2018Gave up\u2019 is a bit of a strong term, I think. "
+      feedbackLatency: 1
+      feedbackTimer: 1.4
+      callAfter: SEQ_5
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: SEQ_5
+    messageAuthor: 0
+    messageContent: 'maybe
+
+      ngl i still have our old wiki on a private server'
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 5
+      replyBrief: "wiki.eren.local\r"
+      replyContent: "wiki.eren.local\r\n\rjust couldn't bring myself to delete it
+        :')\r"
+      replyFeedback: A wiki?
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_6
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: SEQ_6
+    messageAuthor: 1
+    messageContent: "Like to keep track of the game\u2019s progress? "
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 6
+      replyBrief: pretty much
+      replyContent: "yeah pretty much\r\nmaybe i should go back and look at it\r\nfor
+        old time\u2019s sake\r"
+      replyFeedback: 'Ooh, let me know how that goes. '
       feedbackLatency: 1
       feedbackTimer: 1.5
       callAfter: 
-      briefKey: SEQ1-1_R2B
-      contentKey: SEQ1-1_R2C
-      feedbackKey: SEQ1-1_R2F
-    messageKey: SEQ1-1_1
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
