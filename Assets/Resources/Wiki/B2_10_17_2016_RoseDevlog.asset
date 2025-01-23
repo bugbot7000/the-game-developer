@@ -13,24 +13,23 @@ MonoBehaviour:
   m_Name: B2_10_17_2016_RoseDevlog
   m_EditorClassIdentifier: 
   Date: '10/17/16 '
-  Title: Third Devlog - Kento
-  Subtitle: Why does magic grace the world? Because I toiled to make it so.
-  Content: "Our midsemester progress deadline is coming up, and it\u2019s crucial
-    that we really wow our advisor and the rest of the professors for it. It\u2019s
-    our big chance to show everyone that The Last Sorcerer isn\u2019t just any old
-    game. \r\nAs such, I\u2019m planning for us to have the maze level finished by
-    next week. The modular magic system has been working really well, and we\u2019ve
-    decided to transition over to using it as our main gameplay mechanic. Currently,
-    we have a small but solid number of both spell shapes and spell effects, as well
-    as valid outputs for all possible combinations. I\u2019ve been making great progress
-    on the narrative as well, and plan to have a voiceover recorded for the deadline.
-    \r\nRose has been trying to push back on the big build, though. I don\u2019t
-    see the issue - she\u2019s been making good progress on updating all our assets,
-    and it\u2019s work she\u2019ll need to do anyway. Why delay it when we can put
-    it in now? Besides, I decided to capitulate and implement her modular magic idea.
-    This team is a two-way street, after all. \r\nI did manage to get through to
-    her in the end, so all\u2019s well that ends well. Our <i>advisor</i> is super
-    on board with the idea too, and I\u2019m excited to knock his socks off. \r"
+  Title: devlog 2
+  Subtitle: rose
+  Content: "- i am so goddamn tired\r\n- our last few meetings have been mostly about
+    scope for the midsemester deadline\r\n- as usual i was planning to stick to keeping
+    expectations low/average and overdelivering if we could\r\n- kento wanted to
+    shoot for the stars though and was really pushing for us to get the maze level
+    finished\r\n- i told him that i would have to do a lot of extra work to get it
+    done because i have other classes and other midterms to study for\r\n- he didn\u2019t
+    listen though and kept saying that it was really important that we wow everyone
+    for this deadline\r\n<indent=2%>- like\u2026 dude we\u2019re barely two months
+    into the dev process, it\u2019s not a race</indent>\r\n- eren agreed with kento
+    and said that it wouldn\u2019t be a problem to implement the assets when i had
+    them done\r\n- normally i would push back more but kento already went and told
+    our advisor about his planned scope for the deadline so i guess i don\u2019t
+    really have a choice\u2026 \r\n- stuff to finish by next week: \r\n<indent=2%>-
+    maze textures and tilesets</indent>\r\n<indent=2%>- first boss animations</indent>\r\n<indent=2%>-
+    all modular magic animations</indent>\r\n<indent=2%>- basic UI for like. everything</indent>\r"
   ActivatesChat: 0
   ChatID: 
   ContainsBuild: 0
