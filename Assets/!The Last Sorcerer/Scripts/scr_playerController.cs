@@ -29,11 +29,24 @@ public class scr_playerController : MonoBehaviour
     public GameObject spell1;
     public GameObject currentAttack;
     public GameObject[] currentFamiliars;
+    public GameObject swipe, beam;
     public bool spellOnCooldown;
     public float cooldownTime;
 
     public GameObject familiar1, familiar2, familiar3;
     public bool openFamiliarSlot = true;
+
+    public enum SpellType
+    {
+        Push,
+        Pull,
+        Summon
+    }
+
+    public SpellType spell1Type;
+    public SpellType spell2Type;
+    // New method for choosing spell types
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,13 +96,13 @@ public class scr_playerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J) && !dashing) 
         {
             equippedSpell = spell1;
-            Attack(equippedSpell); 
+            Attack(equippedSpell, spell1Type); 
         }
 
         if (Input.GetKeyDown(KeyCode.I) && !dashing)
         {
             equippedSpell = spell2;
-            Attack(equippedSpell);
+            Attack(equippedSpell, spell2Type);
         }
 
         if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar); }
@@ -111,9 +124,8 @@ public class scr_playerController : MonoBehaviour
                     Destroy(currentAttack.gameObject);
                     currentAttack = null;
                 }
-                else if (Input.GetKeyUp(KeyCode.J)) 
-                { 
-                    currentAttack.GetComponent<scr_spells>().Push(currentAttack.GetComponent<scr_spells>().pulled);
+                else if (Input.GetKeyUp(KeyCode.J))
+                {
                     Destroy(currentAttack.gameObject);
                     currentAttack = null;
                 }
@@ -132,6 +144,49 @@ public class scr_playerController : MonoBehaviour
 
         //if (Input.GetKeyDown(KeyCode.I)) { SwitchSpell(equippedSpell); }
         if (health <= 0f) { Death(); }
+    }
+
+    public void ChangeFirstSpellEffect(int NewType)
+    {
+        spell1Type = (SpellType)NewType;
+    }
+
+    public void ChangeSecondSpellEffect(int NewType)
+    {
+        spell2Type = (SpellType)NewType;
+    }
+
+    public void ToggleObject(GameObject subject) 
+    {
+        if (subject != null)
+        {
+            if (subject.activeSelf)
+            {
+                subject.SetActive(false);
+            }
+            else if (!subject.activeSelf) 
+            { 
+                subject.SetActive(true);
+            }
+        }
+    }
+
+    public void SwitchSpell1ToSwipe()
+    {
+        spell1 = swipe;
+    }
+    public void SwitchSpell1ToBeam()
+    {
+        spell1 = beam;
+    }
+
+    public void SwitchSpell2ToSwipe()
+    {
+        spell2 = swipe;
+    }
+    public void SwitchSpell2ToBeam()
+    {
+        spell2 = beam;
     }
 
     public void SlotMyFamiliar(GameObject familiar)
@@ -201,20 +256,42 @@ public class scr_playerController : MonoBehaviour
         }
     }
 
-    void Attack(GameObject castSpell)
+    void Attack(GameObject castSpell, SpellType type)
     {
         if (currentAttack == null)
         {
             var copy = Instantiate(castSpell, activeFirePoint.transform.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
             currentAttack = copy;
+            if (type == SpellType.Push)
+            {
+                var copyScript = copy.GetComponent<scr_spells>();
+                copyScript.PushSpell = true;
+                copyScript.PullSpell = false;
+            }
+            else if (type == SpellType.Pull)
+            {
+                var copyScript = copy.GetComponent<scr_spells>();
+                copyScript.PushSpell = false;
+                copyScript.PullSpell = true;
+            }
             if (copy.GetComponent<scr_spells>().PushSpell)
             {
                 //Vector3 spellScale = copy.transform.localScale;
                 //copy.transform.localScale = new Vector3(spellScale.x + spellScale.x, spellScale.y + spellScale.y, spellScale.z); //enlarges the spell, code may be useful later
                 Destroy(copy, dTime);
             }
-            
+
+        }
+        // Push/Pull combo
+        else if (currentAttack != null 
+            && currentAttack.GetComponent<scr_spells>().PullSpell
+            && type == SpellType.Push
+            && currentAttack.GetComponent<scr_spells>().pulled != null) 
+        {
+            currentAttack.GetComponent<scr_spells>().Push(currentAttack.GetComponent<scr_spells>().pulled);
+            Destroy(currentAttack.gameObject);
+            currentAttack = null;
         }
     }
 
@@ -289,6 +366,7 @@ public class scr_playerController : MonoBehaviour
         if (currentSpell == spell1){ currentSpell = spell2; }
         else if (currentSpell == spell2){ currentSpell = spell1 ; }
     }
+
     void Death()
     {
         Debug.Log("YOU DIED");

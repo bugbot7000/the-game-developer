@@ -16,12 +16,15 @@ public class scr_spells : MonoBehaviour
 
     public GameObject player, wand;
 
-    //The idea is that we have a bool for each spell. We write them as functions and then use the bools to turn them on and off. Hitboxes are handled by the object we attach this script to
+    //The idea is that we have a bool for each spell.
+    //We write them as functions and then use the bools to turn them on and off.
+    //Hitboxes are handled by the object we attach this script to
     public bool PushSpell, PullSpell;
     // Start is called before the first frame update
     void Start()
     {
-        // Finds the first game object with the 'player' tag. Fairly certain this only works so long as there is only 1 object with said tag. But we're single player anyways
+        // Finds the first game object with the 'player' tag.
+        // Fairly certain this only works so long as there is only 1 object with said tag. But we're single player anyways
         player = GameObject.FindGameObjectWithTag("Player");
         wand = GameObject.FindGameObjectWithTag("Wand");
     }
@@ -57,7 +60,8 @@ public class scr_spells : MonoBehaviour
         var direction = pushedBody.transform.position - player.transform.position;
         Debug.Log(direction);
 
-        //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
+        //Normalize keeps the value of a vector, but reduces it to 1.
+        //We use this to determine the direction of the pushed object relative to the player
         //pushedBody.AddForce(direction.normalized * pushForce, ForceMode.Impulse);
         if (pushedObject.GetComponent<enemyAI_Script>() != null)
         {
@@ -112,7 +116,8 @@ public class scr_spells : MonoBehaviour
             // Get direction from your postion toward the object you wish to push
             var direction = pulledBody.transform.position - player.transform.position;
 
-            //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
+            //Normalize keeps the value of a vector, but reduces it to 1.
+            //We use this to determine the direction of the pushed object relative to the player
             pulledBody.AddForce(-direction.normalized * pushForce *0.5f, ForceMode.Impulse);
             //StartCoroutine(pulledObject.GetComponent<enemyAI_Script>().RestoreAgentAfterWait());
         }
