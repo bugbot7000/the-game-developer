@@ -22,13 +22,20 @@ public class SpellModifierController : MonoBehaviour
         Pull
     }
     //UI References
-    public Animator ActiveSpellAnim;
+    public Animator ActiveSpellAnim,SelectionAnim;
     public Spells activeSpell = Spells.Spell1;
-    public Shapes activeShape = Shapes.Beam;
-    public Effects activeEffect = Effects.Pull;
+    [Header("Spell 1")]
+    public Shapes spellOneActiveShape = Shapes.Beam;
+    public Effects spellOneActiveEffect = Effects.Pull;
+    public GameObject SpellOneShapeList;
+    public GameObject SpellOneEffectList;
+    [Header("Spell 2")]
+    public Shapes spellTwoActiveShape = Shapes.Beam;
+    public Effects spellTwoActiveEffect = Effects.Pull;
+    public GameObject SpellTwoShapeList;
+    public GameObject SpellTwoEffectList;
     
-    [FormerlySerializedAs("SpellList")] public GameObject ShapeList;
-    public GameObject EffectList;
+    
 
     public void ToggleSpell()
     {   
@@ -37,45 +44,79 @@ public class SpellModifierController : MonoBehaviour
         {
             activeSpell = Spells.Spell2;
             ActiveSpellAnim.Play("SwitchToSpell2");
+            SelectionAnim.Play("GoToSpell2");
         }
         else
         {
             activeSpell = Spells.Spell1;
             ActiveSpellAnim.Play("SwitchToSpell1");
+            SelectionAnim.Play("GoToSpell1");
         }
     }
 
-    public void ToggleShapeList()
+    public void ToggleShapeList(int spellIndex)
     {
-        ShapeList.gameObject.SetActive(!ShapeList.gameObject.activeSelf);
+        if (spellIndex == 0)
+            SpellOneShapeList.gameObject.SetActive(!SpellOneShapeList.gameObject.activeSelf);
+        else
+            SpellTwoShapeList.gameObject.SetActive(!SpellTwoShapeList.gameObject.activeSelf);
     }
-    public void ToggleEffectList()
+    public void ToggleEffectList(int spellIndex)
     {
-        EffectList.gameObject.SetActive(!EffectList.gameObject.activeSelf);
+        if(spellIndex == 0)
+        SpellOneEffectList.gameObject.SetActive(!SpellOneEffectList.gameObject.activeSelf);
+        else
+            SpellTwoEffectList.gameObject.SetActive(!SpellTwoEffectList.gameObject.activeSelf);
     }
 
-    public void OnShapeToggleValueChanged(int shape)
+    public void OnSpellOneShapeToggleValueChanged(int shape)
     {
         switch (shape)
         {
             case 0:
-                activeShape = Shapes.Beam;
+                spellOneActiveShape = Shapes.Beam;
 
                 break;
             case 1:
-                activeShape = Shapes.Swipe;
+                spellOneActiveShape = Shapes.Swipe;
                 break;
         }
     }
-    public void OnEffectToggleValueChanged(int effect)
+    public void OnSpellOneEffectToggleValueChanged(int effect)
     {
         switch (effect)
         {
             case 0:
-                activeEffect = Effects.Push;
+                spellOneActiveEffect = Effects.Push;
                 break;
             case 1:
-                activeEffect = Effects.Pull;
+                spellOneActiveEffect = Effects.Pull;
+                break;
+        }
+    }
+    
+    public void OnSpellTwoShapeToggleValueChanged(int shape)
+    {
+        switch (shape)
+        {
+            case 0:
+                spellTwoActiveShape = Shapes.Beam;
+
+                break;
+            case 1:
+                spellTwoActiveShape = Shapes.Swipe;
+                break;
+        }
+    }
+    public void OnSpellTwoEffectToggleValueChanged(int effect)
+    {
+        switch (effect)
+        {
+            case 0:
+                spellTwoActiveEffect = Effects.Push;
+                break;
+            case 1:
+                spellTwoActiveEffect = Effects.Pull;
                 break;
         }
     }
@@ -84,7 +125,7 @@ public class SpellModifierController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Spell: "+activeSpell + " Shape: " + activeShape + " Effect : " + activeEffect);
+            Debug.Log("Spell: "+activeSpell + " Shape: " + spellOneActiveShape + " Effect : " + spellOneActiveEffect);
         }
     }
 }
