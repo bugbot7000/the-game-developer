@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B1_09_19_2016_ErenDevlog
+  m_EditorClassIdentifier: 
+  Date: 09/19/2016
+  Title: Eren's Devlog #1
+  Subtitle: "We\u2019ve added Rose to our team! (\u2312\u25BD\u2312)\u2606"
+  Content: "\rRose willl be handling all of the art and other visual design stuff
+    like the UI. Like I said in my last log, her prior experience with gamedev will
+    also help us out tremendously - me and Kento are still pretty new to this, after
+    all. I\u2019m hoping to pick her brain on the programming and implementation
+    side of things; she might not be programming for this game, but she\u2019s done
+    some really neat stuff in the past. ( \u02D9\u25BF\u02D9 )\r\nOne big thing Rose
+    brought up at our last meeting was that Kento\u2019s (still currently theoretical)
+    system for magic would probably benefit from being modularized into two parts.
+    Is modularized a word? I don\u2019t know. (\u201E\u2022 \u058A \u2022\u201E)
+    Anyways. \r\nIt took some convincing to get Kento to give it a shot, but I think
+    he\u2019s coming around. He gets\u2026 very stuck in his own ways sometimes (classic
+    Kento!). After all, I wasn\u2019t able to get his previous ideas working in-engine
+    to a point where he was happy with it. \r\nRose\u2019s modular system idea will
+    definitely be a lot more straightforward to implement, and I actually already
+    have a good chunk of it done already. It\u2019s still all placeholder sprites
+    and there are a few bugs for me to iron out, but the spell combination system
+    works and I\u2019m able to trigger different effects on the enemies based on
+    the component parts of said spells. +\uFF61\uFF9F\u03C6(\u309D\u03C9\u30FB\uFF40\u25CB)+\uFF61\uFF9F\r\n\rAll
+    in all, we\u2019re on a pretty good track, I think. At least with more of a distributed
+    <i>workload</i> we won\u2019t all get overwhelmed with work now\u2026 \r"
+  ActivatesChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

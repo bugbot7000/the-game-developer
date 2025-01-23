@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B0_09_5_2016_ErenDevlog
+  m_EditorClassIdentifier: 
+  Date: 09/5/2016
+  Title: Eren's Devlog #0
+  Subtitle: "Can\u2019t wait to finally get to work on this in class! (\u2312\u25BD\u2312)\u2606"
+  Content: "I really didn\u2019t think we\u2019d get this far on The Last Sorcerer,
+    honestly. Kento and me started it for fun and now it\u2019s like a whole long-term
+    project! Funny how these things work, sometimes.\r\nOur advisor did suggest we
+    look into getting someone with more visual experience onto the project. To Kento\u2019s
+    chagrin. Idk tho, I think it\u2019s a great idea. There\u2019s no guarantee that
+    we\u2019ll have the funds or connections to commission an artist willing to endure
+    Kento\u2019s vision, and developing visuals alongside the rest of the project
+    is probably a much better use of our time anyway. \r\nMaybe Rose would be down
+    to join us? (\xB4\uFF61\u2022 \u03C9 \u2022\uFF61`)\r\nShe did show a lot of
+    interest during our initial presentation last week. She\u2019s also got quite
+    a few games under her belt already, and that experience will be invaluable since
+    we want to have this published eventually. I\u2019ll run it by her next week
+    and see what she thinks. (\xB4 \u2200 ` *)\r\nWe also have a new wiki to track
+    our progress in! (\u272F\u25E1\u272F)\r\nI\u2019m posting this devlog directly
+    there, and I\u2019ll upload our progress builds and chat logs as well. I had
+    to clear some stuff off my private server for the partition, but it was all random
+    old stuff anyway.. \r\nThat aside, now I have to clean up the file structure
+    of the project since I probably won\u2019t be the only person working on the
+    code\u2026 \xAF\\_| \u2716 \u301C \u2716 |_/\xAF\r"
+  ActivatesChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B2_10_17_2016_ErenDevlog
+  m_EditorClassIdentifier: 
+  Date: '10/17/16 '
+  Title: Eren's Devlog #2
+  Subtitle: "Mid-semester deadline next week! \u0669(\u25D5\u203F\u25D5\uFF61)\u06F6"
+  Content: "I\u2019ve been implementing everything that Kento and Rose have been
+    coming up with into our latest build of the maze level (which we are calling
+    <i>Asterion</i>), as well as programming all the intricacies of the player\u2019s
+    movement (dashing, dodging, etc) and it\u2019s shaping up to be a really cool
+    experience so far. (\u272F\u25E1\u272F) Kento\u2019s transformed Rose\u2019s
+    modular magic concept into a whole intricate system, and after grumbling about
+    it to me for a good lil\u2019 bit, I think he\u2019s come around and grown to
+    really like it.\r\nBuuut, that does bring me to programming the boss\u2019s attacks. 
+    I could program it just fine with the placeholder asset we\u2019ve been using,
+    but I won\u2019t know the timings of the animations Rose is using on the actual
+    sprite until she\u2019s finished with them, and I would likely have to redo all
+    my programming work. We talked about that during our last meeting, but that caused
+    Kento and Rose to get into a big <i>argument</i> (which I still feel really bad
+    about). (U \u2022\u0301 .\u032B \u2022\u0300 U)\r\nIt really won\u2019t take
+    me that long to implement all the assets once Rose is finished with them, but
+    I\u2019m a little worried about Kento\u2019s pushiness. I don\u2019t really mind
+    it since I\u2019m usually happy to help him out, but Rose isn\u2019t used to
+    the way Kento works, and neither of them seem willing to change how they do things\u2026
+    I hope it doesn\u2019t blow up into a full-fledged fight. \r\n\r\n<i>Addendum
+    10/19:</i> I happened to overhear one of Kento\u2019s conversations with our
+    advisor, who was worried that we\u2019re overscoping for the mid-semester deadline.
+    Our advisor thought we\u2019re doing too much, especially with the art, but Kento
+    reassured him that Rose was doing alright. It\u2019s a little unlike Kento to
+    be so in-touch with Rose\u2019s workflow, especially since they\u2019ve been
+    fighting,  but I guess they talked about it outside the meeting because Rose
+    has been slowly working away at the necessary assets in the meantime. \r\nI\u2019m
+    just glad everything turned out okay. ( \u02D9\u25BF\u02D9 )\r"
+  ActivatesChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

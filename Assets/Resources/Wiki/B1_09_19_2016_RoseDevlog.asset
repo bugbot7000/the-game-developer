@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B1_09_19_2016_RoseDevlog
+  m_EditorClassIdentifier: 
+  Date: 09/19/2016
+  Title: devlog 1
+  Subtitle: rose
+  Content: "- got onboarded by eren and kento, can\u2019t wait to start work on this
+    :) \r\n- kento gave me a pretty big lore dump about the narrative and his vision
+    for the game during our first meeting \r\n<indent=2%>- overall it\u2019s a pretty
+    solid vision, but it kind of gets bogged down by a lot of very specific and complicated
+    mechanics</indent>\r\n- suggested last week that we use a more modular system
+    for casting magic \r\n<indent=2%>- 2 parts</indent>\r\n<indent=2%>- shape: the
+    form the spell takes (fireball, gust of wind, etc)</indent>\r\n<indent=2%>- effect:
+    what the spell does (light things on fire, blow them away, freeze them, etc)</indent>\r\n<indent=2%>-
+    lots more potential for player creativity + interesting effects</indent>\r\n-
+    kento seemed to balk at the idea but eren convinced him to at least give it a
+    shot\r\n- in the meantime i\u2019ve been working on updating the game\u2019s
+    assets from placeholders to actual spritework\r\n<indent=2%>- have most of the
+    sorcerer sprites and animations done, working on a boss sprite/anims as well
+    as the UI for the modular magic system i suggested</indent>\r\n<indent=2%>-the
+    UI is still pretty rudimentary, but we can playtest and refine as we go along</indent>\r\n-
+    also started a github for version control, because apparently eren has just been
+    working from his laptop without any backups. yikes\r\n<indent=2%>- kento wanted
+    to use his fancy wiki, but eren said there probably wouldn\u2019t be enough space
+    on his server for all the files</indent>\r"
+  ActivatesChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []
