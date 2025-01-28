@@ -30,6 +30,7 @@ public class WikiPageSearchManager : MonoBehaviour
     [SerializeField] int maxSearchResults = 3;  
     
     WikiIndex index;
+    List<WikiPageSO> visitedPages = new List<WikiPageSO>();
 
     public WikiIndex Index => index;
     public int MaxSearchResults => maxSearchResults;
@@ -44,7 +45,17 @@ public class WikiPageSearchManager : MonoBehaviour
 
     public void SetPageToLoad(WikiPageSO page)
     {
+        if (!visitedPages.Contains(page))
+        {
+            visitedPages.Add(page);
+        }
+
         LastFoundPageSO = page;
+    }
+
+    public bool HasPageBeenVisited(WikiPageSO page)
+    {
+        return visitedPages.Contains(page);
     }
 
     [TitleGroup("Debug")]

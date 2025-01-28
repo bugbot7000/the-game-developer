@@ -19,7 +19,7 @@ public class WikiSearchResultButton : MonoBehaviour
         
         buttonText.SetText($"({page.Date}) {page.Title}");
 
-        //TODO: if page visited, show image
+        visitedImage.enabled = WikiPageSearchManager.Instance.HasPageBeenVisited(targetPage);
     }
 
     // Called on button OnClick event.
