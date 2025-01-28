@@ -10,6 +10,7 @@ public class WikiSearchResultButton : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI buttonText;
     [SerializeField] Image visitedImage;
+    [SerializeField] Image bullet;
 
     WikiPageSO targetPage;
 
@@ -20,6 +21,7 @@ public class WikiSearchResultButton : MonoBehaviour
         buttonText.SetText($"({page.Date}) {page.Title}");
 
         visitedImage.enabled = WikiPageSearchManager.Instance.HasPageBeenVisited(targetPage);
+        bullet.enabled = !visitedImage.enabled;
     }
 
     // Called on button OnClick event.
