@@ -2,6 +2,7 @@ using UnityEngine;
 
 using Michsky.DreamOS;
 
+//TODO: Rename this to search bar....
 public class WikiHomePage : MonoBehaviour
 {
     WebBrowserManager webBrowserManager;

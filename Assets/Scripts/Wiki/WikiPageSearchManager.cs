@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 
 using Sirenix.OdinInspector;
@@ -21,28 +23,56 @@ public class WikiPageSearchManager : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] WikiIndex index;
+    [TitleGroup("Wiki Index")]
+    [SerializeField] WikiIndexSO newIndex;
+
+    [TitleGroup("Parameters")]
+    [SerializeField] int maxSearchResults = 3;  
+    
+    WikiIndex index;
 
     public WikiIndex Index => index;
+    public int MaxSearchResults => maxSearchResults;
     public string LastSearchTerm  { get; private set; }
     public WikiPage LastFoundPage { get; private set; }
-
-    public bool CheckIfWikiPageExists()
-    {
-        foreach (WikiPage page in index.WikiPages)
-        {
-            if (page.Keywords.Contains(LastSearchTerm))
-            {
-                LastFoundPage = page;
-                return true;
-            }
-        }
-
-        return false;
-    }
+    public WikiPageSO LastFoundPageSO { get; private set; }
 
     public void SetSearchTerm(string term)
     {
         LastSearchTerm = term.ToLower().Trim();
     }
+
+    public void SetPageToLoad(WikiPageSO page)
+    {
+        LastFoundPageSO = page;
+    }
+
+    [TitleGroup("Debug")]
+    [Button]
+    void testSearch(string term)
+    {
+        List<WikiPageSO> results = searchForTerm(term);
+
+        Debug.Log($"[WikiIndexSO] Found {results.Count} for search term '{term}':"); 
+
+        foreach (WikiPageSO result in results)
+            Debug.Log($"    {result.Title}");
+    }
+
+    List<WikiPageSO> searchForTerm(string term)
+    {
+        List<WikiPageSO> results = new List<WikiPageSO>();
+        
+        foreach (WikiPageSO page in newIndex.WikiPages)
+            if (page.PageContainsTerm(term))
+                results.Add(page);
+
+        return results;
+    }
+
+    public List<WikiPageSO> GetSearchResultsForLastTerm()
+    {
+        //TODO: I might not have to sort by date if there are already correctly sorted?
+        return searchForTerm(LastSearchTerm);
+    }    
 }

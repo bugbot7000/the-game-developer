@@ -12,27 +12,16 @@ public class WikiContentPage : MonoBehaviour
     [SerializeField] Button buildButton;
 
     TextMeshProUGUI buttonText;
-    WikiPage currentPage;
+    WikiPageSO currentPage;
 
     void Start()
     {
         buttonText = buildButton.GetComponentInChildren<TextMeshProUGUI>();
 
-        if (WikiPageSearchManager.Instance.CheckIfWikiPageExists())
-        {
-            UpdatePageContent(WikiPageSearchManager.Instance.LastFoundPage);
-        }
-        else
-        {
-            date.SetText("");
-            title.SetText("Not Found");
-            subtitle.SetText("");
-            content.SetText($"No results were found for your search term '{WikiPageSearchManager.Instance.LastSearchTerm}'.\nPlease try again with another search term.");
-            buildButton.gameObject.SetActive(false);
-        }
+        UpdatePageContent(WikiPageSearchManager.Instance.LastFoundPageSO);
     }
     
-    public void UpdatePageContent(WikiPage wikiPage)
+    public void UpdatePageContent(WikiPageSO wikiPage)
     {
         currentPage = wikiPage;
 
@@ -77,7 +66,7 @@ public class WikiContentPage : MonoBehaviour
         {
             if (page.Title == name)
             {
-                UpdatePageContent(page);
+                // UpdatePageContent(page);
                 return;
             }
         }
