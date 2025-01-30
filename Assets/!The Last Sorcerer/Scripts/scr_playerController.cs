@@ -40,6 +40,7 @@ public class scr_playerController : MonoBehaviour
     {
         Push,
         Pull,
+        Charm, //Added new spell type
         Summon
     }
 

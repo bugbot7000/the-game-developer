@@ -51,7 +51,10 @@ public class enemyAI_Script : MonoBehaviour
         player = GameObject.Find("player").transform;
         spawnPoint = gameObject.transform.position;
         patrolTarget = spawnPoint;
-        hitbox.SetActive(false);
+        if (hitbox != null) // Changed to account for charming objects with no hitbox, may need to revisit later. Hitbox exists for a reason.
+        {
+            hitbox.SetActive(false);
+        }
         if (type != EnemyType.Zombie)
         {
             animator = transform.parent.GetComponent<Animator>();
@@ -156,6 +159,14 @@ public class enemyAI_Script : MonoBehaviour
 
         //    agent.enabled = true;
         //}
+    }
+
+    public void CharmMe()
+    {
+        whatIsPlayer = LayerMask.GetMask("Enemies");
+        bodyguard = true;
+        ward = GameObject.Find("player");
+        gameObject.layer = 6;
     }
 
     private bool PitCheck() // We may need to rethink this for enemies who can jump
