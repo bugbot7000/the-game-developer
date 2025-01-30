@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8299251484252125902}
   - component: {fileID: 8123148459873522077}
-  - component: {fileID: 1090869963849362677}
+  - component: {fileID: 5713972455001313024}
   - component: {fileID: 496417842900531386}
   m_Layer: 5
   m_Name: Archive Item
@@ -46,7 +46,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5108497947078549367}
   m_CullTransparentMesh: 1
---- !u!114 &1090869963849362677
+--- !u!114 &5713972455001313024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -88,5 +88,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a92b991020cd0241adc30d3490846a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: {fileID: 0}
-  labelText: {fileID: 0}

@@ -33,6 +33,7 @@ public class WikiPageSearchManager : MonoBehaviour
     List<WikiPageSO> visitedPages = new List<WikiPageSO>();
 
     public WikiIndex Index => index;
+    public WikiIndexSO NewIndex => newIndex;
     public int MaxSearchResults => maxSearchResults;
     public string LastSearchTerm  { get; private set; }
     public WikiPage LastFoundPage { get; private set; }
