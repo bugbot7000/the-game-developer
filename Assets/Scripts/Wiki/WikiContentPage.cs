@@ -28,7 +28,15 @@ public class WikiContentPage : MonoBehaviour
         date.SetText(wikiPage.Date);
         title.SetText(wikiPage.Title);
         subtitle.SetText(wikiPage.Subtitle);
-        content.SetText(wikiPage.Content);
+
+        if (wikiPage.IsArchivedChat)
+        {
+            content.SetText(wikiPage.ContentAsArchivedChat());
+        }
+        else
+        {
+            content.SetText(wikiPage.Content);
+        }
 
         buildButton.gameObject.SetActive(wikiPage.ContainsBuild);
         if (wikiPage.ContainsBuild)
@@ -45,7 +53,7 @@ public class WikiContentPage : MonoBehaviour
             }
         }
 
-        if (wikiPage.ActivatesChat && !MetaNarrativeManager.Instance.HasVisitedSequence(wikiPage.ChatID))
+        if (wikiPage.ActivatesInteractveChat && !MetaNarrativeManager.Instance.HasVisitedSequence(wikiPage.ChatID))
         {
             MetaNarrativeManager.Instance.TriggerStorytellerSequence(wikiPage.ChatID);
         }
