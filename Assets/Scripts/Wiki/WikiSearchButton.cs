@@ -2,8 +2,7 @@ using UnityEngine;
 
 using Michsky.DreamOS;
 
-//TODO: Rename this to search bar....
-public class WikiHomePage : MonoBehaviour
+public class WikiSearchButton : MonoBehaviour
 {
     WebBrowserManager webBrowserManager;
     
@@ -20,5 +19,10 @@ public class WikiHomePage : MonoBehaviour
         WikiPageSearchManager.Instance.SetSearchTerm(content);
 
         webBrowserManager.OpenPage($"wiki.eren.local/search");
+    }
+
+    public void GoToArchive()
+    {
+        webBrowserManager.OpenPage("wiki.eren.local/archive");
     }
 }
