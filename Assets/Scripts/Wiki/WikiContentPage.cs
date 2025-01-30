@@ -32,10 +32,14 @@ public class WikiContentPage : MonoBehaviour
         if (wikiPage.IsArchivedChat)
         {
             content.SetText(wikiPage.ContentAsArchivedChat());
+            content.lineSpacing = 0;
+            content.paragraphSpacing = 48;
         }
         else
         {
             content.SetText(wikiPage.Content);
+            content.lineSpacing = 12;
+            content.paragraphSpacing = 0;
         }
 
         buildButton.gameObject.SetActive(wikiPage.ContainsBuild);
