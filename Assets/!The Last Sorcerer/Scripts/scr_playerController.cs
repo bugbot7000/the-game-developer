@@ -28,6 +28,7 @@ public class scr_playerController : MonoBehaviour
     public GameObject spell2;
     public GameObject spell1;
     public GameObject currentAttack;
+    public GameObject charmedThrall;
     public GameObject[] currentFamiliars;
     public GameObject swipe, beam;
     public bool spellOnCooldown;

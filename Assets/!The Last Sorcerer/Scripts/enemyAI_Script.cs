@@ -169,6 +169,14 @@ public class enemyAI_Script : MonoBehaviour
         gameObject.layer = 6;
     }
 
+    public void DeCharm()
+    {
+        whatIsPlayer = LayerMask.GetMask("Player");
+        bodyguard = false;
+        ward = null;
+        gameObject.layer = 8;
+    }
+
     private bool PitCheck() // We may need to rethink this for enemies who can jump
     {
         LayerMask layerMask = LayerMask.GetMask("Default");

@@ -131,6 +131,22 @@ public class scr_spells : MonoBehaviour
 
     public void Charm(GameObject charmedObject)
     {
+        scr_playerController playerScript = player.GetComponent<scr_playerController>();
+        if ( playerScript.charmedThrall != null) 
+        {
+            if (playerScript.charmedThrall.CompareTag("Enemy")) { playerScript.charmedThrall.AddComponent<enemyAI_Script>().DeCharm(); }
+            else if (playerScript.charmedThrall.CompareTag("Target"))
+            {
+                Destroy(playerScript.charmedThrall.GetComponent<enemyAI_Script>());
+                Destroy(playerScript.charmedThrall.GetComponent<NavMeshAgent>());
+                Destroy(playerScript.charmedThrall.GetComponent<scr_health>());
+
+            }
+        }
+        playerScript.charmedThrall = charmedObject;
+        {
+            
+        }
         if (charmedObject.GetComponent<NavMeshAgent>() == null)
         {
             charmedObject.AddComponent<NavMeshAgent>();
