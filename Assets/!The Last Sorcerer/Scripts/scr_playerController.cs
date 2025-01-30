@@ -269,14 +269,23 @@ public class scr_playerController : MonoBehaviour
                 var copyScript = copy.GetComponent<scr_spells>();
                 copyScript.PushSpell = true;
                 copyScript.PullSpell = false;
+                copyScript.CharmSpell = false; //HERE...
             }
             else if (type == SpellType.Pull)
             {
                 var copyScript = copy.GetComponent<scr_spells>();
                 copyScript.PushSpell = false;
                 copyScript.PullSpell = true;
+                copyScript.CharmSpell = false; //HERE...
             }
-            if (copy.GetComponent<scr_spells>().PushSpell)
+            else if (type == SpellType.Charm) //AND HERE
+            {
+                var copyScript = copy.GetComponent<scr_spells>();
+                copyScript.PushSpell = false;
+                copyScript.PullSpell = false;
+                copyScript.CharmSpell = true;
+            }
+            if (copy.GetComponent<scr_spells>().PushSpell || copy.GetComponent<scr_spells>().CharmSpell)
             {
                 //Vector3 spellScale = copy.transform.localScale;
                 //copy.transform.localScale = new Vector3(spellScale.x + spellScale.x, spellScale.y + spellScale.y, spellScale.z); //enlarges the spell, code may be useful later

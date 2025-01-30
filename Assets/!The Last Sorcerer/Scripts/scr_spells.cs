@@ -19,7 +19,7 @@ public class scr_spells : MonoBehaviour
     //The idea is that we have a bool for each spell.
     //We write them as functions and then use the bools to turn them on and off.
     //Hitboxes are handled by the object we attach this script to
-    public bool PushSpell, PullSpell;
+    public bool PushSpell, PullSpell, CharmSpell;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,8 +47,13 @@ public class scr_spells : MonoBehaviour
         {
             if (PushSpell) { Push(other.gameObject); }
             else if (PullSpell) { Pull(other.gameObject); }
+            else if (CharmSpell)
+            {
+                Charm(other.gameObject);
+            }
             //if (other.gameObject.CompareTag("Enemy")) { other.gameObject.GetComponent<enemyAI_Script>().health -= pushDamage; }
         }
+
     }
 
     public void Push(GameObject pushedObject)
@@ -120,6 +125,43 @@ public class scr_spells : MonoBehaviour
             //We use this to determine the direction of the pushed object relative to the player
             pulledBody.AddForce(-direction.normalized * pushForce *0.5f, ForceMode.Impulse);
             //StartCoroutine(pulledObject.GetComponent<enemyAI_Script>().RestoreAgentAfterWait());
+        }
+
+    }
+
+    public void Charm(GameObject charmedObject)
+    {
+        if (charmedObject.GetComponent<NavMeshAgent>() == null)
+        {
+            charmedObject.AddComponent<NavMeshAgent>();
+            //Debug.Log("NavMesh added");
+        }
+        if (charmedObject.GetComponent<scr_health>() == null)
+        {
+            charmedObject.AddComponent<scr_health>();
+            charmedObject.GetComponent<scr_health>().health = 4;
+            //Debug.Log("NavMesh added");
+        }
+        if (charmedObject.GetComponent<Rigidbody>() != null) 
+        {
+            Rigidbody body = charmedObject.GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.FreezeRotationX;
+            body.constraints = RigidbodyConstraints.FreezeRotationZ;
+        }
+        if (charmedObject.GetComponent<enemyAI_Script>() != null)
+        {
+            charmedObject.GetComponent<enemyAI_Script>().CharmMe();
+        }
+        else
+        {
+            charmedObject.AddComponent<enemyAI_Script>();
+            enemyAI_Script charmedObjectAIScript = charmedObject.GetComponent<enemyAI_Script>();
+            charmedObjectAIScript.CharmMe();
+            charmedObjectAIScript.type = enemyAI_Script.EnemyType.Zombie;
+            charmedObjectAIScript.slamSpd = 15f;
+            charmedObjectAIScript.dmg = 2f;
+            charmedObjectAIScript.sightRange = 10f;
+            charmedObjectAIScript.attackRange = 5f;
         }
 
     }
