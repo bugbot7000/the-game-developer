@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using Michsky.DreamOS;
 using TMPro;
 
 /// <summary>
 /// Button that appears on the search result page. Shows the name of the page, and whether it has been visited or not.
 /// </summary>
-public class WikiSearchResultButton : MonoBehaviour
+public class WikiSearchResultButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] TextMeshProUGUI buttonText;
     [SerializeField] Image visitedImage;
@@ -30,5 +31,15 @@ public class WikiSearchResultButton : MonoBehaviour
         WikiPageSearchManager.Instance.SetPageToLoad(targetPage);
 
         FindAnyObjectByType<WebBrowserManager>().OpenPage($"wiki.eren.local/content");
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        buttonText.fontStyle = FontStyles.Underline;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        buttonText.fontStyle = FontStyles.Normal;
     }
 }
