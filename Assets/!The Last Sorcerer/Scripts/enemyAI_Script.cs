@@ -37,6 +37,8 @@ public class enemyAI_Script : MonoBehaviour
     private Vector3 velocity;
     private Vector3 previousPosition;
 
+    public float charmPoints;
+
     public enum EnemyType
     {
         Zombie,
@@ -159,6 +161,10 @@ public class enemyAI_Script : MonoBehaviour
 
         //    agent.enabled = true;
         //}
+        if(charmPoints > 0f)
+        {
+            charmPoints -= Time.deltaTime;
+        }
     }
 
     public void CharmMe()
