@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f56f7f64b3020f24ab45e6082e1f9dae
+guid: 03c8016322fa8224faeafc00bbc16b52
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -50,7 +50,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -97,177 +97,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Orc-Walk_0
+      name: Smoke VFX3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 291ddf8696fc4344b89286e405d12c6c
-      internalID: -1676058516
+      spriteID: 03fa0f6ca4927214e8f22a622c3c90f4
+      internalID: -1103513202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Walk_1
+      name: Smoke VFX3_1
       rect:
         serializedVersion: 2
-        x: 100
+        x: 32
         y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e6158d357904844186b94497e0e61b7
-      internalID: -838556105
+      spriteID: e367a64fec865fe40b196c4408ba3654
+      internalID: -1860078184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Walk_2
+      name: Smoke VFX3_2
       rect:
         serializedVersion: 2
-        x: 200
+        x: 64
         y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9b17888aa13fd34bac0115ac395bcf0
-      internalID: -893597801
+      spriteID: 582b0fd43c324d14896b0d0f31e9cce9
+      internalID: -1346881783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Walk_3
+      name: Smoke VFX3_3
       rect:
         serializedVersion: 2
-        x: 300
+        x: 96
         y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b91fb1948ddd17c4cb05e8b33159fdcc
-      internalID: 1514018344
+      spriteID: 749fe0631110eed41bd8f8a972a42ac9
+      internalID: 492828976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Walk_4
+      name: Smoke VFX3_4
       rect:
         serializedVersion: 2
-        x: 400
+        x: 128
         y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c9fddb71d86ae48a2218200ccd283e
-      internalID: 62176527
+      spriteID: 2195ff1d516b5f2448744514655c1c2b
+      internalID: 1832636509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Walk_5
+      name: Smoke VFX3_5
       rect:
         serializedVersion: 2
-        x: 500
+        x: 160
         y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21733dc4ed719da4a81175580d493a2d
-      internalID: -1459705978
+      spriteID: 49083166dbd95ae48bebd46de6958f30
+      internalID: -1742989865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Walk_6
+      name: Smoke VFX3_6
       rect:
         serializedVersion: 2
-        x: 600
+        x: 192
         y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37c31b7115317264c9b9c3fdfc129e30
-      internalID: 903142245
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orc-Walk_7
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a201bfffe31dd8b49bada9681833d746
-      internalID: 198210768
+      spriteID: eb1884ff30f16194fa75ee0ad318e2c1
+      internalID: -141330997
       vertices: []
       indices: 
       edges: []
@@ -276,7 +254,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f938d293aca6ebb43ba094ace6fabd8e
+    spriteID: d59b9b7009ddf7f48a26700afc3e2735
     internalID: 0
     vertices: []
     indices: 
@@ -286,14 +264,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Orc-Walk_0: -1676058516
-      Orc-Walk_1: -838556105
-      Orc-Walk_2: -893597801
-      Orc-Walk_3: 1514018344
-      Orc-Walk_4: 62176527
-      Orc-Walk_5: -1459705978
-      Orc-Walk_6: 903142245
-      Orc-Walk_7: 198210768
+      Smoke VFX3_0: -1103513202
+      Smoke VFX3_1: -1860078184
+      Smoke VFX3_2: -1346881783
+      Smoke VFX3_3: 492828976
+      Smoke VFX3_4: 1832636509
+      Smoke VFX3_5: -1742989865
+      Smoke VFX3_6: -141330997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

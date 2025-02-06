@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class scr_playerSprite : MonoBehaviour
 {
+    [SerializeField] GameObject dustParticle;
+    
     scr_playerController player;
     Animator animator;
     bool flipX;
@@ -38,5 +40,10 @@ public class scr_playerSprite : MonoBehaviour
         {
             animator.SetTrigger("attack");
         }
+    }
+
+    public void SpawnDustParticle()
+    {
+        Instantiate(dustParticle, transform.position + Vector3.down, Quaternion.identity);
     }
 }
