@@ -33,5 +33,10 @@ public class scr_playerSprite : MonoBehaviour
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             flipX = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.J) && !animator.GetCurrentAnimatorStateInfo(0).IsName("SoldierAttack"))
+        {
+            animator.SetTrigger("attack");
+        }
     }
 }
