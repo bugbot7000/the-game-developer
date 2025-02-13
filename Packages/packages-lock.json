@@ -8,14 +8,14 @@
       "hash": "093baf4e09c2cd21c284303a977ec112a43041a7"
     },
     "com.singularitygroup.hotreload": {
-      "version": "git+https://gitlab.hotreload.net/root/hot-reload-releases.git#1.12.14",
+      "version": "git+https://gitlab.hotreload.net/root/hot-reload-releases.git#1.12.12",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
       },
-      "hash": "9f9c6863d0fce36ec96da4c98d226d63780daab5"
+      "hash": "56b69dfe27d695bee44ce09f419003c3c4ca9731"
     },
     "com.unity.2d.animation": {
       "version": "10.1.4",
@@ -31,7 +31,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.aseprite": {
-      "version": "1.1.7",
+      "version": "1.1.8",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -166,7 +166,7 @@
         "com.unity.2d.spriteshape": "10.0.7",
         "com.unity.2d.tilemap": "1.0.0",
         "com.unity.2d.tilemap.extras": "4.1.0",
-        "com.unity.2d.aseprite": "1.1.7"
+        "com.unity.2d.aseprite": "1.1.8"
       }
     },
     "com.unity.ide.rider": {
@@ -188,7 +188,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.11.2",
+      "version": "1.12.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -335,13 +335,6 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "dev.yarnspinner.unity": {
-      "version": "https://github.com/YarnSpinnerTool/YarnSpinner-Unity.git#beta",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "0c2723ea71a8aa5e160b46ffe3bca7e599ec316e"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

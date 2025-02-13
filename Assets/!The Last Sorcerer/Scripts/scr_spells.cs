@@ -16,12 +16,15 @@ public class scr_spells : MonoBehaviour
 
     public GameObject player, wand;
 
-    //The idea is that we have a bool for each spell. We write them as functions and then use the bools to turn them on and off. Hitboxes are handled by the object we attach this script to
-    public bool PushSpell, PullSpell;
+    //The idea is that we have a bool for each spell.
+    //We write them as functions and then use the bools to turn them on and off.
+    //Hitboxes are handled by the object we attach this script to
+    public bool PushSpell, PullSpell, CharmSpell;
     // Start is called before the first frame update
     void Start()
     {
-        // Finds the first game object with the 'player' tag. Fairly certain this only works so long as there is only 1 object with said tag. But we're single player anyways
+        // Finds the first game object with the 'player' tag.
+        // Fairly certain this only works so long as there is only 1 object with said tag. But we're single player anyways
         player = GameObject.FindGameObjectWithTag("Player");
         wand = GameObject.FindGameObjectWithTag("Wand");
     }
@@ -44,8 +47,13 @@ public class scr_spells : MonoBehaviour
         {
             if (PushSpell) { Push(other.gameObject); }
             else if (PullSpell) { Pull(other.gameObject); }
+            else if (CharmSpell)
+            {
+                Charm(other.gameObject);
+            }
             //if (other.gameObject.CompareTag("Enemy")) { other.gameObject.GetComponent<enemyAI_Script>().health -= pushDamage; }
         }
+
     }
 
     public void Push(GameObject pushedObject)
@@ -57,7 +65,8 @@ public class scr_spells : MonoBehaviour
         var direction = pushedBody.transform.position - player.transform.position;
         Debug.Log(direction);
 
-        //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
+        //Normalize keeps the value of a vector, but reduces it to 1.
+        //We use this to determine the direction of the pushed object relative to the player
         //pushedBody.AddForce(direction.normalized * pushForce, ForceMode.Impulse);
         if (pushedObject.GetComponent<enemyAI_Script>() != null)
         {
@@ -112,9 +121,70 @@ public class scr_spells : MonoBehaviour
             // Get direction from your postion toward the object you wish to push
             var direction = pulledBody.transform.position - player.transform.position;
 
-            //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
+            //Normalize keeps the value of a vector, but reduces it to 1.
+            //We use this to determine the direction of the pushed object relative to the player
             pulledBody.AddForce(-direction.normalized * pushForce *0.5f, ForceMode.Impulse);
             //StartCoroutine(pulledObject.GetComponent<enemyAI_Script>().RestoreAgentAfterWait());
+        }
+
+    }
+
+    public void Charm(GameObject charmedObject)
+    {
+        scr_playerController playerScript = player.GetComponent<scr_playerController>();
+        if (charmedObject.GetComponent<enemyAI_Script>() != null && charmedObject.GetComponent<scr_health>() != null)
+        {
+            enemyAI_Script AI = charmedObject.GetComponent<enemyAI_Script>();
+            scr_health hpScript = charmedObject.GetComponent<scr_health>();
+            AI.charmPoints += 2f;
+            if (hpScript.health > AI.charmPoints) { return; }
+        }
+        if ( playerScript.charmedThrall != null) 
+        {
+            if (playerScript.charmedThrall.CompareTag("Enemy")) { playerScript.charmedThrall.GetComponent<enemyAI_Script>().DeCharm(); }
+            else if (playerScript.charmedThrall.CompareTag("Target"))
+            {
+                Destroy(playerScript.charmedThrall.GetComponent<enemyAI_Script>());
+                Destroy(playerScript.charmedThrall.GetComponent<NavMeshAgent>());
+                Destroy(playerScript.charmedThrall.GetComponent<scr_health>());
+
+            }
+        }
+        playerScript.charmedThrall = charmedObject;
+        {
+            
+        }
+        if (charmedObject.GetComponent<NavMeshAgent>() == null)
+        {
+            charmedObject.AddComponent<NavMeshAgent>();
+            //Debug.Log("NavMesh added");
+        }
+        if (charmedObject.GetComponent<scr_health>() == null)
+        {
+            charmedObject.AddComponent<scr_health>();
+            charmedObject.GetComponent<scr_health>().health = 4;
+            //Debug.Log("NavMesh added");
+        }
+        if (charmedObject.GetComponent<Rigidbody>() != null) 
+        {
+            Rigidbody body = charmedObject.GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.FreezeRotationX;
+            body.constraints = RigidbodyConstraints.FreezeRotationZ;
+        }
+        if (charmedObject.GetComponent<enemyAI_Script>() != null)
+        {
+            charmedObject.GetComponent<enemyAI_Script>().CharmMe();
+        }
+        else
+        {
+            charmedObject.AddComponent<enemyAI_Script>();
+            enemyAI_Script charmedObjectAIScript = charmedObject.GetComponent<enemyAI_Script>();
+            charmedObjectAIScript.CharmMe();
+            charmedObjectAIScript.type = enemyAI_Script.EnemyType.Zombie;
+            charmedObjectAIScript.slamSpd = 15f;
+            charmedObjectAIScript.dmg = 2f;
+            charmedObjectAIScript.sightRange = 10f;
+            charmedObjectAIScript.attackRange = 5f;
         }
 
     }

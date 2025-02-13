@@ -37,6 +37,8 @@ public class enemyAI_Script : MonoBehaviour
     private Vector3 velocity;
     private Vector3 previousPosition;
 
+    public float charmPoints;
+
     public enum EnemyType
     {
         Zombie,
@@ -51,7 +53,10 @@ public class enemyAI_Script : MonoBehaviour
         player = GameObject.Find("player").transform;
         spawnPoint = gameObject.transform.position;
         patrolTarget = spawnPoint;
-        hitbox.SetActive(false);
+        if (hitbox != null) // Changed to account for charming objects with no hitbox, may need to revisit later. Hitbox exists for a reason.
+        {
+            hitbox.SetActive(false);
+        }
         if (type != EnemyType.Zombie)
         {
             animator = transform.parent.GetComponent<Animator>();
@@ -156,6 +161,26 @@ public class enemyAI_Script : MonoBehaviour
 
         //    agent.enabled = true;
         //}
+        if(charmPoints > 0f)
+        {
+            charmPoints -= Time.deltaTime;
+        }
+    }
+
+    public void CharmMe()
+    {
+        whatIsPlayer = LayerMask.GetMask("Enemies");
+        bodyguard = true;
+        ward = GameObject.Find("player");
+        gameObject.layer = 6;
+    }
+
+    public void DeCharm()
+    {
+        whatIsPlayer = LayerMask.GetMask("Player");
+        bodyguard = false;
+        ward = null;
+        gameObject.layer = 8;
     }
 
     private bool PitCheck() // We may need to rethink this for enemies who can jump
