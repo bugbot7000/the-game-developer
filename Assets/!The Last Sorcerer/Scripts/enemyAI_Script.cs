@@ -285,7 +285,7 @@ public class enemyAI_Script : MonoBehaviour
             //body.constraints = RigidbodyConstraints.FreezePosition;
             body.constraints = RigidbodyConstraints.FreezeRotation;
 
-            hitbox.SetActive(true);
+            hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
             animator.SetBool("isAttacking", true);
             Debug.Log("Attacking");
             alreadyAttacked = true;
