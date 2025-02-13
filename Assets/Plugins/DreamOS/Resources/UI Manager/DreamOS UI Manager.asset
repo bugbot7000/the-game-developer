@@ -36,7 +36,7 @@ MonoBehaviour:
   highlightedColorSecondaryDark: {r: 1, g: 1, b: 1, a: 1}
   primaryColorDark: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   secondaryColorDark: {r: 0.22352941, g: 0.27058825, b: 0.31764707, a: 1}
-  windowBGColorDark: {r: 0.078431375, g: 0.11764706, b: 0.15686275, a: 0.9411765}
+  windowBGColorDark: {r: 0.078431375, g: 0.11764706, b: 0.15686275, a: 1}
   backgroundColorDark: {r: 0.11764706, g: 0.15686275, b: 0.19607843, a: 0.78431374}
   taskBarColorDark: {r: 0.09803922, g: 0.13725491, b: 0.1764706, a: 0.8039216}
   highlightedColorCustom: {r: 1, g: 0.09803922, b: 0.33333334, a: 1}
