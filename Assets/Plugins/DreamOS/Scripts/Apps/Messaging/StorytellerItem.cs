@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+using DG.Tweening;
+
 namespace Michsky.DreamOS
 {
     [RequireComponent(typeof(ButtonManager))]
@@ -12,8 +14,12 @@ namespace Michsky.DreamOS
         [HideInInspector] public DynamicMessageHandler handler;
         [HideInInspector] public string replyLocKey;
 
+        Sequence mySequence;
+
         void Start()
         {
+            mySequence = DOTween.Sequence().Append(transform.DOPunchScale(Vector3.one * 0.13f, 0.5f)).AppendInterval(4f).SetLoops(-1);
+            
             ButtonManager strButton = gameObject.GetComponent<ButtonManager>();
             strButton.onClick.AddListener(delegate
             {
@@ -41,6 +47,11 @@ namespace Michsky.DreamOS
                     }
                 }
             });
+        }
+
+        void OnDestroy()
+        {
+            mySequence.Kill();
         }
     }
 }
