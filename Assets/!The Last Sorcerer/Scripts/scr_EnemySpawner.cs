@@ -16,7 +16,10 @@ public class scr_EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (spawnedEnemy != null)
+        {
+            if (spawnedEnemy.GetComponent<scr_health>().health <= 0f) { spawnedEnemy = null; }
+        }
     }
 
     IEnumerator SpawnEnemies()
@@ -26,5 +29,7 @@ public class scr_EnemySpawner : MonoBehaviour
         if (spawnedEnemy == null) { GameObject enemy = Instantiate(zombiePrefab, transform.position, transform.rotation);
             spawnedEnemy = enemy;
         }
+
+        StartCoroutine(SpawnEnemies());
     }
 }
