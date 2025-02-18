@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class scr_EnemySpawner : MonoBehaviour
 {
-    public GameObject zombiePrefab;
+    public GameObject[] enemyPrefabs;
     public float spawnInterval = 5f;
     public GameObject spawnedEnemy;
 
@@ -26,7 +26,10 @@ public class scr_EnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(spawnInterval);
 
-        if (spawnedEnemy == null) { GameObject enemy = Instantiate(zombiePrefab, transform.position, transform.rotation);
+        if (spawnedEnemy == null) 
+        {
+            int randomEnemy = Random.Range(0, enemyPrefabs.Length);
+            GameObject enemy = Instantiate(enemyPrefabs[randomEnemy], transform.position, transform.rotation);
             spawnedEnemy = enemy;
         }
 

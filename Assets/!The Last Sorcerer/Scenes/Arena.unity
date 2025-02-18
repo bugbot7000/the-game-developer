@@ -354,6 +354,55 @@ Transform:
   - {fileID: 1840748316}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &534611677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534611679}
+  - component: {fileID: 534611678}
+  m_Layer: 0
+  m_Name: Enemy Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &534611678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534611677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd5cbb4fc877cb4dab3691b64a48d63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 1904227190052022871, guid: 3271f8bea7a81614abda5e58c30589f4, type: 3}
+  - {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+  spawnInterval: 5
+  spawnedEnemy: {fileID: 0}
+--- !u!4 &534611679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534611677}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.15, y: 1, z: -21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1133034669 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2628627654340619197, guid: 14052694d48b77240822ecd78ac8f38e, type: 3}
@@ -432,7 +481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd5cbb4fc877cb4dab3691b64a48d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+  enemyPrefabs:
+  - {fileID: 1904227190052022871, guid: 3271f8bea7a81614abda5e58c30589f4, type: 3}
+  - {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
   spawnInterval: 5
   spawnedEnemy: {fileID: 0}
 --- !u!4 &1546515331
@@ -674,5 +725,6 @@ SceneRoots:
   - {fileID: 277076838}
   - {fileID: 489774265}
   - {fileID: 1546515331}
+  - {fileID: 534611679}
   - {fileID: 1742142772}
   - {fileID: 27450468}

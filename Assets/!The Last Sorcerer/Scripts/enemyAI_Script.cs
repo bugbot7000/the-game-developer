@@ -24,7 +24,9 @@ public class enemyAI_Script : MonoBehaviour
     public bool alreadyAttacked;
 
     public float sightRange, attackRange;
+    public float archerRetreatRange;
     public bool playerInSightRange, playerInAttackRange;
+    public bool playerTooCloseToArcher;
 
     public bool bodyguard = false;
     public GameObject ward;
@@ -42,7 +44,8 @@ public class enemyAI_Script : MonoBehaviour
     public enum EnemyType
     {
         Zombie,
-        Ogre
+        Ogre,
+        Archer
     }
     public EnemyType type;
 
@@ -57,10 +60,10 @@ public class enemyAI_Script : MonoBehaviour
         {
             hitbox.SetActive(false);
         }
-        if (type != EnemyType.Zombie)
-        {
-            animator = transform.parent.GetComponent<Animator>();
-        }
+        //if (type != EnemyType.Zombie) // Commented out until animations are set up
+        //{
+        //    animator = transform.parent.GetComponent<Animator>();
+        //}
         //dmgTxt = GameObject.Find("Dev Log").GetComponent<Text>();
         previousPosition = spawnPoint;
         rotationSetting = new Vector3(0, 0, 0);
@@ -76,14 +79,12 @@ public class enemyAI_Script : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
+        playerTooCloseToArcher = Physics.CheckSphere(transform.position, archerRetreatRange, whatIsPlayer);
+
         if (playerInSightRange && !playerInAttackRange) { Pursue(); }
         if (playerInSightRange && playerInAttackRange) { Attack(); }
         if (!playerInSightRange && !playerInAttackRange) { Patrol(); }
-
-
-        //if (health <= 0) { gameObject.SetActive(false); }
-        //Debug.Log(agent.destination);
-        //if (agent.destination == gameObject.transform.position) { Debug.Log("Reached destination"); }
+        
 
         Vector3 currentPosition = transform.position;
         Vector3 direction = currentPosition - previousPosition;
@@ -102,69 +103,16 @@ public class enemyAI_Script : MonoBehaviour
             rotationSetting = new Vector3(0, 180f, 0);
             if (spriteRenderer != null) { spriteRenderer.flipX = true; }
         }
-        //else if (direction.z > 0 && direction.x == 0)
-        //{
-        //    //activeFirePoint = firePointU;
-        //    rotationSetting = new Vector3(0, 0, 0);
-        //}
-        //else if (direction.z < 0 && direction.x == 0)
-        //{
-        //    //activeFirePoint = firePointD;
-        //    rotationSetting = new Vector3(0, 180f, 0f);
-        //}
 
         previousPosition = currentPosition;
 
-        //Vector3 direction;
-
-
-        //if (playerInSightRange && playerInAttackRange) 
-        //{ 
-        //    direction = player.position - transform.position;
-        //    float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
-
-        //    if (angle > 45 && angle <= 135)
-        //    {
-        //        //Face up
-        //        //spriteRenderer.flipX = false; // Hypothetical sprite code
-        //        rotationSetting = new Vector3(0, 180, 0);
-        //    }
-        //    else if (angle > -135 && angle <= -45)
-        //    {
-        //        //Face down
-        //        rotationSetting = new Vector3(0, 0, 0);
-        //    }
-        //if (angle > -45 && angle <= 45)
-        //{
-        //    //Face right
-        //    rotationSetting = new Vector3(0, -90, 0);
-        //}
-        //else
-        //{
-        //    //Face left
-        //    //spriteRenderer.flipX = true; 
-        //    rotationSetting = new Vector3(0, 90, 0);
-        //}
-        //}
-
-        //if (PitCheck())
-        //{
-        //    Rigidbody body = GetComponent<Rigidbody>();
-
-        //    agent.enabled = false;
-        //    body.isKinematic = false;
-        //    body.useGravity = true;
-        //}
-        //else 
-        //{
-        //    Debug.Log("GROUND BENEATH US");
-
-        //    agent.enabled = true;
-        //}
         if(charmPoints > 0f)
         {
             charmPoints -= Time.deltaTime;
         }
+
+        if (playerInSightRange && type == EnemyType.Archer && playerTooCloseToArcher) { Retreat(); }
+
     }
 
     public void CharmMe()
@@ -251,6 +199,17 @@ public class enemyAI_Script : MonoBehaviour
         {
             agent.SetDestination(player.position);
         }
+
+    }
+
+    void Retreat()
+    {
+        Vector3 directionToPlayer = (transform.position - player.position).normalized;
+        Vector3 targetPosition = player.position + directionToPlayer * archerRetreatRange;
+
+        Debug.Log(targetPosition);
+
+        agent.SetDestination(targetPosition);
     }
     void Attack()
     {
@@ -336,22 +295,6 @@ public class enemyAI_Script : MonoBehaviour
     {
         dmgTxt.text = ">";
     }
-
-    // Old attack
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player") && damageOnCollide == true)
-    //    {
-    //        collision.gameObject.GetComponent<scr_playerController>().health -= dmg;
-    //        damageOnCollide = false;
-    //        if (dmgTxt != null) 
-    //        {
-    //            dmgTxt.text = "> RECIEVED " + dmg.ToString() + " DAMAGE";
-    //            Invoke(nameof(ResetDevLogText), 0.5f);
-    //        }
-
-    //    }
-    //}
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<scr_health>() != null && damageOnCollide == true)
@@ -375,20 +318,4 @@ public class enemyAI_Script : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 
-    //Old trigger collider system//
-    //private void OnTriggerStay(Collider other) //We use stay instead of enter because Stay updates the position consistently
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        agent.SetDestination(other.transform.position);
-    //    }
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        agent.SetDestination(spawnPoint);
-    //    }
-    //}
 }
