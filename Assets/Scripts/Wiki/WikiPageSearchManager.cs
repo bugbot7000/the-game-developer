@@ -2,6 +2,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
+using AptabaseSDK;
 using Sirenix.OdinInspector;
 
 [TypeInfoBox("Handles the search function and keeping track of which pages have been visited.")]
@@ -46,6 +47,8 @@ public class WikiPageSearchManager : MonoBehaviour
 
     public void SetPageToLoad(WikiPageSO page)
     {
+        Aptabase.TrackEvent("page_visit", new Dictionary<string, object> {{"first_time", !visitedPages.Contains(page)}, {"page", page.Title} });
+        
         if (!visitedPages.Contains(page))
         {
             visitedPages.Add(page);
@@ -84,7 +87,21 @@ public class WikiPageSearchManager : MonoBehaviour
 
     public List<WikiPageSO> GetSearchResultsForLastTerm()
     {
-        //TODO: I might not have to sort by date if there are already correctly sorted?
-        return searchForTerm(LastSearchTerm);
+        List<WikiPageSO> results = searchForTerm(LastSearchTerm);
+
+        string names = "";
+
+        for (int i = 0; i < MaxSearchResults && i < results.Count; i++)
+        {
+            string visitedCharacter = HasPageBeenVisited(results[i]) ? "✔" : "";
+
+            names += $"({visitedCharacter}) {results[i].Title} - ";
+        }
+
+        names = names.Substring(0, names.Length - 3);
+        
+        Aptabase.TrackEvent("search_results", new Dictionary<string, object> {{"term", LastSearchTerm}, {"count", results.Count}, {"shown_pages", names} });
+        
+        return results;
     }    
 }
