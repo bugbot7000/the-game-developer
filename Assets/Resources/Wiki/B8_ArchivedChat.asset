@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B8_ArchivedChat
+  m_EditorClassIdentifier: 
+  Date: 
+  Title: Archived Chat
+  Subtitle: 
+  Content: "Eventually the stress and overwork gets to Eren and he passes out during
+    an in person job interview. He\u2019s taken to the emergency room and cleared
+    to go home the same day but the doctor emphasizes that he should just rest and
+    do nothing for a little while + refers him to a therapist \r\n\r\nDevlog is replaced
+    with a long archived chat conversation of shit going down in real time. "
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

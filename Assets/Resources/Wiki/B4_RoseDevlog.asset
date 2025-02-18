@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B4_RoseDevlog
+  m_EditorClassIdentifier: 
+  Date: 
+  Title: Rose's Devlog #4
+  Subtitle: 
+  Content: "Rose chipping away at the massive pile of art and visual stuff that Kento
+    keeps adding to, resentful of the fact that he thinks that more is always better.
+    Starts seeing signs of burnout and takes time off accordingly\r"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []
