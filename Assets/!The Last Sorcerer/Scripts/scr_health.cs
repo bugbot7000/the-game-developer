@@ -23,9 +23,8 @@ public class scr_health : MonoBehaviour
                 if (dmgTxt != null)
                 {
                     dmgTxt.text = "> RESPAWNING";
+                    Invoke(nameof(ResetDevLogText), 0.5f);
                 }
-                
-                Invoke(nameof(ResetDevLogText), 0.5f);    
                 transform.position = GameObject.Find("RESPAWN").transform.position;
                 health = 20;
             }
