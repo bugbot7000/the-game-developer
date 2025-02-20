@@ -89,18 +89,25 @@ public class WikiPageSearchManager : MonoBehaviour
     {
         List<WikiPageSO> results = searchForTerm(LastSearchTerm);
 
-        string names = "";
-
-        for (int i = 0; i < MaxSearchResults && i < results.Count; i++)
+        if (results.Count > 0)
         {
-            string visitedCharacter = HasPageBeenVisited(results[i]) ? "✔" : "";
+            string names = "";
 
-            names += $"({visitedCharacter}) {results[i].Title} - ";
+            for (int i = 0; i < MaxSearchResults && i < results.Count; i++)
+            {
+                string visitedCharacter = HasPageBeenVisited(results[i]) ? "✔" : "";
+
+                names += $"({visitedCharacter}) {results[i].Title} - ";
+            }
+
+            names = names.Substring(0, names.Length - 3);
+            
+            Aptabase.TrackEvent("search_results", new Dictionary<string, object> {{"term", LastSearchTerm}, {"count", results.Count}, {"shown_pages", names} });
+        }       
+        else
+        {
+            Aptabase.TrackEvent("no_results_found", new Dictionary<string, object> {{"term", LastSearchTerm} });
         }
-
-        names = names.Substring(0, names.Length - 3);
-        
-        Aptabase.TrackEvent("search_results", new Dictionary<string, object> {{"term", LastSearchTerm}, {"count", results.Count}, {"shown_pages", names} });
         
         return results;
     }    
