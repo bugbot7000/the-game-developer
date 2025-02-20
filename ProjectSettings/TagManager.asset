@@ -9,6 +9,7 @@ TagManager:
   - Wand
   - Target
   - Dev Log
+  - Ground
   layers:
   - Default
   - TransparentFX
