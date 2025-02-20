@@ -253,7 +253,7 @@ public class enemyAI_Script : MonoBehaviour
             body.constraints = RigidbodyConstraints.FreezeRotation;
 
             hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
-            animator.SetBool("isAttacking", true);
+            //animator.SetBool("isAttacking", true);
             Debug.Log("Attacking");
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -287,7 +287,7 @@ public class enemyAI_Script : MonoBehaviour
         }
         if(type == EnemyType.Ogre)
         {
-            animator.SetBool("isAttacking", false);
+            //animator.SetBool("isAttacking", false);
             hitbox.SetActive(false);
             Rigidbody body = GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.None;
