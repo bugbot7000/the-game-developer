@@ -548,7 +548,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2962609249989556397}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.7492754
+  m_Size: 0.7507246
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1140,23 +1140,14 @@ MonoBehaviour:
   m_text: 'Welcome to <b>"The Last Sorcerer"</b> wiki!
 
 
-    We are <b>"The Developers"</b>
-    and we will be using this website to document the development process for our
-    GAMES602 project. Besides containing documentation and design documents, this
-    wiki will contain our progress, tasks list, builds of the game and devlogs!
+    We will be using this
+    website to document the development process for our project. Besides containing
+    documentation and design documents, this wiki will contain our discussions, devlogs
+    and builds of the game!
 
 
-    Use
-    the search button at the top of the website to find pages.
-
-
-    <i>TODO: Add
-    an index page.
-
-    BUG: It seems like the search only returns pages based on
-    keywords or key phrases? Don''t forget to set them everyone!
-
-    </i>'
+    Use the search button at the top of the website
+    to find pages.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
   m_sharedMaterial: {fileID: 5141295571327654121, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
