@@ -44382,12 +44382,15 @@ MonoBehaviour:
   alreadyAttacked: 0
   sightRange: 17
   attackRange: 5
+  archerRetreatRange: 0
   playerInSightRange: 0
   playerInAttackRange: 0
+  playerTooCloseToArcher: 0
   bodyguard: 0
   ward: {fileID: 0}
   hitbox: {fileID: 972511083962631165}
   animator: {fileID: 0}
+  charmPoints: 0
   type: 0
 --- !u!1 &217266679407410199
 GameObject:
@@ -45964,6 +45967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boss
       objectReference: {fileID: 0}
+    - target: {fileID: 2321778064132333075, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2581444556311455780, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -45982,7 +45989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179366805166417863, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4179366805166417863, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
       propertyPath: m_AgentTypeID
@@ -46008,6 +46015,10 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 1065150317}
+    - target: {fileID: 5124700709661584823, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5887721326402832944, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.4
@@ -46324,6 +46335,7 @@ MonoBehaviour:
   spell2: {fileID: 4121033437667739710, guid: 9742a29b796f01d488d367537a6d9195, type: 3}
   spell1: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
   currentAttack: {fileID: 0}
+  charmedThrall: {fileID: 0}
   currentFamiliars: []
   swipe: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
   beam: {fileID: 4121033437667739710, guid: 9742a29b796f01d488d367537a6d9195, type: 3}
@@ -46478,12 +46490,15 @@ MonoBehaviour:
   alreadyAttacked: 0
   sightRange: 17
   attackRange: 5
+  archerRetreatRange: 0
   playerInSightRange: 0
   playerInAttackRange: 0
+  playerTooCloseToArcher: 0
   bodyguard: 0
   ward: {fileID: 0}
   hitbox: {fileID: 6252626571428874893}
   animator: {fileID: 0}
+  charmPoints: 0
   type: 0
 --- !u!224 &6648232431044460986
 RectTransform:
@@ -46877,12 +46892,15 @@ MonoBehaviour:
   alreadyAttacked: 0
   sightRange: 17
   attackRange: 5
+  archerRetreatRange: 0
   playerInSightRange: 0
   playerInAttackRange: 0
+  playerTooCloseToArcher: 0
   bodyguard: 0
   ward: {fileID: 0}
   hitbox: {fileID: 8968987453050930709}
   animator: {fileID: 0}
+  charmPoints: 0
   type: 0
 --- !u!1 &8215922349936687615
 GameObject:

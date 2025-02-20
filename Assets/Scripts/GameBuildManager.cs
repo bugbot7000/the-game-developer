@@ -34,6 +34,12 @@ public class GameBuildManager : MonoBehaviour
 
     int enabledBuild = -1;
 
+    void Start()
+    {
+        Debug.LogWarning("[GameBuildManager] Manually adding Ralia's Lament to build - will break if more builds exist.");
+        AddGameBuildToHub(3);
+    }
+
     public void EnableGameBuild(int build)
     {
         addedBuilds[build].SetActive(true);

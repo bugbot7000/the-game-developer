@@ -207,7 +207,7 @@ public class enemyAI_Script : MonoBehaviour
         Vector3 directionToPlayer = (transform.position - player.position).normalized;
         Vector3 targetPosition = player.position + directionToPlayer * archerRetreatRange;
 
-        Debug.Log(targetPosition);
+//        Debug.Log(targetPosition);
 
         agent.SetDestination(targetPosition);
     }

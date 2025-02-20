@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B2_Lore_The_Fall
+  m_EditorClassIdentifier: 
+  Date: 
+  Title: The Fall
+  Subtitle: Lore
+  Content: "The remaining two sages, seeing the destruction a single selfish act
+    had wrought on the kingdom and its inhabitants, decided that the sorcerer had
+    grown too complacent in his magical ability to fear the rightfully forbidden.
+    They punished him by sealing him into a vast maze at the southern end of the
+    kingdom, as his powers had grown far too much for him to be killed without further
+    magical backlash. \n\r\nUnfortunately, even this was not enough to keep him fully
+    sealed. The two sages eventually realized that the sorcerer\u2019s magic was
+    leaking into the area surrounding the maze, and were forced to suspend the entire
+    old kingdom\u2019s lands into stasis to prevent further catastrophe. \n\r\nThis
+    resulted in a near total purge of all remaining magic from the kingdom, as all
+    of it had to be continually siphoned into maintaining the land\u2019s stasis
+    and the barrier surrounding it. \n\r\nThe sages saw this as an acceptable loss,
+    since they felt that humanity was abusing their gift. Unfortunately, since they
+    had grown to sustain themselves off of people\u2019s worship of them, their power
+    eventually began to fade. \r\nDue to the weakening of the seals on the maze,
+    the last sorcerer eventually awakens, kicking off the plot of the game.\r\n"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

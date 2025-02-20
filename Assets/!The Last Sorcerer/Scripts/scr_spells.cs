@@ -63,7 +63,7 @@ public class scr_spells : MonoBehaviour
 
         // Get direction from your postion toward the object you wish to push
         var direction = pushedBody.transform.position - player.transform.position;
-        Debug.Log(direction);
+//        Debug.Log(direction);
 
         //Normalize keeps the value of a vector, but reduces it to 1.
         //We use this to determine the direction of the pushed object relative to the player
