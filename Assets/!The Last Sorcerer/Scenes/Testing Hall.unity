@@ -1516,6 +1516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: archer
       objectReference: {fileID: 0}
+    - target: {fileID: 3756995341870389322, guid: 3271f8bea7a81614abda5e58c30589f4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8840039744857198414, guid: 3271f8bea7a81614abda5e58c30589f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.71

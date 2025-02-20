@@ -204,12 +204,11 @@ public class enemyAI_Script : MonoBehaviour
 
     void Retreat()
     {
-        Vector3 directionToPlayer = (transform.position - player.position).normalized;
-        Vector3 targetPosition = player.position + directionToPlayer * archerRetreatRange;
+        Vector3 awayFromPlayer = (transform.position - player.position);
 
-        Debug.Log(targetPosition);
+        Debug.Log(awayFromPlayer);
 
-        agent.SetDestination(targetPosition);
+        agent.SetDestination(awayFromPlayer);
     }
     void Attack()
     {
