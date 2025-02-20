@@ -41,6 +41,9 @@ public class enemyAI_Script : MonoBehaviour
 
     public float charmPoints;
 
+    public GameObject arrowPrefab;
+    public Transform arrowSpawnPoint;
+
     public enum EnemyType
     {
         Zombie,
@@ -92,16 +95,22 @@ public class enemyAI_Script : MonoBehaviour
 
         if (direction.x > 0)
         {
-            //activeFirePoint = firePointR;
-            rotationSetting = new Vector3(0, 0, 0); //In 3D we rotate on the Y, not Z
+            rotationSetting = new Vector3(0, 90, 0); //In 3D we rotate on the Y, not Z
             if (spriteRenderer != null) { spriteRenderer.flipX = false; }
 
         }
         else if (direction.x < 0)
         {
-            //activeFirePoint = firePointL;
-            rotationSetting = new Vector3(0, 180f, 0);
+            rotationSetting = new Vector3(0, -90f, 0);
             if (spriteRenderer != null) { spriteRenderer.flipX = true; }
+        }
+        else if (direction.z > 0 && direction.x == 0)
+        {
+            rotationSetting = new Vector3(0, 0, 0);
+        }
+        else if (direction.z < 0 && direction.x == 0)
+        {
+            rotationSetting = new Vector3(0, 180f, 0f);
         }
 
         previousPosition = currentPosition;
@@ -246,6 +255,20 @@ public class enemyAI_Script : MonoBehaviour
             hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
             animator.SetBool("isAttacking", true);
             Debug.Log("Attacking");
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+
+        if (!alreadyAttacked && type == EnemyType.Archer && !playerTooCloseToArcher) 
+        {
+            if (arrowPrefab != null && arrowSpawnPoint != null) 
+            {
+                Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
+                gameObject.transform.rotation = Quaternion.LookRotation(direction);
+
+                GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
+                arrow.transform.rotation = Quaternion.LookRotation(direction);
+            }
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }

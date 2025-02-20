@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &85338345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6230510667980962185, guid: 3271f8bea7a81614abda5e58c30589f4, type: 3}
+  m_PrefabInstance: {fileID: 8199717613374155221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &287491624 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 311319867438963435, guid: 15cb3a2d611db0046bb33895e1e9586f, type: 3}
@@ -1512,6 +1517,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 439973871}
     m_Modifications:
+    - target: {fileID: 1432019598360582091, guid: 3271f8bea7a81614abda5e58c30589f4, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 510945703340445169, guid: 836e0101cb28d9441891a49ac510a16b, type: 3}
+    - target: {fileID: 1432019598360582091, guid: 3271f8bea7a81614abda5e58c30589f4, type: 3}
+      propertyPath: arrowSpawnPoint
+      value: 
+      objectReference: {fileID: 85338345}
     - target: {fileID: 1904227190052022871, guid: 3271f8bea7a81614abda5e58c30589f4, type: 3}
       propertyPath: m_Name
       value: archer
