@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class scr_playerController : MonoBehaviour
@@ -28,10 +27,9 @@ public class scr_playerController : MonoBehaviour
     public GameObject currentAttack;
     public GameObject charmedThrall;
     public GameObject[] currentFamiliars;
-    public GameObject swipe, beam, shield;
+    public GameObject swipe, beam;
     public bool spellOnCooldown;
     public float cooldownTime;
-    private Transform spellSpawn;
 
     public GameObject familiar1, familiar2, familiar3;
     public bool openFamiliarSlot = true;
@@ -87,6 +85,8 @@ public class scr_playerController : MonoBehaviour
             rotationSetting = new Vector3(0, 180f, 0f);
         }
     
+
+
         //if (Input.GetKeyDown(KeyCode.K))
         //{
         //    if (equippedSpell == spellA) { equippedSpell = spellB; }
@@ -141,8 +141,7 @@ public class scr_playerController : MonoBehaviour
             body.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         }
 
-        if (currentAttack != null && equippedSpell == shield) { gameObject.GetComponent<scr_health>().invincible = true; }
-        else { gameObject.GetComponent<scr_health>().invincible = false; }
+        //if (Input.GetKeyDown(KeyCode.I)) { SwitchSpell(equippedSpell); }
         if (health <= 0f) { Death(); }
     }
 
@@ -180,11 +179,6 @@ public class scr_playerController : MonoBehaviour
         spell1 = beam;
     }
 
-    public void SwitchSpell1ToShield()
-    {
-        spell1 = shield;
-    }
-
     public void SwitchSpell2ToSwipe()
     {
         spell2 = swipe;
@@ -192,10 +186,6 @@ public class scr_playerController : MonoBehaviour
     public void SwitchSpell2ToBeam()
     {
         spell2 = beam;
-    }
-    public void SwitchSpell2ToShield()
-    {
-        spell2 = shield;
     }
 
     public void SlotMyFamiliar(GameObject familiar)
@@ -269,15 +259,7 @@ public class scr_playerController : MonoBehaviour
     {
         if (currentAttack == null)
         {
-            if (castSpell == shield)
-            {
-                spellSpawn = gameObject.transform;
-            }
-            else
-            {
-                spellSpawn = activeFirePoint.transform;
-            }
-            var copy = Instantiate(castSpell, spellSpawn.position, Quaternion.identity);
+            var copy = Instantiate(castSpell, activeFirePoint.transform.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
             currentAttack = copy;
             if (type == SpellType.Push)

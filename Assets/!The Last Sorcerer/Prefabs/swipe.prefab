@@ -82,7 +82,6 @@ MonoBehaviour:
   wand: {fileID: 0}
   PushSpell: 1
   PullSpell: 0
-  CharmSpell: 0
 --- !u!33 &3720610034347805193
 MeshFilter:
   m_ObjectHideFlags: 0
