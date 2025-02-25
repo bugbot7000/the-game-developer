@@ -27,12 +27,13 @@ public class scr_playerController : MonoBehaviour
     public GameObject currentAttack;
     public GameObject charmedThrall;
     public GameObject[] currentFamiliars;
-    public GameObject swipe, beam;
+    public GameObject swipe, beam, shield;
     public bool spellOnCooldown;
     public float cooldownTime;
 
     public GameObject familiar1, familiar2, familiar3;
     public bool openFamiliarSlot = true;
+    private Transform spellSpawn;
 
     public enum SpellType
     {
@@ -142,6 +143,8 @@ public class scr_playerController : MonoBehaviour
         }
 
         //if (Input.GetKeyDown(KeyCode.I)) { SwitchSpell(equippedSpell); }
+        if (currentAttack != null && equippedSpell == shield) { gameObject.GetComponent<scr_health>().invincible = true; }
+        else { gameObject.GetComponent<scr_health>().invincible = false; }
         if (health <= 0f) { Death(); }
     }
 
@@ -178,7 +181,10 @@ public class scr_playerController : MonoBehaviour
     {
         spell1 = beam;
     }
-
+    public void SwitchSpell1ToShield()
+    {
+        spell1 = shield;
+    }
     public void SwitchSpell2ToSwipe()
     {
         spell2 = swipe;
@@ -187,7 +193,10 @@ public class scr_playerController : MonoBehaviour
     {
         spell2 = beam;
     }
-
+    public void SwitchSpell2ToShield()
+    {
+        spell2 = shield;
+    }
     public void SlotMyFamiliar(GameObject familiar)
     {
 
@@ -259,7 +268,15 @@ public class scr_playerController : MonoBehaviour
     {
         if (currentAttack == null)
         {
-            var copy = Instantiate(castSpell, activeFirePoint.transform.position, Quaternion.identity);
+            if (castSpell == shield)
+            {
+                spellSpawn = gameObject.transform;
+            }
+            else
+            {
+                spellSpawn = activeFirePoint.transform;
+            }
+            var copy = Instantiate(castSpell, spellSpawn.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
             currentAttack = copy;
             if (type == SpellType.Push)
