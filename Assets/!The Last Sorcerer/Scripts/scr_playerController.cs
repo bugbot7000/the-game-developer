@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class scr_playerController : MonoBehaviour
@@ -409,6 +410,16 @@ public class scr_playerController : MonoBehaviour
     {
         Debug.Log("YOU DIED");
         // Code for death, reset scene?
+    }
+
+    public IEnumerator DeStunTarget(GameObject stunnedObject) 
+    {
+        yield return new WaitForSeconds(3);
+        if (stunnedObject.GetComponent<enemyAI_Script>() != null)
+        {
+            stunnedObject.GetComponent<enemyAI_Script>().enabled = true;
+            stunnedObject.GetComponent<enemyAI_Script>().agent.enabled = true;
+        }
     }
 
     private void FixedUpdate()
