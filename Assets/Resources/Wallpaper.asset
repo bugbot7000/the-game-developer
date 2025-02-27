@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallpapers:
   - wallpaperID: Wallpaper
-    wallpaperSprite: {fileID: 21300000, guid: 38c5b737bcdf9d44ab0f7368f29ed7f0, type: 3}
+    wallpaperSprite: {fileID: 21300000, guid: 5666c01381ddcdf4985c5d166dbd7d7f, type: 3}
