@@ -16,7 +16,7 @@ MonoBehaviour:
     pageTitle: Home Page
     pageURL: :home
     pageIcon: {fileID: 21300000, guid: 5a3c41d9b21911a4e88e133546304c88, type: 3}
-    pageContent: {fileID: 1986372816519924, guid: 9ffd3f611b7edee429beafcbe7dbdf02, type: 3}
+    pageContent: {fileID: 1958891694494868, guid: c5623678cf6fc0b4dbe792e0bfb971e5, type: 3}
     pageSize: 10
     titleKey: HomePageTitle
   notFoundPage:
