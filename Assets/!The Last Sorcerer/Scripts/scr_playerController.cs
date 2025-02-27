@@ -42,6 +42,7 @@ public class scr_playerController : MonoBehaviour
         Pull,
         Charm, //Added new spell type
         Slash,
+        Freeze,
         Summon
     }
 
@@ -289,6 +290,7 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PullSpell = false;
                 copyScript.CharmSpell = false; //HERE...
                 copyScript.SlashSpell = false;
+                copyScript.FreezeSpell = false;
             }
             else if (type == SpellType.Pull)
             {
@@ -297,6 +299,7 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PullSpell = true;
                 copyScript.CharmSpell = false; //HERE...
                 copyScript.SlashSpell = false;
+                copyScript.FreezeSpell = false;
             }
             else if (type == SpellType.Charm) //AND HERE
             {
@@ -305,6 +308,7 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PullSpell = false;
                 copyScript.CharmSpell = true;
                 copyScript.SlashSpell = false;
+                copyScript.FreezeSpell = false;
             }
             else if (type == SpellType.Slash) 
             {
@@ -313,8 +317,18 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PullSpell = false;
                 copyScript.CharmSpell = false;
                 copyScript.SlashSpell = true;
+                copyScript.FreezeSpell = false;
             }
-            if (copy.GetComponent<scr_spells>().PushSpell || copy.GetComponent<scr_spells>().CharmSpell || copy.GetComponent<scr_spells>().SlashSpell)
+            else if (type == SpellType.Freeze)
+            {
+                var copyScript = copy.GetComponent<scr_spells>();
+                copyScript.PushSpell = false;
+                copyScript.PullSpell = false;
+                copyScript.CharmSpell = false;
+                copyScript.SlashSpell = false;
+                copyScript.FreezeSpell = true;
+            }
+            if (!copy.GetComponent<scr_spells>().PullSpell)
             {
                 //Vector3 spellScale = copy.transform.localScale;
                 //copy.transform.localScale = new Vector3(spellScale.x + spellScale.x, spellScale.y + spellScale.y, spellScale.z); //enlarges the spell, code may be useful later
@@ -411,14 +425,50 @@ public class scr_playerController : MonoBehaviour
         Debug.Log("YOU DIED");
         // Code for death, reset scene?
     }
-
-    public IEnumerator DeStunTarget(GameObject stunnedObject) 
+    public void Freeze(GameObject frozenObject)
     {
+        if(frozenObject.GetComponent<scr_health>() != null)
+        {
+            frozenObject.GetComponent<scr_health>().invincible = true;
+        }
+        if (frozenObject.GetComponent<enemyAI_Script>() != null)
+        {
+            Rigidbody body = frozenObject.GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.FreezeAll;
+            frozenObject.GetComponent<enemyAI_Script>().agent.enabled = false;
+            frozenObject.GetComponent<enemyAI_Script>().enabled = false;
+            StartCoroutine(UnfreezeTarget(frozenObject));
+        }
+        else if (frozenObject.GetComponent<enemyAI_Script>() == null)
+        {
+            Rigidbody body = frozenObject.GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.FreezeAll;
+            StartCoroutine(UnfreezeTarget(frozenObject));
+        }
+    }
+    public IEnumerator UnfreezeTarget(GameObject stunnedObject) 
+    {
+        Debug.Log("Running DeStun...");
         yield return new WaitForSeconds(3);
+        Debug.Log("DeStun wait time complete");
+        if (stunnedObject.GetComponent<scr_health>() != null)
+        {
+            stunnedObject.GetComponent<scr_health>().invincible = false;
+        }
         if (stunnedObject.GetComponent<enemyAI_Script>() != null)
         {
             stunnedObject.GetComponent<enemyAI_Script>().enabled = true;
             stunnedObject.GetComponent<enemyAI_Script>().agent.enabled = true;
+
+            Rigidbody body = stunnedObject.GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.None;
+            body.constraints = RigidbodyConstraints.FreezeRotationX;
+            body.constraints = RigidbodyConstraints.FreezeRotationZ;
+        }
+        else if (stunnedObject.GetComponent<enemyAI_Script>() == null)
+        {
+            Rigidbody body = stunnedObject.GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.None;
         }
     }
 

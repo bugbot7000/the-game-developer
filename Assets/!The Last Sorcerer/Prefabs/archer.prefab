@@ -184,6 +184,7 @@ MonoBehaviour:
   dmg: 2
   damageOnCollide: 0
   large: 0
+  noMove: 0
   spawnPoint: {x: 0, y: 0, z: 0}
   patrolTarget: {x: 0, y: 0, z: 0}
   whatIsPlayer:
@@ -195,11 +196,11 @@ MonoBehaviour:
   timeBetweenAttacks: 2
   alreadyAttacked: 0
   sightRange: 17
-  attackRange: 5
-  archerRetreatRange: 4
+  attackRange: 8
+  retreatRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
-  playerTooCloseToArcher: 0
+  playerTooClose: 0
   bodyguard: 0
   ward: {fileID: 0}
   hitbox: {fileID: 4021277157348844231}
@@ -207,6 +208,10 @@ MonoBehaviour:
   charmPoints: 0
   arrowPrefab: {fileID: 510945703340445169, guid: 836e0101cb28d9441891a49ac510a16b, type: 3}
   arrowSpawnPoint: {fileID: 6230510667980962185}
+  DMLeapLocations: []
+  DMJumpSpeed: 0
+  DMIsJumping: 0
+  projectileSpawnPoints: []
   type: 2
 --- !u!114 &7430737324588823963
 MonoBehaviour:
@@ -222,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   dmgTxt: {fileID: 0}
+  invincible: 0
 --- !u!1 &4021277157348844231
 GameObject:
   m_ObjectHideFlags: 0

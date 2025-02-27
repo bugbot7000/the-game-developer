@@ -1974,7 +1974,7 @@ PrefabInstance:
       objectReference: {fileID: 8687078719347366435, guid: e910a0cef55459f41bf7a49c6ad55b31, type: 3}
     - target: {fileID: 954637380081146297, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: spell1Type
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 954637380081146297, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: cooldownTime
@@ -2036,6 +2036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: First Build
       objectReference: {fileID: 0}
+    - target: {fileID: 7448142983619507879, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: b7f251a4d5625c6419d7b35d8d2d88cd, type: 2}
     - target: {fileID: 8877158774855961854, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: health
       value: 80

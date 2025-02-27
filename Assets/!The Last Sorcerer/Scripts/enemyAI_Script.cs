@@ -232,11 +232,15 @@ public class enemyAI_Script : MonoBehaviour
 
     void Retreat()
     {
-        Vector3 awayFromPlayer = (transform.position - player.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        Vector3 directionToPlayer = (transform.position - player.position).normalized;
+        Vector3 targetPosition = player.position + directionToPlayer * attackRange;
 
-        Debug.Log(awayFromPlayer);
-
-        agent.SetDestination(awayFromPlayer);
+        // Check if the enemy is too close or too far from the player
+        if (distanceToPlayer < attackRange - 0.5f || distanceToPlayer > attackRange + 0.5f)
+        {
+            agent.SetDestination(targetPosition);
+        }
     }
     void Attack()
     {
