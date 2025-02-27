@@ -10,7 +10,7 @@ public class scr_spells : MonoBehaviour
 
 
     //This script is intended to work on an object that comes into existence briefly and then goes away
-    public float pushForce, pushRadius, pushDamage;
+    public float pushForce, pushRadius, pushDamage, slashDamage;
     public GameObject pulled;
     private Vector3 pullVelocity = Vector3.zero;
 
@@ -19,7 +19,7 @@ public class scr_spells : MonoBehaviour
     //The idea is that we have a bool for each spell.
     //We write them as functions and then use the bools to turn them on and off.
     //Hitboxes are handled by the object we attach this script to
-    public bool PushSpell, PullSpell, CharmSpell;
+    public bool PushSpell, PullSpell, CharmSpell, SlashSpell;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +51,7 @@ public class scr_spells : MonoBehaviour
             {
                 Charm(other.gameObject);
             }
+            else if (SlashSpell) {  Slash(other.gameObject); }
             //if (other.gameObject.CompareTag("Enemy")) { other.gameObject.GetComponent<enemyAI_Script>().health -= pushDamage; }
         }
 
@@ -187,6 +188,14 @@ public class scr_spells : MonoBehaviour
             charmedObjectAIScript.attackRange = 5f;
         }
 
+    }
+
+    public void Slash (GameObject slashedObject)
+    {
+        if (slashedObject.GetComponent<scr_health>() != null)
+        {
+            slashedObject.GetComponent<scr_health>().TakeDamage(slashDamage);
+        }
     }
 
     //IEnumerator RestoreAgent(GameObject agent)// Doesn't work because the spell is destroyed before the routine finishes

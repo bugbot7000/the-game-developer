@@ -27,18 +27,20 @@ public class scr_playerController : MonoBehaviour
     public GameObject currentAttack;
     public GameObject charmedThrall;
     public GameObject[] currentFamiliars;
-    public GameObject swipe, beam;
+    public GameObject swipe, beam, shield;
     public bool spellOnCooldown;
     public float cooldownTime;
 
     public GameObject familiar1, familiar2, familiar3;
     public bool openFamiliarSlot = true;
+    private Transform spellSpawn;
 
     public enum SpellType
     {
         Push,
         Pull,
         Charm, //Added new spell type
+        Slash,
         Summon
     }
 
@@ -142,6 +144,8 @@ public class scr_playerController : MonoBehaviour
         }
 
         //if (Input.GetKeyDown(KeyCode.I)) { SwitchSpell(equippedSpell); }
+        if (currentAttack != null && equippedSpell == shield) { gameObject.GetComponent<scr_health>().invincible = true; }
+        else { gameObject.GetComponent<scr_health>().invincible = false; }
         if (health <= 0f) { Death(); }
     }
 
@@ -178,7 +182,10 @@ public class scr_playerController : MonoBehaviour
     {
         spell1 = beam;
     }
-
+    public void SwitchSpell1ToShield()
+    {
+        spell1 = shield;
+    }
     public void SwitchSpell2ToSwipe()
     {
         spell2 = swipe;
@@ -187,7 +194,10 @@ public class scr_playerController : MonoBehaviour
     {
         spell2 = beam;
     }
-
+    public void SwitchSpell2ToShield()
+    {
+        spell2 = shield;
+    }
     public void SlotMyFamiliar(GameObject familiar)
     {
 
@@ -259,7 +269,15 @@ public class scr_playerController : MonoBehaviour
     {
         if (currentAttack == null)
         {
-            var copy = Instantiate(castSpell, activeFirePoint.transform.position, Quaternion.identity);
+            if (castSpell == shield)
+            {
+                spellSpawn = gameObject.transform;
+            }
+            else
+            {
+                spellSpawn = activeFirePoint.transform;
+            }
+            var copy = Instantiate(castSpell, spellSpawn.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
             currentAttack = copy;
             if (type == SpellType.Push)
@@ -268,6 +286,7 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PushSpell = true;
                 copyScript.PullSpell = false;
                 copyScript.CharmSpell = false; //HERE...
+                copyScript.SlashSpell = false;
             }
             else if (type == SpellType.Pull)
             {
@@ -275,6 +294,7 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PushSpell = false;
                 copyScript.PullSpell = true;
                 copyScript.CharmSpell = false; //HERE...
+                copyScript.SlashSpell = false;
             }
             else if (type == SpellType.Charm) //AND HERE
             {
@@ -282,8 +302,17 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PushSpell = false;
                 copyScript.PullSpell = false;
                 copyScript.CharmSpell = true;
+                copyScript.SlashSpell = false;
             }
-            if (copy.GetComponent<scr_spells>().PushSpell || copy.GetComponent<scr_spells>().CharmSpell)
+            else if (type == SpellType.Slash) 
+            {
+                var copyScript = copy.GetComponent<scr_spells>();
+                copyScript.PushSpell = false;
+                copyScript.PullSpell = false;
+                copyScript.CharmSpell = false;
+                copyScript.SlashSpell = true;
+            }
+            if (copy.GetComponent<scr_spells>().PushSpell || copy.GetComponent<scr_spells>().CharmSpell || copy.GetComponent<scr_spells>().SlashSpell)
             {
                 //Vector3 spellScale = copy.transform.localScale;
                 //copy.transform.localScale = new Vector3(spellScale.x + spellScale.x, spellScale.y + spellScale.y, spellScale.z); //enlarges the spell, code may be useful later
