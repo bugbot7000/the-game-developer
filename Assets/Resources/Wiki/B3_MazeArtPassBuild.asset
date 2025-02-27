@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
   m_Name: B3_MazeArtPassBuild
   m_EditorClassIdentifier: 
+  PageType: 2
   Date: 
   Title: Maze Art Pass
   Subtitle: 
