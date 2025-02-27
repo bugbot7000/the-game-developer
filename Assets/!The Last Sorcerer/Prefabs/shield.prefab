@@ -77,12 +77,14 @@ MonoBehaviour:
   pushForce: 15
   pushRadius: 5
   pushDamage: 1
+  slashDamage: 3
   pulled: {fileID: 0}
   player: {fileID: 0}
   wand: {fileID: 0}
   PushSpell: 1
   PullSpell: 0
   CharmSpell: 0
+  SlashSpell: 0
 --- !u!33 &6033264105961967995
 MeshFilter:
   m_ObjectHideFlags: 0

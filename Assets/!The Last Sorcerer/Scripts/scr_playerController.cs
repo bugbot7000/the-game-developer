@@ -40,6 +40,7 @@ public class scr_playerController : MonoBehaviour
         Push,
         Pull,
         Charm, //Added new spell type
+        Slash,
         Summon
     }
 
@@ -285,6 +286,7 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PushSpell = true;
                 copyScript.PullSpell = false;
                 copyScript.CharmSpell = false; //HERE...
+                copyScript.SlashSpell = false;
             }
             else if (type == SpellType.Pull)
             {
@@ -292,6 +294,7 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PushSpell = false;
                 copyScript.PullSpell = true;
                 copyScript.CharmSpell = false; //HERE...
+                copyScript.SlashSpell = false;
             }
             else if (type == SpellType.Charm) //AND HERE
             {
@@ -299,8 +302,17 @@ public class scr_playerController : MonoBehaviour
                 copyScript.PushSpell = false;
                 copyScript.PullSpell = false;
                 copyScript.CharmSpell = true;
+                copyScript.SlashSpell = false;
             }
-            if (copy.GetComponent<scr_spells>().PushSpell || copy.GetComponent<scr_spells>().CharmSpell)
+            else if (type == SpellType.Slash) 
+            {
+                var copyScript = copy.GetComponent<scr_spells>();
+                copyScript.PushSpell = false;
+                copyScript.PullSpell = false;
+                copyScript.CharmSpell = false;
+                copyScript.SlashSpell = true;
+            }
+            if (copy.GetComponent<scr_spells>().PushSpell || copy.GetComponent<scr_spells>().CharmSpell || copy.GetComponent<scr_spells>().SlashSpell)
             {
                 //Vector3 spellScale = copy.transform.localScale;
                 //copy.transform.localScale = new Vector3(spellScale.x + spellScale.x, spellScale.y + spellScale.y, spellScale.z); //enlarges the spell, code may be useful later

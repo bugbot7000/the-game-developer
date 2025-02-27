@@ -1876,7 +1876,7 @@ PrefabInstance:
       objectReference: {fileID: 8687078719347366435, guid: e910a0cef55459f41bf7a49c6ad55b31, type: 3}
     - target: {fileID: 954637380081146297, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: spell1Type
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 954637380081146297, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: cooldownTime
