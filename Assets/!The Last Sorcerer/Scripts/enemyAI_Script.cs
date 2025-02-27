@@ -24,9 +24,9 @@ public class enemyAI_Script : MonoBehaviour
     public bool alreadyAttacked;
 
     public float sightRange, attackRange;
-    public float archerRetreatRange;
+    public float retreatRange;
     public bool playerInSightRange, playerInAttackRange;
-    public bool playerTooCloseToArcher;
+    public bool playerTooClose;
 
     public bool bodyguard = false;
     public GameObject ward;
@@ -44,11 +44,19 @@ public class enemyAI_Script : MonoBehaviour
     public GameObject arrowPrefab;
     public Transform arrowSpawnPoint;
 
+    public Transform[] DMLeapLocations;
+    public float DMJumpSpeed;
+    private int DMCurrentJumpIndex = 0;
+    public bool DMIsJumping = false;
+    public Transform[] projectileSpawnPoints;
+    private int projectileSpawnIndex = 0;
+
     public enum EnemyType
     {
         Zombie,
         Ogre,
-        Archer
+        Archer,
+        DM
     }
     public EnemyType type;
 
@@ -82,7 +90,7 @@ public class enemyAI_Script : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        playerTooCloseToArcher = Physics.CheckSphere(transform.position, archerRetreatRange, whatIsPlayer);
+        playerTooClose = Physics.CheckSphere(transform.position, retreatRange, whatIsPlayer);
 
         if (playerInSightRange && !playerInAttackRange) { Pursue(); }
         if (playerInSightRange && playerInAttackRange) { Attack(); }
@@ -120,7 +128,18 @@ public class enemyAI_Script : MonoBehaviour
             charmPoints -= Time.deltaTime;
         }
 
-        if (playerInSightRange && type == EnemyType.Archer && playerTooCloseToArcher) { Retreat(); }
+        if (playerInSightRange && type == EnemyType.Archer && playerTooClose) { Retreat(); }
+        if (type == EnemyType.DM)
+        {
+            if (playerTooClose && !DMIsJumping) 
+            {
+                // Start the jump coroutine
+                StartCoroutine(JumpToLocation(DMLeapLocations[DMCurrentJumpIndex]));
+
+                // Update the current jump index to the next location
+                DMCurrentJumpIndex = (DMCurrentJumpIndex + 1) % DMLeapLocations.Length;
+            }
+        }
 
     }
 
@@ -259,7 +278,7 @@ public class enemyAI_Script : MonoBehaviour
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
 
-        if (!alreadyAttacked && type == EnemyType.Archer && !playerTooCloseToArcher) 
+        if (!alreadyAttacked && type == EnemyType.Archer && !playerTooClose) 
         {
             if (arrowPrefab != null && arrowSpawnPoint != null) 
             {
@@ -271,6 +290,23 @@ public class enemyAI_Script : MonoBehaviour
             }
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+        if (type == EnemyType.DM)
+        {
+            if (!alreadyAttacked)
+            {
+                if (arrowPrefab != null && projectileSpawnPoints != null)
+                {
+                    Vector3 direction = (player.position - projectileSpawnPoints[projectileSpawnIndex].position).normalized;
+                    gameObject.transform.rotation = Quaternion.LookRotation(direction);
+
+                    GameObject projectile = Instantiate(arrowPrefab, projectileSpawnPoints[projectileSpawnIndex].position, Quaternion.identity);
+                    projectile.transform.rotation = Quaternion.LookRotation(direction);
+                    projectileSpawnIndex = (projectileSpawnIndex + 1) % projectileSpawnPoints.Length;
+                }
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            }
         }
         //damageOnCollide = true;
         //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, slamSpd);
@@ -312,7 +348,22 @@ public class enemyAI_Script : MonoBehaviour
             Invoke(nameof(ResetDevLogText), 0.5f);
         }
     }
-
+    private IEnumerator JumpToLocation(Transform jumpLocation)
+    {
+        DMIsJumping = true;
+        //agent.enabled = false;
+        float elapsedTime = 0f;
+        Vector3 startingPosition = transform.position;
+        while (elapsedTime < DMJumpSpeed)
+        {
+            transform.position = Vector3.Lerp(startingPosition, jumpLocation.position, (elapsedTime / DMJumpSpeed));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = jumpLocation.position;
+        //agent.enabled = true;
+        DMIsJumping = false;
+    }
     public void ResetDevLogText()
     {
         dmgTxt.text = ">";
@@ -328,7 +379,6 @@ public class enemyAI_Script : MonoBehaviour
                 dmgTxt.text = "> RECIEVED " + dmg.ToString() + " DAMAGE";
                 Invoke(nameof(ResetDevLogText), 0.5f);
             }
-
         }
     }
 

@@ -110,8 +110,9 @@ public class scr_playerController : MonoBehaviour
 
         if (currentAttack != null)
         {
-            if (currentAttack.GetComponent<scr_spells>().PushSpell) { mSpd = 0f; }
-            else if (currentAttack.GetComponent<scr_spells>().PullSpell) { mSpd = defaultSpd; }
+            mSpd = 0f;
+            //if (currentAttack.GetComponent<scr_spells>().PushSpell) { mSpd = 0f; }
+            if (currentAttack.GetComponent<scr_spells>().PullSpell) { mSpd = defaultSpd; }
         }
         else if (currentAttack == null) { mSpd = defaultSpd; }
 
