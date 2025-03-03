@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: beam
       objectReference: {fileID: 0}
+    - target: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
     - target: {fileID: 3720610034347805193, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
       propertyPath: m_Mesh
       value: 

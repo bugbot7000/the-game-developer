@@ -56,7 +56,8 @@ public class enemyAI_Script : MonoBehaviour
         Zombie,
         Ogre,
         Archer,
-        DM
+        DM,
+        Sprite
     }
     public EnemyType type;
 
@@ -80,8 +81,6 @@ public class enemyAI_Script : MonoBehaviour
         rotationSetting = new Vector3(0, 0, 0);
 
         if (sprite != null) { spriteRenderer = sprite.GetComponent<SpriteRenderer>(); }
-
-
     }
 
     // Update is called once per frame
@@ -92,9 +91,10 @@ public class enemyAI_Script : MonoBehaviour
 
         playerTooClose = Physics.CheckSphere(transform.position, retreatRange, whatIsPlayer);
 
-        if (playerInSightRange && !playerInAttackRange) { Pursue(); }
-        if (playerInSightRange && playerInAttackRange) { Attack(); }
-        if (!playerInSightRange && !playerInAttackRange) { Patrol(); }
+        if (playerInSightRange && !playerInAttackRange && type != EnemyType.Sprite) { Pursue(); }
+        if (playerInSightRange && playerInAttackRange && type != EnemyType.Sprite) { Attack(); }
+        if (!playerInSightRange && !playerInAttackRange && type != EnemyType.Sprite) { Patrol(); }
+        if (type == EnemyType.Sprite && !playerInSightRange) { Patrol(); }
         
 
         Vector3 currentPosition = transform.position;
@@ -129,6 +129,7 @@ public class enemyAI_Script : MonoBehaviour
         }
 
         if (playerInSightRange && type == EnemyType.Archer && playerTooClose) { Retreat(); }
+        if (playerInSightRange && type == EnemyType.Sprite) { Retreat(); }
         if (type == EnemyType.DM)
         {
             if (playerTooClose && !DMIsJumping) 
@@ -157,6 +158,26 @@ public class enemyAI_Script : MonoBehaviour
         bodyguard = false;
         ward = null;
         gameObject.layer = 8;
+    }
+
+    // Sprite orbit logic
+    public void SpriteOrbitStart(GameObject orbit)
+    {
+        scr_orbit OrbitScript = GetComponent<scr_orbit>();
+        OrbitScript.centralObject = orbit.transform;
+    }
+    public void SpriteOrbitStop()
+    {
+        scr_orbit OrbitScript = GetComponent<scr_orbit>();
+        OrbitScript.centralObject = null;
+    }
+
+    private void OnEnable()
+    {
+        if (type == EnemyType.Sprite)
+        {
+            scr_health.OnPlayerDamaged += SpriteOrbitStop;
+        }
     }
 
     private bool PitCheck() // We may need to rethink this for enemies who can jump
@@ -206,7 +227,7 @@ public class enemyAI_Script : MonoBehaviour
 
     void Patrol() //we need to set this continuously when we summon, so that the summons follow the player. Bool check and Update?
     {
-        //Debug.Log("Patrolling");
+        //if (type == EnemyType.Sprite) { Debug.Log("Patrolling"); }
         if (bodyguard)
         {
             patrolTarget = ward.transform.position;

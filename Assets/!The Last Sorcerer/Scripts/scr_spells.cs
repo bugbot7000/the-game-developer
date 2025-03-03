@@ -50,10 +50,12 @@ public class scr_spells : MonoBehaviour
             else if (CharmSpell) { Charm(other.gameObject); }
             else if (SlashSpell) {  Slash(other.gameObject); }
             else if (FreezeSpell) { Freeze(other.gameObject); }
-
-            //if (other.gameObject.CompareTag("Enemy")) { other.gameObject.GetComponent<enemyAI_Script>().health -= pushDamage; }
         }
-
+        else if (other != null && other.gameObject.CompareTag("Sprite"))
+        {
+            enemyAI_Script SpriteScript = other.GetComponent<enemyAI_Script>();
+            SpriteScript.SpriteOrbitStart(player);
+        }
     }
 
     public void Push(GameObject pushedObject)

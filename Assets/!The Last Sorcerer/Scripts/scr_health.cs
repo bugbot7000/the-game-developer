@@ -9,6 +9,9 @@ public class scr_health : MonoBehaviour
     public float health;
     public Text dmgTxt;
     public bool invincible = false;
+
+    public delegate void PlayerDamagedHandler();
+    public static event PlayerDamagedHandler OnPlayerDamaged;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,6 +47,10 @@ public class scr_health : MonoBehaviour
         {
             dmgTxt.text = "> DEALT " + dmgTaken.ToString() + " DAMAGE";
             Invoke(nameof(ResetDevLogText), 0.5f);
+        }
+        if (gameObject.CompareTag("Player"))
+        {
+            OnPlayerDamaged?.Invoke();
         }
     }
 

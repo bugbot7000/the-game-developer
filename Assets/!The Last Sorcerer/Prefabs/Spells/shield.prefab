@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 348394698355035621}
   m_Layer: 0
   m_Name: shield
-  m_TagString: Untagged
+  m_TagString: Spell
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +85,7 @@ MonoBehaviour:
   PullSpell: 0
   CharmSpell: 0
   SlashSpell: 0
+  FreezeSpell: 0
 --- !u!33 &6033264105961967995
 MeshFilter:
   m_ObjectHideFlags: 0

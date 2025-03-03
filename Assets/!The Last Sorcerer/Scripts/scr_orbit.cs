@@ -14,13 +14,13 @@ public class scr_orbit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Calculate the new position for the orbiting object
-        Vector3 orbitPosition = centralObject.position + (transform.position - centralObject.position).normalized * orbitDistance;
+        if (centralObject != null)
+        {
+            // Calculate the new position for the orbiting object
+            Vector3 orbitPosition = centralObject.position + (transform.position - centralObject.position).normalized * orbitDistance;
 
-        // Rotate the object around the central object
-        transform.RotateAround(centralObject.position, Vector3.up, orbitSpeed * Time.deltaTime);
-
-        // Maintain the orbit distance
-        //transform.position = orbitPosition;
+            // Rotate the object around the central object
+            transform.RotateAround(centralObject.position, Vector3.up, orbitSpeed * Time.deltaTime);
+        }
     }
 }
