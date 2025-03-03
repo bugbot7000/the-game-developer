@@ -374,13 +374,19 @@ MonoBehaviour:
   spell2: {fileID: 4121033437667739710, guid: 9742a29b796f01d488d367537a6d9195, type: 3}
   spell1: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
   currentAttack: {fileID: 0}
+  charmedThrall: {fileID: 0}
   currentFamiliars: []
+  swipe: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
+  beam: {fileID: 4121033437667739710, guid: 9742a29b796f01d488d367537a6d9195, type: 3}
+  shield: {fileID: 8687078719347366435, guid: e910a0cef55459f41bf7a49c6ad55b31, type: 3}
   spellOnCooldown: 0
   cooldownTime: 0
   familiar1: {fileID: 0}
   familiar2: {fileID: 0}
   familiar3: {fileID: 0}
   openFamiliarSlot: 1
+  spell1Type: 0
+  spell2Type: 0
 --- !u!114 &1101384961510686523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,6 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 8
   dmgTxt: {fileID: 0}
+  invincible: 0
 --- !u!1 &8864440441887242522
 GameObject:
   m_ObjectHideFlags: 0

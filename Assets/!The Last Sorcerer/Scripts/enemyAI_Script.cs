@@ -165,11 +165,13 @@ public class enemyAI_Script : MonoBehaviour
     {
         scr_orbit OrbitScript = GetComponent<scr_orbit>();
         OrbitScript.centralObject = orbit.transform;
+        agent.enabled = false;
     }
     public void SpriteOrbitStop()
     {
         scr_orbit OrbitScript = GetComponent<scr_orbit>();
         OrbitScript.centralObject = null;
+        agent.enabled = true;
     }
 
     private void OnEnable()
@@ -260,7 +262,10 @@ public class enemyAI_Script : MonoBehaviour
         // Check if the enemy is too close or too far from the player
         if (distanceToPlayer < attackRange - 0.5f || distanceToPlayer > attackRange + 0.5f)
         {
-            agent.SetDestination(targetPosition);
+            if (agent.enabled)
+            {
+                agent.SetDestination(targetPosition);
+            }
         }
     }
     void Attack()

@@ -21,6 +21,10 @@ public class scr_orbit : MonoBehaviour
 
             // Rotate the object around the central object
             transform.RotateAround(centralObject.position, Vector3.up, orbitSpeed * Time.deltaTime);
+
+            Vector3 newPosition = transform.position;
+            newPosition.y = centralObject.position.y; // Match the Y-axis of the target object
+            transform.position = newPosition; // Apply the new position
         }
     }
 }
