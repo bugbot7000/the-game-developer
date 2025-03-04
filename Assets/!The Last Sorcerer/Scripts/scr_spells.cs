@@ -19,7 +19,7 @@ public class scr_spells : MonoBehaviour
     //The idea is that we have a bool for each spell.
     //We write them as functions and then use the bools to turn them on and off.
     //Hitboxes are handled by the object we attach this script to
-    public bool PushSpell, PullSpell, CharmSpell, SlashSpell;
+    public bool PushSpell, PullSpell, CharmSpell, SlashSpell, FreezeSpell;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,14 +47,15 @@ public class scr_spells : MonoBehaviour
         {
             if (PushSpell) { Push(other.gameObject); }
             else if (PullSpell) { Pull(other.gameObject); }
-            else if (CharmSpell)
-            {
-                Charm(other.gameObject);
-            }
+            else if (CharmSpell) { Charm(other.gameObject); }
             else if (SlashSpell) {  Slash(other.gameObject); }
-            //if (other.gameObject.CompareTag("Enemy")) { other.gameObject.GetComponent<enemyAI_Script>().health -= pushDamage; }
+            else if (FreezeSpell) { Freeze(other.gameObject); }
         }
-
+        else if (other != null && other.gameObject.CompareTag("Sprite"))
+        {
+            enemyAI_Script SpriteScript = other.GetComponent<enemyAI_Script>();
+            SpriteScript.SpriteOrbitStart(player);
+        }
     }
 
     public void Push(GameObject pushedObject)
@@ -196,6 +197,11 @@ public class scr_spells : MonoBehaviour
         {
             slashedObject.GetComponent<scr_health>().TakeDamage(slashDamage);
         }
+    }
+
+    public void Freeze (GameObject frozenObject) //This function is in scr_playerController because it needs to use IEnumerator to control timing
+    {
+        player.GetComponent<scr_playerController>().Freeze(frozenObject);
     }
 
     //IEnumerator RestoreAgent(GameObject agent)// Doesn't work because the spell is destroyed before the routine finishes

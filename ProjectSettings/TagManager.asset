@@ -9,7 +9,8 @@ TagManager:
   - Wand
   - Target
   - Dev Log
-  - Ground
+  - Spell
+  - Sprite
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Targets
   - Enemies
   - Void
-  - 
+  - Sprite Surface
   - 
   - 
   - 
