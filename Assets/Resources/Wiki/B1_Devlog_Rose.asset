@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B1_Devlog_Rose
+  m_EditorClassIdentifier: 
+  PageType: 0
+  Date: 
+  Title: Rose's Devlog #1
+  Subtitle: 
+  Content: "Excitement to be working on a project with someone who\u2019s made really
+    interesting narrative and puzzle stuff in the past \r\nPart admiration, part
+    \u201Cwell I need to have a game made by a wider team in my portfolio and this
+    seemed suitable\u201D \r\nTalks about how modular magic system was actually an
+    idea she\u2019d been turning over in her head for a while but didn\u2019t really
+    have the design knowledge to implement herself\r\nWhen she grasped what Kento
+    was trying to tell her about the narrative it clicked and she was like \u201Coh
+    this\u2019ll be perfect\u201D \r\nSays she\u2019s started on assets to fill in
+    the greybox of the existing maze level, and talks about going to Playtest Tuesdays
+    to iron out some of the kinks\r\nKento seemed hesitant about doing so this early
+    but she insisted that they can put together something simple but presentable\r\nGrouses
+    a little bit about how Kento seems resistant to implementing gamedev best practice,
+    like version control and easy to understand naming systems \r\nMentions that
+    Eren smoothed things over by saying they could have both the esoteric build name
+    and the version number \r\nCreated the GitHub for the project (HitGlub) and gave
+    both Eren and Kento contributor perms\r"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

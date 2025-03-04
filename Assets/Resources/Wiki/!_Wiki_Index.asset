@@ -13,10 +13,6 @@ MonoBehaviour:
   m_Name: '!_Wiki_Index'
   m_EditorClassIdentifier: 
   WikiPages:
-  - {fileID: 11400000, guid: 67b8411cef26c1a458f55dfedec5a002, type: 2}
-  - {fileID: 11400000, guid: 01e1a69d7a5571843a9bbe5e283d5da0, type: 2}
-  - {fileID: 11400000, guid: 606e5d3bf5d8ce8438914b2eaa2130b6, type: 2}
-  - {fileID: 11400000, guid: a1a13bf932d86684daad569085dfe1ef, type: 2}
   - {fileID: 11400000, guid: 715d20a4461a9d1409a7c16c0b464460, type: 2}
   - {fileID: 11400000, guid: 908309c1702eafc4894cb853a682d29a, type: 2}
   - {fileID: 11400000, guid: ae7773068daddc5429c7eccdea5a1d06, type: 2}

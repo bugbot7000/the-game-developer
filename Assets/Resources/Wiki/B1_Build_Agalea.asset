@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B1_Build_Agalea
+  m_EditorClassIdentifier: 
+  PageType: 2
+  Date: 9/27/2016
+  Title: Aglaea
+  Subtitle: 
+  Content: "One of the three Charities in Greek mythology \r\n\nName means \u201Cfestive
+    radiance\u201D \n\nThe Last Sorcerer: story of a sorcerer who is trying to escape
+    the maze (and wider region) they\u2019ve been imprisoned in\n\r\nInitially more
+    of a breadcrumb trail story, sorcerer gets no guidance and must figure out bits
+    and pieces on their own\n\r\nDual sages created \nNostralia (past), Reyalita
+    (future)\r\nOne who looks endlessly to the past, one who strives for a better
+    future\r\nTheir conflicting ideals is what caused magic to disappear from the
+    land\r"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 1
+  BuildIndex: 1
+  AdditionalKeywords: []
