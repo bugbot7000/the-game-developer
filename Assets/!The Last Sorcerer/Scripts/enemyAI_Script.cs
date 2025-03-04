@@ -51,12 +51,17 @@ public class enemyAI_Script : MonoBehaviour
     public Transform[] projectileSpawnPoints;
     private int projectileSpawnIndex = 0;
 
+    public float spawnInterval = 3f;
+    public GameObject spawnedEnemy;
+    public Transform enemySpawnPoint;
+
     public enum EnemyType
     {
         Zombie,
         Ogre,
         Archer,
         DM,
+        Necromancer,
         Sprite
     }
     public EnemyType type;
@@ -81,6 +86,7 @@ public class enemyAI_Script : MonoBehaviour
         rotationSetting = new Vector3(0, 0, 0);
 
         if (sprite != null) { spriteRenderer = sprite.GetComponent<SpriteRenderer>(); }
+        if (type == EnemyType.Necromancer) { StartCoroutine(SpawnEnemies()); }
     }
 
     // Update is called once per frame
@@ -129,6 +135,7 @@ public class enemyAI_Script : MonoBehaviour
         }
 
         if (playerInSightRange && type == EnemyType.Archer && playerTooClose) { Retreat(); }
+        if (playerInSightRange && type == EnemyType.Necromancer && playerTooClose) { Retreat(); }
         if (playerInSightRange && type == EnemyType.Sprite) { Retreat(); }
         if (type == EnemyType.DM)
         {
@@ -250,7 +257,6 @@ public class enemyAI_Script : MonoBehaviour
         {
             agent.SetDestination(player.position);
         }
-
     }
 
     void Retreat()
@@ -338,6 +344,19 @@ public class enemyAI_Script : MonoBehaviour
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
             }
         }
+        if (!alreadyAttacked && type == EnemyType.Necromancer && !playerTooClose)
+        {
+            if (arrowPrefab != null && arrowSpawnPoint != null)
+            {
+                Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
+                gameObject.transform.rotation = Quaternion.LookRotation(direction);
+
+                GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
+                arrow.transform.rotation = Quaternion.LookRotation(direction);
+            }
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
         //damageOnCollide = true;
         //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, slamSpd);
     }
@@ -393,6 +412,16 @@ public class enemyAI_Script : MonoBehaviour
         transform.position = jumpLocation.position;
         //agent.enabled = true;
         DMIsJumping = false;
+    }
+    IEnumerator SpawnEnemies()
+    {
+        yield return new WaitForSeconds(spawnInterval);
+
+        if (spawnedEnemy != null && playerInAttackRange && enemySpawnPoint != null)
+        {
+            var enemy = Instantiate(spawnedEnemy, enemySpawnPoint.position, transform.rotation);
+        }
+        StartCoroutine(SpawnEnemies());
     }
     public void ResetDevLogText()
     {
