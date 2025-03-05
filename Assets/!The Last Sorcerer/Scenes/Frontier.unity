@@ -1904,7 +1904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162451124740853484, guid: 45f1d8bc4e40ef94eae4618683c03efd, type: 3}
       propertyPath: orbitSpeed
-      value: 60
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5162451124740853484, guid: 45f1d8bc4e40ef94eae4618683c03efd, type: 3}
       propertyPath: orbitDistance

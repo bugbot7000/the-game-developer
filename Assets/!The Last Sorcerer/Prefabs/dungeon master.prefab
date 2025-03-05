@@ -100,8 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralObject: {fileID: 4743587226708941375}
-  orbitSpeed: 150
-  orbitDistance: 3
+  orbitSpeed: 5
+  angle: 0
+  orbitOffset: -2
 --- !u!1 &4092271748256787515
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,8 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralObject: {fileID: 4743587226708941375}
-  orbitSpeed: 150
-  orbitDistance: 3
+  orbitSpeed: 5
+  angle: 0
+  orbitOffset: 2
 --- !u!1 &5634226220766655464
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +423,7 @@ MonoBehaviour:
   dmg: 2
   damageOnCollide: 0
   large: 0
+  noMove: 0
   spawnPoint: {x: 0, y: 0, z: 0}
   patrolTarget: {x: 0, y: 0, z: 0}
   whatIsPlayer:
@@ -453,6 +456,9 @@ MonoBehaviour:
   projectileSpawnPoints:
   - {fileID: 8596207618009372131}
   - {fileID: 6261862296759222693}
+  spawnInterval: 3
+  spawnedEnemy: {fileID: 0}
+  enemySpawnPoint: {fileID: 0}
   type: 3
 --- !u!114 &801799184300943117
 MonoBehaviour:
