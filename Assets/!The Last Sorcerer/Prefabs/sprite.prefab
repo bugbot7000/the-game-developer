@@ -208,6 +208,9 @@ MonoBehaviour:
   DMJumpSpeed: 0
   DMIsJumping: 0
   projectileSpawnPoints: []
+  spawnInterval: 3
+  spawnedEnemy: {fileID: 0}
+  enemySpawnPoint: {fileID: 0}
   type: 4
 --- !u!114 &5162451124740853484
 MonoBehaviour:
@@ -222,5 +225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralObject: {fileID: 0}
-  orbitSpeed: 150
-  orbitDistance: 7
+  orbitSpeed: 3
+  angle: 0
+  orbitOffset: 1

@@ -24,14 +24,14 @@ public class enemyAI_Script : MonoBehaviour
     public bool alreadyAttacked;
 
     public float sightRange, attackRange;
-    public float retreatRange;
+    public float retreatRange, retreatDistance;
     public bool playerInSightRange, playerInAttackRange;
     public bool playerTooClose;
 
     public bool bodyguard = false;
     public GameObject ward;
 
-    public GameObject hitbox;
+    public GameObject hitbox, nose;
 
     public Animator animator;
 
@@ -43,6 +43,9 @@ public class enemyAI_Script : MonoBehaviour
 
     public GameObject arrowPrefab;
     public Transform arrowSpawnPoint;
+
+    public bool visible = true;
+    public bool stalking = true;
 
     public Transform[] DMLeapLocations;
     public float DMJumpSpeed;
@@ -60,6 +63,8 @@ public class enemyAI_Script : MonoBehaviour
         Zombie,
         Ogre,
         Archer,
+        Assassin,
+        Knight,
         DM,
         Necromancer,
         Sprite
@@ -87,6 +92,7 @@ public class enemyAI_Script : MonoBehaviour
 
         if (sprite != null) { spriteRenderer = sprite.GetComponent<SpriteRenderer>(); }
         if (type == EnemyType.Necromancer) { StartCoroutine(SpawnEnemies()); }
+        if (type == EnemyType.Assassin) { visible = false; }
     }
 
     // Update is called once per frame
@@ -107,22 +113,22 @@ public class enemyAI_Script : MonoBehaviour
         Vector3 direction = currentPosition - previousPosition;
         direction.Normalize();
 
-        if (direction.x > 0)
+        if (direction.x > 0 && type != EnemyType.Knight)
         {
             rotationSetting = new Vector3(0, 90, 0); //In 3D we rotate on the Y, not Z
             if (spriteRenderer != null) { spriteRenderer.flipX = false; }
 
         }
-        else if (direction.x < 0)
+        else if (direction.x < 0 && type != EnemyType.Knight)
         {
             rotationSetting = new Vector3(0, -90f, 0);
             if (spriteRenderer != null) { spriteRenderer.flipX = true; }
         }
-        else if (direction.z > 0 && direction.x == 0)
+        else if (direction.z > 0 && direction.x == 0 && type != EnemyType.Knight)
         {
             rotationSetting = new Vector3(0, 0, 0);
         }
-        else if (direction.z < 0 && direction.x == 0)
+        else if (direction.z < 0 && direction.x == 0 && type != EnemyType.Knight)
         {
             rotationSetting = new Vector3(0, 180f, 0f);
         }
@@ -149,6 +155,20 @@ public class enemyAI_Script : MonoBehaviour
             }
         }
         if (noMove) { agent.enabled = false; }
+
+        if (type == EnemyType.Assassin) 
+        {
+            if (!visible) { GetComponent<MeshRenderer>().enabled = false; }
+            else { GetComponent<MeshRenderer>().enabled = true; }
+            if (playerInSightRange && !stalking) { Retreat(); }
+            //if (alreadyAttacked) { Retreat(); }
+        }
+
+        if (type == EnemyType.Knight && !alreadyAttacked)
+        {
+            Vector3 plyerDirection = (player.position - gameObject.transform.position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
+        }
     }
 
     public void CharmMe()
@@ -172,11 +192,20 @@ public class enemyAI_Script : MonoBehaviour
     {
         scr_orbit OrbitScript = GetComponent<scr_orbit>();
         OrbitScript.centralObject = orbit.transform;
+        //gameObject.transform.SetParent(orbit.transform);
         agent.enabled = false;
     }
     public void SpriteOrbitStop()
     {
         scr_orbit OrbitScript = GetComponent<scr_orbit>();
+        //if (OrbitScript.centralObject.parent != null)
+        //{
+        //    gameObject.transform.SetParent(OrbitScript.centralObject.parent);
+        //}
+        //else
+        //{
+        //    gameObject.transform.SetParent(null);
+        //}
         OrbitScript.centralObject = null;
         agent.enabled = true;
     }
@@ -231,7 +260,10 @@ public class enemyAI_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.eulerAngles = rotationSetting;
+        if (type != EnemyType.Knight) //Using the knight as a test case for getting rid of old rotation logic
+        {
+            transform.eulerAngles = rotationSetting;
+        }
     }
 
     void Patrol() //we need to set this continuously when we summon, so that the summons follow the player. Bool check and Update?
@@ -263,10 +295,10 @@ public class enemyAI_Script : MonoBehaviour
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = (transform.position - player.position).normalized;
-        Vector3 targetPosition = player.position + directionToPlayer * attackRange;
+        Vector3 targetPosition = player.position + directionToPlayer * retreatDistance;
 
         // Check if the enemy is too close or too far from the player
-        if (distanceToPlayer < attackRange - 0.5f || distanceToPlayer > attackRange + 0.5f)
+        if (distanceToPlayer < retreatDistance - 0.5f || distanceToPlayer > retreatDistance + 0.5f)
         {
             if (agent.enabled)
             {
@@ -357,6 +389,28 @@ public class enemyAI_Script : MonoBehaviour
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+
+        if (type == EnemyType.Assassin) 
+        {
+            Vector3 direction = (player.position - gameObject.transform.position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(direction);
+            if (!alreadyAttacked)
+            {
+                alreadyAttacked = true;
+                Invoke("AssassinAppear", 0.5f);
+            }
+        }
+
+        if (type == EnemyType.Knight && !alreadyAttacked)
+        {
+            alreadyAttacked = true;
+            Rigidbody body = GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.FreezePosition;
+            body.constraints = RigidbodyConstraints.FreezeRotation;
+            agent.enabled = false;
+
+            Invoke("KnightAttack", 0.5f);
+        }
         //damageOnCollide = true;
         //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, slamSpd);
     }
@@ -370,7 +424,7 @@ public class enemyAI_Script : MonoBehaviour
             Debug.Log("Resetting attack");
             damageOnCollide = true;
         }
-        if(type == EnemyType.Ogre)
+        if (type == EnemyType.Ogre)
         {
             //animator.SetBool("isAttacking", false);
             hitbox.SetActive(false);
@@ -379,7 +433,59 @@ public class enemyAI_Script : MonoBehaviour
             body.constraints = RigidbodyConstraints.FreezeRotationX;
             body.constraints = RigidbodyConstraints.FreezeRotationZ;
         }
+        if (type == EnemyType.Assassin) { stalking = true; }
+        if (type == EnemyType.Knight)
+        {
+            hitbox.SetActive(false);
+            Rigidbody body = GetComponent<Rigidbody>();
+            body.constraints = RigidbodyConstraints.None;
+            body.constraints = RigidbodyConstraints.FreezeRotationX;
+            body.constraints = RigidbodyConstraints.FreezeRotationZ;
+            agent.enabled = true;
+        }
         alreadyAttacked = false;
+    }
+
+    public void ToggleVisibility() 
+    {
+        if (visible) { visible = false; } 
+        else { visible = true; }
+    }
+
+    public void AssassinAppear()
+    {
+        ToggleVisibility();
+        Invoke("AssassinAttack", 0.5f);
+    }
+
+    public void AssassinAttack()
+    {
+        Rigidbody body = GetComponent<Rigidbody>();
+        //body.constraints = RigidbodyConstraints.FreezePosition;
+        //body.constraints = RigidbodyConstraints.FreezeRotation;
+
+        hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
+                                //animator.SetBool("isAttacking", true);
+        Invoke("AssassinVanish", 0.5f);
+    }
+
+    public void AssassinVanish()
+    {
+        stalking = false;
+        hitbox.SetActive(false);
+        Rigidbody body = GetComponent<Rigidbody>();
+        body.constraints = RigidbodyConstraints.None;
+        body.constraints = RigidbodyConstraints.FreezeRotationX;
+        body.constraints = RigidbodyConstraints.FreezeRotationZ;
+        ToggleVisibility();
+        Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    }
+
+    public void KnightAttack()
+    {
+        hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
+                                //animator.SetBool("isAttacking", true);
+        Invoke(nameof(ResetAttack), timeBetweenAttacks);
     }
 
     //private void PauseAttack()

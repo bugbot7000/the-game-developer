@@ -50,9 +50,14 @@ public class scr_health : MonoBehaviour
         }
         if (gameObject.CompareTag("Player"))
         {
+            invincible = true;
+            Invoke(nameof(DisableInvincibility), 0.3f);
             OnPlayerDamaged?.Invoke();
         }
     }
+
+    public void DisableInvincibility() { invincible = false; }
+    
 
     public void ResetDevLogText()
     {

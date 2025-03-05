@@ -7,7 +7,11 @@ public class scr_damageOnTrigger : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if (gameObject.transform.parent != null && gameObject.GetComponentsInParent<enemyAI_Script>() != null) //Check if we're fatherless
+        { 
+            if (gameObject.GetComponentInParent<enemyAI_Script>().hitbox == null) { gameObject.GetComponentInParent<enemyAI_Script>().hitbox = gameObject; }
+        }
+        //gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,6 +25,7 @@ public class scr_damageOnTrigger : MonoBehaviour
         if (other.gameObject.GetComponent<scr_health>() != null && ((1 << other.gameObject.layer) & WhatIsTarget) != 0)
         {
             other.gameObject.GetComponent<scr_health>().TakeDamage(dmg);
+            //gameObject.SetActive(false);
         }
     }
 }
