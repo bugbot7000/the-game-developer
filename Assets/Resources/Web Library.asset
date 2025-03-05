@@ -34,13 +34,13 @@ MonoBehaviour:
     pageSize: 10
     titleKey: NoConnectionTitle
   webPages:
-  - pageTitle: The Last Sorcerer Wiki
+  - pageTitle: Home
     pageURL: wiki.eren.local
     pageIcon: {fileID: 21300000, guid: 3789b437c7afd9e4e945dba629fefde4, type: 3}
     pageContent: {fileID: 1958891694494868, guid: c5623678cf6fc0b4dbe792e0bfb971e5, type: 3}
     pageSize: 20
     titleKey: 
-  - pageTitle: The Last Sorcerer Wiki - Search
+  - pageTitle: Search Results
     pageURL: wiki.eren.local/search
     pageIcon: {fileID: 21300000, guid: 3789b437c7afd9e4e945dba629fefde4, type: 3}
     pageContent: {fileID: 1958891694494868, guid: 7f8cce23d7a387845be543eed9c95bf3, type: 3}
@@ -52,13 +52,13 @@ MonoBehaviour:
     pageContent: {fileID: 1958891694494868, guid: c92aa99424f40dd4fb967906a75c7acb, type: 3}
     pageSize: 20
     titleKey: 
-  - pageTitle: The Last Sorcerer Wiki - Content
+  - pageTitle: Content
     pageURL: wiki.eren.local/content
     pageIcon: {fileID: 21300000, guid: 3789b437c7afd9e4e945dba629fefde4, type: 3}
     pageContent: {fileID: 1958891694494868, guid: e5f0df6967332b9409f222b59a2b02ef, type: 3}
     pageSize: 20
     titleKey: 
-  - pageTitle: The Last Sorcerer Wiki - Archive
+  - pageTitle: Archive
     pageURL: wiki.eren.local/archive
     pageIcon: {fileID: 21300000, guid: 3789b437c7afd9e4e945dba629fefde4, type: 3}
     pageContent: {fileID: 1958891694494868, guid: 7db0b3ddb5ad7f7439a0750b0b8fed51, type: 3}

@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B2_MazeBuild
+  m_Name: B2_Devlog_Rose
   m_EditorClassIdentifier: 
   Date: 
-  Title: Maze Build
+  Title: Rose's Devlog #2
   Subtitle: 
-  Content: planning out ideas for the start of the game, according to lore the sorcerer
-    starts trapped in a maze
+  Content: "Rose upset that Kento doesn\u2019t understand that they have limited
+    time to work on this game and thus have to limit their scope accordingly. Acknowledges
+    that she may have overstepped but asserts that this is the best for the project.
+    Also talks about some design stuff"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
-  ContainsBuild: 1
-  BuildIndex: 2
+  ContainsBuild: 0
+  BuildIndex: 0
   AdditionalKeywords: []

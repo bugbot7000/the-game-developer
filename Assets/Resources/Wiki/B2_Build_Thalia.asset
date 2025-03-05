@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B2_ErenDevlog
+  m_Name: B2_Build_Thalia
   m_EditorClassIdentifier: 
-  Date: 
-  Title: Eren's Devlog #2
+  PageType: 0
+  Date: 11/10/2016
+  Title: 'Thalia (v2.35 final) '
   Subtitle: 
-  Content: "Eren talks about growing resentment between Kento and Rose, tries to
-    keep the peace between them but a little naively believes it\u2019s all settled.
-    Also a few coding problems are brought up\r"
+  Content: "One of the three Charities in Greek mythology , name means \u201Cabundance\u201D
+    \r\n\r\nMaze has art assets, attack now works\r\n\r\nRevised droning narrator
+    from Beat 1 "
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
-  ContainsBuild: 0
-  BuildIndex: 0
+  ContainsBuild: 1
+  BuildIndex: 2
   AdditionalKeywords: []

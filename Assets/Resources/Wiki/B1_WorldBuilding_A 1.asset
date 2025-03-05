@@ -10,13 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B1_WorldBuilding_A
+  m_Name: B1_WorldBuilding_A 1
   m_EditorClassIdentifier: 
   PageType: 1
   Date: 
   Title: World Building Edition A
   Subtitle: Lore
-  Content: "Worldbuilding document/notes from Kento: Edition A\r"
+  Content: "The Last Sorcerer: story of a sorcerer who is trying to escape the maze
+    (and wider region) they\u2019ve been imprisoned in\r\n\r\nInitially more of a
+    breadcrumb trail story, sorcerer gets no guidance and must figure out bits and
+    pieces on their own\r\n\r\nDual sages created \r\n    Nostralia (past), Reyalita
+    (future)\r\n    One who looks endlessly to the past, one who strives for a better
+    future\r\n    Their conflicting ideals is what caused magic to disappear from
+    the land\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

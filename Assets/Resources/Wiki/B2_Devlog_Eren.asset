@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B2_Devlog_Eren
+  m_EditorClassIdentifier: 
+  PageType: 0
+  Date: 
+  Title: Eren's Devlog #2
+  Subtitle: 
+  Content: "Talks about how he took a well deserved break the weekend after the check
+    in to catch up on sleep, and when he arrived in class the next Tuesday Kento
+    was like \u201Coh good you\u2019re here, what do you think about my 38 new ideas\u201D
+    \r\n\r\nDiscusses a few coding problems he had with the build and how he managed
+    to squeak in one of the fixes right before the deadline bc Kento was fooling
+    around in the build and accidentally fatfingered something that crashed the game\r\n\r\nMentions
+    that the advisors\u2019 main concern with their game was scope - that Kento might
+    be dreaming a little too big for something that should be done by May \r\n   
+    Worries about how Kento is taking it, but mentions that their advisor said they
+    can keep things simple this semester and revisit scope in the spring\r\n    Took
+    that to mean that they can pull back a little and see how things shake out in
+    terms of realistic completion of stuff and workload\r\n\r\nTalk about save/load
+    system they implemented - they can press a key to save and then close game and
+    then press it again to go back to where they were \r\n"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []
