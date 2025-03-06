@@ -149,7 +149,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -334000983
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -194,16 +194,20 @@ MonoBehaviour:
   sightRange: 12
   attackRange: 12
   retreatRange: 10
+  retreatDistance: 10
   playerInSightRange: 0
   playerInAttackRange: 0
   playerTooClose: 0
   bodyguard: 0
   ward: {fileID: 0}
   hitbox: {fileID: 0}
+  nose: {fileID: 0}
   animator: {fileID: 0}
   charmPoints: 0
   arrowPrefab: {fileID: 0}
   arrowSpawnPoint: {fileID: 0}
+  visible: 1
+  stalking: 1
   DMLeapLocations: []
   DMJumpSpeed: 0
   DMIsJumping: 0
@@ -211,7 +215,7 @@ MonoBehaviour:
   spawnInterval: 3
   spawnedEnemy: {fileID: 0}
   enemySpawnPoint: {fileID: 0}
-  type: 4
+  type: 7
 --- !u!114 &5162451124740853484
 MonoBehaviour:
   m_ObjectHideFlags: 0
