@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B5_RoseDevlog
+  m_Name: B5_Devlog_Rose
   m_EditorClassIdentifier: 
-  Date: 
+  PageType: 0
+  Date: 3/15/2017
   Title: Rose's Devlog #5
   Subtitle: 
-  Content: 'Rose clearly upset that Kento is overloading both her and Eren with work
-    while he goes off to his sandbox and churns out more stuff for them to do. Said
-    she managed to finish most of the midgame assets but that Kento was very, very
-    upset with her for not magically having everything done for the showcase. Likens
-    him to an old bad boss she had during an internship
-
-'
+  Content: Rose chipping away at the massive pile of art and visual stuff that Kento
+    keeps adding to, resentful of the fact that he thinks that more is always better.
+    Starts seeing signs of burnout and takes time off accordingly
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

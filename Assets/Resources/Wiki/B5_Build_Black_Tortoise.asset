@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B5_KentoDevlog
+  m_Name: B5_Build_Black_Tortoise
   m_EditorClassIdentifier: 
-  Date: 
-  Title: Kento's Devlog #5
+  PageType: 2
+  Date: 3/13/2017
+  Title: Black Tortoise (version 5.5)
   Subtitle: 
-  Content: "Kento rants about how Rose \u201Cwent behind their backs\u201D and tried
-    to sabotage the project so she didn\u2019t have to do more work, starts to aggressively
-    question if she really wants the game to ever be finished. Talks about some final
-    tweaks he made to the gameplay systems and mechanics\r\n"
+  Content: 'One of the four cardinal animals in Chinese mythology
+
+    Got the idea
+    from Eren, who was in Taiwan for break
+
+'
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

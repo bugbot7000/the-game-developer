@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B5_Devlog_Eren
+  m_EditorClassIdentifier: 
+  PageType: 0
+  Date: 3/14/2016
+  Title: Eren's Devlog #5
+  Subtitle: 
+  Content: "Ran into major visual bug\r\n\tLots of artifacting and flashing that
+    makes the game very hard to play if not unplayable\r\n\tNot sure what causes
+    it - doesn\u2019t happen on every computer or build, and only on certain assets\r\n\nTalks
+    about how Kento kept pushing for him to set it aside and get new things for the
+    arena implemented for midterm check \r\n\tInsinuated that it was an issue with
+    the assets Rose made and she should redo them\r\n\nBug was hastily fixed (he
+    set a certain parameter to 0 on all affected items) and will likely come back
+    at some point\r\n\nMentions how tired he is and that he randomly starts to get
+    headaches when the lights are too bright\r\n\tPushes through because he really
+    wants their project to be a success. Partially for Kento, and partially because
+    this is now kind of his baby as well \r\n"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B5_Chat
+  m_EditorClassIdentifier: 
+  PageType: 2
+  Date: 3/16/2017
+  Title: Archived Chat Log
+  Subtitle: 
+  Content: "Right before this, advisor (during their meeting) wonders why they didn\u2019t
+    submit for DGC (GDC clone)\n\r\nRose says they weren\u2019t ready and changes
+    the subject\n\r\nEren and Kento ask her why afterward bc she was in charge of
+    that\n\r\nRose said she forgot and brushes them off because (to her) the game
+    wasn\u2019t in a polished enough state to submit for the DGC showcase \n\r\nEren
+    is like \u201Cwell youve done this before, I suppose your judgment is sound\u2026\u201D
+    and is sad about it\n\r\nKento is pissed and said she should have told them\r\n"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []
