@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B4_Devlog_Kento
+  m_EditorClassIdentifier: 
+  PageType: 0
+  Date: 1/27/2017
+  Title: Kento's Devlog #4
+  Subtitle: 
+  Content: "Snarks about how much dev time Rose wasted over break by not working
+    on the project over break\r\n\tMentions that he wasn\u2019t gonna bother running
+    his ideas by Rose but Eren insisted he not think so badly of her and to give
+    her a chance\r\n\tSurprisingly she was fine with what he wanted to implement
+    but grouses that it was probably only bc she didn\u2019t have to do any extra
+    work\r\nThat aside, he talks about what it is he wanted to implement in the first
+    place\r\n\tTurning arena from greybox into a more finished state\r\n\tSo he can
+    test things in a smaller place both in terms of aesthetics, player feel, and
+    mechanics \r\n\tPlaying with different lighting conditions and obstacles\r\n"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

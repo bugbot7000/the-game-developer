@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B4_Chat
+  m_EditorClassIdentifier: 
+  PageType: 2
+  Date: 1/22/2017
+  Title: Archived Chat Log
+  Subtitle: 
+  Content: "Conversation where Kento runs his winter break ideas by Rose and she
+    actually likes them to his surprise (he says he didnt expect for someone like
+    her to actually agree)\n\r\nRose is like tf did you mean by that bro\n\r\nKento
+    offhandedly says she\u2019s a lot like his mother\n\r\nEren tenses up because
+    this is not a compliment. \n\r\nRose doesn\u2019t know that though\n\r\nThe conversation
+    luckily doesn\u2019t fall apart but it remains tense \r\n"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
   m_Name: B5_ErenDevlog
   m_EditorClassIdentifier: 
-  Date: 
+  PageType: 0
+  Date: 1/27/2016
   Title: Eren's Devlog #5
   Subtitle: 
   Content: "Eren still trying to be the bridge between Kento and Rose even though

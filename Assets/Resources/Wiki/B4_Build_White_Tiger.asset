@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B4_ErenDevlog
+  m_Name: B4_Build_White_Tiger
   m_EditorClassIdentifier: 
-  Date: 
-  Title: Eren's Devlog #4
+  PageType: 2
+  Date: 1/26/2017
+  Title: White Tiger (version 4.1)
   Subtitle: 
-  Content: 'Eren starts to show signs of burnout because (like Rose) he is still
-    chipping away at the giant pile of stuff Kento wants him to implement. Ran into
-    major bug and needed time to focus on it without adding anything new but Kento
-    kept pushing for him to set it aside and get new things implemented (bug was
-    hastily fixed and still crops up) '
+  Content: 'One of the four cardinal animals in Chinese mythology
+
+    Got the idea
+    from Eren, who was in Taiwan for break
+
+'
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
