@@ -70,6 +70,7 @@ MonoBehaviour:
   buildButton: {fileID: 7365447035223012932}
   downloadIcon: {fileID: 8666411798147884298}
   downloadedColor: {r: 0.41568628, g: 0.3764706, b: 0.6901961, a: 1}
+  contentRect: {fileID: 875316215775768204}
 --- !u!114 &3823824037512334749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,7 +1426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -8, y: -48}
+  m_AnchoredPosition: {x: -8, y: -64}
   m_SizeDelta: {x: 308, y: 38}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &528817912340838685
@@ -2876,7 +2877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3402170774630584465, guid: aa70f10f209de7b48be9e45f06b8018d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

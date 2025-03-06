@@ -12,6 +12,7 @@ public class WikiContentPage : MonoBehaviour
     [SerializeField] Button buildButton;
     [SerializeField] Image downloadIcon;
     [SerializeField] Color downloadedColor;
+    [SerializeField] RectTransform contentRect;
 
     TextMeshProUGUI buttonText;
     WikiPageSO currentPage;
@@ -59,6 +60,10 @@ public class WikiContentPage : MonoBehaviour
                 buttonText.SetText("Download Build");
             }
         }
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(content.rectTransform);
+        
+        contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, content.rectTransform.sizeDelta.y + 300);
 
         if (wikiPage.ActivatesInteractveChat && !MetaNarrativeManager.Instance.HasVisitedSequence(wikiPage.ChatID))
         {
