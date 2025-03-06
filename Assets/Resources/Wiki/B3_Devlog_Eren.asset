@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B3_Devlog_Eren
+  m_EditorClassIdentifier: 
+  PageType: 0
+  Date: 12/8/2016
+  Title: Eren's Devlog #3
+  Subtitle: 
+  Content: "Talks about some issues he had with the builds during playtesting \r\n\tPeople
+    kept shooting a character that was giving them instructions so he made it an
+    Adorable Dog\r\n\tThere was a bug where if you walked into a particular part
+    of the maze it would crash\r\n\tFinal full implementation of the maze and its
+    minotaur boss and can move on to the frontier next semester! Expects that Kento
+    will have lots of things for him to do over break \r\n\nWorries about the growing
+    resentment between Kento and Rose\r\n\tSays he\u2019s been trying to keep the
+    peace between them \r\n\tThings seem to have at least temporarily resolved between
+    them once their advisor gave them advice\r\n\nGlad they\u2019ve made a lot of
+    progress this semester!\r\n\tMentions that he was worried about how Kento would
+    react to letting one of his brainchildren be worked on by others (knew there
+    would be conflict) but is happy it\u2019s worked out (at time of writing)\r\n"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

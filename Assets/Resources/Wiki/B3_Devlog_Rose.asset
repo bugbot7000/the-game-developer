@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B3_Devlog_Rose
+  m_EditorClassIdentifier: 
+  PageType: 0
+  Date: 12/11/2016
+  Title: Rose's Devlog #3
+  Subtitle: 
+  Content: "Upset that Kento doesn\u2019t understand that they have limited time
+    to work on this game and thus have to limit their scope accordingly\r\n\nAcknowledges
+    that she may have overstepped \r\n\nAsserts that this is the best for the project
+    - to break people\u2019s hearts early so they don\u2019t dig themselves in too
+    deep\r\n\nAlso talks about some art stuff ofc\r\n\nMinotaur art, animation, effects
+    all finished\r\n\nMaze 100% done unless they find more bugs\r\n\nNext semester
+    will start working on the rest of the assets (frontier and domain maps)\r\n\nTalks
+    about how she wants to be extra vigilant about burnout\r"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

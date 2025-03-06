@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B3_RoseDevlog
+  m_Name: B3_Build_Euphrosyne
   m_EditorClassIdentifier: 
-  Date: 
-  Title: Rose's Devlog #3
+  PageType: 2
+  Date: 12/9/2016
+  Title: Euphrosyne (v3.1)
   Subtitle: 
-  Content: Rose upset that Kento got mad at her for.. taking a break during break.
-    Notes that she saw updates to the builds regardless and sighs about how much
-    work Kento is throwing at her without prior consultation. Some more notes and
-    sketches about the system
+  Content: "One of the three Charities in Greek mythology \r\n\nName means \u201Cmerriment\u201D
+    \r\n\nKento bitterly notes that it\u2019s kind of ironic that the last Charity
+    ended up on this build \n\nMinotaur boss lines\r\n\nAmbient dialogue\r\n\nNarration
+    has been changed to reading signs/talking to statue NPCs in the maze \r\n\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
-  ContainsBuild: 0
-  BuildIndex: 0
+  ContainsBuild: 1
+  BuildIndex: 4
   AdditionalKeywords: []

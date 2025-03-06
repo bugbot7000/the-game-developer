@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B3_Devlog_Kento
+  m_EditorClassIdentifier: 
+  PageType: 0
+  Date: 12/8/2016
+  Title: Kento's Devlog #3
+  Subtitle: 
+  Content: "Upset that Rose/advisor doesn\u2019t see his vision for the game and
+    that advisor seems to listen to Rose\r\nLists out a whole bunch of things he
+    wants to do \r\nExpand on story\r\nWork on game design document\r\nFinalize all
+    modular magic spells\r\nCome up with some more enemies\r\netc\r\nSays he plans
+    to do them over break anyways\r\nSays he\u2019ll get Eren to help him bc he knows
+    he can be relied on for the project\r\nA little dismissive of what he sees as
+    Rose atop her high horse\r\n\nDoes end up talking about some actual dev stuff\r\nPuzzle
+    design he did for the maze\r\nMinotaur boss fight details\r\nProgress on story
+    design documents\r\nSome tweaking he did to the overall lore of the world, changes
+    to why sorcerer was put in maze\r\nAddition of third sage \r\nPlans for the rest
+    of the game\r\nAlready talked about it a few weeks ago but finalizing it with
+    the rest of the story\r\nThree sages, three domains. three boss rushes\r\nFrontier
+    area right outside the maze \r\n"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []
