@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B6_RoseDevlog
+  m_Name: B9_ArchivedChat
   m_EditorClassIdentifier: 
+  PageType: 3
   Date: 
-  Title: Rose's Devlog #6
+  Title: Archived Chat
   Subtitle: 
-  Content: "Rose getting very fed up with what she sees as Kento hounding her to
-    spend all her free time on TLS. The nagging doesn\u2019t help because she needs
-    space to cook, and after a few times of telling him to stops she ends up leaving
-    him on read (which prompts more nagging)"
+  Content: "Eventually the stress and overwork gets to Eren and he passes out during
+    an in person job interview. He\u2019s taken to the emergency room and cleared
+    to go home the same day but the doctor emphasizes that he should just rest and
+    do nothing for a little while + refers him to a therapist \r\n\r\nDevlog is replaced
+    with a long archived chat conversation of shit going down in real time. "
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

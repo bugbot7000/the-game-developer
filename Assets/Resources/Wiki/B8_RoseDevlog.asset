@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B9_ErenDevlog
+  m_Name: B8_RoseDevlog
   m_EditorClassIdentifier: 
+  PageType: 0
   Date: 
-  Title: Eren's Last Devlog
+  Title: Rose's Devlog #8
   Subtitle: 
-  Content: I fixed the bug.
+  Content: "Rose saying that this should never have happened in the first place and
+    that Kento\u2019s overeagerness and jumping the gun put them in this position
+    to begin with. Says that they should give Eren a break and wait for the stable
+    release but in a very detached way (statistic instead of person)"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
