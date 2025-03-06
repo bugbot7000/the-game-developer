@@ -677,7 +677,7 @@ MonoBehaviour:
 
 
     Use the search bar at the top of the website to
-    find pages, or you can right click on a word to immediately search it! '
+    find pages.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
   m_sharedMaterial: {fileID: 5141295571327654121, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
