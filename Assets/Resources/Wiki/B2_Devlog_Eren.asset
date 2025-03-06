@@ -13,23 +13,25 @@ MonoBehaviour:
   m_Name: B2_Devlog_Eren
   m_EditorClassIdentifier: 
   PageType: 0
-  Date: 
+  Date: 11/25/2016
   Title: Eren's Devlog #2
   Subtitle: 
-  Content: "Talks about how he took a well deserved break the weekend after the check
-    in to catch up on sleep, and when he arrived in class the next Tuesday Kento
-    was like \u201Coh good you\u2019re here, what do you think about my 38 new ideas\u201D
-    \r\n\r\nDiscusses a few coding problems he had with the build and how he managed
-    to squeak in one of the fixes right before the deadline bc Kento was fooling
-    around in the build and accidentally fatfingered something that crashed the game\r\n\r\nMentions
-    that the advisors\u2019 main concern with their game was scope - that Kento might
-    be dreaming a little too big for something that should be done by May \r\n   
-    Worries about how Kento is taking it, but mentions that their advisor said they
-    can keep things simple this semester and revisit scope in the spring\r\n    Took
-    that to mean that they can pull back a little and see how things shake out in
-    terms of realistic completion of stuff and workload\r\n\r\nTalk about save/load
-    system they implemented - they can press a key to save and then close game and
-    then press it again to go back to where they were \r\n"
+  Content: "Implemented modular magic system (kinda broken), minotaur fight (it\u2019s
+    functional, but kind of visually sparse), and maze \r\n\nDiscusses a few coding
+    problems he had with the build \r\n\nMentions save/load system they implemented
+    - they can press a key to save and then close game and then press it again to
+    go back to where they were \r\n\nManaged to squeak in one of the fixes right
+    before the deadline bc Kento was fooling around in the build and accidentally
+    fatfingered something that crashed the game\r\n\nTalks about how he took a well
+    deserved break the weekend after the check in to catch up on sleep, and when
+    he arrived in class the next Tuesday Kento was like \u201Coh good you\u2019re
+    here, what do you think about my 38 new ideas\u201D \r\n\nMentions that the advisors\u2019
+    main concern with their game was scope - that Kento might be dreaming a little
+    too big for something that should be done by May \r\n\nWorries about how Kento
+    is taking it, but mentions that their advisor said they can keep things simple
+    this semester and revisit scope in the spring\r\n\nTook that to mean that they
+    can pull back a little and see how things shake out in terms of realistic completion
+    of stuff and workload\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
