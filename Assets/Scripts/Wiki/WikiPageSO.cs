@@ -51,5 +51,6 @@ public class WikiPageSO : ScriptableObject
 public enum WikiPageType {
     Devlog,
     Lore,
-    Build
+    Build,
+    Chat
 }

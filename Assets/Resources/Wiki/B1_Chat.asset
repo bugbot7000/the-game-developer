@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
   m_Name: B1_Chat
   m_EditorClassIdentifier: 
-  PageType: 1
+  PageType: 3
   Date: 9/28/2016
   Title: Archived Chat Log
   Subtitle: 
