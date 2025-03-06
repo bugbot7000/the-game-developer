@@ -10,6 +10,8 @@ public class WikiContentPage : MonoBehaviour
     [SerializeField] TextMeshProUGUI subtitle;
     [SerializeField] TextMeshProUGUI content;
     [SerializeField] Button buildButton;
+    [SerializeField] Image downloadIcon;
+    [SerializeField] Color downloadedColor;
 
     TextMeshProUGUI buttonText;
     WikiPageSO currentPage;
@@ -49,6 +51,7 @@ public class WikiContentPage : MonoBehaviour
             {
                 buildButton.enabled = false;
                 buttonText.SetText("Build already downloaded");
+                setButtonDownloaded();
             }
             else
             {
@@ -68,7 +71,17 @@ public class WikiContentPage : MonoBehaviour
         buildButton.enabled = false;
         buttonText.SetText("Build added to Game Hub");
 
+        setButtonDownloaded();
+
         GameBuildManager.Instance.AddGameBuildToHub(currentPage.BuildIndex);
+    }
+
+    void setButtonDownloaded()
+    {
+        downloadIcon.enabled = false;
+        buttonText.fontStyle = FontStyles.Normal;
+        buttonText.color = downloadedColor;
+        buttonText.GetComponent<UnderlineTextOnPointerEnter>().enabled = false;
     }
 
     [Button]
