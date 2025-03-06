@@ -612,6 +612,7 @@ GameObject:
   - component: {fileID: 8788230976808807734}
   - component: {fileID: 9008500647035603108}
   - component: {fileID: 8960094523001343518}
+  - component: {fileID: 5781383989124011345}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -675,8 +676,8 @@ MonoBehaviour:
     and builds of the game!
 
 
-    Use the search button at the top of the website
-    to find pages.'
+    Use the search bar at the top of the website to
+    find pages, or you can right click on a word to immediately search it! '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
   m_sharedMaterial: {fileID: 5141295571327654121, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
@@ -777,6 +778,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5781383989124011345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4069173389152524619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0139946101bc754ab49615f5c519a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6279758899227235654
 GameObject:
   m_ObjectHideFlags: 0
