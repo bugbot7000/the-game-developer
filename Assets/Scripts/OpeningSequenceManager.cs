@@ -50,8 +50,8 @@ public class OpeningSequenceManager : MonoBehaviour
                 raliasLamentBuild.SetActive(true);
                 titleScreen.gameObject.SetActive(false);
                 messaging.OpenWindow();
-                webBrowser.OpenWindow();
-                webBrowser.GetComponent<WebBrowserManager>().OpenPage("www.vapor.com/ralias-lament");
+                // webBrowser.OpenWindow();
+                // webBrowser.GetComponent<WebBrowserManager>().OpenPage("www.vapor.com/ralias-lament");
             })
             .AppendInterval(2.0f)
             .Append(fade.DOFade(0.0f, 2.0f).SetEase(Ease.OutCubic))
