@@ -198,6 +198,7 @@ public class enemyAI_Script : MonoBehaviour
     public void SpriteOrbitStop()
     {
         scr_orbit OrbitScript = GetComponent<scr_orbit>();
+        transform.position = spawnPoint;
         //if (OrbitScript.centralObject.parent != null)
         //{
         //    gameObject.transform.SetParent(OrbitScript.centralObject.parent);

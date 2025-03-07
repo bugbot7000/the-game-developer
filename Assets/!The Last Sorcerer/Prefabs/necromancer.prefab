@@ -229,16 +229,20 @@ MonoBehaviour:
   sightRange: 17
   attackRange: 10
   retreatRange: 8
+  retreatDistance: 10
   playerInSightRange: 0
   playerInAttackRange: 0
   playerTooClose: 0
   bodyguard: 0
   ward: {fileID: 0}
   hitbox: {fileID: 7979081663755473800}
+  nose: {fileID: 0}
   animator: {fileID: 0}
   charmPoints: 0
   arrowPrefab: {fileID: 674199214884407343, guid: 1738cfb883e449846b0fd0af9a714ad3, type: 3}
   arrowSpawnPoint: {fileID: 8343017472919352078}
+  visible: 1
+  stalking: 1
   DMLeapLocations: []
   DMJumpSpeed: 0
   DMIsJumping: 0
@@ -246,7 +250,7 @@ MonoBehaviour:
   spawnInterval: 12
   spawnedEnemy: {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
   enemySpawnPoint: {fileID: 8343017472919352078}
-  type: 4
+  type: 6
 --- !u!114 &7568533411508192411
 MonoBehaviour:
   m_ObjectHideFlags: 0
