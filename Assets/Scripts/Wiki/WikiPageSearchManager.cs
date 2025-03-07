@@ -4,6 +4,7 @@ using UnityEngine;
 
 using AptabaseSDK;
 using Sirenix.OdinInspector;
+using Michsky.DreamOS;
 
 [TypeInfoBox("Handles the search function and keeping track of which pages have been visited.")]
 public class WikiPageSearchManager : MonoBehaviour
@@ -26,9 +27,14 @@ public class WikiPageSearchManager : MonoBehaviour
 
     [TitleGroup("Wiki Index")]
     [SerializeField] WikiIndexSO newIndex;
+    [SerializeField] bool enableWikiDebug;
 
     [TitleGroup("Parameters")]
     [SerializeField] int maxSearchResults = 3;  
+
+    [TitleGroup("References")]
+    [SerializeField] WindowManager webBrowser;
+    [SerializeField] NetworkManager networkManager;
     
     WikiIndex index;
     List<WikiPageSO> visitedPages = new List<WikiPageSO>();
@@ -39,6 +45,23 @@ public class WikiPageSearchManager : MonoBehaviour
     public string LastSearchTerm  { get; private set; }
     public WikiPage LastFoundPage { get; private set; }
     public WikiPageSO LastFoundPageSO { get; private set; }
+
+    void Start()
+    {
+        if (enableWikiDebug)
+        {
+            Debug.Log("[WikiPageSearchManager] Wiki debug enabled.");
+
+            foreach (WikiPageSO wikiPage in newIndex.WikiPages)
+            {
+                visitedPages.Add(wikiPage);
+            }
+
+            webBrowser.OpenWindow();
+            webBrowser.GetComponent<WebBrowserManager>().OpenPage("wiki.eren.local/archive");    
+            networkManager.networkItems[0].networkSpeed = 100;        
+        }
+    }
 
     public void SetSearchTerm(string term)
     {
