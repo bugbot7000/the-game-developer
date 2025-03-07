@@ -110,6 +110,16 @@ public class scr_playerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar); }
 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SwitchSpell1ToSwipe();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SwitchSpell1ToBeam();
+        }        
+
         if (currentAttack != null)
         {
             mSpd = 0f;

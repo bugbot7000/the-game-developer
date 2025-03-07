@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 2
   Date: 1/26/2017
-  Title: White Tiger (version 4.1)
+  Title: White Tiger
   Subtitle: 
   Content: 'One of the four cardinal animals in Chinese mythology
 
@@ -25,6 +25,6 @@ MonoBehaviour:
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
-  ContainsBuild: 0
-  BuildIndex: 0
+  ContainsBuild: 1
+  BuildIndex: 3
   AdditionalKeywords: []

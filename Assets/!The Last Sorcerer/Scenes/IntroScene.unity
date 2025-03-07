@@ -42,7 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -126,10 +127,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 954637380081146297, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
-      propertyPath: equippedFamiliar
-      value: 
-      objectReference: {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
     - target: {fileID: 5499041680031555884, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -170,13 +167,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748752438378942516, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
+      propertyPath: targetSpell
+      value: beam
+      objectReference: {fileID: 0}
     - target: {fileID: 6043424687060182410, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
       propertyPath: m_Name
       value: First Build
-      objectReference: {fileID: 0}
-    - target: {fileID: 8877158774855961854, guid: c5a38ed8b50ba5247a632418c6b3602c, type: 3}
-      propertyPath: health
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

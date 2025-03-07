@@ -14,14 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 11/10/2016
-  Title: 'Thalia (v2.35 final) '
+  Title: Thalia
   Subtitle: 
-  Content: "One of the three Charities in Greek mythology , name means \u201Cabundance\u201D
-    \r\n\r\nMaze has art assets, attack now works\r\n\r\nRevised droning narrator
-    from Beat 1 "
+  Content: " name means \u201Cabundance\u201D \r\n\r\nBlock out for the maze level\r\n\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 1
-  BuildIndex: 2
+  BuildIndex: 1
   AdditionalKeywords: []

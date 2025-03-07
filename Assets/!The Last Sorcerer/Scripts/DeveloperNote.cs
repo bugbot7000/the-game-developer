@@ -2,10 +2,16 @@ using UnityEngine;
 
 public class DeveloperNote : MonoBehaviour
 {
-    [SerializeField] GameObject canvas;
-
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        canvas.SetActive(true);
+        if (other.CompareTag("Player"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 }

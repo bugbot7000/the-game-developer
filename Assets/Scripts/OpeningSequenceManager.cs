@@ -57,15 +57,14 @@ public class OpeningSequenceManager : MonoBehaviour
             .Append(fade.DOFade(0.0f, 2.0f).SetEase(Ease.OutCubic))
             .AppendCallback(() => {
                 fade.blocksRaycasts = false;
-                notificationAndCloseGameSequence();
             });
     }
 
-    void notificationAndCloseGameSequence()
+    public void notificationAndCloseGameSequence()
     {
         DOTween.Sequence()
-            .AppendInterval(5.0f)
-            .AppendCallback(() => MetaNarrativeManager.Instance.TriggerStorytellerSequence("SEQ_0"))
+            //.AppendInterval(5.0f)
+            //.AppendCallback(() => MetaNarrativeManager.Instance.TriggerStorytellerSequence("SEQ_0"))
             .Append(notifcation.DOAnchorPosX(-64, 0.5f).SetEase(Ease.OutCubic))
             .AppendInterval(4.5f)
             .Append(notifcation.DOAnchorPosX(400, 0.5f).SetEase(Ease.OutCubic))

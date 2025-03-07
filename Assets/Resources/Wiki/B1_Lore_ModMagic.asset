@@ -10,18 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B1_Build_Agalea
+  m_Name: B1_Lore_ModMagic
   m_EditorClassIdentifier: 
-  PageType: 2
+  PageType: 1
   Date: 9/27/2016
-  Title: Aglaea
-  Subtitle: 
-  Content: "\rName means \u201Cfestive radiance\u201D \n\nYou can use WASD or arrow
-    keys to move\n\nBy pressing J you use your currently equipped spell\n\nIf you
-    fall off, R can be used to respawn"
+  Title: ModMagic
+  Subtitle: Lore
+  Content: 'Kento explains the modular magic system or modmagic as they''re calling
+    it
+
+
+    The modularity comes from the combination of spell shapes and spell
+    types
+
+
+    Kento has a lot of plans for types and shapes, but for now Eren has
+    only implemented swipe (selected by pressing 1) and beam (selected by pressing
+    2)'
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
-  ContainsBuild: 1
+  ContainsBuild: 0
   BuildIndex: 0
   AdditionalKeywords: []

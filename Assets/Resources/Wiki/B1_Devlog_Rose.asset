@@ -17,21 +17,24 @@ MonoBehaviour:
   Title: Rose's Devlog #1
   Subtitle: 
   Content: "Excitement to be working on a project with someone who\u2019s made really
-    interesting narrative and puzzle stuff in the past \r\nPart admiration, part
+    interesting narrative and puzzle stuff in the past \n\r\nPart admiration, part
     \u201Cwell I need to have a game made by a wider team in my portfolio and this
-    seemed suitable\u201D \r\nTalks about how modular magic system was actually an
-    idea she\u2019d been turning over in her head for a while but didn\u2019t really
-    have the design knowledge to implement herself\r\nWhen she grasped what Kento
-    was trying to tell her about the narrative it clicked and she was like \u201Coh
-    this\u2019ll be perfect\u201D \r\nSays she\u2019s started on assets to fill in
-    the greybox of the existing maze level, and talks about going to Playtest Tuesdays
-    to iron out some of the kinks\r\nKento seemed hesitant about doing so this early
-    but she insisted that they can put together something simple but presentable\r\nGrouses
-    a little bit about how Kento seems resistant to implementing gamedev best practice,
-    like version control and easy to understand naming systems \r\nMentions that
-    Eren smoothed things over by saying they could have both the esoteric build name
-    and the version number \r\nCreated the GitHub for the project (HitGlub) and gave
-    both Eren and Kento contributor perms\r"
+    seemed suitable\u201D \n\r\nTalks about how modular magic or modmagic system
+    was actually an idea she\u2019d been turning over in her head for a while but
+    didn\u2019t really have the design knowledge to implement herself\n\r\nWhen she
+    grasped what Kento was trying to tell her about the narrative it clicked and
+    she was like \u201Coh this\u2019ll be perfect\u201D \n\r\nSays she\u2019s started
+    on concept art for the different characters and areas of the game, and talks
+    about going to Playtest Tuesdays to show early builds\n\r\nKento seemed hesitant
+    about doing so this early but she insisted that they can put together something
+    simple but presentable\n\nIt's also a great way to get suggestions - they easily
+    add a Space to dash after some feedback\n\r\nGrouses a little bit about how Kento
+    seems resistant to implementing gamedev best practice, like version control and
+    easy to understand naming systems \n\r\nMentions that Eren smoothed things over
+    by saying they could have both the esoteric build name and the version number,
+    but Kento insisted with the fancy names for the wiki\n\nSeems like Kento is naming
+    the builds after the greek Charities?\n\r\nCreated the GitHub for the project
+    (HitGlub) and gave both Eren and Kento contributor perms\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

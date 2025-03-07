@@ -201,13 +201,6 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: I'm remembering our builds had silly codenames, like Aglaya.
-    objectType: 0
-    messageAuthor: 0
-    sentTime: 
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
   - messageContent: Aglaea*
     objectType: 0
     messageAuthor: 0

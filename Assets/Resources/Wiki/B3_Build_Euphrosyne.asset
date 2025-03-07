@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 2
   Date: 12/9/2016
-  Title: Euphrosyne (v3.1)
+  Title: Euphrosyne
   Subtitle: 
   Content: "One of the three Charities in Greek mythology \r\n\nName means \u201Cmerriment\u201D
     \r\n\nKento bitterly notes that it\u2019s kind of ironic that the last Charity
@@ -24,5 +24,5 @@ MonoBehaviour:
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 1
-  BuildIndex: 4
+  BuildIndex: 2
   AdditionalKeywords: []

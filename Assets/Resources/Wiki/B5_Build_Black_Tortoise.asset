@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 2
   Date: 3/13/2017
-  Title: Black Tortoise (version 5.5)
+  Title: Black Tortoise
   Subtitle: 
   Content: 'One of the four cardinal animals in Chinese mythology
 
@@ -26,5 +26,5 @@ MonoBehaviour:
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 0
-  BuildIndex: 0
+  BuildIndex: 4
   AdditionalKeywords: []
