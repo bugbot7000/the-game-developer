@@ -16,114 +16,118 @@ MonoBehaviour:
   useDynamicMessages: 0
   useStoryTeller: 0
   messageList:
-  - messageContent: "You\u2019re playing THAT game??"
+  - messageContent: "I can\u2019t fucking believe it. "
     objectType: 0
     messageAuthor: 1
     sentTime: 11:06 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "Yeah, it\u2019s really good. "
+  - messageContent: 'Look at this. '
     objectType: 0
-    messageAuthor: 0
+    messageAuthor: 1
     sentTime: 11:09 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: 'After how she tore our group apart? '
+  - messageContent: 'She stole OUR game, Eren. '
     objectType: 0
     messageAuthor: 1
     sentTime: 11:10 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: Cmon man
+  - messageContent: are you sure? it looks a lot different than what we made
     objectType: 0
-    messageAuthor: 1
+    messageAuthor: 0
     sentTime: 11:11 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "Look, Kento. You can\u2019t stay mad at Rose forever. "
+  - messageContent: "Because she put a fancy new coat of paint on it. \r\n"
     objectType: 0
-    messageAuthor: 0
+    messageAuthor: 1
     sentTime: 11:15 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: 'Besides, you were the one to throw in the towel first, right? '
+  - messageContent: 'All of the mechanics are the same. '
     objectType: 0
-    messageAuthor: 0
+    messageAuthor: 1
     sentTime: 11:17 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: Well yeah but she was the one stalling the entire project in
-      the first place!
+  - messageContent: 'I guarantee you she stole the source code from the last build
+      we made. '
     objectType: 0
     messageAuthor: 1
     sentTime: 11:18 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "We would have gotten Trismegistus done and published if she
-      wasn\u2019t constantly insisting on everything being the way SHE wanted it
-      to be "
-    objectType: 0
-    messageAuthor: 1
-    sentTime: 11:18 AM
-    audioMessage: {fileID: 0}
-    imageMessage: {fileID: 0}
-    messageKey: 
-  - messageContent: 'Kento. '
+  - messageContent: "there\u2019s no way for us to check, tho\r"
     objectType: 0
     messageAuthor: 0
+    sentTime: 11:18 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: 'Not with that attitude. '
+    objectType: 0
+    messageAuthor: 1
     sentTime: 11:20 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: 'You know how capable Rose was as a developer, even back in our
-      college days. '
+  - messageContent: 'I managed to pirate it. You should be able to decompile it and
+      check. '
     objectType: 0
-    messageAuthor: 0
+    messageAuthor: 1
     sentTime: 11:21 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "You\u2019ve heard from our alumni group that she started her
-      own studio like you did a few years back."
+  - messageContent: The audacity of this bitch.
     objectType: 0
-    messageAuthor: 0
+    messageAuthor: 1
     sentTime: 11:22 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: 'You guys are a lot more similar than you think. '
+  - messageContent: "kento, I feel like you\u2019re jumping the gun again\u2026"
     objectType: 0
     messageAuthor: 0
     sentTime: 11:24 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "Then why has she gotten so big while I\u2019m still stuck here
-      trying to get a publisher to bite???"
+  - messageContent: "rose is a perfectly capable solo developer\r"
     objectType: 0
-    messageAuthor: 1
+    messageAuthor: 0
     sentTime: 11:24 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "This isn\u2019t fucking fair man"
+  - messageContent: "just because she released something similar to what we worked
+      on together doesn\u2019t automatically mean she stole it!! "
     objectType: 0
-    messageAuthor: 1
+    messageAuthor: 0
     sentTime: 11:26 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: Ugh I hate her guts
+  - messageContent: 'Just take a look. Hell, play it if you want. '
     objectType: 0
     messageAuthor: 1
     sentTime: 11:27 AM
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: "You\u2019ll see what I mean. "
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 11:28 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 

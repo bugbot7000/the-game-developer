@@ -1,0 +1,250 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ca2ddbf6e022748a2db98a0c813735, type: 3}
+  m_Name: Chat_Phantom
+  m_EditorClassIdentifier: 
+  saveConversation: 0
+  useDynamicMessages: 0
+  useStoryTeller: 1
+  messageList:
+  - messageContent: Hey S@v@g3__Scribe!
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: phantom? why are you messaging my work account :v
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: wait a moment, how did you even find my work account?!?
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Was bored at work, wasn't that hard to find you.
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: well... i guess i don't mind :)
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: but i'll ignore you ofc if i'm busy
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Sounds reasonable.
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: You won't get into trouble if IT sees these messages?
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: trust me, i've seen the managers at this company have much more
+      "risky" conversations on their corporate accounts... :s
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Sounds like a story for next time we play!
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Nov. 4
+    objectType: 1
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  dynamicMessages: []
+  storyTeller:
+  - itemID: SEQ_0
+    messageAuthor: 1
+    messageContent: Oh, you're checking out that new game?
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 0_HandProgram
+      replyBrief: kinda yeah
+      replyContent: kinda yeah
+      replyFeedback: What do you think?
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_1
+      briefKey: SEQ0_R1B
+      contentKey: SEQ0_R1C
+      feedbackKey: SEQ0_R1F
+    messageKey: SEQ0_1
+  - itemID: SEQ_1
+    messageAuthor: 0
+    messageContent: it's, uh...
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 1_Not yet
+      replyBrief: (Tell him about your old game)
+      replyContent: "remember that game i worked on for grad school\r"
+      replyFeedback: 'Yeah? '
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_2
+      briefKey: SEQ1_R1B
+      contentKey: SEQ1_R1C
+      feedbackKey: SEQ1_R1F
+    messageKey: SEQ1_1
+  - itemID: SEQ_2
+    messageAuthor: 1
+    messageContent: The Last Sorcerer, or something like that?
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 2_Sure
+      replyBrief: that's the one
+      replyContent: "that's the one, we never finished it though :(\nthe group fell
+        apart\r\n\rand kento thinks this new game is a ripoff\r"
+      replyFeedback: Huh...
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_3
+      briefKey: SEQ2_R1B
+      contentKey: SEQ2_R1C
+      feedbackKey: SEQ2_R1F
+    messageKey: SEQ2_1
+  - itemID: SEQ_3
+    messageAuthor: 1
+    messageContent: "Do you think he\u2019s right? "
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 3_I
+      replyBrief: "\u2026i don\u2019t know"
+      replyContent: "\u2026i don\u2019t know\nthey are like... really similar. but
+        it just doesn't feel the same... y'know??"
+      replyFeedback: "How long\u2019s it been since you looked at your old project? "
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_4
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: SEQ_4
+    messageAuthor: 1
+    messageContent: 'I remember you were working on it for a while after graduation. '
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 4
+      replyBrief: "It\u2019s been a while"
+      replyContent: "it\u2019s been a couple years\ni took this job at formworks
+        right after we gave up on it\r"
+      replyFeedback: "\u2018Gave up\u2019 is a bit of a strong term, I think. "
+      feedbackLatency: 1
+      feedbackTimer: 1.4
+      callAfter: SEQ_5
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: SEQ_5
+    messageAuthor: 0
+    messageContent: 'maybe
+
+      ngl i still have our old wiki on a private server'
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 5
+      replyBrief: "wiki.eren.local\r"
+      replyContent: "wiki.eren.local\r\n\rjust couldn't bring myself to delete it
+        :')\r"
+      replyFeedback: A wiki?
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_6
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: SEQ_6
+    messageAuthor: 1
+    messageContent: "Like to keep track of the game\u2019s progress? "
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 6
+      replyBrief: pretty much
+      replyContent: "yeah pretty much\r\nmaybe i should go back and look at it\r\nfor
+        old time\u2019s sake\r"
+      replyFeedback: 'Ooh, let me know how that goes. '
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: 
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: HINT_0
+    messageAuthor: 1
+    messageContent: Did you find anything?
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: H0
+      replyBrief: it's nolstalgic to look at...
+      replyContent: it's nolstalgic to look at... I thought I could program my own
+        wiki site
+      replyFeedback: Ah, the energy of youth...
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: HINT_1
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: HINT_1
+    messageAuthor: 0
+    messageContent: i'm remembering how we used funny names like gladius to name
+      the builds
+    messageLatency: 1
+    messageTimer: 1.5
+    replies: []
+    messageKey: SEQ3_1
