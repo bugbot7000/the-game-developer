@@ -529,7 +529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Archive
+  m_text: Index
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
   m_sharedMaterial: {fileID: 5141295571327654121, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
@@ -667,17 +667,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to <b>"The Last Sorcerer"</b> wiki!
+  m_text: 'Welcome to <b>"Trismegistus"</b> wiki!
 
 
-    We will be using this
-    website to document the development process for our project. Besides containing
-    documentation and design documents, this wiki will contain our discussions, devlogs
-    and builds of the game!
+    We will be using this website
+    to document the development process for our project. Besides containing documentation
+    and design documents, this wiki will contain our discussions, devlogs and builds
+    of the game!
 
 
-    Use the search bar at the top of the website to
-    find pages.'
+    Use the search bar at the top of the website to find pages.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
   m_sharedMaterial: {fileID: 5141295571327654121, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}

@@ -989,7 +989,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2962609249989556397}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4046875
+  m_Size: 0.4703125
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1115,9 +1115,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 835979451564607449}
-  - {fileID: 8129755404992525889}
   - {fileID: 312284217883801875}
   - {fileID: 6779324417325653620}
+  - {fileID: 8129755404992525889}
   - {fileID: 4958920406221059692}
   - {fileID: 1444973108561770630}
   - {fileID: 3302717748633562148}
@@ -2177,7 +2177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: -70}
+  m_AnchoredPosition: {x: 1, y: -148}
   m_SizeDelta: {x: -66, y: 32}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &5469710643588970461
@@ -2383,7 +2383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Archive
+  m_text: Index
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
   m_sharedMaterial: {fileID: 5141295571327654121, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}

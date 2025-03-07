@@ -145,7 +145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Archive
+  m_text: Index
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
   m_sharedMaterial: {fileID: 5141295571327654121, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
@@ -504,7 +504,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5970252941285711346}
-  - {fileID: 2157885851829522808}
   m_Father: {fileID: 5329051609864082453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -830,7 +829,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2962609249989556397}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.7507246
+  m_Size: 0.87246376
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -960,12 +959,13 @@ RectTransform:
   - {fileID: 6779324417325653620}
   - {fileID: 2789393358227540051}
   - {fileID: 3802134436116297252}
+  - {fileID: 2157885851829522808}
   m_Father: {fileID: 5970252941285711346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -16}
-  m_SizeDelta: {x: -64, y: -32}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -64, y: -64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &730064497365248845
 CanvasRenderer:
@@ -1351,11 +1351,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 875316215775768204}
+  m_Father: {fileID: 6233070691845118304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 48, y: 16}
+  m_AnchoredPosition: {x: 16, y: 14}
   m_SizeDelta: {x: 900, y: 64}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &4224215513747370402
@@ -1386,8 +1386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ERROR: Archive cache corrupted. Please manually load pages to rebuild
-    archive.'
+  m_text: 'ERROR: Index cache corrupted. Please manually load pages to rebuild index.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e033e18078139044abab06cf87660e53, type: 2}
   m_sharedMaterial: {fileID: -7825370461559095283, guid: e033e18078139044abab06cf87660e53, type: 2}
