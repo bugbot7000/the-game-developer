@@ -5880,6 +5880,117 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4411591863307454, guid: fd1c467af72ecd64ca0df9bba37b6af1, type: 3}
   m_PrefabInstance: {fileID: 254715524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &258784021
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1197709225}
+    m_Modifications:
+    - target: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_Name
+      value: minotaur
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.1291547
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.1291547
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.1291547
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.1004791
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9899521
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.6019821
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 258784025}
+    - targetCorrespondingSourceObject: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 258784024}
+  m_SourcePrefab: {fileID: 100100000, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+--- !u!4 &258784022 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4414871117303439923, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+  m_PrefabInstance: {fileID: 258784021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &258784023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
+  m_PrefabInstance: {fileID: 258784021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &258784024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258784023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7650bc109b9b6c14699230982185ea36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  follow_obj: {fileID: 1987836149}
+--- !u!114 &258784025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258784023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b6f98efc1cf9c4a95730bb2f9ff625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeline: {fileID: 1987836149}
 --- !u!1001 &259334025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44370,6 +44481,7 @@ MonoBehaviour:
   dmg: 2
   damageOnCollide: 0
   large: 0
+  noMove: 0
   spawnPoint: {x: 0, y: 0, z: 0}
   patrolTarget: {x: 0, y: 0, z: 0}
   whatIsPlayer:
@@ -44382,15 +44494,28 @@ MonoBehaviour:
   alreadyAttacked: 0
   sightRange: 17
   attackRange: 5
-  archerRetreatRange: 0
+  retreatRange: 0
+  retreatDistance: 0
   playerInSightRange: 0
   playerInAttackRange: 0
-  playerTooCloseToArcher: 0
+  playerTooClose: 0
   bodyguard: 0
   ward: {fileID: 0}
   hitbox: {fileID: 972511083962631165}
+  nose: {fileID: 0}
   animator: {fileID: 0}
   charmPoints: 0
+  arrowPrefab: {fileID: 0}
+  arrowSpawnPoint: {fileID: 0}
+  visible: 1
+  stalking: 1
+  DMLeapLocations: []
+  DMJumpSpeed: 0
+  DMIsJumping: 0
+  projectileSpawnPoints: []
+  spawnInterval: 3
+  spawnedEnemy: {fileID: 0}
+  enemySpawnPoint: {fileID: 0}
   type: 0
 --- !u!1 &217266679407410199
 GameObject:
@@ -44509,6 +44634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   dmgTxt: {fileID: 313758795777118230}
+  invincible: 0
 --- !u!114 &335949458725930067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45182,6 +45308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   dmgTxt: {fileID: 313758795777118230}
+  invincible: 0
 --- !u!23 &2437351802310785375
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45434,6 +45561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   dmgTxt: {fileID: 313758795777118230}
+  invincible: 0
 --- !u!4 &3394195026171088977
 Transform:
   m_ObjectHideFlags: 0
@@ -46067,10 +46195,17 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7840141946167705049, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5738009176299262052, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5887721326402832944, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 258784022}
     - targetCorrespondingSourceObject: {fileID: 5112445058851522885, guid: 4fc2d2be97ad18040854213b2597b5e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1907371605}
@@ -46339,6 +46474,7 @@ MonoBehaviour:
   currentFamiliars: []
   swipe: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
   beam: {fileID: 4121033437667739710, guid: 9742a29b796f01d488d367537a6d9195, type: 3}
+  shield: {fileID: 0}
   spellOnCooldown: 0
   cooldownTime: 0
   familiar1: {fileID: 0}
@@ -46478,6 +46614,7 @@ MonoBehaviour:
   dmg: 2
   damageOnCollide: 0
   large: 0
+  noMove: 0
   spawnPoint: {x: 0, y: 0, z: 0}
   patrolTarget: {x: 0, y: 0, z: 0}
   whatIsPlayer:
@@ -46490,15 +46627,28 @@ MonoBehaviour:
   alreadyAttacked: 0
   sightRange: 17
   attackRange: 5
-  archerRetreatRange: 0
+  retreatRange: 0
+  retreatDistance: 0
   playerInSightRange: 0
   playerInAttackRange: 0
-  playerTooCloseToArcher: 0
+  playerTooClose: 0
   bodyguard: 0
   ward: {fileID: 0}
   hitbox: {fileID: 6252626571428874893}
+  nose: {fileID: 0}
   animator: {fileID: 0}
   charmPoints: 0
+  arrowPrefab: {fileID: 0}
+  arrowSpawnPoint: {fileID: 0}
+  visible: 1
+  stalking: 1
+  DMLeapLocations: []
+  DMJumpSpeed: 0
+  DMIsJumping: 0
+  projectileSpawnPoints: []
+  spawnInterval: 3
+  spawnedEnemy: {fileID: 0}
+  enemySpawnPoint: {fileID: 0}
   type: 0
 --- !u!224 &6648232431044460986
 RectTransform:
@@ -46880,6 +47030,7 @@ MonoBehaviour:
   dmg: 2
   damageOnCollide: 0
   large: 0
+  noMove: 0
   spawnPoint: {x: 0, y: 0, z: 0}
   patrolTarget: {x: 0, y: 0, z: 0}
   whatIsPlayer:
@@ -46892,15 +47043,28 @@ MonoBehaviour:
   alreadyAttacked: 0
   sightRange: 17
   attackRange: 5
-  archerRetreatRange: 0
+  retreatRange: 0
+  retreatDistance: 0
   playerInSightRange: 0
   playerInAttackRange: 0
-  playerTooCloseToArcher: 0
+  playerTooClose: 0
   bodyguard: 0
   ward: {fileID: 0}
   hitbox: {fileID: 8968987453050930709}
+  nose: {fileID: 0}
   animator: {fileID: 0}
   charmPoints: 0
+  arrowPrefab: {fileID: 0}
+  arrowSpawnPoint: {fileID: 0}
+  visible: 1
+  stalking: 1
+  DMLeapLocations: []
+  DMJumpSpeed: 0
+  DMIsJumping: 0
+  projectileSpawnPoints: []
+  spawnInterval: 3
+  spawnedEnemy: {fileID: 0}
+  enemySpawnPoint: {fileID: 0}
   type: 0
 --- !u!1 &8215922349936687615
 GameObject:
@@ -46992,6 +47156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   dmgTxt: {fileID: 313758795777118230}
+  invincible: 0
 --- !u!136 &8483515564695063088
 CapsuleCollider:
   m_ObjectHideFlags: 0
