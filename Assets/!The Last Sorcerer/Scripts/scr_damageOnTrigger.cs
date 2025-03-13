@@ -7,10 +7,10 @@ public class scr_damageOnTrigger : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (gameObject.transform.parent != null && gameObject.GetComponentsInParent<enemyAI_Script>() != null) //Check if we're fatherless
-        { 
-            if (gameObject.GetComponentInParent<enemyAI_Script>().hitbox == null) { gameObject.GetComponentInParent<enemyAI_Script>().hitbox = gameObject; }
-        }
+        //if (gameObject.transform.parent != null && gameObject.GetComponentsInParent<enemyAI_Script>() != null) //Check if we're fatherless
+        //{ 
+        //    if (gameObject.GetComponentInParent<enemyAI_Script>().hitbox == null) { gameObject.GetComponentInParent<enemyAI_Script>().hitbox = gameObject; }
+        //}
         //gameObject.SetActive(false);
     }
 

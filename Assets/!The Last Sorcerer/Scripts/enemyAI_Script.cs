@@ -17,9 +17,6 @@ public class enemyAI_Script : MonoBehaviour
     public LayerMask whatIsPlayer; //Set this on summon to change it to enemies, also change layer to 'familiar layer'
     public Transform player;
 
-    public GameObject sprite;
-    public SpriteRenderer spriteRenderer;
-
     public float timeBetweenAttacks;
     public bool alreadyAttacked;
 
@@ -32,6 +29,7 @@ public class enemyAI_Script : MonoBehaviour
     public GameObject ward;
 
     public GameObject hitbox, nose;
+    public GameObject mesh;
 
     public Animator animator;
 
@@ -78,7 +76,7 @@ public class enemyAI_Script : MonoBehaviour
         player = GameObject.Find("player").transform;
         spawnPoint = gameObject.transform.position;
         patrolTarget = spawnPoint;
-        if (hitbox != null) // Changed to account for charming objects with no hitbox, may need to revisit later. Hitbox exists for a reason.
+        if (hitbox != null && type != EnemyType.Ogre) // Changed to account for charming objects with no hitbox, may need to revisit later. Hitbox exists for a reason.
         {
             hitbox.SetActive(false);
         }
@@ -90,7 +88,6 @@ public class enemyAI_Script : MonoBehaviour
         previousPosition = spawnPoint;
         rotationSetting = new Vector3(0, 0, 0);
 
-        if (sprite != null) { spriteRenderer = sprite.GetComponent<SpriteRenderer>(); }
         if (type == EnemyType.Necromancer) { StartCoroutine(SpawnEnemies()); }
         if (type == EnemyType.Assassin) { visible = false; }
     }
@@ -113,29 +110,31 @@ public class enemyAI_Script : MonoBehaviour
         Vector3 direction = currentPosition - previousPosition;
         direction.Normalize();
 
-        if (direction.x > 0 && type != EnemyType.Knight)
-        {
-            rotationSetting = new Vector3(0, 90, 0); //In 3D we rotate on the Y, not Z
-            if (spriteRenderer != null) { spriteRenderer.flipX = false; }
+        //if (direction.x > 0 && type != EnemyType.Knight)
+        //{
+        //    rotationSetting = new Vector3(0, 90, 0); //In 3D we rotate on the Y, not Z
+        //    if (spriteRenderer != null) { spriteRenderer.flipX = false; }
 
-        }
-        else if (direction.x < 0 && type != EnemyType.Knight)
-        {
-            rotationSetting = new Vector3(0, -90f, 0);
-            if (spriteRenderer != null) { spriteRenderer.flipX = true; }
-        }
-        else if (direction.z > 0 && direction.x == 0 && type != EnemyType.Knight)
-        {
-            rotationSetting = new Vector3(0, 0, 0);
-        }
-        else if (direction.z < 0 && direction.x == 0 && type != EnemyType.Knight)
-        {
-            rotationSetting = new Vector3(0, 180f, 0f);
-        }
+        //}
+        //else if (direction.x < 0 && type != EnemyType.Knight)
+        //{
+        //    rotationSetting = new Vector3(0, -90f, 0);
+        //    if (spriteRenderer != null) { spriteRenderer.flipX = true; }
+        //}
+        //else if (direction.z > 0 && direction.x == 0 && type != EnemyType.Knight)
+        //{
+        //    rotationSetting = new Vector3(0, 0, 0);
+        //}
+        //else if (direction.z < 0 && direction.x == 0 && type != EnemyType.Knight)
+        //{
+        //    rotationSetting = new Vector3(0, 180f, 0f);
+        //}
 
         previousPosition = currentPosition;
+        
 
-        if(charmPoints > 0f)
+
+        if (charmPoints > 0f)
         {
             charmPoints -= Time.deltaTime;
         }
@@ -164,11 +163,11 @@ public class enemyAI_Script : MonoBehaviour
             //if (alreadyAttacked) { Retreat(); }
         }
 
-        if (type == EnemyType.Knight && !alreadyAttacked)
-        {
-            Vector3 plyerDirection = (player.position - gameObject.transform.position).normalized;
-            gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
-        }
+        //if (type == EnemyType.Knight && !alreadyAttacked)
+        //{
+        //    Vector3 plyerDirection = (player.position - gameObject.transform.position).normalized;
+        //    gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
+        //}
     }
 
     public void CharmMe()
@@ -261,9 +260,18 @@ public class enemyAI_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (type != EnemyType.Knight) //Using the knight as a test case for getting rid of old rotation logic
+        //if (type != EnemyType.Knight) //Using the knight as a test case for getting rid of old rotation logic
+        //{
+        //    transform.eulerAngles = rotationSetting;
+        //}
+        if (!alreadyAttacked)
         {
-            transform.eulerAngles = rotationSetting;
+            Vector3 plyerDirection = (player.position - gameObject.transform.position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
+        }
+        if (mesh != null)
+        {
+            mesh.transform.rotation = gameObject.transform.rotation;
         }
     }
 
@@ -315,6 +323,12 @@ public class enemyAI_Script : MonoBehaviour
             agent.SetDestination(transform.position);
         }
 
+        if (!alreadyAttacked) 
+        {
+            Vector3 plyerDirection = (player.position - gameObject.transform.position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
+        }
+
         if (!alreadyAttacked && type == EnemyType.Zombie) 
         {
             damageOnCollide = true;
@@ -340,8 +354,9 @@ public class enemyAI_Script : MonoBehaviour
             //body.constraints = RigidbodyConstraints.FreezePosition;
             body.constraints = RigidbodyConstraints.FreezeRotation;
 
-            hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
-            //animator.SetBool("isAttacking", true);
+            //hitbox.GetComponent<BoxCollider>().enabled = true; //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
+            //animator.SetBool("isAttacking", true); //CODE FOR STARTING ANIMATION GOES HERE. ANIMATION NEEDS TO NOT LOOP(!) FOR THIS CODE TO WORK
+            animator.SetTrigger("ATK1 Trg");
             Debug.Log("Attacking");
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -427,8 +442,8 @@ public class enemyAI_Script : MonoBehaviour
         }
         if (type == EnemyType.Ogre)
         {
-            //animator.SetBool("isAttacking", false);
-            hitbox.SetActive(false);
+            //animator.SetBool("isAttacking", false); //CODE FOR ANIMATION TO END. AGAIN, WE ARE NOT LOOPING. THE "timeBetweenAttacks" VARIABLE DETERMINES ATTACK TIMING
+            //hitbox.GetComponent<BoxCollider>().enabled = false;
             Rigidbody body = GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.None;
             body.constraints = RigidbodyConstraints.FreezeRotationX;
@@ -445,6 +460,15 @@ public class enemyAI_Script : MonoBehaviour
             agent.enabled = true;
         }
         alreadyAttacked = false;
+    }
+
+    public void EnableBossHitbox()
+    {
+        hitbox.GetComponent<BoxCollider>().enabled = true;
+    }
+    public void DisableBossHitbox()
+    {
+        hitbox.GetComponent<BoxCollider>().enabled = false;
     }
 
     public void ToggleVisibility() 
