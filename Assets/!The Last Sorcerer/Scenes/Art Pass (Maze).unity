@@ -786,6 +786,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4411591863307454, guid: fd1c467af72ecd64ca0df9bba37b6af1, type: 3}
   m_PrefabInstance: {fileID: 29167305}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &40436094 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+  m_PrefabInstance: {fileID: 201605725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &40436095 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5459001675724762375, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+  m_PrefabInstance: {fileID: 201605725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b4e1a6e55d549e38dc3f7d891a61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &41039607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4346,6 +4362,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4411591863307454, guid: fd1c467af72ecd64ca0df9bba37b6af1, type: 3}
   m_PrefabInstance: {fileID: 199795676}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &201605725
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4246297261651470795}
+    m_Modifications:
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043984337120189205, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
+      propertyPath: m_Name
+      value: ParticleHandler
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
 --- !u!1001 &204850789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46492,6 +46565,7 @@ Transform:
   - {fileID: 3174561905393206869}
   - {fileID: 3779618966494531504}
   - {fileID: 3394195026171088977}
+  - {fileID: 40436094}
   m_Father: {fileID: 6740109970941749880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &4327456179313354286
@@ -47075,6 +47149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1a2b777e581d648b739637e8f2289c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pspawner: {fileID: 40436095}
   body: {fileID: 0}
   mSpd: 3.75
   dashSpd: 14
