@@ -50,21 +50,22 @@ public class OpeningSequenceManager : MonoBehaviour
                 raliasLamentBuild.SetActive(true);
                 titleScreen.gameObject.SetActive(false);
                 messaging.OpenWindow();
-                // webBrowser.OpenWindow();
-                // webBrowser.GetComponent<WebBrowserManager>().OpenPage("www.vapor.com/ralias-lament");
+                webBrowser.OpenWindow();
+                webBrowser.GetComponent<WebBrowserManager>().OpenPage("www.vapor.com/ralias-lament");
             })
             .AppendInterval(2.0f)
             .Append(fade.DOFade(0.0f, 2.0f).SetEase(Ease.OutCubic))
             .AppendCallback(() => {
                 fade.blocksRaycasts = false;
+                notificationAndCloseGameSequence();
             });
     }
 
-    public void notificationAndCloseGameSequence()
+    void notificationAndCloseGameSequence()
     {
         DOTween.Sequence()
-            //.AppendInterval(5.0f)
-            //.AppendCallback(() => MetaNarrativeManager.Instance.TriggerStorytellerSequence("SEQ_0"))
+            .AppendInterval(5.0f)
+            .AppendCallback(() => MetaNarrativeManager.Instance.TriggerStorytellerSequence("SEQ_0"))
             .Append(notifcation.DOAnchorPosX(-64, 0.5f).SetEase(Ease.OutCubic))
             .AppendInterval(4.5f)
             .Append(notifcation.DOAnchorPosX(400, 0.5f).SetEase(Ease.OutCubic))

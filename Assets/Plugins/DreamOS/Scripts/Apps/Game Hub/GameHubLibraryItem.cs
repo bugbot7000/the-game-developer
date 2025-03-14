@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace Michsky.DreamOS
 {
@@ -8,14 +7,8 @@ namespace Michsky.DreamOS
     {
         [SerializeField] private Image iconObject;
         [SerializeField] private Image bannerObject;
-        [SerializeField] private TextMeshProUGUI gameTitle;
         public ButtonManager playButton;
         [HideInInspector] public int gameIndex;
-
-        public void SetGameName(string text)
-        {
-            gameTitle.SetText(text);
-        }
 
         public void SetIcon(Sprite icon)
         {
