@@ -117,13 +117,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 4240672206808264728}
+        m_TargetAssemblyTypeName: ThanksCanvas, Assembly-CSharp
+        m_MethodName: SubmitEmail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -895,6 +895,7 @@ GameObject:
   - component: {fileID: 5039243930933395423}
   - component: {fileID: 165559064435812432}
   - component: {fileID: 4268074426248856236}
+  - component: {fileID: 8719006897331177821}
   m_Layer: 5
   m_Name: Thanks Panel
   m_TagString: Untagged
@@ -985,6 +986,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!225 &8719006897331177821
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6145820640976143680}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &6917313885678092445
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1010,7 @@ GameObject:
   - component: {fileID: 6251192959273122829}
   - component: {fileID: 8320881379483204810}
   - component: {fileID: 704482186478293553}
+  - component: {fileID: 4240672206808264728}
   m_Layer: 5
   m_Name: Thanks Canvas
   m_TagString: Untagged
@@ -1087,6 +1101,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 1015
+--- !u!114 &4240672206808264728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6917313885678092445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9882ff5a27388841b2d45d01e610f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emailInput: {fileID: 1717527666538271885}
 --- !u!1 &7390461550655338151
 GameObject:
   m_ObjectHideFlags: 0

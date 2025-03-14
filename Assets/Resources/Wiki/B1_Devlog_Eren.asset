@@ -16,22 +16,23 @@ MonoBehaviour:
   Date: 9/13/2016
   Title: Eren's Devlog #1
   Subtitle: 
-  Content: "Tests out his new mic and is relieved that he doesn\u2019t have to return
-    it for the third time\r\n\nTalks about how their thesis project was something
-    him and Kento were working on for a little bit before bringing it into Thesis\r\n\nMention
-    of how Kento is normally very possessive of his own projects and that he\u2019s
-    glad Kento feels comfortable enough to bring others onto this particular one\r\n\nBig
-    milestones he managed to hit in the past few weeks\r\n\tBasic features such as
-    movement, camera, and enemy AI\r\r\n\tStarted work on modular magic system\r\n\tHe
-    also added \"dev notes\" so people can leave comments in a level itself\r\n\nObservations
-    of his teammates\r\n\tKento seems offput by the amount of initiative Rose is
-    taking, but plans to reassure him that this is pretty much standard when working
-    with others \r\n\tWorried that Kento will be unwilling to give up primary control
-    of the aspects that Rose is working on\r\n\nPerhaps he won\u2019t get so overwhelmed
-    with work now\u2026 Rose, with her gamedev experience, can act as a buffer to
-    Kento\u2019s overzealousness and help them bring his vision to new heights\r\n\nAdmits
-    at the end that he really just wants to see Kento succeed in his vision for the
-    game more than anything\r"
+  Content: "[SCRIPT]\r\nTesting. Hello? Cabbage dumplings. Rendezvous. \n\r\nOkay,
+    good, my mic is working. If I had to return another one again I think I would
+    have combusted. \n\r\nSo, uh, this is my first devlog for Trismegistus. That\u2019s
+    what Kento\u2019s named it. He started work on it in his free time a few months
+    ago and asked me to help on some code stuff, but we\u2019ve decided to make it
+    our thesis project alongside Rose, who\u2019s both our, uh, good friend. \n\r\nIt\u2019s
+    only been a few weeks, but I\u2019ve already made good progress. I cleaned up
+    the code for the greyboxed maze level we did before class started, and added
+    some preliminary assets that Rose whipped up. I\u2019ve also started working
+    on the modular magic system she suggested, but that\u2019s gonna take a while.
+    \n\r\nI\u2019m a little worried about how Kento is reacting to bringing Rose
+    on, though. I know this is a big step for him, but he already seems a little
+    offput by the amount of initiative Rose is taking. Which I think is great, but
+    he might not be willing to give up primary control of what is still functionally
+    one of his babies. \n\r\nTo be honest, I\u2019m just really hoping we won\u2019t
+    all get overwhelmed with work now, but at the end I just really want to see Kento
+    succeed with his vision for the game more than anything.\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
