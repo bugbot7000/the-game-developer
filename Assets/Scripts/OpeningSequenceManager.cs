@@ -4,11 +4,10 @@ using System.Collections;
 
 using DG.Tweening;
 using Michsky.DreamOS;
+using AptabaseSDK;
 
 public class OpeningSequenceManager : MonoBehaviour
-{
-    //ralia's lament should have some dialogue...
-    
+{   
     [SerializeField] bool skipOpening;
     [SerializeField] CanvasGroup fade;
     [SerializeField] Canvas dreamOS;
@@ -42,6 +41,8 @@ public class OpeningSequenceManager : MonoBehaviour
 
     public void StartGame()
     {
+        Aptabase.TrackEvent("start_game");
+
         fade.blocksRaycasts = true;
         DOTween.Sequence()
             .Append(fade.DOFade(1.0f, 2.0f).SetEase(Ease.OutCubic))
