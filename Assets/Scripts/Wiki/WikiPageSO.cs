@@ -38,8 +38,9 @@ public class WikiPageSO : ScriptableObject
 
         foreach (string line in Content.Split('\n'))
         {
+            Debug.Log(line);
             string name = line.Split(":")[0]; 
-            string content = line.Split(":")[1];
+            string content = line.Split(":")[1].Trim();
 
             archivedChat += $"<b>{name}:</b><indent=3.5em>{content}</indent>\n";
         }
