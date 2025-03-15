@@ -1,11 +1,17 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 using Michsky.DreamOS;
+using Sirenix.OdinInspector;
+using TMPro;
 
-public class WikiArchivePageItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class WikiArchivePageItem : SerializedMonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] Dictionary<WikiPageType, Sprite> sprites;
+
     WikiArchivePage wikiArchivePage;
     WikiPageSO contentPage;
 
@@ -14,12 +20,21 @@ public class WikiArchivePageItem : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void Initialize(WikiPageSO target, WikiArchivePage archivePage)
     {
+        Image image = GetComponent<Image>();
+
+        image.sprite = sprites[target.PageType];
+
         contentPage = target;
         wikiArchivePage = archivePage;
 
         if (WikiPageSearchManager.Instance.HasPageBeenVisited(contentPage))
         {
-            GetComponent<Image>().color = Color.green;
+            image.color = Color.white;
+             
+            TextMeshProUGUI textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
+            textMeshPro.SetText(target.Title);
+            textMeshPro.color = Color.black;
+
             visited = true;
         }
         else
