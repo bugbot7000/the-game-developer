@@ -24,6 +24,7 @@ public class GameBuildManager : MonoBehaviour
     }
     #endregion    
     
+    [SerializeField] bool enableBuildDebug;
     [SerializeField] List<string> chatOnBuild = new List<string>();
     [SerializeField, SceneObjectsOnly] GameObject[] gamePrefabs;
     [SerializeField] GameHubManager.GameItem[] builds;
@@ -33,6 +34,17 @@ public class GameBuildManager : MonoBehaviour
     List<GameObject> addedBuilds = new List<GameObject>();
 
     int enabledBuild = -1;
+
+    void Start()
+    {
+        if (enableBuildDebug)
+        {
+            for (int i = 0; i < builds.Length; i++)
+            {
+                AddGameBuildToHub(i);
+            }
+        }
+    }
 
     public void EnableGameBuild(int build)
     {
