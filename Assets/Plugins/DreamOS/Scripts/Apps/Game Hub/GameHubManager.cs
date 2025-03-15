@@ -144,7 +144,6 @@ namespace Michsky.DreamOS
             // Get item component
             GameHubLibraryItem itemComp = go.GetComponent<GameHubLibraryItem>();
             itemComp.gameIndex = index;
-            itemComp.SetGameName(games[i].gameTitle);
             itemComp.SetIcon(games[i].gameIcon);
             itemComp.SetBanner(games[i].gameBanner);
             itemComp.playButton.onClick.AddListener(delegate { LaunchGame(itemComp.gameIndex); });            

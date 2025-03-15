@@ -5,6 +5,7 @@ public class scr_playerController : MonoBehaviour
 {
 
     Vector3 velocity;
+    public ParticleSpawner Pspawner;
     public Rigidbody body;
     public float mSpd;
     public float dashSpd;
@@ -278,11 +279,11 @@ public class scr_playerController : MonoBehaviour
         }
     }
 
-    void Attack(GameObject castSpell, SpellType type)
+    void Attack(GameObject spellShape, SpellType type)
     {
         if (currentAttack == null)
         {
-            if (castSpell == shield)
+            if (spellShape == shield)
             {
                 spellSpawn = gameObject.transform;
             }
@@ -290,7 +291,7 @@ public class scr_playerController : MonoBehaviour
             {
                 spellSpawn = activeFirePoint.transform;
             }
-            var copy = Instantiate(castSpell, spellSpawn.position, Quaternion.identity);
+            var copy = Instantiate(spellShape, spellSpawn.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
             currentAttack = copy;
             if (type == SpellType.Push)
@@ -301,6 +302,15 @@ public class scr_playerController : MonoBehaviour
                 copyScript.CharmSpell = false; //HERE...
                 copyScript.SlashSpell = false;
                 copyScript.FreezeSpell = false;
+                if (spellShape == swipe)
+                {
+                    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PushSwipe);
+                }
+                else if (spellShape == beam)
+                {
+                    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PushBeam);
+                }
+                //else if (spellShape == shield) { }
             }
             else if (type == SpellType.Pull)
             {
@@ -310,6 +320,15 @@ public class scr_playerController : MonoBehaviour
                 copyScript.CharmSpell = false; //HERE...
                 copyScript.SlashSpell = false;
                 copyScript.FreezeSpell = false;
+                if (spellShape == swipe)
+                {
+                    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PullSwipe);
+                }
+                else if (spellShape == beam)
+                {
+                    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PullBeam);
+                }
+
             }
             else if (type == SpellType.Charm) //AND HERE
             {

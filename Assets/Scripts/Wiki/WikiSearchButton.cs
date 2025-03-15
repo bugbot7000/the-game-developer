@@ -21,11 +21,6 @@ public class WikiSearchButton : MonoBehaviour
         webBrowserManager.OpenPage($"wiki.eren.local/search");
     }
 
-    public void ReturnToPreviousSearch()
-    {
-        webBrowserManager.OpenPage($"wiki.eren.local/search");
-    }
-
     public void GoToArchive()
     {
         webBrowserManager.OpenPage("wiki.eren.local/archive");

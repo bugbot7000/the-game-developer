@@ -7,7 +7,6 @@ using Sirenix.OdinInspector;
 [CreateAssetMenu(fileName = "New Wiki Page", menuName = "Their Game/Wiki Page")]
 public class WikiPageSO : ScriptableObject
 {
-    public WikiPageType PageType = WikiPageType.Devlog;
     public string Date;
     public string Title;
     [TextArea(3, 4)]
@@ -47,11 +46,4 @@ public class WikiPageSO : ScriptableObject
 
         return archivedChat;
     }
-}
-
-public enum WikiPageType {
-    Devlog,
-    Lore,
-    Build,
-    Chat
 }

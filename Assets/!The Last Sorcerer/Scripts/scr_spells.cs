@@ -12,6 +12,7 @@ public class scr_spells : MonoBehaviour
     //This script is intended to work on an object that comes into existence briefly and then goes away
     public float pushForce, pushRadius, pushDamage, slashDamage;
     public GameObject pulled;
+    public ParticleSpawner Pspawner;
     private Vector3 pullVelocity = Vector3.zero;
 
     public GameObject player, wand;
@@ -27,6 +28,7 @@ public class scr_spells : MonoBehaviour
         // Fairly certain this only works so long as there is only 1 object with said tag. But we're single player anyways
         player = GameObject.FindGameObjectWithTag("Player");
         wand = GameObject.FindGameObjectWithTag("Wand");
+        Pspawner = player.GetComponent<scr_playerController>().Pspawner;
     }
 
     private void FixedUpdate()
@@ -255,6 +257,20 @@ public class scr_spells : MonoBehaviour
             {
                 pulled.GetComponent<enemyAI_Script>().enabled = true;
                 pulled.GetComponent<NavMeshAgent>().enabled = true;
+
+            }
+        }
+        if (PullSpell) 
+        { 
+            if(gameObject.name == "swipe(Clone)")
+            {
+                player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullSwipe);
+                Debug.Log("Destroying swipe particles");
+            }
+            else if(gameObject.name == "beam(Clone)")
+            {
+                player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullBeam);
+                Debug.Log("Destroying beam particles");
 
             }
         }
