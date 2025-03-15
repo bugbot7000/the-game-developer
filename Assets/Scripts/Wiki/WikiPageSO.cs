@@ -7,6 +7,7 @@ using Sirenix.OdinInspector;
 [CreateAssetMenu(fileName = "New Wiki Page", menuName = "Their Game/Wiki Page")]
 public class WikiPageSO : ScriptableObject
 {
+    public WikiPageType PageType = WikiPageType.Devlog;
     public string Date;
     public string Title;
     [TextArea(3, 4)]
@@ -37,13 +38,19 @@ public class WikiPageSO : ScriptableObject
 
         foreach (string line in Content.Split('\n'))
         {
-            Debug.Log(line);
             string name = line.Split(":")[0]; 
-            string content = line.Split(":")[1].Trim();
+            string content = line.Split(":")[1];
 
             archivedChat += $"<b>{name}:</b><indent=3.5em>{content}</indent>\n";
         }
 
         return archivedChat;
     }
+}
+
+public enum WikiPageType {
+    Devlog,
+    Lore,
+    Build,
+    Chat
 }

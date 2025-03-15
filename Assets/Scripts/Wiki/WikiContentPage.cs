@@ -10,6 +10,9 @@ public class WikiContentPage : MonoBehaviour
     [SerializeField] TextMeshProUGUI subtitle;
     [SerializeField] TextMeshProUGUI content;
     [SerializeField] Button buildButton;
+    [SerializeField] Image downloadIcon;
+    [SerializeField] Color downloadedColor;
+    [SerializeField] RectTransform contentRect;
 
     TextMeshProUGUI buttonText;
     WikiPageSO currentPage;
@@ -49,6 +52,7 @@ public class WikiContentPage : MonoBehaviour
             {
                 buildButton.enabled = false;
                 buttonText.SetText("Build already downloaded");
+                setButtonDownloaded();
             }
             else
             {
@@ -56,6 +60,10 @@ public class WikiContentPage : MonoBehaviour
                 buttonText.SetText("Download Build");
             }
         }
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(content.rectTransform);
+        
+        contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, content.rectTransform.sizeDelta.y + 300);
 
         if (wikiPage.ActivatesInteractveChat && !MetaNarrativeManager.Instance.HasVisitedSequence(wikiPage.ChatID))
         {
@@ -68,7 +76,17 @@ public class WikiContentPage : MonoBehaviour
         buildButton.enabled = false;
         buttonText.SetText("Build added to Game Hub");
 
+        setButtonDownloaded();
+
         GameBuildManager.Instance.AddGameBuildToHub(currentPage.BuildIndex);
+    }
+
+    void setButtonDownloaded()
+    {
+        downloadIcon.enabled = false;
+        buttonText.fontStyle = FontStyles.Normal;
+        buttonText.color = downloadedColor;
+        buttonText.GetComponent<UnderlineTextOnPointerEnter>().enabled = false;
     }
 
     [Button]
