@@ -65,6 +65,8 @@ public class WikiContentPage : MonoBehaviour
         
         contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, content.rectTransform.sizeDelta.y + 300);
 
+        LayoutRebuilder.ForceRebuildLayoutImmediate(contentRect.parent.transform.GetComponent<RectTransform>());
+
         if (wikiPage.ActivatesInteractveChat && !MetaNarrativeManager.Instance.HasVisitedSequence(wikiPage.ChatID))
         {
             MetaNarrativeManager.Instance.TriggerStorytellerSequence(wikiPage.ChatID);
