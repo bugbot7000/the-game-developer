@@ -1890,7 +1890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1056971233326599720, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
       propertyPath: m_text
-      value: I hope people won't use glitches to get through the maze...
+      value: eren please fix the wall dash glitch so people don't use it in the maze
       objectReference: {fileID: 0}
     - target: {fileID: 2834181339475905740, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
       propertyPath: m_Name

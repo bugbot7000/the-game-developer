@@ -16,9 +16,11 @@ MonoBehaviour:
   Date: 9/27/2016
   Title: Aglaea
   Subtitle: 
-  Content: "\rName means \u201Cfestive radiance\u201D \n\nYou can use WASD or arrow
-    keys to move\n\nBy pressing J you use your currently equipped spell\n\nIf you
-    fall off, R can be used to respawn"
+  Content: "So, this build has the basic systems I've made to start developing the
+    game.  Kento picked the name for the build and it means \u201Cfestive radiance\u201D,
+    I think it's pretty cool. \r\n\r\nYou can use WASD or arrow keys to move. By
+    pressing J you use your currently equipped spell. If you fall off, R can be used
+    to respawn\r\n\r\n(added a wall to test modmagic puzzles. -k)"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

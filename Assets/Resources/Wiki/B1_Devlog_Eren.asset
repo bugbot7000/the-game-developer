@@ -22,17 +22,19 @@ MonoBehaviour:
     what Kento\u2019s named it. He started work on it in his free time a few months
     ago and asked me to help on some code stuff, but we\u2019ve decided to make it
     our thesis project alongside Rose, who\u2019s both our, uh, good friend. \n\r\nIt\u2019s
-    only been a few weeks, but I\u2019ve already made good progress. I cleaned up
-    the code for the greyboxed maze level we did before class started, and added
-    some preliminary assets that Rose whipped up. I\u2019ve also started working
-    on the modular magic system she suggested, but that\u2019s gonna take a while.
-    \n\r\nI\u2019m a little worried about how Kento is reacting to bringing Rose
-    on, though. I know this is a big step for him, but he already seems a little
-    offput by the amount of initiative Rose is taking. Which I think is great, but
-    he might not be willing to give up primary control of what is still functionally
-    one of his babies. \n\r\nTo be honest, I\u2019m just really hoping we won\u2019t
-    all get overwhelmed with work now, but at the end I just really want to see Kento
-    succeed with his vision for the game more than anything.\r\n"
+    only been a few weeks, but I\u2019ve already made good progress. I set up a small
+    test level that demonstrates the basic movement, camera and dialogue system.
+    I\u2019ve also started working on the modular magic system she suggested, but
+    that\u2019s gonna take a while. Kento wanted some way for us to add comments
+    directly to build so I added that too. I had to use it immediately too after
+    Kento added a seemingly random wall in the middle of the test level.\n\r\nI\u2019m
+    a little worried about how Kento is reacting to bringing Rose on, though. I know
+    this is a big step for him, but he already seems a little offput by the amount
+    of initiative Rose is taking. Which I think is great, but he might not be willing
+    to give up primary control of what is still functionally one of his babies. \n\r\nTo
+    be honest, I\u2019m just really hoping we won\u2019t all get overwhelmed with
+    work now, but at the end I just really want to see Kento succeed with his vision
+    for the game more than anything.\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

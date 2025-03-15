@@ -22,18 +22,20 @@ MonoBehaviour:
     can\u2019t wait to see what he\u2019s got planned for trismegistus</indent>\r\n-
     modular magic system was actually an idea i\u2019d been chewing on for a while
     but i didn\u2019t really have the design knowledge to do it myself\r\n<indent=5%>-
-    the whole a + b = c thing has to consider pretty much every combination</indent>\r\n<indent=5%>-coding
-    for that is way beyond what little i know lmfao</indent>\r\n- when i finally
+    the whole a + b = c thing has to consider pretty much every combination</indent>\r\n<indent=5%>-
+    coding for that is way beyond what little i know lmfao</indent>\r\n- when i finally
     figured out what kento was trying to tell me about the narrative it just kinda
-    clicked yknow\r\n- anyways i\u2019ve started working on assets to fill in the
-    greybox of the maze level we have already, mostly to make it presentable before
-    we can take it to playtest tuesdays\r\n<indent=5%>-kento was kinda hesitant to
-    show it off so early but we need to know if the modmagic is working as intended</indent>\r\n-
+    clicked yknow\r\n- anyways i\u2019ve started working on assets to start building
+    better looking levels, mostly to make it presentable before we can take it to
+    playtest tuesdays\r\n<indent=5%>- kento was kinda hesitant to show it off so
+    early but we need to know if the modmagic is working as intended</indent>\r\n-
     speaking of kento i\u2019m pretty sure this guy is allergic to gamedev best practices\r\n<indent=5%>-
     i made a kithub for the game bc apparently eren has just been storing this on
     his personal server???</indent>\r\n<indent=5%>- also kento keeps naming his builds
-    esoteric things. i keep telling him they need actual version numbers</indent>\r\n<indent=5%>-
-    both of em have contributor perms now (though idk if they\u2019ll use em)</indent>\r\n"
+    esoteric things.  like based on the greek charities. </indent>\n<indent=5%>-
+    i keep telling him they need actual version numbers but it seems like they're
+    only on the downloaded builds</indent>\r\n<indent=5%>- both of em have contributor
+    perms now (though idk if they\u2019ll use em)</indent>\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

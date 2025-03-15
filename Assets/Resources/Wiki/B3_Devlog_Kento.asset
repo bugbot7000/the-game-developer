@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 12/8/2016
-  Title: fights and bosses
+  Title: fights, bosses.
   Subtitle: 
   Content: "ok maybe i\u2019m starting to understand why rose was so gung ho on warning
     me off of all nighters. i\u2019m so tired. \n\r\nbut once i catch up on sleep
@@ -24,16 +24,17 @@ MonoBehaviour:
     spells, come up with some more enemies so rose can get started on the 3d models\u2026
     \n\r\nspeaking of story, i did end up tweaking it a little bit based on feedback
     from playtesters and clover. i\u2019ve decided that there are three sages now
-    instead of two, and the third sage is related to the reason why the sorcerer
-    has ended up trapped in the maze. it\u2019ll all be in the story document since
-    i don\u2019t think my ramblings about it would fit in this dev log\n\r\nas for
-    my plans for the rest of the game, each sage will have a separate arena-based
-    boss rush accessible from the frontier map. i\u2019m planning to have the original
-    two sages unlock the way to the third sage, who has been shut away for as long
-    as the sorcerer has been in the maze \n\r\ni\u2019ll likely also be asking eren
-    for help adding some of the more basic parts of my to-do items over winter break
-    since rose is so insistent on not overworking herself. she\u2019d tell me to
-    leave them for the start of the semester, you know how she is\r"
+    instead of two, and the third sage (called Immuta) is related to the reason why
+    the sorcerer has ended up trapped in the maze. it\u2019ll all be in the story
+    document since i don\u2019t think my ramblings about it would fit in this dev
+    log\n\r\nas for my plans for the rest of the game, each sage will have a separate
+    arena-based boss rush accessible from the frontier map. i\u2019m planning to
+    have the original two sages unlock the way to the third sage, who has been shut
+    away for as long as the sorcerer has been in the maze \n\r\ni\u2019ll likely
+    also be asking eren for help adding some of the more basic parts of my to-do
+    items over winter break since rose is so insistent on not overworking herself.
+    she\u2019d tell me to leave them for the start of the semester, you know how
+    she is\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

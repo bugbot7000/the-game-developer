@@ -16,17 +16,15 @@ MonoBehaviour:
   Date: 9/27/2016
   Title: ModMagic
   Subtitle: Lore
-  Content: 'Kento explains the modular magic system or modmagic as they''re calling
-    it
-
-
-    The modularity comes from the combination of spell shapes and spell
-    types
-
-
-    Kento has a lot of plans for types and shapes, but for now Eren has
-    only implemented swipe (selected by pressing 1) and beam (selected by pressing
-    2)'
+  Content: "modmagic is a modular magic system where spell shapes and types come
+    together to create unique spells. like for example you can have a spell type
+    that pushes enemies, but you will have different shapes like a short swipe or
+    a long beam that will have different uses based on the enemies you're fighting.\r\n\r\neren
+    still has to do work to get all the shapes and types done, but the first build
+    he made has two shapes the player can play with: swipe (press 1) and beam (press
+    2). i think this has a great potential for puzzles, like that you need to use
+    a specifc shape like beam to destroy a wall, so I was testing that in the first
+    build eren made.\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

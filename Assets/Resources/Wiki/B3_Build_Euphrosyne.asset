@@ -16,10 +16,13 @@ MonoBehaviour:
   Date: 12/9/2016
   Title: Euphrosyne
   Subtitle: 
-  Content: "One of the three Charities in Greek mythology \r\n\nName means \u201Cmerriment\u201D
-    \r\n\nKento bitterly notes that it\u2019s kind of ironic that the last Charity
-    ended up on this build \n\nMinotaur boss lines\r\n\nAmbient dialogue\r\n\nNarration
-    has been changed to reading signs/talking to statue NPCs in the maze \r\n\r\n"
+  Content: 'I finally combined Rose''s art assets with Kento''s maze design, and
+    the result looks great! The particle system Rose designed really makes the spells
+    pop. Kento mentioned that this title stood for "merriment", but muttered something
+    ironic about the last Charity ending up on this build. Not sure what that was
+    about.
+
+'
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

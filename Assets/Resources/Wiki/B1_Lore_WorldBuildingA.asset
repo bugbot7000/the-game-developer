@@ -13,15 +13,18 @@ MonoBehaviour:
   m_Name: B1_Lore_WorldBuildingA
   m_EditorClassIdentifier: 
   PageType: 1
-  Date: 
-  Title: World Building Edition A
+  Date: 9/13/2016
+  Title: World Building v1
   Subtitle: Lore
-  Content: "Trismegistus : story of a sorcerer who is trying to escape the maze (and
-    wider region) they\u2019ve been imprisoned in\r\n\r\nInitially more of a breadcrumb
-    trail story, sorcerer gets no guidance and must figure out bits and pieces on
-    their own\r\n\r\nDual sages created \r\n    Nostralia (past), Reyalita (future)\r\n   
-    One who looks endlessly to the past, one who strives for a better future\r\n   
-    Their conflicting ideals is what caused magic to disappear from the land\r\n"
+  Content: "The plains were once home to a flourishing technologically and magically
+    advanced kingdom (think magic-based Industrial Revolution tech levels)\n\r\nWhile
+    this kingdom was ruled by a royal family, power was not limited to those of noble
+    birth. Any sufficiently talented or skilled magic user, regardless of social
+    status, could rise to positions of power in government, industry, or religion.
+    \n\r\nIt is widely believed that magic was a gift granted to humanity by the
+    two sages - Nostralia and Reyalita. Worship of these sages and the following
+    of their teachings (namely, that magic is meant to be used for the betterment
+    of all) is the main method of cultivating and developing one\u2019s magic. \r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
