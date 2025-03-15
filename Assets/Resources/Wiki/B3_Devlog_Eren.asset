@@ -14,20 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 12/8/2016
-  Title: Eren's Devlog #3
+  Title: Crunch and Compromise
   Subtitle: 
-  Content: "Talks about some issues he had with the builds during playtesting \r\n\tPeople
-    kept shooting a character that was giving them instructions so he made it an
-    Adorable Dog\r\n\tThere was a bug where if you walked into a particular part
-    of the maze it would crash\r\n\tFinal full implementation of the maze and its
-    minotaur boss and can move on to the frontier next semester! Expects that Kento
-    will have lots of things for him to do over break \r\n\nWorries about the growing
-    resentment between Kento and Rose\r\n\tSays he\u2019s been trying to keep the
-    peace between them \r\n\tThings seem to have at least temporarily resolved between
-    them once their advisor gave them advice\r\n\nGlad they\u2019ve made a lot of
-    progress this semester!\r\n\tMentions that he was worried about how Kento would
-    react to letting one of his brainchildren be worked on by others (knew there
-    would be conflict) but is happy it\u2019s worked out (at time of writing)\r\n"
+  Content: "I\u2019ve hit a wall with some coding stuff, so I may as well get this
+    devlog out of the way while I\u2019m trying to clear my head. \n\r\nWe ran into
+    quite a few issues during playtesting. I expected some of them to pop up, but
+    some of the others were kind of absurd. For example, people kept shooting the
+    tutorial old man so I had to rename him to Adorable Dog. We found a weird bug
+    where if you walked into a specific corner of the maze the entire game crashed.
+    One poor guy at Playtest Tuesday managed to break Kento\u2019s Toonity installation
+    so badly he had to reinstall the entire program. \n\r\nBut we should have the
+    close to final maze implemented alongside the minotaur boss! This means we can
+    move on to the rest of the game next semester, starting with the frontier Kento
+    has planned. I already expect he\u2019ll have a ton of things for me when we
+    come back. \n\r\nI am a little worried about Kento and Rose though. They seem
+    to have completely opposite philosophies when it comes to gamedev. Kento is a
+    more grindset person, while Rose is really anti-burnout. Rose mentioned after
+    our midterm that she crunched to finish one of her games and it didn\u2019t turn
+    out well, called The Last Knight. I went and played it and I kind of see what
+    she means, but it was still a really good game. \n\r\nWe did come to an understanding
+    after talking with Clover though, so I really hope it doesn\u2019t spiral out
+    of control in the future. \n\r\nI\u2019m glad we made lots of progress this semester!
+    I was worried that Kento would be more hostile to the idea of one of his brainchildren
+    getting shared with someone that he doesn\u2019t super trust but I\u2019m so
+    relieved it\u2019s been working out. \r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

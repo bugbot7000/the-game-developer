@@ -14,16 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 12/11/2016
-  Title: Rose's Devlog #3
+  Title: assets modeled, sleep schedule murdered
   Subtitle: 
-  Content: "Upset that Kento doesn\u2019t understand that they have limited time
-    to work on this game and thus have to limit their scope accordingly\r\n\nAcknowledges
-    that she may have overstepped \r\n\nAsserts that this is the best for the project
-    - to break people\u2019s hearts early so they don\u2019t dig themselves in too
-    deep\r\n\nAlso talks about some art stuff ofc\r\n\nMinotaur art, animation, effects
-    all finished\r\n\nMaze 100% done unless they find more bugs\r\n\nNext semester
-    will start working on the rest of the assets (frontier and domain maps)\r\n\nTalks
-    about how she wants to be extra vigilant about burnout\r"
+  Content: "finished: \r\n- minotaur final textures\r\n- minotaur animations\r\n-
+    minotaur particle effects\r\n- maze texture tweaks/fixes\r\n- minor fixes\r\n\nto
+    do next semester: \r\n- frontier map assets (textures, some models)\r\n- frontier
+    npcs (models, textures)\r\n- new enemies (3d models - talk to kento about final
+    designs in jan)\r\n- work out arena details with team \n\r\nim fucking exhausted
+    im going home and sleeping for 84 years\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

@@ -14,21 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 12/8/2016
-  Title: Kento's Devlog #3
+  Title: fights and bosses
   Subtitle: 
-  Content: "Upset that Rose/advisor doesn\u2019t see his vision for the game and
-    that advisor seems to listen to Rose\r\nLists out a whole bunch of things he
-    wants to do \r\nExpand on story\r\nWork on game design document\r\nFinalize all
-    modular magic spells\r\nCome up with some more enemies\r\netc\r\nSays he plans
-    to do them over break anyways\r\nSays he\u2019ll get Eren to help him bc he knows
-    he can be relied on for the project\r\nA little dismissive of what he sees as
-    Rose atop her high horse\r\n\nDoes end up talking about some actual dev stuff\r\nPuzzle
-    design he did for the maze\r\nMinotaur boss fight details\r\nProgress on story
-    design documents\r\nSome tweaking he did to the overall lore of the world, changes
-    to why sorcerer was put in maze\r\nAddition of third sage \r\nPlans for the rest
-    of the game\r\nAlready talked about it a few weeks ago but finalizing it with
-    the rest of the story\r\nThree sages, three domains. three boss rushes\r\nFrontier
-    area right outside the maze \r\n"
+  Content: "ok maybe i\u2019m starting to understand why rose was so gung ho on warning
+    me off of all nighters. i\u2019m so tired. \n\r\nbut once i catch up on sleep
+    i can work on a whole new aspect of trismegistus! i have so much planned that
+    i want to do. i\u2019ve got to expand fully on the story outline i wrote earlier
+    this semester, work on the game design document, finalize all the modular magic
+    spells, come up with some more enemies so rose can get started on the 3d models\u2026
+    \n\r\nspeaking of story, i did end up tweaking it a little bit based on feedback
+    from playtesters and clover. i\u2019ve decided that there are three sages now
+    instead of two, and the third sage is related to the reason why the sorcerer
+    has ended up trapped in the maze. it\u2019ll all be in the story document since
+    i don\u2019t think my ramblings about it would fit in this dev log\n\r\nas for
+    my plans for the rest of the game, each sage will have a separate arena-based
+    boss rush accessible from the frontier map. i\u2019m planning to have the original
+    two sages unlock the way to the third sage, who has been shut away for as long
+    as the sorcerer has been in the maze \n\r\ni\u2019ll likely also be asking eren
+    for help adding some of the more basic parts of my to-do items over winter break
+    since rose is so insistent on not overworking herself. she\u2019d tell me to
+    leave them for the start of the semester, you know how she is\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

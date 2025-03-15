@@ -14,20 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 3
   Date: 12/13/2016
-  Title: Archived Chat Log
+  Title: Chat Log Archive (12/13/2016)
   Subtitle: 
-  Content: "Kento comes in after deadline and is very upset about how Rose seems
-    to be \u201Ctaking over the project\u201D in his eyes\r\n\nEren is quick to try
-    and defuse and says he was the one who suggested talking to their advisor, he
-    can\u2019t blame Rose for that\n\r\nRose is like bro I don\u2019t want us to
-    burn ourselves out on this trying to make the game of the year\n\r\nKento takes
-    this as her still not being serious about the project (why cant it be goty?)\n\r\nRose
-    is like c'mon man be realistic\n\r\nEren again tries to defuse the situation
-    and say that surely all of them are committed to working towards completion,
-    it\u2019s just that we need to be more conscious of what we can reasonably take
-    on\n\r\nHe suggests that they all take a step back from working on it for a few
-    weeks, since it\u2019s winter break soon anyway \r\n"
-  IsArchivedChat: 0
+  Content: "Rose: Attachment (the_grind_never_starts_i_am_busy_sleeping.png)\nKento:
+    idk you seem like you grinded pretty hard for this deadline\nRose: listen it
+    was ethical responsible grinding\nRose: i was in bed by midnight every day for
+    the past two weeks\nKento: damn, you really are dedicated to your sleep schedule\nKento:
+    i still think we could have gotten so much more done\u2026\nEren: Well, it\u2019s
+    all over now, and we got tons of praise and feedback at winter showcase.\nEren:
+    I think we\u2019ve earned ourselves a break!\nRose: yeah kentos idea of a break
+    is more work lmfao\nKento: well i mean you aren\u2019t exactly wrong\u2026\nKento:
+    i just really want trismegistus to be the best it can be\nEren: You really should
+    take the break to catch up on sleep.\nEren: At this rate you\u2019ll be mistaken
+    for a panda with how big your dark circles are.\nRose: bro is gonna get held
+    up at tsa bc of the size of those bags\nRose: but yeah please dont feel obligated
+    to keep working on this through winter break\nRose: youre gonna burn yourself
+    out if you keep going at this pace\nKento: how could i ever get burnt out on
+    what is essentially my brainchild?\nRose: youd be surprised\nRose: i ended up
+    taking the last knight off of my itch page btw\nEren: Wait, why?\nEren: I really
+    enjoyed that game.\nRose: im not proud of it\nRose: plus i need to start polishing
+    my portfolio and resume for job apps\nRose: cant have something half baked on
+    there\nRose: anyways did yall get to play audionaut at showcase\nEren: Yeah!
+    It was insanely cool.\nEren: I do hope they get their plugin troubles sorted
+    out soon, though.\nKento: weren\u2019t they talking to someone about it or something?\nEren:
+    You know how the Salesman engine is.\nEren: It only came out 2 years ago, so
+    there aren\u2019t a lot of plugins for it yet.\nRose: damn that sucks ass\nRose:
+    yknow what doesnt suck ass\nKento: what?\nRose: my memes\nRose: Attachment (dope_mooncake_meme.png)\nEren:
+    Waiter, can I get twenty more of these memes you speak of?\nRose: sure\nRose:
+    uhhhh\nRose: she tris on my megistus til i sorcerer?\nRose: sorry\nKento: boooo"
+  IsArchivedChat: 1
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 0

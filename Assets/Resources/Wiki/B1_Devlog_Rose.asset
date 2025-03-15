@@ -14,27 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 9/16/2016
-  Title: Rose's Devlog #1
+  Title: magic
   Subtitle: 
-  Content: "Excitement to be working on a project with someone who\u2019s made really
-    interesting narrative and puzzle stuff in the past \n\r\nPart admiration, part
-    \u201Cwell I need to have a game made by a wider team in my portfolio and this
-    seemed suitable\u201D \n\r\nTalks about how modular magic or modmagic system
-    was actually an idea she\u2019d been turning over in her head for a while but
-    didn\u2019t really have the design knowledge to implement herself\n\r\nWhen she
-    grasped what Kento was trying to tell her about the narrative it clicked and
-    she was like \u201Coh this\u2019ll be perfect\u201D \n\r\nSays she\u2019s started
-    on concept art for the different characters and areas of the game, and talks
-    about going to Playtest Tuesdays to show early builds\n\r\nKento seemed hesitant
-    about doing so this early but she insisted that they can put together something
-    simple but presentable\n\nIt's also a great way to get suggestions - they easily
-    add a Space to dash after some feedback\n\r\nGrouses a little bit about how Kento
-    seems resistant to implementing gamedev best practice, like version control and
-    easy to understand naming systems \n\r\nMentions that Eren smoothed things over
-    by saying they could have both the esoteric build name and the version number,
-    but Kento insisted with the fancy names for the wiki\n\nSeems like Kento is naming
-    the builds after the greek Charities?\n\r\nCreated the GitHub for the project
-    (HitGlub) and gave both Eren and Kento contributor perms\r"
+  Content: "- excited to be working on this with eren and kento!! \r\n<indent=5%>-
+    eren does witchcraft with his code that not even i understand</indent>\r\n<indent=5%>-
+    kento\u2019s made really interesting narrative/puzzle stuff in the past and i
+    can\u2019t wait to see what he\u2019s got planned for trismegistus</indent>\r\n-
+    modular magic system was actually an idea i\u2019d been chewing on for a while
+    but i didn\u2019t really have the design knowledge to do it myself\r\n<indent=5%>-
+    the whole a + b = c thing has to consider pretty much every combination</indent>\r\n<indent=5%>-coding
+    for that is way beyond what little i know lmfao</indent>\r\n- when i finally
+    figured out what kento was trying to tell me about the narrative it just kinda
+    clicked yknow\r\n- anyways i\u2019ve started working on assets to fill in the
+    greybox of the maze level we have already, mostly to make it presentable before
+    we can take it to playtest tuesdays\r\n<indent=5%>-kento was kinda hesitant to
+    show it off so early but we need to know if the modmagic is working as intended</indent>\r\n-
+    speaking of kento i\u2019m pretty sure this guy is allergic to gamedev best practices\r\n<indent=5%>-
+    i made a kithub for the game bc apparently eren has just been storing this on
+    his personal server???</indent>\r\n<indent=5%>- also kento keeps naming his builds
+    esoteric things. i keep telling him they need actual version numbers</indent>\r\n<indent=5%>-
+    both of em have contributor perms now (though idk if they\u2019ll use em)</indent>\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

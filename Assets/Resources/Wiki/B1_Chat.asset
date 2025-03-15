@@ -14,18 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 3
   Date: 9/28/2016
-  Title: Archived Chat Log
+  Title: Chat Log Archive (9/28/2016)
   Subtitle: 
-  Content: "Flesh out post-advisor meeting context\r\n\nMostly good news from advisor,
-    who says they\u2019re making good progress on both the modular magic idea (they
-    want to see more of that specifically) and the overall narrative skeleton\n\r\nRose
-    is like oh wow I really didn\u2019t think the modular magic idea would be so
-    well received, I was just kinda tossing the idea around\u2026 \r\n\nKento is
-    a little miffed that the modmagic seemed to be the standout feature instead of
-    his narrative (which the advisor said was good, just needed some more clarity
-    - they said the problem was that it was all in his brain and it needed to come
-    out onto paper)\r\n\nEren is like wow haha I love working with my friends! \r\n"
-  IsArchivedChat: 0
+  Content: "Kento: good meeting! what did you guys think\r\nRose: im so glad that
+    the modular magic idea meshed so well with what you brought in at the start of
+    the year\r\nRose: i really didnt think itd work that well\r\nEren: Even our advisor
+    Clover was shocked, I think. Rare to see that on her. \r\nRose:yea i think the
+    only other time ive seen her like that was when the dept chair covered everything
+    in her office in tinfoil for april fools\r\nKento: i would hope that \u201Cpleasantly
+    shocked\u201D and \u201Cwhat the fuck is happening\u201D look markedly different
+    on her\u2026\r\nRose: cmon you know what i mean\r\nRose: like\r\nRose: shes always
+    so chill and cool\r\nRose: we rarely see her facade crack\r\nEren: Yeah, it was
+    nice to see her emote a little more than she normally does, haha. \r\nEren: But
+    back to business. \r\nEren: Clover said they wanted to see a little more from
+    the modular magic idea by our midterm check-in, so we should definitely make
+    that one of our top priorities. \r\nKento: don\u2019t forget the overall narrative
+    skeleton too! \r\nKento: that\u2019s one of the most important parts of the game\r\nEren:
+    Oh, yeah, of course. \r\nRose: i think clovers just having a bit of a hard time
+    imagining whats in ur head lol\r\nKento: well where else would it be? \r\nRose:
+    on paper somewhere? \r\nRose: kinda hard for people to read ur mind and figure
+    out what ur cooking for the game\r\nEren: Rose is right, Kento. I think a brain
+    dump would help to just get everything out of your head? \r\nEren: It doesn\u2019t
+    need to be neat, just accessible to others. \r\nKento: i mean i guess i can give
+    it a shot\r\nKento: you know i\u2019ve never done anything like this before eren\r\nRose:
+    wait fr\r\nRose: i totally thought you would be the kind of lore guy with like
+    30000 google docs \r\nEren: This\u2019ll be a fruitful semester, I think! \r\nEren:
+    When did you guys want to meet oh hello there Mooncake. Can I help you? Oh ow
+    don\u2019t do that. See you not. \r\nRose: huh whuh\r\nKento: oh mooncake probably
+    walked in while he was in the middle of speech to text\r\nKento: happens all
+    the time\r\nRose: ohhhh\r\nEren: Sorry about that. The child is now contained.
+    \r\nRose: i demand pictures of the child\r\nEren: Attachment (mooncake.png)\r\nRose:
+    OH MY GOD\r\nKento: ah, mischievous as ever \r\nRose: ok but howd the speech
+    to text end up with see you not lmao\r\nRose: what were you trying to say\r\nEren:
+    Oh, it butchered a Hokkien phrase I use a lot. \r\nEren: \u201CSee jen na\u201D
+    means \u201Cbad kid\u201D, and I guess speech to text had a bit of an aneurysm.
+    \r\nEren: One of the many hazards of being dyslexic.\r\nRose: its funny though\r\nRose:
+    see you not mooncake\r\nKento: see you not mooncake\r\nEren: Oh, for fuck\u2019s
+    sake. \r"
+  IsArchivedChat: 1
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 0

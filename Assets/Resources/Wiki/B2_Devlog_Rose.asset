@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 11/18/2016
-  Title: Rose's Devlog #2
+  Title: midterm conquered
   Subtitle: 
-  Content: "Lists out all the assets she\u2019s finished or made progress on for
-    the midsemester deadline\r\nMaze assets done\r\nMinotaur prelim animations and
-    model\r\nModular magic UI and placeholder icons\r\n\nPretty upset at Kento for
-    asking so much of her for their first checkin (she didn\u2019t see it as a hard
-    academic deadline, more of a progress thing), most of it was done before Eren
-    was even ready to put it in engine\r\n\nGrouses about how Kento doesn\u2019t
-    really seem to respect her experience when she warns them about overwork and
-    burnout\r\n\nCrunch is an industry thing, yes, but long term it\u2019s really
-    not good for you\r\n\nReflects on how crunch has bit her in the ass in the past
-    and how she really tries to avoid it at all costs\r\n\nRelieved that their advisor
-    seems to be warning Kento away from focusing too much on detailed things for
-    this semester and telling him to focus on the big picture\r\n"
+  Content: "- midterm check is finally past whew\r\n- list of assets i've done (standard
+    format): \r\n<indent=5%>- maze (environmental assets mostly, some tweaks)</indent>\r\n<indent=5%>-
+    minotaur (model)</indent>\r\n<indent=5%>- modular magic ui and placeholder icons</indent>\r\n-
+    i fuckin pulled an all nighter by mistake while working on the minotaur model
+    \r\n<indent=5%>- cmon rose you made so much progress on Not Doing That what happened
+    girl</indent>\r\n- when i told the others kento seemed like he wanted to encourage
+    that behavior though which worries me\r\n<indent=5%>- crunch is an industry thing
+    yeah but it\u2019s not good for you long term</indent>\r\n<indent=5%>- i should
+    probably tell them about the last knight and how i crunched like hell on that
+    only to release something half baked</indent>\r\n- our advisor clover seems to
+    be warning the others away from crunch though which is good\r\n<indent=5%>- from
+    what i understand she wants us to focus on broad strokes for now and fill in
+    the details next semester</indent> \r\n<indent=5%>- she also told kento that
+    his planned scope was too big for the time we have so hopefully that also helps
+    reduce that stress</indent>\r\n- i really do wanna make sure that none of us
+    crunch on this to the point where our health suffers\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
