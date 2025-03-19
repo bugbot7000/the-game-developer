@@ -23,12 +23,13 @@ MonoBehaviour:
     modular magic system was actually an idea i\u2019d been chewing on for a while
     but i didn\u2019t really have the design knowledge to do it myself\r\n<indent=5%>-
     the whole a + b = c thing has to consider pretty much every combination</indent>\r\n<indent=5%>-
-    coding for that is way beyond what little i know lmfao</indent>\r\n- when i finally
-    figured out what kento was trying to tell me about the narrative it just kinda
-    clicked yknow\r\n- anyways i\u2019ve started working on assets to start building
-    better looking levels, mostly to make it presentable before we can take it to
-    playtest tuesdays\r\n<indent=5%>- kento was kinda hesitant to show it off so
-    early but we need to know if the modmagic is working as intended</indent>\r\n-
+    coding for that is way beyond what little i know lmfao</indent>\n<indent=5%>-
+    I did add a space to dash to make it easier to move the character around</indent>\r\n-
+    when i finally figured out what kento was trying to tell me about the narrative
+    it just kinda clicked yknow\r\n- anyways i\u2019ve started working on assets
+    to start building better looking levels, mostly to make it presentable before
+    we can take it to playtest tuesdays\r\n<indent=5%>- kento was kinda hesitant
+    to show it off so early but we need to know if the modmagic is working as intended</indent>\r\n-
     speaking of kento i\u2019m pretty sure this guy is allergic to gamedev best practices\r\n<indent=5%>-
     i made a kithub for the game bc apparently eren has just been storing this on
     his personal server???</indent>\r\n<indent=5%>- also kento keeps naming his builds
