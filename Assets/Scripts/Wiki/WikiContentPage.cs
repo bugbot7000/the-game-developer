@@ -7,7 +7,6 @@ public class WikiContentPage : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI date;
     [SerializeField] TextMeshProUGUI title;
-    [SerializeField] TextMeshProUGUI subtitle;
     [SerializeField] TextMeshProUGUI content;
     [SerializeField] Button buildButton;
     [SerializeField] Image downloadIcon;
@@ -30,7 +29,6 @@ public class WikiContentPage : MonoBehaviour
 
         date.SetText(wikiPage.Date);
         title.SetText(wikiPage.Title);
-        subtitle.SetText(wikiPage.Subtitle);
 
         if (wikiPage.IsArchivedChat)
         {

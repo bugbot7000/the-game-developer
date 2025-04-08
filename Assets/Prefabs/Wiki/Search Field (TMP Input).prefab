@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Search Wiki...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
   m_sharedMaterial: {fileID: 5141295571327654121, guid: 52fe89427e3e2f94dbbfbe60ccefc50e, type: 2}
