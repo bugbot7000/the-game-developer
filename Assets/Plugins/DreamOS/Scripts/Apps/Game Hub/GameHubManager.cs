@@ -106,7 +106,8 @@ namespace Michsky.DreamOS
                 itemComp.gameIndex = index;
                 itemComp.SetIcon(games[i].gameIcon);
                 itemComp.SetBanner(games[i].gameBanner);
-                itemComp.playButton.onClick.AddListener(delegate { LaunchGame(itemComp.gameIndex); });
+                itemComp.playRestartButton.onClick.AddListener(delegate { LaunchGame(itemComp.gameIndex); });
+                itemComp.continueButton.onClick.AddListener(delegate { LaunchGame(itemComp.gameIndex); });
 
                 if (games[i].addToSlider)
                 {
@@ -147,7 +148,8 @@ namespace Michsky.DreamOS
             itemComp.SetGameName(games[i].gameTitle);
             itemComp.SetIcon(games[i].gameIcon);
             itemComp.SetBanner(games[i].gameBanner);
-            itemComp.playButton.onClick.AddListener(delegate { LaunchGame(itemComp.gameIndex); });            
+            itemComp.playRestartButton.onClick.AddListener(delegate { LaunchGame(itemComp.gameIndex); }); 
+            itemComp.continueButton.onClick.AddListener(delegate { LaunchGame(itemComp.gameIndex); });           
         }
 
         public void LaunchGame(int index)

@@ -9,7 +9,8 @@ namespace Michsky.DreamOS
         [SerializeField] private Image iconObject;
         [SerializeField] private Image bannerObject;
         [SerializeField] private TextMeshProUGUI gameTitle;
-        public ButtonManager playButton;
+        public ButtonManager playRestartButton;
+        public ButtonManager continueButton;
         [HideInInspector] public int gameIndex;
 
         public void SetGameName(string text)

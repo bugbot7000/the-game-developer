@@ -29,14 +29,21 @@ public class GameBuildManager : MonoBehaviour
     [SerializeField, SceneObjectsOnly] GameObject[] gamePrefabs;
     [SerializeField] GameHubManager.GameItem[] builds;
     [SerializeField] GameHubManager gameHubManager;
+    [SerializeField] GameObject cloneParent;
 
     List<int> addedBuildIndices = new List<int>();
     List<GameObject> addedBuilds = new List<GameObject>();
+    List<bool> hasBuildBeenPlayed = new List<bool>();
 
     int enabledBuild = -1;
 
     void Start()
     {
+        for (int i = 0; i < gamePrefabs.Length; i++)
+        {
+            Instantiate(gamePrefabs[i], cloneParent.transform);
+        }
+
         if (enableBuildDebug)
         {
             for (int i = 0; i < builds.Length; i++)
@@ -49,6 +56,7 @@ public class GameBuildManager : MonoBehaviour
     public void EnableGameBuild(int build)
     {
         addedBuilds[build].SetActive(true);
+        hasBuildBeenPlayed[build] = true;
 
         enabledBuild = build;
 
@@ -63,6 +71,18 @@ public class GameBuildManager : MonoBehaviour
         }
     }
 
+    public void RestartGameBuild(int build)
+    {
+        int sibilingIndex = addedBuilds[build].transform.GetSiblingIndex();
+        Destroy(addedBuilds[build]);
+        addedBuilds[build] = cloneParent.transform.GetChild(sibilingIndex).gameObject;
+        addedBuilds[build].transform.parent = transform;
+        addedBuilds[build].transform.SetSiblingIndex(sibilingIndex);
+        GameObject replacementClone = Instantiate(addedBuilds[build], cloneParent.transform);
+        replacementClone.transform.SetSiblingIndex(sibilingIndex);
+        EnableGameBuild(build);
+    }
+
     public void DisableGameBuild()
     {
         addedBuilds[enabledBuild].SetActive(false);
@@ -75,6 +95,16 @@ public class GameBuildManager : MonoBehaviour
         return addedBuildIndices.Contains(index);
     }
 
+    public bool HasGameBeenPlayed(int index)
+    {
+        if (hasBuildBeenPlayed.Count == 0)
+        {
+            return false;
+        }
+
+        return hasBuildBeenPlayed[index];
+    }
+
     [Button]
     public void AddGameBuildToHub(int buildIndex)
     {
@@ -83,6 +113,7 @@ public class GameBuildManager : MonoBehaviour
             gameHubManager.AddGameToLibrary(builds[buildIndex]);
             addedBuilds.Add(gamePrefabs[buildIndex]);
             addedBuildIndices.Add(buildIndex);
+            hasBuildBeenPlayed.Add(false);
         }
     }
 }
