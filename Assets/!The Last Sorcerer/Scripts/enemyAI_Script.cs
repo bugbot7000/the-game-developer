@@ -264,7 +264,7 @@ public class enemyAI_Script : MonoBehaviour
         //{
         //    transform.eulerAngles = rotationSetting;
         //}
-        if (!alreadyAttacked)
+        if (!alreadyAttacked && player != null)
         {
             Vector3 plyerDirection = (player.position - gameObject.transform.position).normalized;
             gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
@@ -323,7 +323,7 @@ public class enemyAI_Script : MonoBehaviour
             agent.SetDestination(transform.position);
         }
 
-        if (!alreadyAttacked) 
+        if (!alreadyAttacked && player != null) 
         {
             Vector3 plyerDirection = (player.position - gameObject.transform.position).normalized;
             gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);

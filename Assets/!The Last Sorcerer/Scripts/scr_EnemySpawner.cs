@@ -6,11 +6,14 @@ public class scr_EnemySpawner : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public float spawnInterval = 5f;
     public GameObject spawnedEnemy;
+    public GameObject arenaManager;
+    public ArenaManager_scr arenaMgrScr;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartCoroutine(SpawnEnemies());
+        arenaMgrScr = arenaManager.GetComponent<ArenaManager_scr>();
     }
 
     // Update is called once per frame
@@ -18,7 +21,14 @@ public class scr_EnemySpawner : MonoBehaviour
     {
         if (spawnedEnemy != null)
         {
-            if (spawnedEnemy.GetComponent<scr_health>().health <= 0f) { spawnedEnemy = null; }
+            if (spawnedEnemy.GetComponent<scr_health>().health <= 0f) 
+            { 
+                spawnedEnemy = null; 
+                if (arenaManager != null)
+                {
+                    arenaMgrScr.deadEnemies += 1;
+                }
+            }
         }
     }
 
