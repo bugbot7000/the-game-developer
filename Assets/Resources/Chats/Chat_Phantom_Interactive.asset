@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ca2ddbf6e022748a2db98a0c813735, type: 3}
+  m_Name: Chat_Phantom_Interactive
+  m_EditorClassIdentifier: 
+  saveConversation: 0
+  useDynamicMessages: 0
+  useStoryTeller: 1
+  messageList:
+  - messageContent: was great playing with you :)
+    objectType: 0
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Likewise! Let's keep in touch.
+    objectType: 0
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  - messageContent: Today
+    objectType: 1
+    messageAuthor: 1
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  dynamicMessages: []
+  storyTeller:
+  - itemID: SEQ_0
+    messageAuthor: 1
+    messageContent: "oh ur playing that new game . how is it?\r"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 0_HandProgram
+      replyBrief: I really like it.
+      replyContent: I really like it.
+      replyFeedback: ooh i see
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_1
+      briefKey: SEQ0_R1B
+      contentKey: SEQ0_R1C
+      feedbackKey: SEQ0_R1F
+    messageKey: SEQ0_1
+  - itemID: SEQ_1
+    messageAuthor: 1
+    messageContent: should i pick it up?
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 1_Not yet
+      replyBrief: Yeah.
+      replyContent: Yeah, it's a lovely game. The devloper is actually one of my
+        classmates from college.
+      replyFeedback: oh yea
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_2
+      briefKey: SEQ1_R1B
+      contentKey: SEQ1_R1C
+      feedbackKey: SEQ1_R1F
+    messageKey: SEQ1_1
+  - itemID: SEQ_2
+    messageAuthor: 1
+    messageContent: you majored in game design for undergrad didn't you
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 2_Sure
+      replyBrief: Eight whole years ago.
+      replyContent: Eight whole years ago. Never ended up doing anything with it,
+        though.
+      replyFeedback: why not?
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_3
+      briefKey: SEQ2_R1B
+      contentKey: SEQ2_R1C
+      feedbackKey: SEQ2_R1F
+    messageKey: SEQ2_1
+  - itemID: SEQ_3
+    messageAuthor: 0
+    messageContent: It's kind of complicated.
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 3_I
+      replyBrief: (tell them about your old game)
+      replyContent: "The dev for Ralia\u2019s Lament actually worked with me and
+        another friend for our thesis project. \r\nWe planned to publish it but we
+        never finished it. \r\nThe whole situation kind of soured me on game dev.
+        \r"
+      replyFeedback: what was the project about if you dont mind me asking
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: SEQ_4
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: SEQ_4
+    messageAuthor: 0
+    messageContent: "Oh, jeez, I don\u2019t remember all the details. "
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 4
+      replyBrief: '(mention personal server) '
+      replyContent: 'I think I still have our old development wiki on my personal
+        server. '
+      replyFeedback: i await the refreshing of your memory with bated breath then
+      feedbackLatency: 1
+      feedbackTimer: 1.4
+      callAfter: 
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: HINT_0
+    messageAuthor: 1
+    messageContent: any luck?
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: H0
+      replyBrief: "Well, there\u2019s a slight problem."
+      replyContent: "The personal server is corrupt and and the wiki index is busted,
+        so I can\u2019t just access all our builds and dev logs at once. \r\nI\u2019d
+        have to use the search function to find everything manually. \r"
+      replyFeedback: ough
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: HINT_1
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: HINT_1
+    messageAuthor: 1
+    messageContent: is there anything you can start with? maybe an old keyword or
+      something
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: I think I remember the codename for our first build...
+      replyContent: "I think I remember our first build being codenamed Aglaya.\r\nAglaea*\r\nSorry,
+        speech to text.  \r\t"
+      replyFeedback: ooo
+      feedbackLatency: 0
+      feedbackTimer: 0
+      callAfter: 
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
