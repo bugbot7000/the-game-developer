@@ -99,14 +99,22 @@ public class scr_playerController : MonoBehaviour
         //}
         if (Input.GetKeyDown(KeyCode.J) && !dashing) 
         {
-            equippedSpell = spell1;
-            Attack(equippedSpell, spell1Type); 
+            if (spell1 == gameObject) { gameObject.GetComponent<scr_health>().health = 0; }
+            else 
+            {
+                equippedSpell = spell1;
+                Attack(equippedSpell, spell1Type);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.I) && !dashing)
         {
-            equippedSpell = spell2;
-            Attack(equippedSpell, spell2Type);
+            if (spell2 == gameObject) { gameObject.GetComponent<scr_health>().health = 0; }
+            else
+            {
+                equippedSpell = spell2;
+                Attack(equippedSpell, spell2Type);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar); }
@@ -200,6 +208,10 @@ public class scr_playerController : MonoBehaviour
     {
         spell1 = shield;
     }
+    public void SwitchSpell1ToSelf()
+    {
+        spell1 = gameObject;
+    }
     public void SwitchSpell2ToSwipe()
     {
         spell2 = swipe;
@@ -211,6 +223,10 @@ public class scr_playerController : MonoBehaviour
     public void SwitchSpell2ToShield()
     {
         spell2 = shield;
+    }
+    public void SwitchSpell2ToSelf()
+    {
+        spell2 = gameObject;
     }
     public void SlotMyFamiliar(GameObject familiar)
     {
