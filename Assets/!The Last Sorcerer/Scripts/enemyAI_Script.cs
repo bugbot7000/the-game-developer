@@ -3,11 +3,14 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class enemyAI_Script : MonoBehaviour
 {
     public Text dmgTxt;
 
+    public Animator anim;
+    public Rigidbody rb;
     public NavMeshAgent agent;
     public float health, slamSpd, dmg;
     public bool damageOnCollide = false;
@@ -76,6 +79,7 @@ public class enemyAI_Script : MonoBehaviour
         player = GameObject.Find("player").transform;
         spawnPoint = gameObject.transform.position;
         patrolTarget = spawnPoint;
+        rb = gameObject.GetComponent<Rigidbody>();
         if (hitbox != null && type != EnemyType.Ogre) // Changed to account for charming objects with no hitbox, may need to revisit later. Hitbox exists for a reason.
         {
             hitbox.SetActive(false);
@@ -168,6 +172,20 @@ public class enemyAI_Script : MonoBehaviour
         //    Vector3 plyerDirection = (player.position - gameObject.transform.position).normalized;
         //    gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
         //}
+
+        if (anim != null) 
+        {
+            if (direction.x > 0.01f || direction.y > 0.01f || direction.x < 0.01f || direction.y < 0.01f) // A small threshold to account for tiny movements
+            {
+                anim.SetBool("MOVE", true);
+                Debug.Log("MOVING");
+            }
+            else
+            {
+                anim.SetBool("MOVE", false);
+            }
+        }
+        
     }
 
     public void CharmMe()
@@ -338,11 +356,14 @@ public class enemyAI_Script : MonoBehaviour
             Rigidbody body = GetComponent<Rigidbody>();
 
             // Get direction from your postion toward the object you wish to push
-            var direction =  player.position - body.transform.position;
+            if(player != null)
+            {
+                var direction = player.position - body.transform.position;
+                body.AddForce(direction.normalized * slamSpd, ForceMode.Impulse);
+            }
             //Debug.Log(direction);
 
             //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
-            body.AddForce(direction.normalized * slamSpd, ForceMode.Impulse);
             //body.AddForce(transform.forward * slamSpd, ForceMode.Impulse);
             Debug.Log("Attacking");
             alreadyAttacked = true;
@@ -396,14 +417,8 @@ public class enemyAI_Script : MonoBehaviour
         {
             if (arrowPrefab != null && arrowSpawnPoint != null)
             {
-                Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
-                gameObject.transform.rotation = Quaternion.LookRotation(direction);
-
-                GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
-                arrow.transform.rotation = Quaternion.LookRotation(direction);
+                NecromanerBlastPlayAnim();
             }
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
 
         if (type == EnemyType.Assassin) 
@@ -429,6 +444,27 @@ public class enemyAI_Script : MonoBehaviour
         }
         //damageOnCollide = true;
         //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, slamSpd);
+    }
+
+    public void AttackGap()
+    {
+        anim.SetBool("ATTACK", false);
+        alreadyAttacked = true;
+        Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    }
+
+    public void NecromancerBlast()
+    {
+        Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
+        gameObject.transform.rotation = Quaternion.LookRotation(direction);
+
+        GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
+        arrow.transform.rotation = Quaternion.LookRotation(direction);
+    }
+
+    public void NecromanerBlastPlayAnim()
+    {
+        anim.SetBool("ATTACK", true);
     }
 
     private void ResetAttack()
@@ -550,9 +586,15 @@ public class enemyAI_Script : MonoBehaviour
 
         if (spawnedEnemy != null && playerInAttackRange && enemySpawnPoint != null)
         {
-            var enemy = Instantiate(spawnedEnemy, enemySpawnPoint.position, transform.rotation);
+            anim.SetBool("CALL", true);
         }
         StartCoroutine(SpawnEnemies());
+    }
+
+    public void MakeZombie()
+    {
+        var enemy = Instantiate(spawnedEnemy, enemySpawnPoint.position, transform.rotation);
+        anim.SetBool("CALL", false);
     }
     public void ResetDevLogText()
     {
