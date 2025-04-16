@@ -372,7 +372,7 @@ MonoBehaviour:
   rotationSetting: {x: 0, y: 0, z: 0}
   activeFirePoint: {fileID: 8524601803316210857}
   equippedSpell: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
-  equippedFamiliar: {fileID: 0}
+  equippedFamiliar: {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
   spell2: {fileID: 4121033437667739710, guid: 9742a29b796f01d488d367537a6d9195, type: 3}
   spell1: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
   currentAttack: {fileID: 0}
