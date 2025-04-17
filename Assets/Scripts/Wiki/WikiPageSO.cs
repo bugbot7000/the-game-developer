@@ -53,20 +53,18 @@ public class WikiPageSO : ScriptableObject
 
             if (KentoAliasess.Contains(name))
             {
-                archivedChat += $"<font=\"KentoFont SDF\">{name}:{content}</font>\n";
+                name = $"<color=#f5260f>{name}</color>";
             }
             else if (RoseAliasess.Contains(name))
             {
-                archivedChat += $"<font=\"RoseFont SDF\">{name}:{content}</font>\n";
+                name = $"<color=#c002d1>{name}</color>";
             }
             else if (ErenAliasess.Contains(name))
             {
-                archivedChat += $"<font=\"ErenFont SDF\">{name}:{content}</font>\n";
+                name = $"<color=#0bd400>{name}</color>";
             }
-            else
-            {
-                archivedChat += $"<b>{name}:</b>{content}\n";
-            }
+
+            archivedChat += $"<b>{name}:</b>{content}\n";
         }
 
         return archivedChat;
