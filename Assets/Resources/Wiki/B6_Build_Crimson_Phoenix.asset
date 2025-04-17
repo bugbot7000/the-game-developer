@@ -10,22 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B3_Build_Euphrosyne
+  m_Name: B6_Build_Crimson_Phoenix
   m_EditorClassIdentifier: 
   PageType: 2
-  Date: 12/9/2016
-  Title: Euphrosyne
-  Subtitle: 
-  Content: 'I finally combined Rose''s art <mark=#ffff00aa>assets</mark> with Kento''s
-    <mark=#ffff00aa>maze</mark> design, and the result looks great! The particle
-    system Rose designed really makes the spells pop. Kento mentioned that this title
-    stood for "merriment", but muttered something ironic about the last Charity ending
-    up on this build. Not sure what that was about.
-
-'
+  Date: 5/9/2017
+  Title: Crimson Phoenix
+  Subtitle: "spring showcase build finally!!! everything up to the first two arenas
+    is in here and i'm so proud of all the work we've done :) also the fact that
+    we all can graduate i am so tired of school and homework \ncrimson phoenix is
+    a fitting name for this build i think. kento's saving golden dragon for when
+    we launch on vapor"
+  Content: 
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 1
-  BuildIndex: 2
+  BuildIndex: 0
   AdditionalKeywords: []

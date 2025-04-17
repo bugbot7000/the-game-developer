@@ -16,24 +16,28 @@ MonoBehaviour:
   Date: 11/25/2016
   Title: T-Posing Minotaurs and Scope Struggle
   Subtitle: 
-  Content: "[SCRIPT] \r\nAlright, this is my second devlog. We\u2019ve finally hit
-    the middle of the semester, our midterm progress presentations were last week,
-    and we just got the feedback from that. Though I should probably talk about what
-    I worked on for that milestone first, haha. \n\r\nSince my last devlog, I\u2019ve
-    successfully implemented the modular magic system, though it is kinda broken
-    still. Most of the components work, but I\u2019m still ironing out some bugs
-    when it comes to actually combining them and using them on overworld objects
-    so I think i won't merge it for the next build or so. The minotaur fight at the
-    end of the maze is functional, but still kind of visually sparse. We don\u2019t
-    have the animations for them yet, so they just T-pose after you while yelling
-    their boss lines. It\u2019s very funny but I'm waiting for the animation before
-    I combine it with Kento's maze. \n\r\nThe faculty\u2019s main concern with our
-    game was scope, aside from a few mechanical things I can fix next week. They
-    thought that Kento might be dreaming a little too big for something that should
-    be done by May, and I suppose they\u2019re right. I am worried about how Kento
-    is taking the news though. It was already a really big step for him to bring
-    one of his stories out into the open. I hope he doesn\u2019t take it too personally.
-    \r\n"
+  Content: "Alright, this is my second devlog. We\u2019ve finally hit the middle
+    of the semester, our midterm progress presentations were last week, and we just
+    got the feedback from that. Though I should probably talk about what I worked
+    on for that milestone first, haha. \n\r\nSince my last devlog, I\u2019ve successfully
+    implemented the <mark=#ffff00aa>modular magic</mark> system, though it is kinda
+    broken still. Most of the components work, but I\u2019m still ironing out some
+    bugs when it comes to actually combining them and using them on overworld objects.
+    The <mark=#ffff00aa>minotaur</mark> fight at the end of the <mark=#ffff00aa>maze</mark>
+    is functional, but still kind of visually sparse. We don\u2019t have the animations
+    for them yet, so they just T-pose after you while yelling their boss lines. It\u2019s
+    very funny. \n\r\nI also tried out a new <mark=#ffff00aa>save/load system</mark>,
+    where you can press [KEY] to save, close the game, and then press [OTHER KEY]
+    to load your progress after you open it again. Turns out this was crashing the
+    game, but we only found out because Kento was fooling around in the build right
+    before the deadline and accidentally pressed [KEY THAT CRASHES THE GAME] instead.
+    I did manage to squeak in a fix, though. \n\r\nThe faculty\u2019s main concern
+    with our game was scope, aside from a few mechanical things I can fix next week.
+    They thought that Kento might be dreaming a little too big for something that
+    should be done by May, and I suppose they\u2019re right. \n\nI am worried about
+    how Kento is taking the news though. It was already a really big step for him
+    to bring one of his stories out into the open. I hope he doesn\u2019t take it
+    too personally. \r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

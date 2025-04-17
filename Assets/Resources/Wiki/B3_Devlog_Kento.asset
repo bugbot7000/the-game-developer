@@ -16,25 +16,26 @@ MonoBehaviour:
   Date: 12/8/2016
   Title: fights, bosses.
   Subtitle: 
-  Content: "ok maybe i\u2019m starting to understand why rose was so gung ho on warning
-    me off of all nighters. i\u2019m so tired. \n\r\nbut once i catch up on sleep
-    i can work on a whole new aspect of trismegistus! i have so much planned that
-    i want to do. i\u2019ve got to expand fully on the story outline i wrote earlier
-    this semester, work on the game design document, finalize all the modular magic
-    spells, come up with some more enemies so rose can get started on the 3d models\u2026
-    \n\r\nspeaking of story, i did end up tweaking it a little bit based on feedback
-    from playtesters and clover. i\u2019ve decided that there are three sages now
-    instead of two, and the third sage (called Immuta) is related to the reason why
-    the sorcerer has ended up trapped in the maze. it\u2019ll all be in the story
-    document since i don\u2019t think my ramblings about it would fit in this dev
-    log\n\r\nas for my plans for the rest of the game, each sage will have a separate
-    arena-based boss rush accessible from the frontier map. i\u2019m planning to
-    have the original two sages unlock the way to the third sage, who has been shut
-    away for as long as the sorcerer has been in the maze \n\r\ni\u2019ll likely
-    also be asking eren for help adding some of the more basic parts of my to-do
-    items over winter break since rose is so insistent on not overworking herself.
-    she\u2019d tell me to leave them for the start of the semester, you know how
-    she is\r"
+  Content: "I\u2019m working with maybe\u2026 6 hours of sleep over 48 hours as I
+    write this. I will concede that Rose had a point about all nighters.\n\r\nBut
+    we soldier on! Time waits for no one and I have plans. Many plans. Once I\u2019ve
+    slept I\u2019m diving straight in: I\u2019m refining the <mark=#ffff00aa>design
+    documents</mark>, finalizing the spells for our <mark=#ffff00aa>modular magic</mark>
+    system, and finishing those new enemies. Rose can\u2019t start the 3D models
+    until she knows what sort of abilities they\u2019ll have.\n\r\nI\u2019m also
+    going to further detail the <mark=#ffff00aa>story outline</mark>. A third <mark=#ffff00aa>sage</mark>
+    is being introduced, related to the events that saw our protagonist imprisoned.
+    More on that in the <mark=#ffff00aa>story document</mark>. It won\u2019t fit
+    here. \n\nConcerning their integration with gameplay, the <mark=#ffff00aa>Frontier</mark>
+    section will lead the player to an arena. Each <mark=#ffff00aa>sage</mark> has
+    a separate \u2018boss rush\u2019 gauntlet, the third being locked until the first
+    two fall. It\u2019s better for pacing if the secrets they hold aren\u2019t revealed
+    too early. The \u2018plot\u2019 reason for this is\u2026 that the third <mark=#ffff00aa>sage</mark>
+    has been locked away in a manner much like our protagonist, and for just as long.
+    I think that will work, but I might revisit the question later.\n\r\nIf I recruit
+    Eren to assist me with some of the simpler tasks over the Winter Break, this
+    ought to be doable. Rose is insistent about not overworking herself, so I can\u2019t
+    depend on her help during the off-season.\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

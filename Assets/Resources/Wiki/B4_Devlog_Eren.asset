@@ -14,19 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 1/26/2107
-  Title: Eren's Devlog #4
+  Title: Starting Strong
   Subtitle: 
-  Content: "Was conflicted about going behind Rose\u2019s back to put Kento\u2019s
-    ideas in the game\r\n\tHe understood where Kento was coming from, but didn\u2019t
-    feel comfortable going behind Rose\u2019s back to help him\r\n\tRelieved that
-    Kento was willing to hear him out and follow his advice bc a team doesn\u2019t
-    hide things from each other \r\nTalks about what he implemented + a couple of
-    bugs\r\n\tStarted implementing the arena combat in an actual arena instead of
-    a greybox (though he used it as reference)\r\n\tComments that Rose\u2019s assets
-    are really well made in a such a way that allows them to be repurposed/tweaked
-    very easily (mental reminder to thank her later)\r\n\tMentions that an update
-    did break a few things on the engine backend but he managed to get them sorted
-    out\r\n"
+  Content: "We hit the ground running pretty much immediately after getting back
+    from break. Though Kento didn\u2019t seem to have taken a break at all. He was
+    actually kind of upset that Rose didn\u2019t do the same. \n\r\nWell, she kind
+    of did, actually. That new 3D modeling technique she tried out over break is
+    gonna make implementing her models a lot easier - I just think Kento is a little
+    miffed that she didn\u2019t apply it to our game first. I totally get why she
+    didn\u2019t do that, but I would have been more than willing to help her out\u2026
+    Oh well. I\u2019m just glad that our workflows are all a little easier now. \r\n\r\nI
+    should probably talk about what I\u2019ve been working on\u2026 Kento wants me
+    to implement a more finished version of the <indent=5%>arena</mark> so he can
+    mess around in the engine and figure out things like mechanics, tone, and lighting
+    conditions. Rose is still hard at work on the final <mark=#ffff00aa>assets</mark>
+    for both the <mark=#ffff00aa>frontier</mark> and the <mark=#ffff00aa>arena</mark>,
+    but her <mark=#ffff00aa>assets</mark> are structured in such a way that I\u2019m
+    able to use previous ones for the <mark=#ffff00aa>maze</mark> as placeholders.
+    I should thank her for her foresight. There was also an update to the engine
+    last month that did break a few things on the backend but I managed to get them
+    sorted out pretty quick. \r\n\r\nClover also mentioned that we could submit our
+    midterm progress to <mark=#ffff00aa>DGC\u2019s</mark> indie showcase! The <mark=#ffff00aa>maze</mark>
+    level by itself more than meets the requirement that builds are playable for
+    at least 5 minutes or more, and we can definitely set aside a week or so to make
+    some preliminary promo stuff. We\u2019ve set up a checklist of things we want
+    to have in the game by the submission deadline in mid-March (Kento and Rose argued
+    a little about the details but that\u2019s to be expected), and Rose will be
+    handling the submission form since she\u2019s done this before. \n\r\nI\u2019m
+    super excited for more people to see our game! \r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

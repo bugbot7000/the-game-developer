@@ -16,15 +16,13 @@ MonoBehaviour:
   Date: 3/13/2017
   Title: Black Tortoise
   Subtitle: 
-  Content: 'One of the four cardinal animals in Chinese mythology
-
-    Got the idea
-    from Eren, who was in Taiwan for break
-
-'
+  Content: 'Onto our second cardinal animal! This one represents the North, and is
+    either a snake or a tortoise (but most people see it as a tortoise). Excited
+    to submit for DGC -  can''t wait to see what people think of it. (We do also
+    need the playtest data) '
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
-  ContainsBuild: 0
+  ContainsBuild: 1
   BuildIndex: 4
   AdditionalKeywords: []

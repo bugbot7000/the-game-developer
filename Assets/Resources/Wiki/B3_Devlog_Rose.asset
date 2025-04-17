@@ -16,11 +16,13 @@ MonoBehaviour:
   Date: 12/11/2016
   Title: assets modeled, sleep schedule murdered
   Subtitle: 
-  Content: "finished: \r\n- minotaur final textures\r\n- minotaur animations\r\n-
-    minotaur particle effects\r\n- maze texture tweaks/fixes\r\n- minor fixes\r\n\nto
-    do next semester: \r\n- frontier map assets (textures, some models)\r\n- frontier
-    npcs (models, textures)\r\n- new enemies (3d models - talk to kento about final
-    designs in jan)\r\n- work out arena details with team \n\r\nim fucking exhausted
+  Content: "finished: \r\n- <mark=#ffff00aa>minotaur</mark> final textures\r\n- <mark=#ffff00aa>minotaur</mark>
+    animations\r\n- <mark=#ffff00aa>minotaur</mark> particle effects\r\n- <mark=#ffff00aa>maze</mark>
+    texture tweaks/fixes BECAUSE I FORGOT TO MAKE THE TEXTURES SEAMLESS\r\n- minor
+    fixes\r\n\nto do next semester: \r\n- <mark=#ffff00aa>frontier</mark> map assets
+    (textures, some models)\r\n- <mark=#ffff00aa>frontier</mark> npcs (models, textures)\r\n-
+    new enemies (3d models - talk to kento about final designs in jan)\r\n- work
+    out <mark=#ffff00aa>arena</mark> details with team \n\r\nim fucking exhausted
     im going home and sleeping for 84 years\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0

@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B3_Lore_WorldBuildingA
+  m_EditorClassIdentifier: 
+  PageType: 1
+  Date: 9/13/2016
+  Title: World Bible v1 (Recovered)
+  Subtitle: 'Here''s what I managed to put together for our final deadline. Still
+    lots of things to be worked out, but I think it''ll suffice for now. '
+  Content: "<b>GOALS THAT WORLD NEEDS TO FULFILL</b>\r\n<indent=5%>- Needs to feel
+    like a world in stasis (instead of being alive) but not be super obvious in this
+    goal\r\n- No one remembers its name. They just call it the \u201Cfrontier\u201D
+    or the \u201Cplains\r\n- Something bad happened when the previous kingdom fell
+    - some sort of cataclysm that shattered the belief systems of the world</indent>\r\n\r\n<b>THE
+    WORLD</b>\r\n<indent=5%>- Exact climate pending - probably somewhere dry and
+    kinda barren?\r\n- Civilization is long since past its peak, land is covered
+    in ruins\r\n- People get weird headaches and visions if they venture too far
+    out into the plains, with some reporting that the world simply turns to static
+    at the edges </indent>\r\n\r\n<b>TECH</b>\r\n<indent=5%>- Iron age - lots of
+    materials, lacking in manpower and advanced knowledge\r\n- A lot of scholars
+    and artisans are gone for whatever reason (died in the cataclysm probably)</indent>\r\n\r\n<b>THE
+    BEFORE TIMES</b>\r\n<indent=5%>- Used to be a very powerful magitech kingdom
+    in the frontier\r\n- Magic is a gift from the two sages: Nostralia (sage of the
+    past) and Reyalita (sage of the future)\n- Third sage (name pending) was the
+    sages\u2019 most ardent follower and was ascended to sagehood for his devotion\r\n-
+    Magic and religion are connected to each other in a sort of positive feedback
+    loop\r\n- Magic is only to be used for good in the service of the kingdom and
+    its people\r\n- If a mage acts selfishly they can lose part or all of their magical
+    abilities\r\n- Improving your magic is done through selfless acts and service
+    to the kingdom\r\n- Tie in with modular magic system: Base spells can be combined
+    to form more complex ones \r\n- There are definitely people dabbling in forbidden
+    magic </indent>\r\n\r\n<b>THE LAST SORCERER</b>\r\n<indent=5%>- Wakes up trapped
+    in the maze level\r\n- Must escape to the outside world by defeating the minotaur
+    at the end \r\n- Sorcerer committed some unforgivable sin related to the third
+    sage in the past that caused the sages to seal him away \r\n- As a result of
+    the cataclysm, the sages have been fading away for many years (which weakens
+    the sorcerer\u2019s seal)</indent>\n\n<b>THE FALL</b>\r\n<indent=5%>- One day
+    a plague swept across the plains of the kingdom\r\n- No one knew where it had
+    come from or how exactly it spread, only that the afflicted lost all motivation
+    to create and live\r\n- The last sorcerer, then the court mage at the royal palace,
+    fell deathly ill\r\n- The third sage desperately searched for a way to save him
+    but eventually turned to more dubious sources after exhausting every single avenue\r\n-
+    Unfortunately his cure didn\u2019t work and ended up turning the sorcerer into
+    a monster, which the sages were then forced to seal away in the maze to keep
+    the rest of the kingdom safe\r\n- The third sage was also sealed in his sanctum
+    due to his role in the tragedy</indent>\r\n\r\n"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []
