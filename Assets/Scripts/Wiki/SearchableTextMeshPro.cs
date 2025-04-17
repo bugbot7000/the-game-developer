@@ -8,7 +8,6 @@ public class SearchableTextMeshPro : MonoBehaviour
 {
     WebBrowserManager webBrowserManager;
     TextMeshProUGUI text;
-    bool blocked;
 
     void Start()
     {
@@ -18,9 +17,6 @@ public class SearchableTextMeshPro : MonoBehaviour
 
     void Update()
     {
-        if (blocked)
-            return;
-
         if (Input.GetMouseButtonDown(1))
         {
             int wordIndex = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
@@ -30,6 +26,7 @@ public class SearchableTextMeshPro : MonoBehaviour
                 string textString = text.text;
                 string wordString = text.textInfo.wordInfo[wordIndex].GetWord();
 
+                /*
                 textString = textString.Remove(
                     text.textInfo.wordInfo[wordIndex].firstCharacterIndex,  
                     text.textInfo.wordInfo[wordIndex].characterCount
@@ -39,14 +36,13 @@ public class SearchableTextMeshPro : MonoBehaviour
                     text.textInfo.wordInfo[wordIndex].firstCharacterIndex,
                     $"<b><u>{wordString}</b></u>"
                 );
+                */
                 
                 WikiPageSearchManager.Instance.SetSearchTerm(wordString);
 
-                webBrowserManager.OpenPage($"wiki.eren.local/search");
+                webBrowserManager.CreateNewTab($"wiki.eren.local/search");
 
                 text.SetText(textString);
-
-                blocked = true;
             }
         }
     }
