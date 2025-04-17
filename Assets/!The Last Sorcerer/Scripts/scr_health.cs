@@ -50,7 +50,12 @@ public class scr_health : MonoBehaviour
     {
         if (invincible) { return; }
         health -= dmgTaken;
-        if (anim != null) { anim.SetBool("HURT", true); } //Note that this bool needs to be the same for ALL CHARACTERS
+        Debug.Log("Taken DMG");
+        if (anim != null) 
+        { 
+            anim.SetBool("HURT", true);
+            Debug.Log("AM HURT");
+        } //Note that this bool needs to be the same for ALL CHARACTERS
         if (dmgTxt != null)
         {
             dmgTxt.text = "> DEALT " + dmgTaken.ToString() + " DAMAGE";

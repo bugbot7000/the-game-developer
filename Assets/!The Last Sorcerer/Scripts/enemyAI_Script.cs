@@ -178,7 +178,7 @@ public class enemyAI_Script : MonoBehaviour
             if (direction.x > 0.01f || direction.y > 0.01f || direction.x < 0.01f || direction.y < 0.01f) // A small threshold to account for tiny movements
             {
                 anim.SetBool("MOVE", true);
-                Debug.Log("MOVING");
+                //Debug.Log("MOVING");
             }
             else
             {
@@ -320,16 +320,19 @@ public class enemyAI_Script : MonoBehaviour
 
     void Retreat()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        Vector3 directionToPlayer = (transform.position - player.position).normalized;
-        Vector3 targetPosition = player.position + directionToPlayer * retreatDistance;
-
-        // Check if the enemy is too close or too far from the player
-        if (distanceToPlayer < retreatDistance - 0.5f || distanceToPlayer > retreatDistance + 0.5f)
+        if (player != null)
         {
-            if (agent.enabled)
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+            Vector3 directionToPlayer = (transform.position - player.position).normalized;
+            Vector3 targetPosition = player.position + directionToPlayer * retreatDistance;
+
+            // Check if the enemy is too close or too far from the player
+            if (distanceToPlayer < retreatDistance - 0.5f || distanceToPlayer > retreatDistance + 0.5f)
             {
-                agent.SetDestination(targetPosition);
+                if (agent.enabled)
+                {
+                    agent.SetDestination(targetPosition);
+                }
             }
         }
     }
@@ -365,7 +368,7 @@ public class enemyAI_Script : MonoBehaviour
 
             //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
             //body.AddForce(transform.forward * slamSpd, ForceMode.Impulse);
-            Debug.Log("Attacking");
+            //Debug.Log("Attacking");
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
@@ -455,11 +458,14 @@ public class enemyAI_Script : MonoBehaviour
 
     public void NecromancerBlast()
     {
-        Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
-        gameObject.transform.rotation = Quaternion.LookRotation(direction);
+        if (player != null)
+        {
+            Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(direction);
 
-        GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
-        arrow.transform.rotation = Quaternion.LookRotation(direction);
+            GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
+            arrow.transform.rotation = Quaternion.LookRotation(direction);
+        }
     }
 
     public void NecromanerBlastPlayAnim()
@@ -473,7 +479,7 @@ public class enemyAI_Script : MonoBehaviour
         {
             Rigidbody body = GetComponent<Rigidbody>();
             body.linearVelocity = Vector3.zero;
-            Debug.Log("Resetting attack");
+            //Debug.Log("Resetting attack");
             damageOnCollide = true;
         }
         if (type == EnemyType.Ogre)

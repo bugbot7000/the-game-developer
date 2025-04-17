@@ -1837,6 +1837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: necromancer
       objectReference: {fileID: 0}
+    - target: {fileID: 7568533411508192411, guid: bf79f7ce214288e46841666f476d206a, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1825715411}
     - target: {fileID: 8162804565332567646, guid: bf79f7ce214288e46841666f476d206a, type: 3}
       propertyPath: anim
       value: 
