@@ -13,13 +13,38 @@ MonoBehaviour:
   m_Name: B6_Devlog_Kento
   m_EditorClassIdentifier: 
   PageType: 0
-  Date: 
-  Title: Kento's Devlog #6
+  Date: 5/10/2017
+  Title: looking forwards
   Subtitle: 
-  Content: "Kento rants about how Rose \u201Cwent behind their backs\u201D and tried
-    to sabotage the project so she didn\u2019t have to do more work, starts to aggressively
-    question if she really wants the game to ever be finished. Talks about some final
-    tweaks he made to the gameplay systems and mechanics"
+  Content: "The <mark=#ffff00aa>puzzle</mark> designs and dialogue for the <mark=#ffff00aa>arena</mark>
+    are finished, faster than expected actually. I used the extra time to finally
+    draft an <mark=#ffff00aa>ending</mark> to our tale: Our heroic <mark=#ffff00aa>sorcerer</mark>
+    uncovers a terrible secret, a spell gone wrong that transformed the third <mark=#ffff00aa>sage</mark>
+    - his dear friend - into the very <mark=#ffff00aa>necromancer</mark> that hunts
+    him. In the climatic finale, he must step forth with a heavy heart to destroy
+    the evil he brought into the world.\r\n\r\nI struggled with the finer details
+    of it all. Tragedy requires nuance. A tragic hero is one who rises above humankind
+    before falling far below it. And the change must be shocking and stark for it
+    to have maximum impact. Yet it must also avoid being contrived. The shocking
+    yet inevitable fall from grace: something of a literary hat trick. I\u2019ve
+    done my best with it. Looking back over the dialogue I\u2019ve written for the
+    <mark=#ffff00aa>necromancer</mark>, I\u2019m struck by how similar his voice
+    is to someone I used to know, years ago. \r\n\r\nI think it\u2019s best I leave
+    it alone: if you manage to channel something raw and real into your story, don\u2019t
+    second guess it.\r\n\r\nI\u2019ve moved on to the more mechanical aspects of
+    the ending. The <mark=#ffff00aa>Sanctum</mark> area is in the early drafts; I\u2019ll
+    come back to it once the dust settles post graduation. My workflow is too chaotic
+    to focus on it for now. Rose likes to make these constant tiny little pushes
+    on KitHub which make clean version control difficult. More than once I\u2019ve
+    started work on what I\u2019ve been told is the latest build only to find I\u2019ve
+    actually run into conflict with some micro-update she\u2019s made. It would be
+    easier if she would just push her work in one wave, so that I could see the full
+    scope of potential conflicts. I doubt she\u2019ll want to work nearly this much
+    after we graduate, so I should have a more stable foundation to work from then.\r\n\r\nThere
+    is one complication: I have a job prospect from Double Lariat Studios. I\u2019ve
+    gotten as far as an interview. I would be foolish to turn down an offer from
+    them, but I intend to negotiate a delay to beginning my position so I can finish
+    <mark=#ffff00aa>Trismegistus</mark>.\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

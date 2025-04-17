@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B5_Build_Black_Tortoise
+  m_Name: B6_Build_Crimson_Phoenix
   m_EditorClassIdentifier: 
   PageType: 2
-  Date: 3/13/2017
-  Title: Black Tortoise
-  Subtitle: 
-  Content: 'Onto our second cardinal animal! This one represents the North, and is
-    either a snake or a tortoise (but most people see it as a tortoise). Excited
-    to submit for DGC -  can''t wait to see what people think of it. (We do also
-    need the playtest data) '
+  Date: 5/9/2017
+  Title: Crimson Phoenix
+  Subtitle: "spring showcase build finally!!! everything up to the first two arenas
+    is in here and i'm so proud of all the work we've done :) also the fact that
+    we all can graduate i am so tired of school and homework \ncrimson phoenix is
+    a fitting name for this build i think. kento's saving golden dragon for when
+    we launch on vapor"
+  Content: 
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 1
-  BuildIndex: 4
+  BuildIndex: 0
   AdditionalKeywords: []

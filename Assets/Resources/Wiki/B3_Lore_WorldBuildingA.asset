@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B1_Lore_WorldBuildingA
+  m_Name: B3_Lore_WorldBuildingA
   m_EditorClassIdentifier: 
   PageType: 1
   Date: 9/13/2016

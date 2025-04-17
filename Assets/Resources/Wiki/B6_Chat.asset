@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B6_Chat
+  m_EditorClassIdentifier: 
+  PageType: 3
+  Date: 5/17/2017
+  Title: Archived Chat Log
+  Subtitle: 
+  Content: "Lai-ing on the floor: Whew, showcase is over finally. Great job team!
+    \r\nLai-ing on the floor: It was really nice to meet your families too. \r\nKento\u2019s
+    Still Writing: i wouldn\u2019t describe meeting my parents as a \u201Cnice\u201D
+    experience\r\nKento\u2019s Still Writing: but I\u2019m gonna focus on how many
+    people liked our game and got sucked into the narrative and puzzles\r\npunished
+    rose: yeah that never gets old tbh\r\npunished rose: especially when people notice
+    the small details\r\npunished rose: was really annoying when that lady was constantly
+    making her teenage son the center of attention though\r\npunished rose: not just
+    at our setup but literally fucking everywhere else\r\nKento\u2019s Still Writing:
+    oh right you were wandering around the showcase floor when she came by\r\nKento\u2019s
+    Still Writing: i have the great misfortune of having that woman as my mother\r\npunished
+    rose: oh\r\npunished rose: Yikes\r\npunished rose: yeah that checks out\r\npunished
+    rose: her son looked really embarrassed about it though \r\nLai-ing on the floor:
+    Yeah, I think Shawn is starting to realize that what his mom does isn\u2019t
+    exactly normal. \r\nKento\u2019s Still Writing: checks out? \r\npunished rose:
+    kento im half chinese half indian i have two cultures weird about individuality
+    in my bones \r\npunished rose: i know this shit\r\nKento\u2019s Still Writing:
+    oh huh i didn\u2019t know that \r\nLai-ing on the floor: It was nice chatting
+    with your dad for a bit though, Kento. He seemed really interested in the narrative.
+    \r\nKento\u2019s Still Writing: finally remembered to be interested in something
+    I\u2019m passionate about that isn\u2019t tied to my brother in some way, more
+    like\r\nKento\u2019s Still Writing: probably just a means to an end for him\r\npunished
+    rose: oh you too? \r\npunished rose: my dads kinda like that as well\r\npunished
+    rose:  trying to make up for things that he knows can never be fixed\r\nKento\u2019s
+    Still Writing: really? \r\nKento\u2019s Still Writing: wouldn\u2019t have expected
+    that from you\r\nLai-ing on the floor: Oh wait guys have you seen my AirPods?
+    \r\nLai-ing on the floor: I can\u2019t find them in my bag. \r\npunished rose:
+    no you put them in your inner jacket pocket\r\nLai-ing on the floor: How did
+    you remember that? \r\npunished rose: i remember before we all left you were
+    like \u201Ci named my airpods see you not because of that stupid joke from last
+    semester\u201D and then we spent like 5 minutes bullying you with see you not
+    jokes\r\npunished rose: and then you shoved it in your jacket pocket because
+    you didnt want to to take your backpack off\r\nKento\u2019s Still Writing: are
+    you sure you have trouble remembering things? \r\npunished rose: yeah i only
+    remember useless facts and trivia \r\npunished rose: my brain has weird priorities\r\nKento\u2019s
+    Still Writing: that is kind of strange now that you mention it\r\npunished rose:
+    oh oh ive been itching to tell you guys all night\r\npunished rose: revolt sent
+    me an offer literally this morning \r\nLai-ing on the floor: Oh, congratulations!
+    \r\nKento\u2019s Still Writing: that\u2019s the tech art position right? \r\npunished
+    rose: yeah!! \r\npunished rose: im so excited\r\nLai-ing on the floor: When are
+    you starting? \r\npunished rose: see thats the problem\r\npunished rose: they
+    want me to start pretty much immediately\r\npunished rose: like start of june?
+    so thats barely enough time to relocate to nyc and sign a lease and everything
+    else\r\npunished rose: so i dont know how much time i can put towards trismegistus
+    in the near future at least \r\npunished rose: whats it looking like for you
+    guys? \r\nLai-ing on the floor: Still waiting on Subliminal to get back to me,
+    but my fingers are crossed since our last interview went an hour over. \r\nLai-ing
+    on the floor: It\u2019s a remote position so I have no plans to move. \r\nKento\u2019s
+    Still Writing: i\u2019ve got an interview with double lariat scheduled for the
+    week after graduation\r\nKento\u2019s Still Writing: so nothing concrete yet
+    but i\u2019m planning to negotiate for a delayed start if i get the job\r\r\npunished
+    rose: ahh ok\r\npunished rose: good luck with your job searches! hope you guys
+    get good news soon \r"
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 0
+  BuildIndex: 0
+  AdditionalKeywords: []

@@ -14,17 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 1/27/2017
-  Title: Kento's Devlog #4
+  Title: willing sacrifices
   Subtitle: 
-  Content: "Snarks about how much dev time Rose wasted over break by not working
-    on the project over break\r\n\tMentions that he wasn\u2019t gonna bother running
-    his ideas by Rose but Eren insisted he not think so badly of her and to give
-    her a chance\r\n\tSurprisingly she was fine with what he wanted to implement
-    but grouses that it was probably only bc she didn\u2019t have to do any extra
-    work\r\nThat aside, he talks about what it is he wanted to implement in the first
-    place\r\n\tTurning arena from greybox into a more finished state\r\n\tSo he can
-    test things in a smaller place both in terms of aesthetics, player feel, and
-    mechanics \r\n\tPlaying with different lighting conditions and obstacles\r\n"
+  Content: "We're at the halfway point in the school year and the game is deceptively
+    playable. By which I mean it's technically functional without being meaningful.
+    Rose seems satisfied enough but I disagree, and I suspect Eren does as well.
+    They will, of course, never voice that disagreement aloud.\r\n\r\nI sometimes
+    wonder if Rose values comfort over productivity. <mark=#ffff00aa>'Crunch'</mark>
+    was broached during our last talk. The discourse around that term is useless
+    to anyone actually trying to break into the game scene. This is a cutting edge
+    medium in a cutthroat industry; <mark=#ffff00aa>crunch<mark=#ffff00aa> happens
+    because a team willing to do it will always have the edge over a team who isn't.
+    It's a simple calculus: you get more done if you put in more time.\r\n\r\nThere's
+    no doubt it's unhealthy, but idealistic pundits and young developers seem to
+    have no plan for actually changing the industry enough to get rid of it. We will
+    be in no position to oppose <mark=#ffff00aa>crunch</mark> if we don't have a
+    successful game, if we don't have a seat at the table. There's no questioning
+    Rose's talent, but it's as if she's only looking to produce a proof of concept
+    to impress a professor and nothing more. That's not good enough. Right now, we're
+    their job. Once we're out of school, we aren't their problem anymore. Are they
+    going to finance our next game?\r\n\r\nNobody browsing Vapor is going to recommend
+    some half-finished 'proof of concept.' Every week we spend 'resting' or working
+    on other things is another feature that doesn't get finished, another player
+    who puts our game down.\r\n\r\nI think it's vital at this stage that we make
+    serious progress on the <mark=#ffff00aa>arena</mark> section. It's been a greybox
+    for too long, and we won't even know if it works experientially until it's more
+    complete. We still have big questions to answer as far as aesthetics (lighting,
+    color palette, etc. - DETAILS MATTER), game feel, mechanical balance and so on.
+    I have a whole other set of obstacles I've designed but have had no opportunity
+    to test, and I won\u2019t get the chance until Eren implements placeholder <mark=#ffff00aa>assets</mark>.
+    \r\n\r\nEven though we\u2019re planning to show <mark=#ffff00aa>Trismegistus</mark>
+    at <mark=#ffff00aa>DGC</mark> in March (which will get our game in front of an
+    audience that knows it\u2019s still a work in progress), I feel like I'm the
+    only person on this team who understands that success in this industry is an
+    uphill battle. This is the career they both chose. Didn't they think it might
+    require some sacrifice?\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

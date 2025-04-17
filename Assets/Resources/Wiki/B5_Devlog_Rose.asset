@@ -13,12 +13,27 @@ MonoBehaviour:
   m_Name: B5_Devlog_Rose
   m_EditorClassIdentifier: 
   PageType: 0
-  Date: 3/15/2017
-  Title: Rose's Devlog #5
+  Date: 3/16/2017
+  Title: im sorry
   Subtitle: 
-  Content: Rose chipping away at the massive pile of art and visual stuff that Kento
-    keeps adding to, resentful of the fact that he thinks that more is always better.
-    Starts seeing signs of burnout and takes time off accordingly
+  Content: "- i\u2019m really, really sorry i forgot to submit for <mark=#ffff00aa>dgc</mark>\r\n<indent=5%>-
+    i swear i wrote the date down correctly but i mixed it up with the tax filing
+    deadline for this year\r\n- i know it doesn\u2019t look great for me since i
+    was really wanting to show something polished at <mark=#ffff00aa>dgc</mark> but
+    i promise i didn\u2019t forget on purpose\r\n- i know kento thinks im lying.
+    he has the right to think so\r\n- ive disappointed so many people by making careless
+    mistakes like this i thought i was getting better at remembering\r\n- im sorry</indent>\n\r\nupdate
+    3/17:\r\n- i figured out why my <mark=#ffff00aa>assets</mark> were causing that
+    visual <mark=#ffff00aa>bug</mark>\r\n<indent=5%>- it was because toonity changed
+    how their assets link into the engine\u2019s systems \r\n- one of the methods
+    i was using to define parameters changed in a really weird way\r\n- i\u2019m
+    gonna have to change how my <mark=#ffff00aa>assets</mark> are structured now\r\n-
+    still haven\u2019t fixed the originals bc i really had to get the <mark=#ffff00aa>frontier</mark>
+    ones done \r\n- eren found a temp fix but we had to take <mark=#ffff00aa>arena</mark>
+    out of the midterm build bc that was where the flashing problem was</indent>
+    \r\n- but i managed to finish the <mark=#ffff00aa>frontier</mark> assets on time
+    without any all nighters\r\n- i cant forget things again this time. i cant disappoint
+    the others any more than i already have\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

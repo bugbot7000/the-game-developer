@@ -13,15 +13,36 @@ MonoBehaviour:
   m_Name: B6_Devlog_Eren
   m_EditorClassIdentifier: 
   PageType: 0
-  Date: 
-  Title: Eren's Devlog #6
+  Date: 5/11/2017
+  Title: 'Showcase! '
   Subtitle: 
-  Content: "Eren still trying to be the bridge between Kento and Rose even though
-    it\u2019s becoming very clear that this isn\u2019t going to be feasible long
-    term. Mention of the long hours he pulled getting everything implemented, laments
-    that he had to use placeholders since Rose didn\u2019t have everything done.
-    Still unable to fix the bug mentioned in previous builds due to time constraints
-    \r\n"
+  Content: "As of just now, our final build for the spring semester and the <mark=#ffff00aa>showcase</mark>
+    next week has been submitted. We\u2019re finally almost free. \n\r\nWell, not
+    that we\u2019re being held at gunpoint to finish our game, but I am so done with
+    being in school. \n\r\nAnyways, after Rose finished all the <mark=#ffff00aa>frontier</mark>
+    and <mark=#ffff00aa>arena assets</mark> and Kento finished with his <mark=#ffff00aa>puzzles</mark>
+    I was able to implement the new levels into Toonity. The current progression
+    of our game is now <mark=#ffff00aa>Maze</mark> > <mark=#ffff00aa>Frontier</mark>
+    > <mark=#ffff00aa>Arena</mark>, with Kento planning a third <mark=#ffff00aa>arena</mark>
+    for after we graduate. We\u2019re about 80% there and plan to be working on <mark=#ffff00aa>Trismegistus</mark>
+    for a few more months once we don\u2019t have to go to class anymore. \n\r\nI
+    still can\u2019t figure out what the deal is with the weird visual <mark=#ffff00aa>bug</mark>
+    we\u2019ve been continuing to get. It seems to have spread to all three of our
+    Toonity installations, and sometimes the game is entirely unplayable when we
+    export builds. Kento managed to get a build that reliably doesn\u2019t do that,
+    but this is going to be a huge problem that we need to iron out sooner rather
+    than later. I think it has something to do with how textures are linked to their
+    models in-engine? I\u2019ve sent the Toonity devs another email, because Clover
+    and all our other professors are equally stumped. \n\r\nAll three of us had a
+    big discussion about post-grad plans the other day as well, just to figure out
+    what our schedules will be looking like over the <mark=#ffff00aa>summer</mark>.
+    I just interviewed with a smaller indie studio called Subliminal for a lead programmer
+    role. I think they\u2019ll offer me the position since they really liked how
+    I handled some of the coding hurdles in <mark=#ffff00aa>Trismegistus</mark>,
+    so here\u2019s hoping. \n\r\nKento and Rose mostly seem to have moved past our
+    big fight a few months ago, but honestly I\u2019m still a little worried about
+    them coming to blows again, especially since once we go solo on this we won\u2019t
+    have regular work time and advising meetings anymore. \r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

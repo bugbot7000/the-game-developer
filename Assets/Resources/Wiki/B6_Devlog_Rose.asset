@@ -13,14 +13,26 @@ MonoBehaviour:
   m_Name: B6_Devlog_Rose
   m_EditorClassIdentifier: 
   PageType: 0
-  Date: 
-  Title: Rose's Devlog #6
+  Date: 5/13/2017
+  Title: FREEDOM
   Subtitle: 
-  Content: Rose clearly upset that Kento is overloading both her and Eren with work
-    while he goes off to his sandbox and churns out more stuff for them to do. Said
-    she managed to finish most of the midgame assets but that Kento was very, very
-    upset with her for not magically having everything done for the showcase. Likens
-    him to an old bad boss she had during an internship
+  Content: "- IM FREE KINDA\r\n- things i did for spring showcase build: \r\n<indent=5%>-
+    finally fixed the fucking arena assets (though now eren thinks the problem is
+    how they\u2019re hooked into the 3d models so that\u2019s great\u2026)\r\n- finished
+    all arena boss models \r\n- finished all enemies\r\n- frontier stuff is done
+    too but that was relatively quick compared to this</indent>\r\n- ok maybe i\u2019m
+    not as free as i would think bc i keep going back and tweaking little things
+    about the textures and models and anims\r\n<indent=5%>- tbh i\u2019m really worried
+    about whether or not this game is polished enough\u2026 i had an interview with
+    revolt games last week and i said i\u2019d send them the final showcase build
+    when we were done\r\n- mental note i need to do that<indent=5%>\r\n- i\u2019ve
+    really been working hard this past few weeks to try and make up for my dgc mistake\r\n<indent=5%>-
+    accidentally did a few more late nights but no all nighters so that\u2019s a
+    small win for me at least\r\n- i still feel absolutely horrid about that i can\u2019t
+    b elieve i was so forgetful and mixed up the dates like that\r\n- kento seems
+    to have moved past it but i can\u2019t help but feel that he\u2019s still a little
+    frosty sometimes\r\n- i hope i\u2019m not pissing him off with all the kithub
+    pushes </indent>\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
