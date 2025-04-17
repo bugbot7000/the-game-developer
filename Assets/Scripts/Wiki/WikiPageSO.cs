@@ -42,7 +42,6 @@ public class WikiPageSO : ScriptableObject
 
         foreach (string line in Content.Split('\n'))
         {
-            Debug.Log(line);
             if (line.StartsWith("-") || line.StartsWith("["))
             {
                 archivedChat += $"{line}\n";
