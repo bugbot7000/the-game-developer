@@ -16,28 +16,39 @@ MonoBehaviour:
   Date: 9/13/2016
   Title: a forgotten sorcerer, a remembered dream.
   Subtitle: 
-  Content: "trismegistus is now officially my thesis project for this year. it feels
-    kind of surreal, to be honest - i\u2019ve spent so long with my stories locked
-    away in my head out of necessity, and now here i am working on it with eren and
-    rose\n\r\ni know we only have so much time, and that ultimately this is still
-    a student undertaking, but i have high hopes for this game. i want it to be a
-    journey not only for the amnesiac main character, but the player, who is experiencing
-    this for the first time alongside the mc\n\r\nbut i\u2019m getting off track.
-    i should talk more about what i have planned\n\r\nthe basic plot i\u2019ve settled
-    on is that a sorcerer wakes up in the maze he\u2019s been sealed in and attempts
-    an escape, only to realize that his journey is far from over once he finally
-    steps outside of it. he must visit the domains of two sages and receive their
-    blessings before becoming strong enough to confront the shadows of his past made
-    manifest by the very act that wiped all magic from the world. in essence, it\u2019s
-    about waking up to a world that no longer remembers you. \n\r\nit took a little
-    while for rose and our advisor clover to understand what i was talking about,
-    but when it clicked for them they were instantly on board with the idea, which
-    i\u2019m glad for\n \r\nin terms of the puzzle systems, i\u2019ve decided to
-    base most of them off of the modular magic system that rose suggested. to test
-    the concept, I added a wall to Eren's test level that can only be destroyed using
-    the beam spell shape. \n\nloath as i am to admit it, it\u2019s a cool idea with
-    lots of potential that i hadn't thought of before and i look forward to expanding
-    on it\r"
+  Content: "After a prolonged stay in my imagination, <mark=#ffff00aa>Trismegistus</mark>
+    now\u2026 exists. In a rudimentary form, at least. Eren and I have elected it
+    as our thesis project for the year. There is something innately surreal about
+    the work of creating, as distinct from the precursor act of imagining. Once a
+    work goes from an idea - the stuff of ether - to material, to something others
+    can touch and look at and judge, it\u2019s easy to forget you can no longer change
+    it with a thought. It\u2019s not yours anymore, really.\r\n\r\nBy serendipity
+    (or irony, as the case may be), the story I have outlined is related to that
+    idea. Eren - who routinely tries and fails to keep me grounded - has reminded
+    me that we ought to be cautious with scope. We are only a student game. In my
+    opinion nobody who plays Trismegistus will care where it came from if it isn\u2019t
+    a <b>good</b> game. I will bleed on my canvas if I have to.\r\n\r\nI should refocus
+    before I go on another rant. The start of the plot as I have imagined it is that
+    our protagonist is an amnesiac sorcerer waking up in a world that has passed
+    him by, and forgotten the magic of old. The opening section sees them escaping
+    from a <mark=#ffff00aa> maze</mark>, at the center of which they have been imprisoned.
+    They will then go on to consult with two sages and confront the shadows of her
+    past.\r\n\r\nTo be brief, I will simply say that the arc of the story involves
+    discovering our lead character is less innocent than we\u2019ve been led to believe.
+    I\u2019ve drawn inspiration from Planescape: Torment here, a game that leverages
+    the bias of the player to sympathize with their avatar, and then complicates
+    that relationship.\r\n\r\nOur advisor doesn\u2019t see the vision, unfortunately.
+    I had to simplify the idea for her. I think the larger point I\u2019m trying
+    to make about the misuse of power went over her head, but we won her over eventually.
+    Her suggestion was that we bring on a third member to ease the workload: Rose.
+    \r\n\r\nRose\u2019s talent isn\u2019t in question, but I don\u2019t know yet
+    if her artistic priorities are the same as ours. She did contribute a genuinely
+    innovative piece of system design: a <mark=#ffff00aa> modular magic</mark> system.
+    I\u2019ve begun drafting puzzles to put it through its paces and test its limitations.
+    We\u2019ll see whether or not the system affords us the narrative design space
+    we need.\r\n\r\nP.S: Threw a wall into Eren\u2019s test level that can only be
+    destroyed with <mark=#ffff00> \u201CBeam\u201D</mark> shaped spells. Just testing
+    to make sure the collider and tag code is working."
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

@@ -16,18 +16,19 @@ MonoBehaviour:
   Date: 9/13/2016
   Title: Mic Check, Magic, and Managing Kento
   Subtitle: 
-  Content: "[SCRIPT]\r\nTesting. Hello? Cabbage dumplings. Rendezvous. \n\r\nOkay,
-    good, my mic is working. If I had to return another one again I think I would
-    have combusted. \n\r\nSo, uh, this is my first devlog for Trismegistus. That\u2019s
+  Content: "Testing. Hello? Cabbage dumplings. Rendezvous. \n\r\nOkay, good, my mic
+    is working. If I had to return another one again I think I would have combusted.
+    \n\r\nSo, uh, this is my first devlog for our <mark=#ffff00aa>thesis</mark> game
+    for UCP\u2019s game design program, <mark=#ffff00aa>Trismegistus</mark>. That\u2019s
     what Kento\u2019s named it. He started work on it in his free time a few months
     ago and asked me to help on some code stuff, but we\u2019ve decided to make it
-    our thesis project alongside Rose, who\u2019s both our, uh, good friend. \n\r\nIt\u2019s
+    our thesis project alongside Rose, who\u2019s both our good friend. \n\r\nIt\u2019s
     only been a few weeks, but I\u2019ve already made good progress. I set up a small
     test level that demonstrates the basic movement, camera and dialogue system.
-    I\u2019ve also started working on the modular magic system she suggested, but
-    that\u2019s gonna take a while. Kento wanted some way for us to add comments
-    directly to build so I added that too. I had to use it immediately too after
-    Kento added a seemingly random wall in the middle of the test level.\n\r\nI\u2019m
+    I\u2019ve also started working on the <mark=#ffff00aa>modular magic</mark> system
+    she suggested, but that\u2019s gonna take a while. Kento wanted some way for
+    us to add comments directly to build so I added that too. I had to use it immediately
+    too after Kento added a seemingly random wall in the middle of the test level.\n\r\nI\u2019m
     a little worried about how Kento is reacting to bringing Rose on, though. I know
     this is a big step for him, but he already seems a little offput by the amount
     of initiative Rose is taking. Which I think is great, but he might not be willing
