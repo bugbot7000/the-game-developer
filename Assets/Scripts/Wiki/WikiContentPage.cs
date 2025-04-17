@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -59,10 +60,9 @@ public class WikiContentPage : MonoBehaviour
             }
         }
 
-        LayoutRebuilder.ForceRebuildLayoutImmediate(content.rectTransform);
-        
         contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, content.rectTransform.sizeDelta.y + 300);
 
+        LayoutRebuilder.ForceRebuildLayoutImmediate(content.rectTransform);
         LayoutRebuilder.ForceRebuildLayoutImmediate(contentRect.parent.transform.GetComponent<RectTransform>());
 
         if (wikiPage.ActivatesInteractveChat && !MetaNarrativeManager.Instance.HasVisitedSequence(wikiPage.ChatID))
