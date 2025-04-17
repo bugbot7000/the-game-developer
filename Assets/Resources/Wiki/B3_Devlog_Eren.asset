@@ -26,7 +26,7 @@ MonoBehaviour:
     Toonity installation so badly he had to reinstall the entire program. \n\r\nBut
     we should have the close to final <mark=#ffff00aa>maze</mark> implemented alongside
     the <mark=#ffff00aa>minotaur </mark>boss!  We did get some feedback that killing
-    the minotaur with the pull spell was not that intuitive and I can see why:  you 
+    the minotaur with the pull spell was not that intuitive and I can see why: you
     need to hold shift and press 2 to activate the pull spell, press 2 (without shift)
     to switch to the beam shape, and then go to a separate platform to pull the minotaur
     off. \n\nBut once this is fixed we can move on to the rest of the game next semester,
