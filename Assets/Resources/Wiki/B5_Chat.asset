@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
   m_Name: B5_Chat
   m_EditorClassIdentifier: 
-  PageType: 2
+  PageType: 3
   Date: 3/16/2017
   Title: Archived Chat Log
   Subtitle: 
@@ -71,7 +71,7 @@ MonoBehaviour:
     erenlaiii.]\r\nFlashing Lights Warning: Both of you are going to stop talking
     in here, calm down, and sleep this off. \r\nFlashing Lights Warning: We\u2019ll
     address this properly tomorrow. \r"
-  IsArchivedChat: 0
+  IsArchivedChat: 1
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 0

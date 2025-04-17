@@ -676,7 +676,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2962609249989556397}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.87246376
+  m_Size: 0.7550725
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'TODO: Figure out why the database crashes if I return more than 3 results?!?'
+  m_text: 'TODO: Figure out why the database crashes if I return more than 4 results?!?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e033e18078139044abab06cf87660e53, type: 2}
   m_sharedMaterial: {fileID: -7825370461559095283, guid: e033e18078139044abab06cf87660e53, type: 2}

@@ -35,7 +35,7 @@ public class WikiContentPage : MonoBehaviour
         {
             content.SetText(wikiPage.ContentAsArchivedChat());
             content.lineSpacing = 0;
-            content.paragraphSpacing = 48;
+            content.paragraphSpacing = 64;
         }
         else
         {

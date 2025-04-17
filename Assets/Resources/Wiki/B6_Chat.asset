@@ -69,7 +69,7 @@ MonoBehaviour:
     but i\u2019m planning to negotiate for a delayed start if i get the job\r\r\npunished
     rose: ahh ok\r\npunished rose: good luck with your job searches! hope you guys
     get good news soon \r"
-  IsArchivedChat: 0
+  IsArchivedChat: 1
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 0

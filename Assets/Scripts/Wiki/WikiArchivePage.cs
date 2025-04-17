@@ -12,19 +12,43 @@ public class WikiArchivePage : MonoBehaviour
     [TitleGroup("Prefabs"), AssetsOnly]
     [SerializeField] GameObject archiveItemPrefab;
 
+    [TitleGroup("Grid Layouts")]
+    [SerializeField] GameObject fallIndexContainer;
+    [SerializeField] GameObject springIndexContainer;
+
     [TitleGroup("References")]
-    [SerializeField] GameObject archiveContainer;
+    [SerializeField] TextMeshProUGUI springLoadingText;
+
+    [TitleGroup("Label")]
     [SerializeField] RectTransform label;
     [SerializeField] CanvasGroup labelCanvas;
     [SerializeField] TextMeshProUGUI labelText;
 
     void Start()
     {
-        foreach (WikiPageSO page in WikiPageSearchManager.Instance.NewIndex.WikiPages)
+        foreach (WikiPageSO page in WikiPageSearchManager.Instance.FallIndex.WikiPages)
         {
-            Instantiate(archiveItemPrefab, archiveContainer.transform)
+            Instantiate(archiveItemPrefab, fallIndexContainer.transform)
                 .GetComponent<WikiArchivePageItem>().Initialize(page, this);
         }
+
+        if (WikiPageSearchManager.Instance.SpringUnlocked())
+        {
+            springLoadingText.gameObject.SetActive(false);
+            
+            foreach (WikiPageSO page in WikiPageSearchManager.Instance.SpringIndex.WikiPages)
+            {
+                Instantiate(archiveItemPrefab, springIndexContainer.transform)
+                    .GetComponent<WikiArchivePageItem>().Initialize(page, this);
+            }  
+        }
+        else
+        {
+            
+            springLoadingText.SetText($"Rebuilding... {Mathf.Round(WikiPageSearchManager.Instance.GetFallSemesterProgress() * 100)}% complete. Continuing loading pages to complete index rebuild.");
+        }
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(GetComponent<RectTransform>());
     }
     
     void Update()

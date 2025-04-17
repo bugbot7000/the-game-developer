@@ -26,11 +26,13 @@ public class WikiPageSearchManager : MonoBehaviour
     #endregion
 
     [TitleGroup("Wiki Index")]
-    [SerializeField] WikiIndexSO newIndex;
+    [SerializeField] WikiIndexSO fallIndex;
+    [SerializeField] WikiIndexSO springIndex;
     [SerializeField] bool enableWikiDebug;
 
     [TitleGroup("Parameters")]
     [SerializeField] int maxSearchResults = 3;  
+    [SerializeField] float progressToUnlockSpring = 0.8f;
 
     [TitleGroup("References")]
     [SerializeField] WindowManager webBrowser;
@@ -40,7 +42,8 @@ public class WikiPageSearchManager : MonoBehaviour
     List<WikiPageSO> visitedPages = new List<WikiPageSO>();
 
     public WikiIndex Index => index;
-    public WikiIndexSO NewIndex => newIndex;
+    public WikiIndexSO FallIndex => fallIndex;
+    public WikiIndexSO SpringIndex => springIndex;
     public int MaxSearchResults => maxSearchResults;
     public string LastSearchTerm  { get; private set; }
     public WikiPage LastFoundPage { get; private set; }
@@ -52,15 +55,36 @@ public class WikiPageSearchManager : MonoBehaviour
         {
             Debug.Log("[WikiPageSearchManager] Wiki debug enabled.");
 
-            foreach (WikiPageSO wikiPage in newIndex.WikiPages)
+            foreach (WikiPageSO wikiPage in fallIndex.WikiPages)
             {
                 visitedPages.Add(wikiPage);
             }
+
+            foreach (WikiPageSO wikiPage in springIndex.WikiPages)
+            {
+                visitedPages.Add(wikiPage);
+            }            
 
             webBrowser.OpenWindow();
             webBrowser.GetComponent<WebBrowserManager>().OpenPage("wiki.eren.local/archive");    
             networkManager.networkItems[0].networkSpeed = 100;        
         }
+    }
+
+    public float GetFallSemesterProgress()
+    {
+        float visited = 0;
+
+        foreach (WikiPageSO wikiPage in fallIndex.WikiPages)
+            if (HasPageBeenVisited(wikiPage))
+                visited++;
+
+        return visited / (fallIndex.WikiPages.Count * progressToUnlockSpring);
+    }
+
+    public bool SpringUnlocked()
+    {
+        return GetFallSemesterProgress() >= progressToUnlockSpring;
     }
 
     public void SetSearchTerm(string term)
@@ -101,9 +125,14 @@ public class WikiPageSearchManager : MonoBehaviour
     {
         List<WikiPageSO> results = new List<WikiPageSO>();
         
-        foreach (WikiPageSO page in newIndex.WikiPages)
+        foreach (WikiPageSO page in fallIndex.WikiPages)
             if (page.PageContainsTerm(term))
                 results.Add(page);
+        
+        if (SpringUnlocked())
+            foreach (WikiPageSO page in springIndex.WikiPages)
+                if (page.PageContainsTerm(term))
+                    results.Add(page);                
 
         return results;
     }
