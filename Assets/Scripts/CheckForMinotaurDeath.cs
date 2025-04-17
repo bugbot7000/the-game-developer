@@ -3,6 +3,7 @@ using UnityEngine;
 public class CheckForMinotaurDeath : MonoBehaviour
 {
     [SerializeField] GameObject minotaur;
+    [SerializeField] GameObject loadArenaPanel;
 
     bool openedPanel;
 
@@ -12,7 +13,7 @@ public class CheckForMinotaurDeath : MonoBehaviour
         {
             if (minotaur == null)
             {
-                FindFirstObjectByType<ThanksCanvas>()?.OpenPanel();
+                loadArenaPanel.SetActive(true);
                 openedPanel = true;
             }
         }

@@ -25,20 +25,24 @@ MonoBehaviour:
     the entire game crashed. One poor guy at Playtest Tuesday managed to break Kento\u2019s
     Toonity installation so badly he had to reinstall the entire program. \n\r\nBut
     we should have the close to final <mark=#ffff00aa>maze</mark> implemented alongside
-    the <mark=#ffff00aa>minotaur </mark>boss! This means we can move on to the rest
-    of the game next semester, starting with the <mark=#ffff00aa>frontier</mark>
-    level Kento has planned. I already expect he\u2019ll have a ton of things for
-    me when we come back. \n\r\nI am a little worried about Kento and Rose though.
-    They seem to have completely opposite philosophies when it comes to gamedev.
-    Kento is a more grindset person, while Rose is really anti-burnout. Rose mentioned
-    after our midterm that she crunched to finish one of her games and it didn\u2019t
-    turn out well, called <mark=#ffff00aa>The Last Knight</mark>. I went and played
-    it and I kind of see what she means, but it was still a really good game. \n\r\nWe
-    did come to an understanding after talking with Clover though, so I really hope
-    it doesn\u2019t spiral out of control in the future. \n\r\nI\u2019m glad we made
-    lots of progress this semester! I was worried that Kento would be more hostile
-    to the idea of one of his brainchildren getting shared with someone that he doesn\u2019t
-    super trust yet but I\u2019m so relieved it\u2019s been working out. \r"
+    the <mark=#ffff00aa>minotaur </mark>boss!  We did get some feedback that killing
+    the minotaur with the pull spell was not that intuitive and I can see why:  you 
+    need to hold shift and press 2 to activate the pull spell, press 2 (without shift)
+    to switch to the beam shape, and then go to a separate platform to pull the minotaur
+    off. \n\nBut once this is fixed we can move on to the rest of the game next semester,
+    starting with the <mark=#ffff00aa>frontier</mark> level Kento has planned. I
+    already expect he\u2019ll have a ton of things for me when we come back. \n\r\nI
+    am a little worried about Kento and Rose though. They seem to have completely
+    opposite philosophies when it comes to gamedev. Kento is a more grindset person,
+    while Rose is really anti-burnout. Rose mentioned after our midterm that she
+    crunched to finish one of her games and it didn\u2019t turn out well, called
+    <mark=#ffff00aa>The Last Knight</mark>. I went and played it and I kind of see
+    what she means, but it was still a really good game. \n\r\nWe did come to an
+    understanding after talking with Clover though, so I really hope it doesn\u2019t
+    spiral out of control in the future. \n\r\nI\u2019m glad we made lots of progress
+    this semester! I was worried that Kento would be more hostile to the idea of
+    one of his brainchildren getting shared with someone that he doesn\u2019t super
+    trust yet but I\u2019m so relieved it\u2019s been working out. \r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

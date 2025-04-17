@@ -117,17 +117,8 @@ public class scr_playerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar); }
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SwitchSpell1ToSwipe();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SwitchSpell1ToBeam();
-        }        
+        // Disabling the familiar for now until we more explicitly introduce summoning familiars at some point
+        // if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar); }  
 
         if (currentAttack != null)
         {
