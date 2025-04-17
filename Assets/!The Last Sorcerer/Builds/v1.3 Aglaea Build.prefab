@@ -420,7 +420,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5877d35284cba054c95862279152baac, type: 2}
+  - {fileID: 2100000, guid: 78b24181aa0f2b543b13285c6f13720c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1272,7 +1272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1056971233326599720, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
       propertyPath: m_text
-      value: i just glitched through it with the dash lol
+      value: he explains it in the modmagic article in the wiki
       objectReference: {fileID: 0}
     - target: {fileID: 2834181339475905740, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
       propertyPath: m_Name
