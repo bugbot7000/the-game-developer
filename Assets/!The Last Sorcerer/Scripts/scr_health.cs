@@ -17,7 +17,7 @@ public class scr_health : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        enemyAI = GetComponent<enemyAI_Script>();
     }
 
     // Update is called once per frame
@@ -78,12 +78,18 @@ public class scr_health : MonoBehaviour
     {
         if (enemyAI != null)
         {
-            if (enemyAI != null) { gameObject.layer = 0; }
-            enemyAI.agent.enabled = false;
-            enemyAI.enabled = false;
+            Debug.Log("Enemy death");
+            gameObject.layer = 0;
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            Destroy(GetComponent<enemyAI_Script>());
+            Destroy(GetComponent<CapsuleCollider>());
+            Destroy(GetComponent<scr_health>());
+            //enemyAI.agent.enabled = false;
+            //enemyAI.enabled = false;
         }
         else
         {
+            Debug.Log("Destruction");
             Destroy(gameObject);
         }
     }

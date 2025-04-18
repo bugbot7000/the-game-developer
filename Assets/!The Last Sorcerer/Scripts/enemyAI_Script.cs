@@ -214,18 +214,21 @@ public class enemyAI_Script : MonoBehaviour
     }
     public void SpriteOrbitStop()
     {
-        scr_orbit OrbitScript = GetComponent<scr_orbit>();
-        transform.position = spawnPoint;
-        //if (OrbitScript.centralObject.parent != null)
-        //{
-        //    gameObject.transform.SetParent(OrbitScript.centralObject.parent);
-        //}
-        //else
-        //{
-        //    gameObject.transform.SetParent(null);
-        //}
-        OrbitScript.centralObject = null;
-        agent.enabled = true;
+        if (GetComponent<scr_orbit>() != null)
+        {
+            scr_orbit OrbitScript = GetComponent<scr_orbit>();
+            transform.position = spawnPoint;
+            //if (OrbitScript.centralObject.parent != null)
+            //{
+            //    gameObject.transform.SetParent(OrbitScript.centralObject.parent);
+            //}
+            //else
+            //{
+            //    gameObject.transform.SetParent(null);
+            //}
+            OrbitScript.centralObject = null;
+            agent.enabled = true;
+        }
     }
 
     private void OnEnable()
