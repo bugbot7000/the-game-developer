@@ -39,6 +39,9 @@ public class enemyAI_Script : MonoBehaviour
     private Vector3 rotationSetting;
     private Vector3 velocity;
     private Vector3 previousPosition;
+    private Vector3 currentPositionCheck;
+    private Vector3 previousPositionCheck;
+    public float moveAnimThreshold = 1f;
 
     public float charmPoints;
 
@@ -94,6 +97,7 @@ public class enemyAI_Script : MonoBehaviour
 
         if (type == EnemyType.Necromancer) { StartCoroutine(SpawnEnemies()); }
         if (type == EnemyType.Assassin) { visible = false; }
+        currentPositionCheck = transform.position;
     }
 
     // Update is called once per frame
@@ -173,9 +177,15 @@ public class enemyAI_Script : MonoBehaviour
         //    gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
         //}
 
+        currentPositionCheck = transform.position;
+        float distance = Vector3.Distance(currentPositionCheck, previousPositionCheck);
+        float speed = distance / Time.deltaTime;
+
+
         if (anim != null) 
         {
-            if (direction.x > 0.01f || direction.y > 0.01f || direction.x < 0.01f || direction.y < 0.01f) // A small threshold to account for tiny movements
+            //if (direction.x > 0.1f || direction.y > 0.1f || direction.x < 0.1f || direction.y < 0.1f) // A small threshold to account for tiny movements
+            if(speed > moveAnimThreshold)
             {
                 anim.SetBool("MOVE", true);
                 //Debug.Log("MOVING");
@@ -185,7 +195,7 @@ public class enemyAI_Script : MonoBehaviour
                 anim.SetBool("MOVE", false);
             }
         }
-        
+        previousPositionCheck = currentPositionCheck;
     }
 
     public void CharmMe()
@@ -429,11 +439,16 @@ public class enemyAI_Script : MonoBehaviour
 
         if (type == EnemyType.Assassin) 
         {
-            Vector3 direction = (player.position - gameObject.transform.position).normalized;
-            gameObject.transform.rotation = Quaternion.LookRotation(direction);
+            //Vector3 direction = (player.position - gameObject.transform.position).normalized;
+            //gameObject.transform.rotation = Quaternion.LookRotation(direction);
             if (!alreadyAttacked)
             {
                 alreadyAttacked = true;
+                Rigidbody body = GetComponent<Rigidbody>();
+                body.constraints = RigidbodyConstraints.FreezePosition;
+                //agent.enabled = false;
+                //agent.SetDestination(transform.position);
+                agent.speed = 0;
                 Invoke("AssassinAppear", 0.5f);
             }
         }
@@ -524,30 +539,37 @@ public class enemyAI_Script : MonoBehaviour
 
     public void AssassinAppear()
     {
-        ToggleVisibility();
+        //ToggleVisibility();
         Invoke("AssassinAttack", 0.5f);
     }
 
     public void AssassinAttack()
     {
         Rigidbody body = GetComponent<Rigidbody>();
-        //body.constraints = RigidbodyConstraints.FreezePosition;
+        body.constraints = RigidbodyConstraints.FreezePosition;
         //body.constraints = RigidbodyConstraints.FreezeRotation;
 
-        hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
-                                //animator.SetBool("isAttacking", true);
-        Invoke("AssassinVanish", 0.5f);
+        //hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
+        //animator.SetBool("isAttacking", true);
+
+        anim.SetTrigger("ATTACK");
+        //Invoke("AssassinVanish", 3.5f);
+
+        // start the animation
+        // place the vanish invocation  inside the animation
     }
 
     public void AssassinVanish()
     {
         stalking = false;
-        hitbox.SetActive(false);
+        //hitbox.SetActive(false);
         Rigidbody body = GetComponent<Rigidbody>();
         body.constraints = RigidbodyConstraints.None;
         body.constraints = RigidbodyConstraints.FreezeRotationX;
         body.constraints = RigidbodyConstraints.FreezeRotationZ;
-        ToggleVisibility();
+        //ToggleVisibility();
+        //agent.enabled = true;
+        agent.speed = 16;
         Invoke(nameof(ResetAttack), timeBetweenAttacks);
     }
 

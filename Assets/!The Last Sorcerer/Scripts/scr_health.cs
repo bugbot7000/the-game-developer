@@ -42,6 +42,7 @@ public class scr_health : MonoBehaviour
                 {
                     Destroy(gameObject);
                 }
+                else { Die(); }
             }
         }
     }
@@ -52,10 +53,11 @@ public class scr_health : MonoBehaviour
         health -= dmgTaken;
         Debug.Log("Taken DMG");
         if (anim != null && !gameObject.CompareTag("Player")) 
-        { 
-            anim.SetBool("HURT", true);
+        {
+            //anim.SetBool("HURT", true);
+            anim.SetTrigger("HURT");
             Debug.Log("AM HURT");
-        } //Note that this bool needs to be the same for ALL CHARACTERS
+        } 
         if (dmgTxt != null)
         {
             dmgTxt.text = "> DEALT " + dmgTaken.ToString() + " DAMAGE";

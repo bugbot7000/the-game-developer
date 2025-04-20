@@ -23,18 +23,20 @@ public class GhostModeSwitcher : MonoBehaviour
                 materials.Add(mat);
             }
         }
+        EnableGhost();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            EnableGhost();
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            DisableGhost();
-        }
+        // we do this with animations
+        //if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    EnableGhost();
+        //}
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    DisableGhost();
+        //}
     }
 
     public void EnableGhost()
