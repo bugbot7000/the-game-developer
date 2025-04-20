@@ -7,11 +7,9 @@ using UnityEngine.UI;
 
 public class AbilitySelector : MonoBehaviour
 {
-    public Animator shapeAnim;
     public List<DOTweenAnimation> GrowTweens = new();
    // public List<DOTweenAnimation> ShrinkTweens = new();
     public List<GameObject> Skills = new();
-    public Animator shapeSelectorAnimator;
     public enum Shapes
     {
         Beam,Swipe,Shield
