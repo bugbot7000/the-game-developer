@@ -335,6 +335,7 @@ public class enemyAI_Script : MonoBehaviour
     {
         if (player != null)
         {
+            Debug.Log("Retreating");
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
             Vector3 directionToPlayer = (transform.position - player.position).normalized;
             Vector3 targetPosition = player.position + directionToPlayer * retreatDistance;
@@ -401,16 +402,8 @@ public class enemyAI_Script : MonoBehaviour
 
         if (!alreadyAttacked && type == EnemyType.Archer && !playerTooClose) 
         {
-            if (arrowPrefab != null && arrowSpawnPoint != null) 
-            {
-                Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
-                gameObject.transform.rotation = Quaternion.LookRotation(direction);
-
-                GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
-                arrow.transform.rotation = Quaternion.LookRotation(direction);
-            }
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            anim.SetTrigger("ATTACK");
+            agent.speed = 0;
         }
         if (type == EnemyType.DM)
         {
@@ -474,6 +467,19 @@ public class enemyAI_Script : MonoBehaviour
         Invoke(nameof(ResetAttack), timeBetweenAttacks);
     }
 
+    public void ShootArror() {
+        if (arrowPrefab != null && arrowSpawnPoint != null)
+        {
+            Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(direction);
+
+            GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
+            arrow.transform.rotation = Quaternion.LookRotation(direction);
+        }
+        alreadyAttacked = true;
+        //Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    }
+
     public void NecromancerBlast()
     {
         if (player != null)
@@ -491,7 +497,7 @@ public class enemyAI_Script : MonoBehaviour
         anim.SetBool("ATTACK", true);
     }
 
-    private void ResetAttack()
+    public void ResetAttack()
     {
         if (type == EnemyType.Zombie)
         {
@@ -519,6 +525,7 @@ public class enemyAI_Script : MonoBehaviour
             body.constraints = RigidbodyConstraints.FreezeRotationZ;
             agent.enabled = true;
         }
+        if (type == EnemyType.Archer) { agent.speed = 10; }
         alreadyAttacked = false;
     }
 
