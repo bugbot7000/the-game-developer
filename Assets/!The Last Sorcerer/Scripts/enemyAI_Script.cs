@@ -34,8 +34,6 @@ public class enemyAI_Script : MonoBehaviour
     public GameObject hitbox, nose;
     public GameObject mesh;
 
-    public Animator animator;
-
     private Vector3 rotationSetting;
     private Vector3 velocity;
     private Vector3 previousPosition;
@@ -366,25 +364,8 @@ public class enemyAI_Script : MonoBehaviour
 
         if (!alreadyAttacked && type == EnemyType.Zombie) 
         {
-            damageOnCollide = true;
-            //transform.LookAt(player);
-            //transform.position = Vector3.MoveTowards(transform.position, player.position, slamSpd);
-
-            Rigidbody body = GetComponent<Rigidbody>();
-
-            // Get direction from your postion toward the object you wish to push
-            if(player != null)
-            {
-                var direction = player.position - body.transform.position;
-                body.AddForce(direction.normalized * slamSpd, ForceMode.Impulse);
-            }
-            //Debug.Log(direction);
-
-            //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
-            //body.AddForce(transform.forward * slamSpd, ForceMode.Impulse);
-            //Debug.Log("Attacking");
             alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            anim.SetTrigger("ATTACK");
         }
         if (!alreadyAttacked && type == EnemyType.Ogre)
         {
@@ -394,10 +375,15 @@ public class enemyAI_Script : MonoBehaviour
 
             //hitbox.GetComponent<BoxCollider>().enabled = true; //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
             //animator.SetBool("isAttacking", true); //CODE FOR STARTING ANIMATION GOES HERE. ANIMATION NEEDS TO NOT LOOP(!) FOR THIS CODE TO WORK
-            animator.SetTrigger("ATK1 Trg");
-            Debug.Log("Attacking");
+
+            //anim.SetTrigger("ATK1 Trg");
+            //Debug.Log("Attacking");
+            //alreadyAttacked = true;
+            //Invoke(nameof(ResetAttack), timeBetweenAttacks);
+
+            anim.SetTrigger("ATTACK");
             alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            agent.speed = 0;
         }
 
         if (!alreadyAttacked && type == EnemyType.Archer && !playerTooClose) 
@@ -443,9 +429,11 @@ public class enemyAI_Script : MonoBehaviour
             Rigidbody body = GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.FreezePosition;
             body.constraints = RigidbodyConstraints.FreezeRotation;
-            agent.enabled = false;
+            agent.speed = 0;
+            anim.SetTrigger("ATTACK");
+            //agent.enabled = false;
 
-            Invoke("KnightAttack", 0.5f);
+            //Invoke("KnightAttack", 0.5f);
         }
         //damageOnCollide = true;
         //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, slamSpd);
@@ -456,6 +444,24 @@ public class enemyAI_Script : MonoBehaviour
         anim.SetBool("ATTACK", false);
         alreadyAttacked = true;
         Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    }
+
+    public void ZombieCharge()
+    {
+        damageOnCollide = true;
+        //transform.LookAt(player);
+        //transform.position = Vector3.MoveTowards(transform.position, player.position, slamSpd);
+
+        Rigidbody body = GetComponent<Rigidbody>();
+
+        // Get direction from your postion toward the object you wish to push
+        if (player != null)
+        {
+            var direction = player.position - body.transform.position;
+            body.AddForce(direction.normalized * slamSpd, ForceMode.Impulse);
+        }
+        alreadyAttacked = true;
+        //Invoke(nameof(ResetAttack), timeBetweenAttacks);
     }
 
     public void ShootArror() {
@@ -509,7 +515,8 @@ public class enemyAI_Script : MonoBehaviour
             Rigidbody body = GetComponent<Rigidbody>();
             body.linearVelocity = Vector3.zero;
             //Debug.Log("Resetting attack");
-            damageOnCollide = true;
+            damageOnCollide = false;
+            StartCoroutine(ZombieCooldown());
         }
         if (type == EnemyType.Ogre)
         {
@@ -519,19 +526,27 @@ public class enemyAI_Script : MonoBehaviour
             body.constraints = RigidbodyConstraints.None;
             body.constraints = RigidbodyConstraints.FreezeRotationX;
             body.constraints = RigidbodyConstraints.FreezeRotationZ;
+            agent.speed = 6;
         }
         if (type == EnemyType.Assassin) { stalking = true; }
         if (type == EnemyType.Knight)
         {
-            hitbox.SetActive(false);
+            //hitbox.SetActive(false);
             Rigidbody body = GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.None;
             body.constraints = RigidbodyConstraints.FreezeRotationX;
             body.constraints = RigidbodyConstraints.FreezeRotationZ;
-            agent.enabled = true;
+            agent.speed = 3;
+            //agent.enabled = true;
         }
         if (type == EnemyType.Archer) { agent.speed = 10; }
+        if(type == EnemyType.Zombie) { return; }
         alreadyAttacked = false;
+    }
+    public IEnumerator ZombieCooldown() 
+    { 
+        yield return new WaitForSeconds(timeBetweenAttacks);
+        alreadyAttacked = false; 
     }
 
     public void EnableBossHitbox()
