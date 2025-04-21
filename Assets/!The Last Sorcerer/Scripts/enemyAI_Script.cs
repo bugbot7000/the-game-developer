@@ -409,17 +409,8 @@ public class enemyAI_Script : MonoBehaviour
         {
             if (!alreadyAttacked)
             {
-                if (arrowPrefab != null && projectileSpawnPoints != null)
-                {
-                    Vector3 direction = (player.position - projectileSpawnPoints[projectileSpawnIndex].position).normalized;
-                    gameObject.transform.rotation = Quaternion.LookRotation(direction);
+                anim.SetTrigger("ATTACK");
 
-                    GameObject projectile = Instantiate(arrowPrefab, projectileSpawnPoints[projectileSpawnIndex].position, Quaternion.identity);
-                    projectile.transform.rotation = Quaternion.LookRotation(direction);
-                    projectileSpawnIndex = (projectileSpawnIndex + 1) % projectileSpawnPoints.Length;
-                }
-                alreadyAttacked = true;
-                Invoke(nameof(ResetAttack), timeBetweenAttacks);
             }
         }
         if (!alreadyAttacked && type == EnemyType.Necromancer && !playerTooClose)
@@ -478,6 +469,20 @@ public class enemyAI_Script : MonoBehaviour
         }
         alreadyAttacked = true;
         //Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    }
+
+    public void DMShot() {
+        if (arrowPrefab != null && projectileSpawnPoints != null)
+        {
+            Vector3 direction = (player.position - projectileSpawnPoints[projectileSpawnIndex].position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(direction);
+
+            GameObject projectile = Instantiate(arrowPrefab, projectileSpawnPoints[projectileSpawnIndex].position, Quaternion.identity);
+            projectile.transform.rotation = Quaternion.LookRotation(direction);
+            projectileSpawnIndex = (projectileSpawnIndex + 1) % projectileSpawnPoints.Length;
+        }
+        alreadyAttacked = true;
+        Invoke(nameof(ResetAttack), timeBetweenAttacks);
     }
 
     public void NecromancerBlast()
