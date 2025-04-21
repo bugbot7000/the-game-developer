@@ -6,6 +6,7 @@ public class scr_Arrow : MonoBehaviour
     float speed = 20f;
     float lifetime = 10f;
     float damage = 1f;
+    // add reference to enemy ai scrip, assing when instantiaded
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +22,7 @@ public class scr_Arrow : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Handle collision with the player
-        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        if (other.CompareTag("Player")) // change to look for the target of ai script
         {
             other.gameObject.GetComponent<scr_health>().TakeDamage(damage);
             Destroy(gameObject);
