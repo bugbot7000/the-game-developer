@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 566494210}
   - component: {fileID: 566494212}
   - component: {fileID: 566494211}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: brickroad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2532,7 +2532,7 @@ GameObject:
   - component: {fileID: 859274902}
   - component: {fileID: 859274904}
   - component: {fileID: 859274903}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: brickroad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3522,7 +3522,7 @@ GameObject:
   - component: {fileID: 1395587473}
   - component: {fileID: 1395587475}
   - component: {fileID: 1395587474}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: threshold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4044,7 +4044,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1574944664}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: road 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

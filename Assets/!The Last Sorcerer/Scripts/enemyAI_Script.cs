@@ -34,11 +34,12 @@ public class enemyAI_Script : MonoBehaviour
     public GameObject hitbox, nose;
     public GameObject mesh;
 
-    public Animator animator;
-
     private Vector3 rotationSetting;
     private Vector3 velocity;
     private Vector3 previousPosition;
+    private Vector3 currentPositionCheck;
+    private Vector3 previousPositionCheck;
+    public float moveAnimThreshold = 1f;
 
     public float charmPoints;
 
@@ -94,6 +95,7 @@ public class enemyAI_Script : MonoBehaviour
 
         if (type == EnemyType.Necromancer) { StartCoroutine(SpawnEnemies()); }
         if (type == EnemyType.Assassin) { visible = false; }
+        currentPositionCheck = transform.position;
     }
 
     // Update is called once per frame
@@ -173,19 +175,25 @@ public class enemyAI_Script : MonoBehaviour
         //    gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
         //}
 
+        currentPositionCheck = transform.position;
+        float distance = Vector3.Distance(currentPositionCheck, previousPositionCheck);
+        float speed = distance / Time.deltaTime;
+
+
         if (anim != null) 
         {
-            if (direction.x > 0.01f || direction.y > 0.01f || direction.x < 0.01f || direction.y < 0.01f) // A small threshold to account for tiny movements
+            //if (direction.x > 0.1f || direction.y > 0.1f || direction.x < 0.1f || direction.y < 0.1f) // A small threshold to account for tiny movements
+            if(speed > moveAnimThreshold)
             {
                 anim.SetBool("MOVE", true);
-                Debug.Log("MOVING");
+                //Debug.Log("MOVING");
             }
             else
             {
                 anim.SetBool("MOVE", false);
             }
         }
-        
+        previousPositionCheck = currentPositionCheck;
     }
 
     public void CharmMe()
@@ -214,18 +222,21 @@ public class enemyAI_Script : MonoBehaviour
     }
     public void SpriteOrbitStop()
     {
-        scr_orbit OrbitScript = GetComponent<scr_orbit>();
-        transform.position = spawnPoint;
-        //if (OrbitScript.centralObject.parent != null)
-        //{
-        //    gameObject.transform.SetParent(OrbitScript.centralObject.parent);
-        //}
-        //else
-        //{
-        //    gameObject.transform.SetParent(null);
-        //}
-        OrbitScript.centralObject = null;
-        agent.enabled = true;
+        if (GetComponent<scr_orbit>() != null)
+        {
+            scr_orbit OrbitScript = GetComponent<scr_orbit>();
+            transform.position = spawnPoint;
+            //if (OrbitScript.centralObject.parent != null)
+            //{
+            //    gameObject.transform.SetParent(OrbitScript.centralObject.parent);
+            //}
+            //else
+            //{
+            //    gameObject.transform.SetParent(null);
+            //}
+            OrbitScript.centralObject = null;
+            agent.enabled = true;
+        }
     }
 
     private void OnEnable()
@@ -320,16 +331,20 @@ public class enemyAI_Script : MonoBehaviour
 
     void Retreat()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        Vector3 directionToPlayer = (transform.position - player.position).normalized;
-        Vector3 targetPosition = player.position + directionToPlayer * retreatDistance;
-
-        // Check if the enemy is too close or too far from the player
-        if (distanceToPlayer < retreatDistance - 0.5f || distanceToPlayer > retreatDistance + 0.5f)
+        if (player != null)
         {
-            if (agent.enabled)
+            Debug.Log("Retreating");
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+            Vector3 directionToPlayer = (transform.position - player.position).normalized;
+            Vector3 targetPosition = player.position + directionToPlayer * retreatDistance;
+
+            // Check if the enemy is too close or too far from the player
+            if (distanceToPlayer < retreatDistance - 0.5f || distanceToPlayer > retreatDistance + 0.5f)
             {
-                agent.SetDestination(targetPosition);
+                if (agent.enabled)
+                {
+                    agent.SetDestination(targetPosition);
+                }
             }
         }
     }
@@ -349,25 +364,8 @@ public class enemyAI_Script : MonoBehaviour
 
         if (!alreadyAttacked && type == EnemyType.Zombie) 
         {
-            damageOnCollide = true;
-            //transform.LookAt(player);
-            //transform.position = Vector3.MoveTowards(transform.position, player.position, slamSpd);
-
-            Rigidbody body = GetComponent<Rigidbody>();
-
-            // Get direction from your postion toward the object you wish to push
-            if(player != null)
-            {
-                var direction = player.position - body.transform.position;
-                body.AddForce(direction.normalized * slamSpd, ForceMode.Impulse);
-            }
-            //Debug.Log(direction);
-
-            //Normalize keeps the value of a vector, but reduces it to 1. We use this to determine the direction of the pushed object relative to the player
-            //body.AddForce(transform.forward * slamSpd, ForceMode.Impulse);
-            Debug.Log("Attacking");
             alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            anim.SetTrigger("ATTACK");
         }
         if (!alreadyAttacked && type == EnemyType.Ogre)
         {
@@ -377,40 +375,28 @@ public class enemyAI_Script : MonoBehaviour
 
             //hitbox.GetComponent<BoxCollider>().enabled = true; //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
             //animator.SetBool("isAttacking", true); //CODE FOR STARTING ANIMATION GOES HERE. ANIMATION NEEDS TO NOT LOOP(!) FOR THIS CODE TO WORK
-            animator.SetTrigger("ATK1 Trg");
-            Debug.Log("Attacking");
+
+            //anim.SetTrigger("ATK1 Trg");
+            //Debug.Log("Attacking");
+            //alreadyAttacked = true;
+            //Invoke(nameof(ResetAttack), timeBetweenAttacks);
+
+            anim.SetTrigger("ATTACK");
             alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            agent.speed = 0;
         }
 
         if (!alreadyAttacked && type == EnemyType.Archer && !playerTooClose) 
         {
-            if (arrowPrefab != null && arrowSpawnPoint != null) 
-            {
-                Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
-                gameObject.transform.rotation = Quaternion.LookRotation(direction);
-
-                GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
-                arrow.transform.rotation = Quaternion.LookRotation(direction);
-            }
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            anim.SetTrigger("ATTACK");
+            agent.speed = 0;
         }
         if (type == EnemyType.DM)
         {
             if (!alreadyAttacked)
             {
-                if (arrowPrefab != null && projectileSpawnPoints != null)
-                {
-                    Vector3 direction = (player.position - projectileSpawnPoints[projectileSpawnIndex].position).normalized;
-                    gameObject.transform.rotation = Quaternion.LookRotation(direction);
+                anim.SetTrigger("ATTACK");
 
-                    GameObject projectile = Instantiate(arrowPrefab, projectileSpawnPoints[projectileSpawnIndex].position, Quaternion.identity);
-                    projectile.transform.rotation = Quaternion.LookRotation(direction);
-                    projectileSpawnIndex = (projectileSpawnIndex + 1) % projectileSpawnPoints.Length;
-                }
-                alreadyAttacked = true;
-                Invoke(nameof(ResetAttack), timeBetweenAttacks);
             }
         }
         if (!alreadyAttacked && type == EnemyType.Necromancer && !playerTooClose)
@@ -423,11 +409,16 @@ public class enemyAI_Script : MonoBehaviour
 
         if (type == EnemyType.Assassin) 
         {
-            Vector3 direction = (player.position - gameObject.transform.position).normalized;
-            gameObject.transform.rotation = Quaternion.LookRotation(direction);
+            //Vector3 direction = (player.position - gameObject.transform.position).normalized;
+            //gameObject.transform.rotation = Quaternion.LookRotation(direction);
             if (!alreadyAttacked)
             {
                 alreadyAttacked = true;
+                Rigidbody body = GetComponent<Rigidbody>();
+                body.constraints = RigidbodyConstraints.FreezePosition;
+                //agent.enabled = false;
+                //agent.SetDestination(transform.position);
+                agent.speed = 0;
                 Invoke("AssassinAppear", 0.5f);
             }
         }
@@ -438,9 +429,11 @@ public class enemyAI_Script : MonoBehaviour
             Rigidbody body = GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.FreezePosition;
             body.constraints = RigidbodyConstraints.FreezeRotation;
-            agent.enabled = false;
+            agent.speed = 0;
+            anim.SetTrigger("ATTACK");
+            //agent.enabled = false;
 
-            Invoke("KnightAttack", 0.5f);
+            //Invoke("KnightAttack", 0.5f);
         }
         //damageOnCollide = true;
         //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, slamSpd);
@@ -453,13 +446,61 @@ public class enemyAI_Script : MonoBehaviour
         Invoke(nameof(ResetAttack), timeBetweenAttacks);
     }
 
+    public void ZombieCharge()
+    {
+        damageOnCollide = true;
+        //transform.LookAt(player);
+        //transform.position = Vector3.MoveTowards(transform.position, player.position, slamSpd);
+
+        Rigidbody body = GetComponent<Rigidbody>();
+
+        // Get direction from your postion toward the object you wish to push
+        if (player != null)
+        {
+            var direction = player.position - body.transform.position;
+            body.AddForce(direction.normalized * slamSpd, ForceMode.Impulse);
+        }
+        alreadyAttacked = true;
+        //Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    }
+
+    public void ShootArror() {
+        if (arrowPrefab != null && arrowSpawnPoint != null)
+        {
+            Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(direction);
+
+            GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
+            arrow.transform.rotation = Quaternion.LookRotation(direction);
+        }
+        alreadyAttacked = true;
+        //Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    }
+
+    public void DMShot() {
+        if (arrowPrefab != null && projectileSpawnPoints != null)
+        {
+            Vector3 direction = (player.position - projectileSpawnPoints[projectileSpawnIndex].position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(direction);
+
+            GameObject projectile = Instantiate(arrowPrefab, projectileSpawnPoints[projectileSpawnIndex].position, Quaternion.identity);
+            projectile.transform.rotation = Quaternion.LookRotation(direction);
+            projectileSpawnIndex = (projectileSpawnIndex + 1) % projectileSpawnPoints.Length;
+        }
+        alreadyAttacked = true;
+        Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    }
+
     public void NecromancerBlast()
     {
-        Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
-        gameObject.transform.rotation = Quaternion.LookRotation(direction);
+        if (player != null)
+        {
+            Vector3 direction = (player.position - arrowSpawnPoint.position).normalized;
+            gameObject.transform.rotation = Quaternion.LookRotation(direction);
 
-        GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
-        arrow.transform.rotation = Quaternion.LookRotation(direction);
+            GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
+            arrow.transform.rotation = Quaternion.LookRotation(direction);
+        }
     }
 
     public void NecromanerBlastPlayAnim()
@@ -467,14 +508,15 @@ public class enemyAI_Script : MonoBehaviour
         anim.SetBool("ATTACK", true);
     }
 
-    private void ResetAttack()
+    public void ResetAttack()
     {
         if (type == EnemyType.Zombie)
         {
             Rigidbody body = GetComponent<Rigidbody>();
             body.linearVelocity = Vector3.zero;
-            Debug.Log("Resetting attack");
-            damageOnCollide = true;
+            //Debug.Log("Resetting attack");
+            damageOnCollide = false;
+            StartCoroutine(ZombieCooldown());
         }
         if (type == EnemyType.Ogre)
         {
@@ -484,18 +526,27 @@ public class enemyAI_Script : MonoBehaviour
             body.constraints = RigidbodyConstraints.None;
             body.constraints = RigidbodyConstraints.FreezeRotationX;
             body.constraints = RigidbodyConstraints.FreezeRotationZ;
+            agent.speed = 6;
         }
         if (type == EnemyType.Assassin) { stalking = true; }
         if (type == EnemyType.Knight)
         {
-            hitbox.SetActive(false);
+            //hitbox.SetActive(false);
             Rigidbody body = GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.None;
             body.constraints = RigidbodyConstraints.FreezeRotationX;
             body.constraints = RigidbodyConstraints.FreezeRotationZ;
-            agent.enabled = true;
+            agent.speed = 3;
+            //agent.enabled = true;
         }
+        if (type == EnemyType.Archer) { agent.speed = 10; }
+        if(type == EnemyType.Zombie) { return; }
         alreadyAttacked = false;
+    }
+    public IEnumerator ZombieCooldown() 
+    { 
+        yield return new WaitForSeconds(timeBetweenAttacks);
+        alreadyAttacked = false; 
     }
 
     public void EnableBossHitbox()
@@ -515,30 +566,37 @@ public class enemyAI_Script : MonoBehaviour
 
     public void AssassinAppear()
     {
-        ToggleVisibility();
+        //ToggleVisibility();
         Invoke("AssassinAttack", 0.5f);
     }
 
     public void AssassinAttack()
     {
         Rigidbody body = GetComponent<Rigidbody>();
-        //body.constraints = RigidbodyConstraints.FreezePosition;
+        body.constraints = RigidbodyConstraints.FreezePosition;
         //body.constraints = RigidbodyConstraints.FreezeRotation;
 
-        hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
-                                //animator.SetBool("isAttacking", true);
-        Invoke("AssassinVanish", 0.5f);
+        //hitbox.SetActive(true); //NOTE: In future, we need to find a way to assign hitbox on spawn for the summon to work
+        //animator.SetBool("isAttacking", true);
+
+        anim.SetTrigger("ATTACK");
+        //Invoke("AssassinVanish", 3.5f);
+
+        // start the animation
+        // place the vanish invocation  inside the animation
     }
 
     public void AssassinVanish()
     {
         stalking = false;
-        hitbox.SetActive(false);
+        //hitbox.SetActive(false);
         Rigidbody body = GetComponent<Rigidbody>();
         body.constraints = RigidbodyConstraints.None;
         body.constraints = RigidbodyConstraints.FreezeRotationX;
         body.constraints = RigidbodyConstraints.FreezeRotationZ;
-        ToggleVisibility();
+        //ToggleVisibility();
+        //agent.enabled = true;
+        agent.speed = 16;
         Invoke(nameof(ResetAttack), timeBetweenAttacks);
     }
 
