@@ -28,7 +28,7 @@ public class scr_spells : MonoBehaviour
         // Fairly certain this only works so long as there is only 1 object with said tag. But we're single player anyways
         player = GameObject.FindGameObjectWithTag("Player");
         wand = GameObject.FindGameObjectWithTag("Wand");
-        Pspawner = player.GetComponent<scr_playerController>().Pspawner;
+        //Pspawner = player.GetComponent<scr_playerController>().Pspawner;
     }
 
     private void FixedUpdate()
@@ -260,19 +260,19 @@ public class scr_spells : MonoBehaviour
 
             }
         }
-        if (PullSpell) 
-        { 
-            if(gameObject.name == "swipe(Clone)")
-            {
-                player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullSwipe);
-                Debug.Log("Destroying swipe particles");
-            }
-            else if(gameObject.name == "beam(Clone)")
-            {
-                player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullBeam);
-                Debug.Log("Destroying beam particles");
+        //if (PullSpell) 
+        //{ 
+        //    if(gameObject.name == "swipe(Clone)")
+        //    {
+        //        player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullSwipe);
+        //        Debug.Log("Destroying swipe particles");
+        //    }
+        //    else if(gameObject.name == "beam(Clone)")
+        //    {
+        //        player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullBeam);
+        //        Debug.Log("Destroying beam particles");
 
-            }
-        }
+        //    }
+        //}
     }
 }
