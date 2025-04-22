@@ -3,12 +3,11 @@ using UnityEngine;
 using System.Collections;
 
 using DG.Tweening;
+using TMPro;
 using Michsky.DreamOS;
 
 public class OpeningSequenceManager : MonoBehaviour
 {
-    //ralia's lament should have some dialogue...
-    
     [SerializeField] bool skipOpening;
     [SerializeField] CanvasGroup fade;
     [SerializeField] Canvas dreamOS;
@@ -17,6 +16,8 @@ public class OpeningSequenceManager : MonoBehaviour
     [SerializeField] RectTransform fullScreenRawImage;
     [SerializeField] RectTransform mouseCursor;
     [SerializeField] RectTransform topBar;
+    [SerializeField] TextMeshProUGUI chapterTitleText;
+    [SerializeField] CanvasGroup theEndCanvasGroup;
     [SerializeField] WindowManager messaging;
     [SerializeField] WindowManager webBrowser;
 
@@ -53,16 +54,20 @@ public class OpeningSequenceManager : MonoBehaviour
             .Append(fade.DOFade(0.0f, 2.0f).SetEase(Ease.OutCubic))
             .AppendCallback(() => {
                 fade.blocksRaycasts = false;
-            });
+            })
+            .AppendInterval(3.0f)
+            .Append(chapterTitleText.DOFade(0, 1.0f).SetEase(Ease.OutCubic));
     }
 
     public void notificationAndCloseGameSequence()
     {
         DOTween.Sequence()
-            .AppendInterval(5.0f)
+            .AppendInterval(2.0f)
+            .Append(theEndCanvasGroup.DOFade(1, 2.0f).SetEase(Ease.OutSine))
+            .AppendInterval(2.0f)
             .AppendCallback(() => MetaNarrativeManager.Instance.TriggerStorytellerSequence("SEQ_0"))
             .Append(notifcation.DOAnchorPosX(-64, 0.5f).SetEase(Ease.OutCubic))
-            .AppendInterval(4.5f)
+            .AppendInterval(3.0f)
             .Append(notifcation.DOAnchorPosX(400, 0.5f).SetEase(Ease.OutCubic))
             .Join(topBar.DOAnchorPosY(0, 0.5f));
     }

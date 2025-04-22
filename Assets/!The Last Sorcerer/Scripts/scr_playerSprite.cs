@@ -16,7 +16,7 @@ public class scr_playerSprite : MonoBehaviour
 
     void Update()
     {
-        transform.position = player.transform.position;        
+        transform.position = player.transform.position + transform.up * 0.8f;        
         
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
