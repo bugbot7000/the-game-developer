@@ -5,7 +5,7 @@ public class scr_playerController : MonoBehaviour
 {
 
     Vector3 velocity;
-    public ParticleSpawner Pspawner;
+    //public ParticleSpawner Pspawner;
     public Rigidbody body;
     public Animator anim;
     public float mSpd;
@@ -321,6 +321,10 @@ public class scr_playerController : MonoBehaviour
     {
         var spellShape = equippedSpell;
         var type = equippedEffect;
+        //if (spellShape = beam)
+        //{
+        //    spellShape = spellShape.transform.GetChild(0).gameObject;
+        //}
         if (currentAttack == null)
         {
             if (spellShape == shield)
@@ -333,6 +337,11 @@ public class scr_playerController : MonoBehaviour
             }
             var copy = Instantiate(spellShape, spellSpawn.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
+            if (spellShape = beam)
+            {
+                Vector3 beamRotation = new Vector3(rotationSetting.x, rotationSetting.y + 90f, rotationSetting.z);
+                copy.transform.eulerAngles = beamRotation;
+            }
             currentAttack = copy;
             if (type == SpellType.Push)
             {
@@ -342,14 +351,14 @@ public class scr_playerController : MonoBehaviour
                 copyScript.CharmSpell = false; //HERE...
                 copyScript.SlashSpell = false;
                 copyScript.FreezeSpell = false;
-                if (spellShape == swipe)
-                {
-                    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PushSwipe);
-                }
-                else if (spellShape == beam)
-                {
-                    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PushBeam);
-                }
+                //if (spellShape == swipe)
+                //{
+                //    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PushSwipe);
+                //}
+                //else if (spellShape == beam)
+                //{
+                //    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PushBeam);
+                //}
                 //else if (spellShape == shield) { }
             }
             else if (type == SpellType.Pull)
@@ -360,14 +369,14 @@ public class scr_playerController : MonoBehaviour
                 copyScript.CharmSpell = false; //HERE...
                 copyScript.SlashSpell = false;
                 copyScript.FreezeSpell = false;
-                if (spellShape == swipe)
-                {
-                    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PullSwipe);
-                }
-                else if (spellShape == beam)
-                {
-                    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PullBeam);
-                }
+                //if (spellShape == swipe)
+                //{
+                //    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PullSwipe);
+                //}
+                //else if (spellShape == beam)
+                //{
+                //    Pspawner.SpawnParticle(ParticleSpawner.ParticleType.PullBeam);
+                //}
 
             }
             else if (type == SpellType.Charm) //AND HERE
