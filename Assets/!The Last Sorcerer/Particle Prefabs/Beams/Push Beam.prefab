@@ -66905,6 +66905,7 @@ GameObject:
   - component: {fileID: 68147747324704887}
   - component: {fileID: 2159225003342039679}
   - component: {fileID: 4781158366406759823}
+  - component: {fileID: 465313582387396138}
   m_Layer: 0
   m_Name: Push Beam
   m_TagString: Untagged
@@ -71808,6 +71809,19 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_ConstantMin: 0
     m_ConstantMax: 60
+--- !u!114 &465313582387396138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8935877853152463227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78383b55254f7b64999b3faebfee894a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punkAssBeamScript: {fileID: 0}
 --- !u!1 &9157972240723837834
 GameObject:
   m_ObjectHideFlags: 0

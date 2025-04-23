@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground 01A (525)
       objectReference: {fileID: 0}
+    - target: {fileID: 1011843826784534, guid: fd1c467af72ecd64ca0df9bba37b6af1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4411591863307454, guid: fd1c467af72ecd64ca0df9bba37b6af1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48
@@ -2658,7 +2662,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -39717,7 +39721,7 @@ Transform:
   m_GameObject: {fileID: 1918401859}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 164.1, y: -40.9, z: 0}
+  m_LocalPosition: {x: 164.1, y: -49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

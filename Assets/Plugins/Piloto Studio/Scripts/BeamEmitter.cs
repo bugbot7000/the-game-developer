@@ -285,7 +285,10 @@ namespace PilotoStudio
         }
 
 
-
+        public void Awake()
+        {
+            beamTarget = GameObject.Find("BeamStopper").transform;
+        }
 
     }
 }

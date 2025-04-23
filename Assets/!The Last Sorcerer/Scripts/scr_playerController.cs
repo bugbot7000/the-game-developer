@@ -5,8 +5,23 @@ using UnityEngine;
 
 public class scr_playerController : MonoBehaviour
 {
+    public Transform shieldParPos, swipeParPos, beamParPos;
+    public GameObject charmBeam, freezeBeam, slashBeam, pushBeam, pullBeam,
+        charmSwipe, freezeSwipe, slashSwipe, pushSwipe, pullSwipe,
+        charmShield, freezeShield, slashShield, pushShield;
 
-    Vector3 velocity;
+    public Transform particlePosition;
+    public GameObject currentParticleType;
+
+    public Vector3 shieldRotationSetting = new Vector3(90f, 0f, 0f);
+    public Vector3 swipeRotationSetting = new Vector3(0f, 0f, 0f);
+    public Vector3 shieldScaleSetting = new Vector3(2.3f, 2.3f, 2.3f);
+    public Vector3 swipeScaleSetting = new Vector3(0.5f, 0.5f, 0.5f);
+    public Vector3 currentParticleScale;
+    public Vector3 currentParticleRotation;
+
+
+Vector3 velocity;
     //public ParticleSpawner Pspawner;
     public Rigidbody body;
     public Animator anim;
@@ -14,10 +29,10 @@ public class scr_playerController : MonoBehaviour
     public float dashSpd;
     public float dashCooldown;
     public GameObject pitCheckObj;
-    public GameObject beamStopper;
+    public GameObject beamStopper, currnetBeamTarget;
     public float defaultSpd;
     public float dTime = 0.5f;
-    public float health;
+    //public float health;
     public bool dashing;
     public bool noMove;
     public bool stunned;
@@ -63,10 +78,7 @@ public class scr_playerController : MonoBehaviour
 
     public void BeamAssignment(GameObject assignedObj)
     {
-        for (int i = 0; i < beamEmitterScr.Length; i++)
-        {
-            beamEmitterScr[i].beamTarget = assignedObj.transform;
-        }
+        currnetBeamTarget = assignedObj;
     }
 
     private void Awake()
@@ -215,7 +227,9 @@ public class scr_playerController : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.I)) { SwitchSpell(equippedSpell); }
         if (currentAttack != null && equippedSpell == shield) { gameObject.GetComponent<scr_health>().invincible = true; }
         else { gameObject.GetComponent<scr_health>().invincible = false; }
-        if (health <= 0f) { Death(); }
+        //if (health <= 0f) { Death(); }
+
+        CommitSedoku();
     }
 
     public void EnableMovement() { noMove = false; }
@@ -366,6 +380,8 @@ public class scr_playerController : MonoBehaviour
             {
                 spellSpawn = activeFirePoint.transform;
             }
+
+            MakeParticles();
             var copy = Instantiate(spellShape, spellSpawn.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
             if (spellShape = beam)
@@ -578,6 +594,63 @@ public class scr_playerController : MonoBehaviour
         {
             Rigidbody body = stunnedObject.GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.None;
+        }
+    }
+
+    public void MakeParticles()
+    {
+        AssignParticles();
+        GameObject spellParticles = Instantiate(currentParticleType, transform);
+        //if (equippedSpell == swipe)
+        //{
+        //    //spellParticles.transform.SetParent(swipeParPos, true);
+        //    spellParticles.transform.localScale = swipeScaleSetting;
+        //    spellParticles.transform.eulerAngles = swipeRotationSetting;
+        //}
+        //else if (equippedSpell == shield) 
+        //{
+        //    //spellParticles.transform.SetParent(shieldParPos, true);
+        //    spellParticles.transform.localScale = shieldScaleSetting;
+        //    spellParticles.transform.eulerAngles = shieldRotationSetting;
+        //}
+    }
+
+    public void AssignParticles()
+    {
+        if (equippedSpell == beam)
+        {
+            particlePosition = beamParPos;
+            if (equippedEffect == SpellType.Push) { currentParticleType = pushBeam; }
+            else if (equippedEffect == SpellType.Pull) { currentParticleType = pullBeam; }
+            else if (equippedEffect == SpellType.Charm) { currentParticleType = charmBeam; }
+            else if (equippedEffect == SpellType.Slash) { currentParticleType = slashBeam; }
+            else if (equippedEffect == SpellType.Freeze) { currentParticleType = freezeBeam; }
+        }
+        else if (equippedSpell == swipe)
+        {
+            particlePosition = swipeParPos;
+            if (equippedEffect == SpellType.Push) { currentParticleType = pushSwipe; }
+            else if (equippedEffect == SpellType.Pull) { currentParticleType = pullSwipe; }
+            else if (equippedEffect == SpellType.Charm) { currentParticleType = charmSwipe; }
+            else if (equippedEffect == SpellType.Slash) { currentParticleType = slashSwipe; }
+            else if (equippedEffect == SpellType.Freeze) { currentParticleType = freezeSwipe; }
+        }
+        else if (equippedSpell == shield) 
+        {
+            particlePosition = shieldParPos;
+            if (equippedEffect == SpellType.Push) { currentParticleType = pushShield; }
+            else if (equippedEffect == SpellType.Pull) { currentParticleType = pushShield; }
+            else if (equippedEffect == SpellType.Charm) { currentParticleType = charmShield; }
+            else if (equippedEffect == SpellType.Slash) { currentParticleType = slashShield; }
+            else if (equippedEffect == SpellType.Freeze) { currentParticleType = freezeShield; }
+        }
+    }
+
+    public void CommitSedoku()
+    {
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.Escape)) // 
+        {
+            gameObject.GetComponent<scr_health>().health = 0f;
         }
     }
 

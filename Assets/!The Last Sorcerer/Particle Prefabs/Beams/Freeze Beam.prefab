@@ -34786,6 +34786,7 @@ GameObject:
   - component: {fileID: 4310214876596736904}
   - component: {fileID: 4704451582866178126}
   - component: {fileID: 3423592902448768688}
+  - component: {fileID: -732675532381389510}
   m_Layer: 0
   m_Name: Freeze Beam
   m_TagString: Untagged
@@ -39689,6 +39690,19 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_ConstantMin: 0
     m_ConstantMax: 30
+--- !u!114 &-732675532381389510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5521937347709177046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78383b55254f7b64999b3faebfee894a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punkAssBeamScript: {fileID: 0}
 --- !u!1 &5864702643608473415
 GameObject:
   m_ObjectHideFlags: 0
