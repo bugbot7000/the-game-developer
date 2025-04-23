@@ -20,11 +20,17 @@ public class WikiHome : MonoBehaviour
         
         LayoutRebuilder.ForceRebuildLayoutImmediate(verticalLayoutGroup);
 
-        yield return new WaitForSeconds(1.0f);
+        // Weird little wait since the home page is created when the scene starts.
+        yield return new WaitForSeconds(0.5f);
 
-        if (gameObject.activeSelf && !MetaNarrativeManager.Instance.HasVisitedSequence(firstOpenHintSequence))
+        if (gameObject.activeSelf)
         {
-            MetaNarrativeManager.Instance.TriggerStorytellerSequence(firstOpenHintSequence);
+            WikiHistoryManager.Instance.AddPageToHistory(new HistoryItem(PageType.Home));
+
+            if (!MetaNarrativeManager.Instance.HasVisitedSequence(firstOpenHintSequence))
+            {
+                MetaNarrativeManager.Instance.TriggerStorytellerSequence(firstOpenHintSequence);
+            }
         }        
     }
 }

@@ -22,6 +22,8 @@ public class WikiContentPage : MonoBehaviour
         buttonText = buildButton.GetComponentInChildren<TextMeshProUGUI>();
 
         UpdatePageContent(WikiPageSearchManager.Instance.LastFoundPageSO);
+
+        WikiHistoryManager.Instance.AddPageToHistory(new HistoryItem(PageType.Content, content:currentPage));
     }
     
     public void UpdatePageContent(WikiPageSO wikiPage)

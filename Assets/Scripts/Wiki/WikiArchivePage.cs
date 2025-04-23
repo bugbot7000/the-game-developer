@@ -48,6 +48,8 @@ public class WikiArchivePage : MonoBehaviour
             springLoadingText.SetText($"Rebuilding... {Mathf.Round(WikiPageSearchManager.Instance.GetFallSemesterProgress() * 100)}% complete. Continuing loading pages to complete index rebuild.");
         }
 
+        WikiHistoryManager.Instance.AddPageToHistory(new HistoryItem(PageType.Index));
+
         LayoutRebuilder.ForceRebuildLayoutImmediate(GetComponent<RectTransform>());
     }
     

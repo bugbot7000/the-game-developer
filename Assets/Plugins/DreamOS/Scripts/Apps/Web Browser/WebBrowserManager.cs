@@ -843,6 +843,11 @@ namespace Michsky.DreamOS
             isUrlFieldActive = value;
         }
 
+        public int GetOpenTabIndex()
+        {
+            return GetTabIndex(currentTabGuid);
+        }
+
         int GetTabIndex(string guid)
         {
             int tabIndex = -1;

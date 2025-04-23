@@ -38,5 +38,7 @@ public class WikiSearchResultsPage : MonoBehaviour
         {
             searchResultsText.SetText($"{searchResults.Count} results were found for the given search term '{searchManager.LastSearchTerm}'.");
         }
+
+        WikiHistoryManager.Instance.AddPageToHistory(new HistoryItem(PageType.Search, searchManager.LastSearchTerm));
     }
 }
