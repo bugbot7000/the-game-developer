@@ -28,7 +28,7 @@ public class scr_health : MonoBehaviour
 
             if (gameObject.CompareTag("Player"))
             {
-                anim.SetBool("DEAD", true) ;
+                //anim.SetBool("DEAD", true) ;
                 if (dmgTxt != null)
                 {
                     dmgTxt.text = "> RESPAWNING";
@@ -57,6 +57,7 @@ public class scr_health : MonoBehaviour
             //anim.SetBool("HURT", true);
             anim.SetTrigger("HURT");
             Debug.Log("AM HURT");
+            GetComponent<Rigidbody>().freezeRotation = true;
         } 
         if (dmgTxt != null)
         {
@@ -82,6 +83,7 @@ public class scr_health : MonoBehaviour
     public void BeUnhurt()
     {
         if (anim != null) { anim.SetBool("HURT", false); } //Note that this bool needs to be the same for ALL CHARACTERS
+        GetComponent<Rigidbody>().freezeRotation = false;
     }
 
     public void Die()
@@ -91,10 +93,12 @@ public class scr_health : MonoBehaviour
             Debug.Log("Enemy death");
             gameObject.layer = 0;
             gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            Destroy(GetComponent<enemyAI_Script>());
+            //Destroy(GetComponent<enemyAI_Script>());
+            //enemyAI.agent.enabled = false;
+            GetComponent<enemyAI_Script>().enabled = false;
+            Destroy(GetComponent<NavMeshAgent>());
             Destroy(GetComponent<CapsuleCollider>());
             Destroy(GetComponent<scr_health>());
-            //enemyAI.agent.enabled = false;
             //enemyAI.enabled = false;
         }
         else

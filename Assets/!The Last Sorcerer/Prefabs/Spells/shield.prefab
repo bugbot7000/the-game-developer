@@ -79,8 +79,10 @@ MonoBehaviour:
   pushDamage: 1
   slashDamage: 3
   pulled: {fileID: 0}
+  Pspawner: {fileID: 0}
   player: {fileID: 0}
   wand: {fileID: 0}
+  playerController: {fileID: 0}
   PushSpell: 1
   PullSpell: 0
   CharmSpell: 0
@@ -101,7 +103,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8687078719347366435}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

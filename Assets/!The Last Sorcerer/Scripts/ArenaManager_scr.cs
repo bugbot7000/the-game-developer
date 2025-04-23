@@ -15,23 +15,23 @@ public class ArenaManager_scr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deadEnemies >= 5 && !bossSpawned) 
+        if (deadEnemies >= 2 && !bossSpawned) 
         {
             spawners[1].SetActive(true);
         }
-        if (deadEnemies >= 10 && !bossSpawned)
+        if (deadEnemies >= 4 && !bossSpawned)
         {
             spawners[2].SetActive(true);
         }
-        if (deadEnemies >= 15 && !bossSpawned)
+        if (deadEnemies >= 6 && !bossSpawned)
         {
             spawners[3].SetActive(true);
         }
-        if (deadEnemies >= 20 && !bossSpawned)
+        if (deadEnemies >= 10 && !bossSpawned)
         {
             spawners[4].SetActive(true);
         }
-        if(deadEnemies >= 25 && !bossSpawned)
+        if(deadEnemies >= 12 && !bossSpawned)
         {
             //GameObject enemy = Instantiate(boss, spawners[4].transform.position, spawners[4].transform.rotation);
             boss.SetActive(true);
@@ -42,5 +42,11 @@ public class ArenaManager_scr : MonoBehaviour
             spawners[3].SetActive(false);
             spawners[4].SetActive(false);
         }
+        CheckVictory();
+    }
+
+    public void CheckVictory()
+    {
+        if (bossSpawned && boss.GetComponent<scr_health>().health <= 0) { Debug.Log("This is where you might put victory text"); }
     }
 }

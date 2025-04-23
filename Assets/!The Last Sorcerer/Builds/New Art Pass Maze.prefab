@@ -2444,7 +2444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1a2b777e581d648b739637e8f2289c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pspawner: {fileID: 0}
   body: {fileID: 0}
   anim: {fileID: 0}
   mSpd: 3.75
@@ -2495,18 +2494,6 @@ MonoBehaviour:
   invincible: 0
   anim: {fileID: 0}
   enemyAI: {fileID: 0}
---- !u!114 &4284093608218551064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4056439302349804666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84e31a78d2c04594390f3d59a1f0c6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4174502030731531860
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,6 @@ public class DeathGate_scr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sacrifice == null) { Destroy(gameObject); }
+        if (sacrifice.GetComponent<scr_health>().health <= 0) { Destroy(gameObject); }
     }
 }

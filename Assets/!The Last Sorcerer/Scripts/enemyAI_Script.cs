@@ -194,6 +194,11 @@ public class enemyAI_Script : MonoBehaviour
             }
         }
         previousPositionCheck = currentPositionCheck;
+
+        if (PitCheck()) 
+        {
+            if (type == EnemyType.Ogre) { agent.enabled = false; } 
+        }
     }
 
     public void CharmMe()
@@ -241,10 +246,10 @@ public class enemyAI_Script : MonoBehaviour
 
     private void OnEnable()
     {
-        if (type == EnemyType.Sprite)
-        {
-            scr_health.OnPlayerDamaged += SpriteOrbitStop;
-        }
+        //if (type == EnemyType.Sprite)
+        //{
+        //    scr_health.OnPlayerDamaged += SpriteOrbitStop;
+        //}
     }
 
     private bool PitCheck() // We may need to rethink this for enemies who can jump
@@ -264,27 +269,33 @@ public class enemyAI_Script : MonoBehaviour
 
     public void StunSelf()
     {
+        if (agent == null) { return; }
         agent.enabled = false;
         StartCoroutine(RestoreAgentAfterWait());
     }
     public IEnumerator RestoreAgentAfterWait()
     {
-        Debug.Log("STARTED COROUTINE");
-        //Debug.Log(agent.GetComponent<enemyAI_Script>().agent);
-
-
-        yield return new WaitForSeconds(3);
-        Debug.Log("WAITED");
-
-        LayerMask layerMask = LayerMask.GetMask("Default");
-
-        if (Physics.Raycast(transform.position, Vector3.down, 8f, layerMask))
+        if (agent != null)
         {
-            Debug.Log("RESTORED AGENT");
+            Debug.Log("STARTED COROUTINE");
+            //Debug.Log(agent.GetComponent<enemyAI_Script>().agent);
 
-            agent.enabled = true;
+
+            yield return new WaitForSeconds(3);
+            Debug.Log("WAITED");
+
+            LayerMask layerMask = LayerMask.GetMask("Default");
+
+            if (Physics.Raycast(transform.position, Vector3.down, 8f, layerMask))
+            {
+                Debug.Log("RESTORED AGENT");
+
+                if(agent != null)
+                {
+                    agent.enabled = true;
+                }
+            }
         }
-
     }
 
     private void FixedUpdate()
@@ -333,7 +344,7 @@ public class enemyAI_Script : MonoBehaviour
     {
         if (player != null)
         {
-            Debug.Log("Retreating");
+            //Debug.Log("Retreating");
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
             Vector3 directionToPlayer = (transform.position - player.position).normalized;
             Vector3 targetPosition = player.position + directionToPlayer * retreatDistance;

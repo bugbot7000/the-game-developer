@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class scr_spells : MonoBehaviour
 {
+
     public scr_dialogueScript dmgTxt;
 
 
@@ -16,6 +17,7 @@ public class scr_spells : MonoBehaviour
     private Vector3 pullVelocity = Vector3.zero;
 
     public GameObject player, wand;
+    public scr_playerController playerController;
 
     //The idea is that we have a bool for each spell.
     //We write them as functions and then use the bools to turn them on and off.
@@ -28,12 +30,13 @@ public class scr_spells : MonoBehaviour
         // Fairly certain this only works so long as there is only 1 object with said tag. But we're single player anyways
         player = GameObject.FindGameObjectWithTag("Player");
         wand = GameObject.FindGameObjectWithTag("Wand");
-        Pspawner = player.GetComponent<scr_playerController>().Pspawner;
+        playerController = player.GetComponent<scr_playerController>();
+        //Pspawner = player.GetComponent<scr_playerController>().Pspawner;
     }
 
     private void FixedUpdate()
     {
-        if (PullSpell && pulled != null) 
+        if (PullSpell && pulled != null)
         {
             //pulled.transform.position = Vector3.SmoothDamp(pulled.transform.position, transform.position, ref pullVelocity, 0.3f);
             pulled.transform.position = Vector3.MoveTowards(pulled.transform.position, wand.transform.position, 1f);
@@ -45,12 +48,13 @@ public class scr_spells : MonoBehaviour
     {
         //Debug.Log(other);
         if (other != null && other.gameObject.CompareTag("Target") ||
-            other != null && other.gameObject.CompareTag("Enemy")) 
+            other != null && other.gameObject.CompareTag("Enemy"))
         {
+            playerController.BeamAssignment(other.gameObject); // Had to do it like this because Beam Emmitter refuses to acknowledge the existence of the player controller
             if (PushSpell) { Push(other.gameObject); }
             else if (PullSpell) { Pull(other.gameObject); }
             else if (CharmSpell) { Charm(other.gameObject); }
-            else if (SlashSpell) {  Slash(other.gameObject); }
+            else if (SlashSpell) { Slash(other.gameObject); }
             else if (FreezeSpell) { Freeze(other.gameObject); }
         }
         else if (other != null && other.gameObject.CompareTag("Sprite"))
@@ -67,7 +71,7 @@ public class scr_spells : MonoBehaviour
 
         // Get direction from your postion toward the object you wish to push
         var direction = pushedBody.transform.position - player.transform.position;
-//        Debug.Log(direction);
+        //        Debug.Log(direction);
 
         //Normalize keeps the value of a vector, but reduces it to 1.
         //We use this to determine the direction of the pushed object relative to the player
@@ -119,7 +123,8 @@ public class scr_spells : MonoBehaviour
         }
         else if (pulledObject.GetComponent<enemyAI_Script>().large == true)
         {
-            pulledObject.GetComponent <enemyAI_Script>().StunSelf();
+            Debug.Log("Pulled large enemy");
+            pulledObject.GetComponent<enemyAI_Script>().StunSelf();
             Rigidbody pulledBody = pulledObject.GetComponent<Rigidbody>();
 
             // Get direction from your postion toward the object you wish to push
@@ -127,7 +132,7 @@ public class scr_spells : MonoBehaviour
 
             //Normalize keeps the value of a vector, but reduces it to 1.
             //We use this to determine the direction of the pushed object relative to the player
-            pulledBody.AddForce(-direction.normalized * pushForce *0.5f, ForceMode.Impulse);
+            pulledBody.AddForce(-direction.normalized * pushForce * 0.5f, ForceMode.Impulse);
             //StartCoroutine(pulledObject.GetComponent<enemyAI_Script>().RestoreAgentAfterWait());
         }
 
@@ -140,10 +145,10 @@ public class scr_spells : MonoBehaviour
         {
             enemyAI_Script AI = charmedObject.GetComponent<enemyAI_Script>();
             scr_health hpScript = charmedObject.GetComponent<scr_health>();
-            AI.charmPoints += 2f;
+            AI.charmPoints += 4f;
             if (hpScript.health > AI.charmPoints) { return; }
         }
-        if ( playerScript.charmedThrall != null) 
+        if (playerScript.charmedThrall != null)
         {
             if (playerScript.charmedThrall.CompareTag("Enemy")) { playerScript.charmedThrall.GetComponent<enemyAI_Script>().DeCharm(); }
             else if (playerScript.charmedThrall.CompareTag("Target"))
@@ -156,7 +161,7 @@ public class scr_spells : MonoBehaviour
         }
         playerScript.charmedThrall = charmedObject;
         {
-            
+
         }
         if (charmedObject.GetComponent<NavMeshAgent>() == null)
         {
@@ -169,7 +174,7 @@ public class scr_spells : MonoBehaviour
             charmedObject.GetComponent<scr_health>().health = 4;
             //Debug.Log("NavMesh added");
         }
-        if (charmedObject.GetComponent<Rigidbody>() != null) 
+        if (charmedObject.GetComponent<Rigidbody>() != null)
         {
             Rigidbody body = charmedObject.GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.FreezeRotationX;
@@ -193,7 +198,7 @@ public class scr_spells : MonoBehaviour
 
     }
 
-    public void Slash (GameObject slashedObject)
+    public void Slash(GameObject slashedObject)
     {
         if (slashedObject.GetComponent<scr_health>() != null)
         {
@@ -201,7 +206,7 @@ public class scr_spells : MonoBehaviour
         }
     }
 
-    public void Freeze (GameObject frozenObject) //This function is in scr_playerController because it needs to use IEnumerator to control timing
+    public void Freeze(GameObject frozenObject) //This function is in scr_playerController because it needs to use IEnumerator to control timing
     {
         player.GetComponent<scr_playerController>().Freeze(frozenObject);
     }
@@ -251,6 +256,8 @@ public class scr_spells : MonoBehaviour
 
     private void OnDestroy()
     {
+
+        playerController.BeamAssignment(playerController.beamStopper);
         if (pulled != null)
         {
             if (pulled.GetComponent<enemyAI_Script>() != null)
@@ -260,19 +267,21 @@ public class scr_spells : MonoBehaviour
 
             }
         }
-        if (PullSpell) 
-        { 
-            if(gameObject.name == "swipe(Clone)")
-            {
-                player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullSwipe);
-                Debug.Log("Destroying swipe particles");
-            }
-            else if(gameObject.name == "beam(Clone)")
-            {
-                player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullBeam);
-                Debug.Log("Destroying beam particles");
+        //if (PullSpell) 
+        //{ 
+        //    if(gameObject.name == "swipe(Clone)")
+        //    {
+        //        player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullSwipe);
+        //        Debug.Log("Destroying swipe particles");
+        //    }
+        //    else if(gameObject.name == "beam(Clone)")
+        //    {
+        //        player.GetComponent<scr_playerController>().Pspawner.DestroyPullParticle(ParticleSpawner.ParticleType.PullBeam);
+        //        Debug.Log("Destroying beam particles");
 
-            }
-        }
+        //    }
+        //}
     }
+
+    
 }
