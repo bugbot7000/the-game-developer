@@ -1,27 +1,50 @@
-using System;
+using System.Collections;
 using TMPro;
 using Unity.Cinemachine;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class CursorMover : MonoBehaviour
 {
-    public CinemachineCamera mainCam, optionsCam, creditsCam;
+    public CinemachineCamera mainCam, optionsCam, creditsCam, loadingCam;
     public float mouseH, mouseV, xClamp,yClamp;
-    public GameObject Lamp,Options;
+    public GameObject Lamp,Options,LoadingCanvas;
+    public CanvasGroup fadeCanvas;
+    
+    bool inputMouseUp;
+    Collider option;
+    
     void Start()
     {
         Cursor.visible = false;
         mainCam.Priority = 1;
         Cursor.lockState = CursorLockMode.Locked;
+        fadeCanvas.DOFade(0.0f, 1.0f).SetEase(Ease.OutCubic);
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine (_StartGame());
 
+        IEnumerator _StartGame()
+        {
+            GetComponentInParent<Canvas>().enabled = false;
+            LoadingCanvas.SetActive(true);
+            loadingCam.Priority = 2;
+
+            yield return new WaitForSeconds(3.0f);
+
+            yield return fadeCanvas.DOFade(1.0f, 1.0f).SetEase(Ease.OutCubic).WaitForCompletion();
+
+            SceneManager.LoadScene(1);
+        }
     }
+
     void Update()
     {
         if (mainCam.Priority > optionsCam.Priority && mainCam.Priority > creditsCam.Priority)
@@ -43,6 +66,42 @@ public class CursorMover : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, 45f, 165f);
             Lamp.transform.localRotation = Quaternion.Euler(rotationX, 175.631f, 220.4f);
         }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            // If in credits, clicking also returns to the menu.
+            if (Lamp.activeInHierarchy)
+            {
+                BackToMainMenu();
+            }
+            else if (option != null)
+            {
+                if (option.name == "Start")
+                {
+                    StartGame();
+                }
+                else if (option.name == "Credits")
+                {
+                    Lamp.SetActive(true);
+                    SwitchToCredits();
+                }
+                else if (option.name == "Options")
+                {
+                    creditsCam.Priority = 0;
+                    mainCam.Priority = 0;
+                    optionsCam.Priority = 1;
+                    Options.SetActive(true);
+                }
+                else if (option.name == "Exit")
+                {
+                    #if UNITY_EDITOR
+                        EditorApplication.isPlaying = false;         
+                    #else
+                        Application.Quit();   
+                    #endif
+                }            
+            }   
+        }
     }
 
     void MoveMainCursor()
@@ -57,6 +116,8 @@ public class CursorMover : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        option = other;
+        
         if (other.name == "Start" || other.name == "Credits" || other.name == "Options")
         {
             other.GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -70,32 +131,11 @@ public class CursorMover : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        other.GetComponent<TextMeshProUGUI>().color = new Color(0.7f,0.7f,0.7f);
+        other.GetComponent<TextMeshProUGUI>().color = new Color(0.4f,0.4f,0.4f);
+
+        option = null;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (other.name == "Start")
-            {
-                StartGame();
-            }
-            else   if (other.name == "Credits")
-            {
-                Lamp.SetActive(true);
-                Invoke("SwitchToCredits", 0.85f);
-            }
-            else   if (other.name == "Options")
-            {
-                
-                creditsCam.Priority = 0;
-                mainCam.Priority = 0;
-                optionsCam.Priority = 1;
-                Options.SetActive(true);
-            }
-        }
-    }
     private void SwitchToCredits()
     {
         creditsCam.Priority = 1;
