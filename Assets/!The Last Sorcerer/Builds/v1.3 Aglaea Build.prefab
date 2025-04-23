@@ -912,7 +912,7 @@ MonoBehaviour:
   dialogue:
     name: Old Man
     sentences:
-    - Nostralia has abandoned us...
+    - Our beloved sages have abandoned us... How could it have come to this?
 --- !u!65 &3494839755532484860
 BoxCollider:
   m_ObjectHideFlags: 0

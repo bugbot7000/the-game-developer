@@ -1293,7 +1293,7 @@ MonoBehaviour:
   hitbox: {fileID: 2039565094198946551}
   nose: {fileID: 0}
   mesh: {fileID: 0}
-  animator: {fileID: 0}
+  moveAnimThreshold: 1
   charmPoints: 0
   arrowPrefab: {fileID: 0}
   arrowSpawnPoint: {fileID: 0}
@@ -1322,6 +1322,8 @@ MonoBehaviour:
   health: 4
   dmgTxt: {fileID: 437534474311498838}
   invincible: 0
+  anim: {fileID: 0}
+  enemyAI: {fileID: 0}
 --- !u!1 &1652414851689141071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,7 +1776,7 @@ MonoBehaviour:
   hitbox: {fileID: 3393518319670198272}
   nose: {fileID: 0}
   mesh: {fileID: 8357956234192762957}
-  animator: {fileID: 8357956234192762956}
+  moveAnimThreshold: 1
   charmPoints: 0
   arrowPrefab: {fileID: 0}
   arrowSpawnPoint: {fileID: 0}
@@ -1803,6 +1805,8 @@ MonoBehaviour:
   health: 999
   dmgTxt: {fileID: 437534474311498838}
   invincible: 0
+  anim: {fileID: 0}
+  enemyAI: {fileID: 0}
 --- !u!1 &3124487669952709788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,7 +2252,7 @@ MonoBehaviour:
   dialogue:
     name: '[NARRATOR]'
     sentences:
-    - Soltrice has lost his third eye, and magic is gone from the world
+    - The sages have lost their third eye, and magic is gone from the world.
 --- !u!1 &3768001665127219298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,7 +2327,6 @@ Transform:
   - {fileID: 138677492440785036}
   - {fileID: 1348176687654235991}
   - {fileID: 40620230030947824}
-  - {fileID: 6896566844846469075}
   m_Father: {fileID: 8159896135756948103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4973249825876138240
@@ -2441,8 +2444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1a2b777e581d648b739637e8f2289c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pspawner: {fileID: 6971670545007471}
+  Pspawner: {fileID: 0}
   body: {fileID: 0}
+  anim: {fileID: 0}
   mSpd: 3.75
   dashSpd: 14
   dashCooldown: 0.3
@@ -2451,9 +2455,12 @@ MonoBehaviour:
   dTime: 0.5
   health: 12
   dashing: 0
+  noMove: 0
+  stunned: 0
   rotationSetting: {x: 0, y: 0, z: 0}
   activeFirePoint: {fileID: 1369726099625928486}
   equippedSpell: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
+  equippedEffect: 0
   equippedFamiliar: {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
   spell2: {fileID: 4121033437667739710, guid: 9742a29b796f01d488d367537a6d9195, type: 3}
   spell1: {fileID: 2922821225636103285, guid: 1864c493163aa4849ad49b62b0c2a079, type: 3}
@@ -2486,6 +2493,8 @@ MonoBehaviour:
   health: 20
   dmgTxt: {fileID: 437534474311498838}
   invincible: 0
+  anim: {fileID: 0}
+  enemyAI: {fileID: 0}
 --- !u!114 &4284093608218551064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3377,7 +3386,7 @@ MonoBehaviour:
   hitbox: {fileID: 3126884170461809769}
   nose: {fileID: 0}
   mesh: {fileID: 0}
-  animator: {fileID: 0}
+  moveAnimThreshold: 1
   charmPoints: 0
   arrowPrefab: {fileID: 0}
   arrowSpawnPoint: {fileID: 0}
@@ -3406,6 +3415,8 @@ MonoBehaviour:
   health: 4
   dmgTxt: {fileID: 437534474311498838}
   invincible: 0
+  anim: {fileID: 0}
+  enemyAI: {fileID: 0}
 --- !u!1 &5710906334963893445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3423,7 +3434,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2907021612551651072
 Transform:
   m_ObjectHideFlags: 0
@@ -4433,7 +4444,7 @@ MonoBehaviour:
   hitbox: {fileID: 6287775499972387664}
   nose: {fileID: 0}
   mesh: {fileID: 0}
-  animator: {fileID: 0}
+  moveAnimThreshold: 1
   charmPoints: 0
   arrowPrefab: {fileID: 0}
   arrowSpawnPoint: {fileID: 0}
@@ -4462,6 +4473,8 @@ MonoBehaviour:
   health: 4
   dmgTxt: {fileID: 437534474311498838}
   invincible: 0
+  anim: {fileID: 0}
+  enemyAI: {fileID: 0}
 --- !u!1 &7333911753202369628
 GameObject:
   m_ObjectHideFlags: 0
@@ -29254,79 +29267,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4411591863307454, guid: fd1c467af72ecd64ca0df9bba37b6af1, type: 3}
   m_PrefabInstance: {fileID: 5422164778220158958}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5465823670675287656
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2070454157539344798}
-    m_Modifications:
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8043984337120189205, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-      propertyPath: m_Name
-      value: ParticleHandler
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
---- !u!114 &6971670545007471 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5459001675724762375, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-  m_PrefabInstance: {fileID: 5465823670675287656}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3b4e1a6e55d549e38dc3f7d891a61bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &6896566844846469075 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1472402931113968059, guid: b0485d130271ca8468a99cbcb3db306d, type: 3}
-  m_PrefabInstance: {fileID: 5465823670675287656}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5492686517059276060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30637,11 +30577,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8106745870530870374}
   m_SourcePrefab: {fileID: 100100000, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
---- !u!95 &8357956234192762956 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4414871117303439920, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}
-  m_PrefabInstance: {fileID: 5672751067261229692}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8357956234192762957 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4414871117303439921, guid: aef9a3e063e740f4d8100584de73ceb4, type: 3}

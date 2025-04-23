@@ -1027,7 +1027,7 @@ MonoBehaviour:
   dialogue:
     name: '[NARRATOR]'
     sentences:
-    - Immuta has lost their third eye, and magic is gone from the world
+    - The sages have lost their third eye, and magic is gone from the world.
 --- !u!1 &2181320991677301180
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,7 +4017,7 @@ MonoBehaviour:
   dialogue:
     name: Old Man
     sentences:
-    - Nostralia has abandoned us...
+    - Our beloved sages have abandoned us... How could it have come to this?
 --- !u!65 &1352746548362803004
 BoxCollider:
   m_ObjectHideFlags: 0
