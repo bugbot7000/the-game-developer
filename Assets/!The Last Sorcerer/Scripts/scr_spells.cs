@@ -16,6 +16,7 @@ public class scr_spells : MonoBehaviour
     private Vector3 pullVelocity = Vector3.zero;
 
     public GameObject player, wand;
+    public scr_playerController playerController;
 
     //The idea is that we have a bool for each spell.
     //We write them as functions and then use the bools to turn them on and off.
@@ -28,6 +29,7 @@ public class scr_spells : MonoBehaviour
         // Fairly certain this only works so long as there is only 1 object with said tag. But we're single player anyways
         player = GameObject.FindGameObjectWithTag("Player");
         wand = GameObject.FindGameObjectWithTag("Wand");
+        playerController = player.GetComponent<scr_playerController>();
         //Pspawner = player.GetComponent<scr_playerController>().Pspawner;
     }
 
@@ -47,6 +49,7 @@ public class scr_spells : MonoBehaviour
         if (other != null && other.gameObject.CompareTag("Target") ||
             other != null && other.gameObject.CompareTag("Enemy")) 
         {
+            playerController.BeamAssignment(other.gameObject); // This works so long as a beam spell doesn't need to co-exist with a non-beam
             if (PushSpell) { Push(other.gameObject); }
             else if (PullSpell) { Pull(other.gameObject); }
             else if (CharmSpell) { Charm(other.gameObject); }
@@ -119,6 +122,7 @@ public class scr_spells : MonoBehaviour
         }
         else if (pulledObject.GetComponent<enemyAI_Script>().large == true)
         {
+            Debug.Log("Pulled large enemy");
             pulledObject.GetComponent <enemyAI_Script>().StunSelf();
             Rigidbody pulledBody = pulledObject.GetComponent<Rigidbody>();
 
@@ -140,7 +144,7 @@ public class scr_spells : MonoBehaviour
         {
             enemyAI_Script AI = charmedObject.GetComponent<enemyAI_Script>();
             scr_health hpScript = charmedObject.GetComponent<scr_health>();
-            AI.charmPoints += 2f;
+            AI.charmPoints += 4f;
             if (hpScript.health > AI.charmPoints) { return; }
         }
         if ( playerScript.charmedThrall != null) 
@@ -251,6 +255,8 @@ public class scr_spells : MonoBehaviour
 
     private void OnDestroy()
     {
+
+        playerController.BeamAssignment(playerController.beamStopper);
         if (pulled != null)
         {
             if (pulled.GetComponent<enemyAI_Script>() != null)

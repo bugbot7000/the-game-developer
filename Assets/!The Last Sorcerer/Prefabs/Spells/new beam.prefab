@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: baa5efbbe9f720849b06c3620916857a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 31.731346
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baa5efbbe9f720849b06c3620916857a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.7401
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: baa5efbbe9f720849b06c3620916857a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -99,6 +99,7 @@ MonoBehaviour:
   Pspawner: {fileID: 0}
   player: {fileID: 0}
   wand: {fileID: 0}
+  playerController: {fileID: 0}
   PushSpell: 0
   PullSpell: 0
   CharmSpell: 0

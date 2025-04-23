@@ -1196,6 +1196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: necromancer
       objectReference: {fileID: 0}
+    - target: {fileID: 7240045947309195407, guid: bf79f7ce214288e46841666f476d206a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7568533411508192411, guid: bf79f7ce214288e46841666f476d206a, type: 3}
       propertyPath: health
       value: 1
@@ -2013,8 +2017,8 @@ Transform:
   m_GameObject: {fileID: 1705254620}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.9331, y: -1.55, z: 0.0334}
-  m_LocalScale: {x: 137.98676, y: 1, z: 58.809746}
+  m_LocalPosition: {x: 20.9331, y: -1.55, z: 0.2688}
+  m_LocalScale: {x: 137.98676, y: 1, z: 14.838749}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4865706}

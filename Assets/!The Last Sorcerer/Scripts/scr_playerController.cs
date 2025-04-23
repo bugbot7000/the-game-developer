@@ -1,3 +1,5 @@
+using DG.Tweening;
+using PilotoStudio;
 using System.Collections;
 using UnityEngine;
 
@@ -12,6 +14,7 @@ public class scr_playerController : MonoBehaviour
     public float dashSpd;
     public float dashCooldown;
     public GameObject pitCheckObj;
+    public GameObject beamStopper;
     public float defaultSpd;
     public float dTime = 0.5f;
     public float health;
@@ -55,19 +58,47 @@ public class scr_playerController : MonoBehaviour
     public SpellType spell2Type;
     // New method for choosing spell types
 
+    float beamLength = 10f;
+    public BeamEmitter[] beamEmitterScr;
+
+    public void BeamAssignment(GameObject assignedObj)
+    {
+        for (int i = 0; i < beamEmitterScr.Length; i++)
+        {
+            beamEmitterScr[i].beamTarget = assignedObj.transform;
+        }
+    }
+
+    private void Awake()
+    {
+        BeamAssignment(beamStopper);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         //activeFirePoint = firePointU;
         body = GetComponent<Rigidbody>();
         rotationSetting = new Vector3(0, 0, 0f);
+
+        
+        //Debug.Log(beam.transform.localScale.x);
+
+        //beamLength = beam.transform.localScale.x;
     }
 
-
+    //public void BeamStopperPositionSetter()
+    //{
+    //    beamStopper.transform.position = new Vector3(activeFirePoint.transform.position.x,
+    //        activeFirePoint.transform.position.y,
+    //        activeFirePoint.transform.position.z + beamLength);
+    //}
 
     // Update is called once per frame
     void Update()
     {
+        //BeamStopperPositionSetter();
+
         velocity = Vector3.zero;
         velocity.x = Input.GetAxisRaw("Horizontal");
         velocity.z = Input.GetAxisRaw("Vertical"); //We move on X and Z, not Y. Result of moving from 2 to 3 dimensions
@@ -505,11 +536,11 @@ public class scr_playerController : MonoBehaviour
     }
     public void Freeze(GameObject frozenObject)
     {
-        if(frozenObject.GetComponent<scr_health>() != null)
-        {
-            frozenObject.GetComponent<scr_health>().invincible = true;
-        }
-        if (frozenObject.GetComponent<enemyAI_Script>() != null)
+        //if(frozenObject.GetComponent<scr_health>() != null)
+        //{
+        //    frozenObject.GetComponent<scr_health>().invincible = true;
+        //}
+        if (frozenObject.GetComponent<enemyAI_Script>() != null && frozenObject.GetComponent<enemyAI_Script>().enabled)
         {
             Rigidbody body = frozenObject.GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.FreezeAll;
@@ -529,11 +560,11 @@ public class scr_playerController : MonoBehaviour
         Debug.Log("Running DeStun...");
         yield return new WaitForSeconds(3);
         Debug.Log("DeStun wait time complete");
-        if (stunnedObject.GetComponent<scr_health>() != null)
-        {
-            stunnedObject.GetComponent<scr_health>().invincible = false;
-        }
-        if (stunnedObject.GetComponent<enemyAI_Script>() != null)
+        //if (stunnedObject.GetComponent<scr_health>() != null)
+        //{
+        //    stunnedObject.GetComponent<scr_health>().invincible = false;
+        //}
+        if (stunnedObject.GetComponent<enemyAI_Script>() != null && stunnedObject.GetComponent<enemyAI_Script>().enabled)
         {
             stunnedObject.GetComponent<enemyAI_Script>().enabled = true;
             stunnedObject.GetComponent<enemyAI_Script>().agent.enabled = true;
