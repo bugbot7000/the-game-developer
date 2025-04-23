@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 using System.Collections;
 
@@ -18,6 +19,7 @@ public class OpeningSequenceManager : MonoBehaviour
     [SerializeField] RectTransform topBar;
     [SerializeField] TextMeshProUGUI chapterTitleText;
     [SerializeField] CanvasGroup theEndCanvasGroup;
+    [SerializeField] Image closeButton;
     [SerializeField] WindowManager messaging;
     [SerializeField] WindowManager webBrowser;
 
@@ -67,9 +69,12 @@ public class OpeningSequenceManager : MonoBehaviour
             .AppendInterval(2.0f)
             .AppendCallback(() => MetaNarrativeManager.Instance.TriggerStorytellerSequence("SEQ_0"))
             .Append(notifcation.DOAnchorPosX(-64, 0.5f).SetEase(Ease.OutCubic))
-            .AppendInterval(3.0f)
+            .AppendInterval(2.0f)
+            .AppendCallback(() => {Cursor.visible = true; Cursor.lockState = CursorLockMode.None;})
             .Append(notifcation.DOAnchorPosX(400, 0.5f).SetEase(Ease.OutCubic))
-            .Join(topBar.DOAnchorPosY(0, 0.5f));
+            .Join(topBar.DOAnchorPosY(0, 0.5f))
+            .OnComplete(() => closeButton.DOFade(0, 0.1f).SetLoops(-1, LoopType.Yoyo));
+
     }
 
     public void CloseGame()
