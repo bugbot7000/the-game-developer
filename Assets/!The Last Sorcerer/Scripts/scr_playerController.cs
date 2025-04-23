@@ -375,7 +375,7 @@ Vector3 velocity;
             MakeParticles();
             var copy = Instantiate(spellShape, spellSpawn.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
-            if (spellShape = beam)
+            if (spellShape == beam)
             {
                 Vector3 beamRotation = new Vector3(rotationSetting.x, rotationSetting.y + 90f, rotationSetting.z);
                 copy.transform.eulerAngles = beamRotation;
@@ -591,7 +591,11 @@ Vector3 velocity;
     public void MakeParticles()
     {
         AssignParticles();
-        GameObject spellParticles = Instantiate(currentParticleType, transform);
+        GameObject AttackParticle = Instantiate(currentParticleType, transform);
+        if (equippedSpell == beam)
+        {
+            Destroy(AttackParticle,dTime);
+        }
         //if (equippedSpell == swipe)
         //{
         //    //spellParticles.transform.SetParent(swipeParPos, true);
