@@ -10,19 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B4_Build_White_Tiger
+  m_Name: B10_Build_Nephrite
   m_EditorClassIdentifier: 
   PageType: 2
-  Date: 1/26/2017
-  Title: White Tiger
-  Subtitle: Kento
-  Content: "This semester's builds are going to be named after the four cardinal
-    beasts of Chinese mythology. I got the idea from Eren while he was in Taiwan
-    over break.\r\n\r\nThe <mark=#ffff00aa>frontier</mark> and its puzzles are in
-    this build, but still pretty rudimentary.\r"
+  Date: 9/1/2017
+  Title: Nephrite
+  Subtitle: Eren
+  Content: Bug fixes.
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 1
-  BuildIndex: 3
+  BuildIndex: 0
   AdditionalKeywords: []

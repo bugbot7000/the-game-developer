@@ -15,14 +15,13 @@ MonoBehaviour:
   PageType: 2
   Date: 9/27/2016
   Title: Aglaea
-  Subtitle: 
+  Subtitle: 'Eren '
   Content: "So this build has the basic systems I've made to start developing the
-    game. Kento picked the name (something about Greek mythology?) - appparently
-    it means \u201Cfestive radiance\u201D. I think it's pretty cool. \r\n\r\nYou
-    can use WASD or arrow keys to move through the... well, it's not really a <mark=#ffff00aa>maze</mark>
-    right now, but it'll get there. By pressing J you use your currently equipped
-    spell. If you fall off, R can be used to respawn. \r\n\r\n(added a wall to test
-    modmagic puzzles. - k)"
+    game. Kento named it after a minor goddess in Greek mythology. I think one of
+    the Charities? \r\n\r\nControls: \r\nWASD or arrow keys to move through the <mark=#ffff00aa>maze</mark>.
+    Well it's not really a maze right now but it'll get there\r\nJ to cast your currently
+    prepared spell\r\nR to respawn\r\n\r\n(I\u2019ve added a wall in the build to
+    test a potential way of solving puzzles. - Kento)\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

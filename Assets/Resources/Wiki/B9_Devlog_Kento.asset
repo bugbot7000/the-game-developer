@@ -14,13 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 8/21/2017
-  Title: Kento's Devlog #9
-  Subtitle: 
-  Content: "Kento goes on a rant about how they have to IMMEDIATELY fix this or their
-    timeline for a Steam release will get messed up. Argues that Rose is sabotaging
-    the project and doesn\u2019t want it to get done bc it\u2019s embarrassing (cites
-    the DGC thing). Feels very betrayed by Eren \u201Csiding\u201D with Rose despite
-    him acknowledging the effort it would take to get everything fixed\r"
+  Title: Loss after loss.
+  Subtitle: Kento
+  Content: "\tEren is officially out of commission for now. He passed out during
+    a job interview and ended up in the ER. I hope he\u2019ll be alright - I wish
+    he\u2019d told me how bad it had gotten. \r\n\n\tIn the meantime I tried to export
+    another build with what I\u2019ve worked on. All it did was crash on startup,
+    though. I put it on the wiki anyway for archival purposes with the name <mark=#ffff00aa>Aventurine</mark>
+    - a stone commonly used as a cheaper substitute for <mark=#ffff00aa>jade</mark>.
+    Seems fitting.\r\n\n\tRose claims that my attitude was part of the problem, though,
+    and stuck to her guns about stonewalling us on her work. Then she claimed that
+    we should follow her illustrious example and all stop working on the game for
+    a few months. \r\n\n\tWe\u2019re so close. I\u2019m so close. There are plenty
+    of things we can do without our lead programmer, but she still refuses to see
+    that. I guess I\u2019m the only one who holds any <mark=#ffff00aa>enjoyment</mark>
+    of this process anymore. \r\n\n\tAnd my mom says I act as if the world is against
+    me. \u2018Act like.\u2019 Our generation is projected to be poorer and shorter
+    lived than our parents. Corporations are swallowing the world whole. The planet
+    is on fucking fire, for God\u2019s sake. \r\n\n\tI\u2019d like to make a few
+    fun video games before the end of the world. I\u2019d like to do it on my own
+    terms. \r\n\n\tI don\u2019t want to be rich. I don\u2019t want to be famous.
+    I don\u2019t even need people to like my work. \r\n\n\tAnd I\u2019m willing to
+    work hard. I have worked hard. All I want to do is spend my time doing what I
+    love. \r\n\n\tToo much to ask, I guess. \r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

@@ -14,12 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 6/25/2017
-  Title: Rose's Devlog #7
-  Subtitle: 
-  Content: "Rose getting very fed up with what she sees as Kento hounding her to
-    spend all her free time on TLS. The nagging doesn\u2019t help because she needs
-    space to cook, and after a few times of telling him to stops she ends up leaving
-    him on read (which prompts more nagging)"
+  Title: devlog #7
+  Subtitle: Rose
+  Content: "- look kento i know you read these so i\u2019ll repeat my point from
+    last week: i cannot keep working at the pace you expect of me\r\n<indent=5%>-
+    i have a full time job\r\n- i have social obligations\r\n- i need to go outside
+    every once in a while\r\n- i have other things i want to be spending my time
+    on\r\n- i am in a timezone 3 hours ahead of you </indent>\r\n- i cannot be constantly
+    staring at 3d modeling softwares and art programs in my off time when i already
+    do that from 9-5 5 days a week\r\n- on top of that you need to be telling me
+    upfront what you need for your ritual level and fucking STICK TO IT\r\n<indent=5%>-
+    if you say you don\u2019t need the giant worm enemy anymore and i\u2019ve already
+    made the model for it that\u2019s your own fault for not communicating </indent>\r\n-
+    not to mention we still have that weird flashing lights thing hanging over our
+    heads that we NEED to fix before it becomes too big to ignore\r\n- want all this
+    work done right now or you\u2019ll explode? like i said, hire another artist.
+    i am not the only person in the world you can or should be asking for assets
+    \r\n- anyways here\u2019s what i\u2019ve been able to chip away at despite the
+    lady doth protesting too much\r\n<indent=5%>- some modified arena textures for
+    the ritual level (corrupted, crumbling, you know the drill)\r\n- unrigged necromancer
+    base model </indent>\r\n- i\u2019ve also picked up a few new techniques from
+    my coworkers that have really helped with my workflow (did you know you can just
+    hit select all in Mixer and it'll remember that selection when you go into the
+    texture menu? i sure fucking didn\u2019t)\r\n- also i miss mooncake. my current
+    lease doesn\u2019t allow pets so i can\u2019t even adopt a cat of my own \r\n<indent=5%>-
+    the landlord is on the fence about it though. ther eis hope</indent>"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

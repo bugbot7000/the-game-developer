@@ -14,11 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 7/19/2017
-  Title: Eren's Devlog #8
-  Subtitle: 
-  Content: "Eren feeling very pressured from both sides - his programmer instinct
-    is telling him to wait, but his friendship with Kento is telling him to get this
-    done at any cost. Cites more overwork symptoms like loss of appetite\r"
+  Title: Not this shit again
+  Subtitle: Eren
+  Content: "- My personal fucking demon has returned it\u2019s that stupid goddamn
+    <mark=#ffff00aa>bug</mark> from the spring semester no please mooncake not right
+    now sweetheart ugh okay fine\r\n- Cat has been fed\r\n- Toonity rolled out some
+    new updates and now my hotfix for the visual <mark=#ffff00aa>bug</mark> from
+    earlier doesn\u2019t work anymore\r\n- It\u2019s a <mark=#ffff00aa>glitch</mark>
+    at this point I think\r\n- I could do another fix because I\u2019m a Toonity
+    genius but that means we\u2019d have to refactor like a huge part of the codebase\r\n-
+    We\u2019re looking at like months of just internal changes to sort out the code\r\n-
+    On top of that I noticed a couple of weeks ago that Kento\u2019s been making
+    these cryptic KitHub commits \r\n- His comments were all shit like: \u201Cthe
+    stochastic update\u201D and \u201Cfixed the thing with the enemies\u201D and
+    \u201Cadded chapters 320-461 of worldbuilding and lore\u201D\r\n- I told him
+    that we really shouldn\u2019t be adding so much new content before we\u2019ve
+    fixed the <mark=#ffff00aa>glitch</mark> that makes the game literally unplayable\r\n-
+    There\u2019s a good chance we might have to redo a lot of that work\r\n- He just
+    told me I\u2019ve been talking to Rose too much and that he thought I saw the
+    vision too and \u201Cwe can just fix it later\u201D\r\n- He\u2019s allergic to
+    good software development practices I swear\r\n- Anyway even after harnessing
+    the powers of Google nobody seemed to have the same problem as me \r\n- Except
+    apparently xxx_ninjabunny69420_xxx from 2009 who then deleted their account so
+    I can\u2019t find out what the solution was \r\n- Fortunately, I was able to
+    reach out to the Toonity devs and they were helpful! Tony from Toonity customer
+    support is going to take a look at our build and see what\u2019s wrong\r\n- I
+    told Kento and he really didn\u2019t like that I was \u201Csending our masterpiece
+    to strangers\u201D \r\n- Look all I\u2019m saying is that our masterpiece is
+    gonna get sent to nobody ever if we can\u2019t get this <mark=#ffff00aa>glitch</mark>
+    figured out\r\n- My light sensitivity is getting worse too\r\n- I keep getting
+    massive headaches trying to do these marathon coding sessions debugging the game\r\n-
+    It\u2019s like I\u2019m back in that coworking area all over again\r\n- Funny
+    thing is it seems like it\u2019s just artificial light\r\n- When I actually go
+    outside and touch grass, I\u2019m totally fine with the sunlight\r\n- I think
+    nature might be trying to tell me something about my <mark=#ffff00aa>health</mark>
+    lol\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

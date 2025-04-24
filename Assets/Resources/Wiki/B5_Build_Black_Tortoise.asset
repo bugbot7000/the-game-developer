@@ -15,11 +15,14 @@ MonoBehaviour:
   PageType: 2
   Date: 3/13/2017
   Title: Black Tortoise
-  Subtitle: 
-  Content: 'Onto our second cardinal animal! This one represents the North, and is
-    either a snake or a tortoise (but most people see it as a tortoise). Excited
-    to submit for DGC -  can''t wait to see what people think of it. (We do also
-    need the playtest data) '
+  Subtitle: Eren
+  Content: "Onto our second cardinal animal! This one represents the North and is
+    either a snake or a tortoise but most people see it as a <mark=#ffff00aa>tortoise</mark>\r\nThis
+    build has no <mark=#ffff00aa>sage</mark> appearances just yet sadly but there
+    is that secret island idea Kento asked me to try out with spamming the dash button.
+    There\u2019s also that weird flashing lights <mark=#ffff00aa>bug</mark> that
+    I turned off the skybox for \r\nI can't wait to see what people think of our
+    game. We do also need the playtest data lol\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

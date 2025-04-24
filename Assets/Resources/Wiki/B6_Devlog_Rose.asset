@@ -15,24 +15,29 @@ MonoBehaviour:
   PageType: 0
   Date: 5/13/2017
   Title: FREEDOM
-  Subtitle: 
+  Subtitle: 'Rose '
   Content: "- IM FREE KINDA\r\n- things i did for spring showcase build: \r\n<indent=5%>-
-    finally fixed the fucking arena assets (though now eren thinks the problem is
-    how they\u2019re hooked into the 3d models so that\u2019s great\u2026)\r\n- finished
-    all arena boss models \r\n- finished all enemies\r\n- frontier stuff is done
-    too but that was relatively quick compared to this</indent>\r\n- ok maybe i\u2019m
-    not as free as i would think bc i keep going back and tweaking little things
+    finished all remaining boss models (with a different method of linking them to
+    the proper scripts)\r\n- finished all enemies</indent>\r\n- i wanted to scale
+    down the final deliverable so i could fix all our old assets and hopefully solve
+    that bug we ran into in march but kento insisted i not waste my time with that\r\n<indent=5%>-
+    i gave in because i still felt terrible about the dgc thing but that\u2019s the
+    first thing i\u2019m going to fix over the summer </indent>\r\n- for a few days
+    before the deadline i kept feeling compelled to go back and tweak little things
     about the textures and models and anims\r\n<indent=5%>- tbh i\u2019m really worried
-    about whether or not this game is polished enough\u2026 i had an interview with
-    revolt games last week and i said i\u2019d send them the final showcase build
-    when we were done\r\n- mental note i need to do that<indent=5%>\r\n- i\u2019ve
-    really been working hard this past few weeks to try and make up for my dgc mistake\r\n<indent=5%>-
-    accidentally did a few more late nights but no all nighters so that\u2019s a
-    small win for me at least\r\n- i still feel absolutely horrid about that i can\u2019t
-    b elieve i was so forgetful and mixed up the dates like that\r\n- kento seems
-    to have moved past it but i can\u2019t help but feel that he\u2019s still a little
-    frosty sometimes\r\n- i hope i\u2019m not pissing him off with all the kithub
-    pushes </indent>\r\n"
+    about whether or not this game is polished enough\u2026 this is the biggest project
+    i\u2019ve worked on so far and it needs to impress</indent>\r\n- i\u2019ve really
+    been working hard this past while to try and make up for my <mark=#ffff00aa>dgc</mark>
+    mistake\r\n<indent=5%>- maybe i got a little defensive but honestly kento came
+    in swinging so what was i supposed to do, just sit there and take it like i always
+    did as a kid?\r\n- accidentally did a few more late nights but no all nighters
+    so that\u2019s a small win for me at least. no <mark=#ffff00aa>crunch</mark>
+    allowed in this house\r\n- i hope i\u2019m not pissing kento off with all the
+    kithub pushes\u2026 maybe if i go play underwatch and nolife in ranked for a
+    little bit itll help </indent>\r\n- as for my <mark=#ffff00aa>post-grad</mark>
+    plans: i\u2019m waiting to hear back from revolt games after our final interview
+    \r\n<indent=5%>- here\u2019s hoping i get the position! \r\n- oh yeah i said
+    i\u2019d send them the final showcase build when we were done lemme go do that</indent>\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

@@ -14,36 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 11/16/2016
-  Title: ambition.
-  Subtitle: 
-  Content: "I was pleasantly surprised by our midterm feedback. I expected to comb
-    through a rats nest of surface level criticism, which is what I\u2019ve come
-    to expect from faculty. But the response was actually quite positive, if not
-    terribly substantive. The thrust of their suggestion was \u201CDon\u2019t be
-    too ambitious.\u201D (I think that was the quote.) Which is deeply unhelpful
-    feedback for a narrative game.\r\n\r\nLet\u2019s consider what an unambitious
-    game narrative looks like. In the best case scenario, we\u2019d have a genre
-    pastiche of a piece of nerd ephemera - Lord of the Rings, Star Wars, Dawn of
-    the Dead, etc. - in the form of a movie with gameplay begrudgingly attached to
-    it. (A movie with terrible production quality given we\u2019re a team of three
-    to boot.) \r\n\r\nAmbition is all we have. If our game doesn\u2019t stand out,
-    if it doesn\u2019t command attention, it won\u2019t get any. What else can that
-    feedback accomplish besides engendering mediocrity? The acceptance of mediocrity
-    is why I never work with teams on any project with a complex story. Games are
-    a medium in which not having a story is preferable to a perfunctory one, because
-    then at least the gameplay goes uninterrupted. I\u2019ve lost track of how many
-    times I tried to explain that to my last team. But I think maybe Eren gets it,
-    which is a nice surprise.\r\n\r\nThough to be honest I find myself disagreeing
-    with Rose\u2019s perspective on the issue. We\u2019re having a productive semester:
-    the <mark=#ffff00aa>maze</mark> is nearly done - all her <mark=#ffff00aa>assets</mark>
-    are in place and only the <mark=#ffff00aa>Minotaur</mark> remains unfinished.
-    And she\u2019s already talking about <mark=#ffff00aa>burnout</mark>. Not even
-    half a year into a project.\r\n\r\nThe positive feedback we\u2019ve received
-    so far is contingent upon the pace we\u2019re keeping. The \u201Clost sleep\u201D
+  Title: Ambition.
+  Subtitle: Kento
+  Content: "\tI was pleasantly surprised by the midterm feedback on our second build,
+    codenamed <mark=#ffff00aa>Thalia</mark>. I expected to comb through a rat\u2019s
+    nest of surface level criticism, which is what I\u2019ve come to expect from
+    faculty. But the response was actually quite positive, if not terribly substantive.
+    The thrust of their suggestion was \u201CDon\u2019t be too ambitious on <mark=#ffff00aa>scope</mark>.\u201D
+    (I think that was the quote.) Which is deeply unhelpful feedback for a narrative
+    game.\r\n\r\n\tLet\u2019s consider what an unambitious game narrative looks like.
+    In the best case scenario, we\u2019d have a genre pastiche of a piece of nerd
+    ephemera - Lord of the Rings, Star Wars, Dawn of the Dead, etc. - in the form
+    of a movie with gameplay begrudgingly attached to it. (A movie with terrible
+    production quality given we\u2019re a team of three to boot.) \r\n\r\n\tAmbition
+    is all we have. If our game doesn\u2019t stand out, if it doesn\u2019t command
+    attention, it won\u2019t get any. What else can that feedback accomplish besides
+    engendering mediocrity? The acceptance of mediocrity is why I never work with
+    teams on any project with a complex story. Games are a medium in which not having
+    a story is preferable to a perfunctory one, because then at least the gameplay
+    goes uninterrupted. I\u2019ve lost track of how many times I tried to explain
+    that to my last team. But I think maybe Eren gets it, which is a nice surprise.\r\n\r\n\tThough
+    to be honest I find myself disagreeing with Rose\u2019s perspective on the issue.
+    We\u2019re having a productive semester: the first level is nearly done - all
+    her assets are in place to be implemented and only the <mark=#ffff00aa>Minotaur</mark>
+    remains unfinished. And she\u2019s already talking about burnout. Not even half
+    a year into a project.\r\n\r\n\tThe positive feedback we\u2019ve received so
+    far is contingent upon the pace we\u2019re keeping. The \u201Clost sleep\u201D
     she\u2019s trying to prevent is the very thing that allowed us to get this far.
     I don\u2019t know how to explain to her that this is just what it means to make
     art under capitalism. She\u2019s smart enough to know that and she\u2019s done
-    good work so far. I have faith that she\u2019ll come to see things my way.\r\n\r"
+    good work so far. I have faith that she\u2019ll come to see things my way.\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

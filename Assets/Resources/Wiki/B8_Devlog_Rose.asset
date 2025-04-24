@@ -14,12 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 7/20/2017
-  Title: Rose's Devlog #8
-  Subtitle: 
-  Content: "Rose saying that this should never have happened in the first place and
-    that Kento\u2019s overeagerness and jumping the gun put them in this position
-    to begin with. Says that they should give Eren a break and wait for the stable
-    release but in a very detached way (statistic instead of person)"
+  Title: devlog #8
+  Subtitle: Rose
+  Content: "- i TOLD kento that we should have dealt with that stupid <mark=#ffff00aa>glitch</mark>
+    when it first showed up\r\n<indent=5%>- but noooooo he insisted on ignoring it
+    and using clumsy workarounds instead of figuring out how to properly avoid or
+    fix it\r\n- wouldn\u2019t even give me the time to try my solution on one of
+    the old test levels we had\r\n- i can\u2019t believe eren listened to him </indent>\r\n-
+    but i\u2019m putting my foot down. either he gives me the flexibility i need
+    to actually work on this without landing myself in the hospital from overwork,
+    or i stop entirely for my <mark=#ffff00aa>health</mark>\r\n<indent=5%>- some
+    days i just want to play minecraft when i come back from work but kento will
+    bombard me with 50 thousand reminders to work on his game</indent>\r\n- i found
+    myself referring to this as \u201Ckento\u2019s game\u201D the other day despite
+    all the work i put into it, not to mention that the magic system was originally
+    my idea\r\n<indent=5%>- that was not a fun realization to have. i do all the
+    heavy lifting and he takes credit for it just because he's doing all the <mark=#ffff00aa>writing</mark>\r\n-
+    just like my dad, bragging about my achievements like they never would have happened
+    if not for his stupid guiding hand</indent>\r\n- and he has the nerve to call
+    me a fucking micromanager? that\u2019s just salt in the wound\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
