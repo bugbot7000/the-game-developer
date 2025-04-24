@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Collections;
 
 using UnityEngine;
+using UnityEngine.UI;
 
 using Sirenix.OdinInspector;
 using TMPro;
@@ -13,6 +15,7 @@ public class WikiSearchResultsPage : MonoBehaviour
     [TitleGroup("References")]
     [SerializeField] GameObject searchResultsContainer;
     [SerializeField] TextMeshProUGUI searchResultsText;
+    [SerializeField] RectTransform layoutGroup;
 
     WikiPageSearchManager searchManager => WikiPageSearchManager.Instance;
 
@@ -40,5 +43,14 @@ public class WikiSearchResultsPage : MonoBehaviour
         }
 
         WikiHistoryManager.Instance.AddPageToHistory(new HistoryItem(PageType.Search, searchManager.LastSearchTerm));
+
+        StartCoroutine(rebuild());
+    }
+
+    IEnumerator rebuild()
+    {
+        yield return new WaitForEndOfFrame();
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(layoutGroup);
     }
 }
