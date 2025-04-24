@@ -42,6 +42,6 @@ public class LevelManager : MonoBehaviour
     public void OnSequenceComplete()
     {
         playerController.enabled = true;
-        spawner.enabled = true;
+        // spawner.enabled = true;
     }
 }
