@@ -175,7 +175,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8524601803316210857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -429,7 +429,6 @@ MonoBehaviour:
   currnetBeamTarget: {fileID: 0}
   defaultSpd: 8
   dTime: 0.5
-  health: 12
   dashing: 0
   noMove: 0
   stunned: 0
