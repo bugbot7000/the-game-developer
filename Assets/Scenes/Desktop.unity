@@ -9377,7 +9377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122f05710d3522f4987911e3ed7f5ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableBuildDebug: 1
+  enableBuildDebug: 0
   chatOnBuild:
   - 
   - 
@@ -27388,7 +27388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33f3a34d40956141bcb7cb939d0f73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipOpening: 0
+  skipOpening: 1
   fade: {fileID: 796706797}
   dreamOS: {fileID: 1474427588}
   raliasLamentBuild: {fileID: 2086724041}

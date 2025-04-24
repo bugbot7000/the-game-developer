@@ -223,6 +223,16 @@ namespace Michsky.DreamOS
             ShowViewer();
         }
 
+        public void UpdateFirstNoteContent(string content)
+        {
+            noteItems[0].noteContent = content;
+        }
+
+        public string GetFirstNoteContent()
+        {
+            return viewerContent.text;
+        }
+
         public void OpenNote(string noteID)
         {
             for (int i = 0; i < noteItems.Count; i++)

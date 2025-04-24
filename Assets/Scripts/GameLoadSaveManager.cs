@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using Michsky.DreamOS;
+
 public class GameLoadSaveManager : MonoBehaviour
 {
     void Start()
@@ -18,6 +20,8 @@ public class GameLoadSaveManager : MonoBehaviour
             {
                 FindFirstObjectByType<OpeningSequenceManager>().SkipOpening();
                 FindFirstObjectByType<WikiPageSearchManager>().Load();
+                FindFirstObjectByType<NotepadManager>(FindObjectsInactive.Include)
+                    .UpdateFirstNoteContent(PlayerPrefs.GetString("notepad"));
             }   
             else
             {
