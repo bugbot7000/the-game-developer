@@ -848,6 +848,11 @@ namespace Michsky.DreamOS
             return GetTabIndex(currentTabGuid);
         }
 
+        public void UpdateCurrentTabText(string text)
+        {
+            currentTabs[GetTabIndex(currentTabGuid)].item.UpdateText(text);
+        }
+
         int GetTabIndex(string guid)
         {
             int tabIndex = -1;

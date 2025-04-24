@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
+using Michsky.DreamOS;
 
 public class WikiContentPage : MonoBehaviour
 {
@@ -61,6 +62,8 @@ public class WikiContentPage : MonoBehaviour
                 buttonText.SetText("Download Build");
             }
         }
+
+        FindFirstObjectByType<WebBrowserManager>().UpdateCurrentTabText(wikiPage.Title);
 
         contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, content.rectTransform.sizeDelta.y + 300);
 

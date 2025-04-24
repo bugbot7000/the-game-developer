@@ -36,6 +36,12 @@ namespace Michsky.DreamOS
             mainButton.UpdateUI();
         }
 
+        public void UpdateText(string text)
+        {
+            mainButton.buttonText = text;
+            mainButton.UpdateUI();
+        }
+
         public void SetIndicator(bool value)
         {
             indicatorObject.SetActive(value);
