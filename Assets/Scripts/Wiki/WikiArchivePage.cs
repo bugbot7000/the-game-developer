@@ -1,3 +1,5 @@
+using System.Collections;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,9 +17,12 @@ public class WikiArchivePage : MonoBehaviour
     [TitleGroup("Grid Layouts")]
     [SerializeField] GameObject fallIndexContainer;
     [SerializeField] GameObject springIndexContainer;
+    [SerializeField] GameObject summerIndexContainer;
 
     [TitleGroup("References")]
-    [SerializeField] TextMeshProUGUI springLoadingText;
+    [SerializeField] RectTransform layoutGroup;
+    [SerializeField] TextMeshProUGUI springErrorText;
+    [SerializeField] TextMeshProUGUI summerErrorText;
 
     [TitleGroup("Label")]
     [SerializeField] RectTransform label;
@@ -33,8 +38,8 @@ public class WikiArchivePage : MonoBehaviour
         }
 
         if (WikiPageSearchManager.Instance.SpringUnlocked())
-        {
-            springLoadingText.gameObject.SetActive(false);
+        {            
+            springErrorText.gameObject.SetActive(false);
             
             foreach (WikiPageSO page in WikiPageSearchManager.Instance.SpringIndex.WikiPages)
             {
@@ -42,15 +47,28 @@ public class WikiArchivePage : MonoBehaviour
                     .GetComponent<WikiArchivePageItem>().Initialize(page, this);
             }  
         }
-        else
+
+        if (WikiPageSearchManager.Instance.SummerUnlocked())
         {
-            
-            springLoadingText.SetText($"Rebuilding... {Mathf.Round(WikiPageSearchManager.Instance.GetFallSemesterProgress() * 100)}% complete. Continuing loading pages to complete index rebuild.");
+            summerErrorText.gameObject.SetActive(false);
+
+            foreach (WikiPageSO page in WikiPageSearchManager.Instance.SummerIndex.WikiPages)
+            {
+                Instantiate(archiveItemPrefab, summerIndexContainer.transform)
+                    .GetComponent<WikiArchivePageItem>().Initialize(page, this);
+            }              
         }
 
         WikiHistoryManager.Instance.AddPageToHistory(new HistoryItem(PageType.Index));
 
-        LayoutRebuilder.ForceRebuildLayoutImmediate(GetComponent<RectTransform>());
+        StartCoroutine(rebuild());
+    }
+
+    IEnumerator rebuild()
+    {
+        yield return new WaitForEndOfFrame();
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(layoutGroup);
     }
     
     void Update()

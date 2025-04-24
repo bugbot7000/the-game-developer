@@ -28,11 +28,13 @@ public class WikiPageSearchManager : MonoBehaviour
     [TitleGroup("Wiki Index")]
     [SerializeField] WikiIndexSO fallIndex;
     [SerializeField] WikiIndexSO springIndex;
+    [SerializeField] WikiIndexSO summerIndex;
     [SerializeField] bool enableWikiDebug;
 
     [TitleGroup("Parameters")]
     [SerializeField] int maxSearchResults = 3;  
     [SerializeField] float progressToUnlockSpring = 0.8f;
+    [SerializeField] float progressToUnlockSummer = 0.7f;
 
     [TitleGroup("References")]
     [SerializeField] WindowManager webBrowser;
@@ -44,6 +46,7 @@ public class WikiPageSearchManager : MonoBehaviour
     public WikiIndex Index => index;
     public WikiIndexSO FallIndex => fallIndex;
     public WikiIndexSO SpringIndex => springIndex;
+    public WikiIndexSO SummerIndex => summerIndex;
     public int MaxSearchResults => maxSearchResults;
     public string LastSearchTerm  { get; private set; }
     public WikiPage LastFoundPage { get; private set; }
@@ -63,6 +66,11 @@ public class WikiPageSearchManager : MonoBehaviour
             foreach (WikiPageSO wikiPage in springIndex.WikiPages)
             {
                 visitedPages.Add(wikiPage);
+            }
+
+            foreach (WikiPageSO wikiPage in summerIndex.WikiPages)
+            {
+                visitedPages.Add(wikiPage);
             }            
 
             webBrowser.OpenWindow();
@@ -79,12 +87,28 @@ public class WikiPageSearchManager : MonoBehaviour
             if (HasPageBeenVisited(wikiPage))
                 visited++;
 
-        return visited / (fallIndex.WikiPages.Count * progressToUnlockSpring);
+        return visited / fallIndex.WikiPages.Count;
     }
 
     public bool SpringUnlocked()
     {
         return GetFallSemesterProgress() >= progressToUnlockSpring;
+    }
+
+    public float GetSpringSemesterProgress()
+    {
+        float visited = 0;
+
+        foreach (WikiPageSO wikiPage in springIndex.WikiPages)
+            if (HasPageBeenVisited(wikiPage))
+                visited++;        
+
+        return visited / springIndex.WikiPages.Count;
+    }
+
+    public bool SummerUnlocked()
+    {
+        return GetSpringSemesterProgress() >= progressToUnlockSummer;
     }
 
     public void SetSearchTerm(string term)
@@ -132,7 +156,12 @@ public class WikiPageSearchManager : MonoBehaviour
         if (SpringUnlocked())
             foreach (WikiPageSO page in springIndex.WikiPages)
                 if (page.PageContainsTerm(term))
-                    results.Add(page);                
+                    results.Add(page);
+
+        if (SummerUnlocked())
+            foreach (WikiPageSO page in summerIndex.WikiPages)
+                if (page.PageContainsTerm(term))
+                    results.Add(page);                                      
 
         return results;
     }
