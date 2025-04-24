@@ -16,10 +16,13 @@ MonoBehaviour:
   Date: 9/1/2017
   Title: Nephrite
   Subtitle: Eren
-  Content: Bug fixes.
+  Content: 'Bug fixes.
+
+
+    [BUILD DATA CORRUPTED] '
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
-  ContainsBuild: 1
+  ContainsBuild: 0
   BuildIndex: 0
   AdditionalKeywords: []

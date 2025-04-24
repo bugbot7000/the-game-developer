@@ -16,11 +16,12 @@ MonoBehaviour:
   Date: 8/21/2017
   Title: Aventurine
   Subtitle: Kento
-  Content: 'Putting this here for archival purposes. This build has most of my attempted
-    implementation for <mark=#ffff00aa>Ritual</mark> but it just crashes on start. '
+  Content: "Putting this here for archival purposes. This build has most of my attempted
+    implementation for <mark=#ffff00aa>Ritual</mark> but it just crashes on start.
+    \n\n[BUILD DATA CORRUPTED] "
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
-  ContainsBuild: 1
+  ContainsBuild: 0
   BuildIndex: 0
   AdditionalKeywords: []

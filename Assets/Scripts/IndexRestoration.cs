@@ -17,10 +17,12 @@ public class IndexRestoration : MonoBehaviour
     [SerializeField] Image summerProgressBar;
     [SerializeField] Image summerUnlockMarker;
 
+    float barLength = 600f;
+
     void Start()
     {
-        fallUnlockMarker.rectTransform.anchoredPosition = new Vector2(500 * WikiPageSearchManager.Instance.ProgressToUnlockSpring, 0);
-        springUnlockMarker.rectTransform.anchoredPosition = new Vector2(500 * WikiPageSearchManager.Instance.ProgressToUnlockSummer, 0);
+        fallUnlockMarker.rectTransform.anchoredPosition = new Vector2(barLength * WikiPageSearchManager.Instance.ProgressToUnlockSpring, 0);
+        springUnlockMarker.rectTransform.anchoredPosition = new Vector2(barLength * WikiPageSearchManager.Instance.ProgressToUnlockSummer, 0);
     }
     
     void Update()
@@ -29,13 +31,13 @@ public class IndexRestoration : MonoBehaviour
         
         float fallProgress = WikiPageSearchManager.Instance.GetFallSemesterProgress();
         fallText.SetText($"Fall Restoration Progress - {(int) (fallProgress * 100)}%");
-        fallProgressBar.rectTransform.sizeDelta = new Vector2(500 * fallProgress, 16);
+        fallProgressBar.rectTransform.sizeDelta = new Vector2(barLength * fallProgress, 16);
         
         if (WikiPageSearchManager.Instance.SpringUnlocked())
         {
             float springProgress = WikiPageSearchManager.Instance.GetSpringSemesterProgress();
             springText.SetText($"Spring Restoration Progress - {(int) (springProgress * 100)}%");
-            springProgressBar.rectTransform.sizeDelta = new Vector2(500 * springProgress, 16);
+            springProgressBar.rectTransform.sizeDelta = new Vector2(barLength * springProgress, 16);
         }
         else
         {
@@ -47,7 +49,7 @@ public class IndexRestoration : MonoBehaviour
         {
             float summerProgress = WikiPageSearchManager.Instance.GetSummerProgress();
             summerText.SetText($"Summer Restoration Progress - {(int) (summerProgress * 100)}%");
-            summerProgressBar.rectTransform.sizeDelta = new Vector2(500 * summerProgress, 16);
+            summerProgressBar.rectTransform.sizeDelta = new Vector2(barLength * summerProgress, 16);
         }
         else
         {

@@ -27,28 +27,26 @@ MonoBehaviour:
     stuff wasn\u2019t done in time for the deadline since she didn\u2019t want to
     pull an allnighter \r\n- Makes sense since we\u2019re still early on but Kento
     was kinda upset about that\r\n- I also implemented a save and load system \r\n-
-    Right now you can press [KEY] to save and quit\r\n- [OTHER KEY] loads your progress
-    after you open it again and it remembers where you were in the world space of
-    the game \r\n- Anyway it was a whole mess because we almost didn\u2019t catch
-    this critical bug that Kento found while doing honestly I have no idea what in
-    the build like a few hours before we were supposed to submit\r\n- Instead of
-    pressing [KEY] he accidentally pressed [KEY THAT CRASHES THE GAME] instead and
-    the entire thing crashed\r\n- I patched in a hotfix for the deadline but it took
-    me an oolong fuelled 2am bender rubber ducking it that night to finally find
-    the bug\r\n- It was a single equals instead of a double equals which just feels
-    so bad man. I managed to get it all sorted out though\r\n- The faculty pretty
-    much unanimously told us we were going way too big on <mark=#ffff00aa>scope</mark>
-    but it\u2019s okay because we\u2019re still early on in development\r\n- After
-    hearing more about Kento\u2019s grand plans for <mark=#ffff00aa>Trismegistus</mark>
-    I can definitely see where they\u2019re coming from but man Kento did NOT seem
-    to take that feedback too well\r\n- He was civil about it and said he\u2019d
-    think about it but I could tell he felt conflicted about scaling back our game.
-    He was like a cat with its tail twitching \r\n- Our advisor Clover said that
-    we can keep things simple for now and revisit this question of scale sometime
-    next semester\r\n- I\u2019m glad to hear that because it means I can take a step
-    back a little bit\r\n- Gives me more time to grind the new lifetime suit in Momo
-    Magick and watch the like 5 Solaris vods I missed while working on the midterm
-    build\r\n"
+    Right now you can press . (period) to save and quit\r\n- , (comma) loads your
+    progress after you open it again and it remembers where you were in the world
+    space of the game \r\n- Anyway it was a whole mess because we almost didn\u2019t
+    catch this critical bug that Kento found while doing honestly I have no idea
+    what in the build like a few hours before we were supposed to submit\r\r\n- I
+    patched in a hotfix for the deadline but it took me an oolong fuelled 2am bender
+    rubber ducking it that night to finally find the bug\r\n- It was a single equals
+    instead of a double equals which just feels so bad man. I managed to get it all
+    sorted out though\r\n- The faculty pretty much unanimously told us we were going
+    way too big on <mark=#ffff00aa>scope</mark> but it\u2019s okay because we\u2019re
+    still early on in development\r\n- After hearing more about Kento\u2019s grand
+    plans for <mark=#ffff00aa>Trismegistus</mark> I can definitely see where they\u2019re
+    coming from but man Kento did NOT seem to take that feedback too well\r\n- He
+    was civil about it and said he\u2019d think about it but I could tell he felt
+    conflicted about scaling back our game. He was like a cat with its tail twitching
+    \r\n- Our advisor Clover said that we can keep things simple for now and revisit
+    this question of scale sometime next semester\r\n- I\u2019m glad to hear that
+    because it means I can take a step back a little bit\r\n- Gives me more time
+    to grind the new lifetime suit in Momo Magick and watch the like 5 Solaris vods
+    I missed while working on the midterm build\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
