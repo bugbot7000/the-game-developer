@@ -27,9 +27,10 @@ public class WikiHome : MonoBehaviour
         {
             WikiHistoryManager.Instance.AddPageToHistory(new HistoryItem(PageType.Home));
 
-            if (!MetaNarrativeManager.Instance.HasVisitedSequence(firstOpenHintSequence))
+            if (!PlayerPrefs.HasKey("firstOpenHintSequence"))
             {
                 MetaNarrativeManager.Instance.TriggerStorytellerSequence(firstOpenHintSequence);
+                PlayerPrefs.SetInt("firstOpenHintSequence", 1);
             }
         }        
     }

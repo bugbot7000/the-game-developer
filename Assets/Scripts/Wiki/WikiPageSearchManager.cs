@@ -176,6 +176,7 @@ public class WikiPageSearchManager : MonoBehaviour
         if (!visitedPages.Contains(page))
         {
             visitedPages.Add(page);
+            Save();
         }
 
         LastFoundPageSO = page;
@@ -244,5 +245,42 @@ public class WikiPageSearchManager : MonoBehaviour
         }
         
         return results;
-    }    
+    }
+
+    [Button]
+    public void Save()
+    {
+        foreach (WikiPageSO visited in visitedPages)
+        {
+            PlayerPrefs.SetInt(visited.name, 1);
+        }
+    }   
+
+    [Button]
+    public void Load()
+    {
+        foreach (WikiPageSO page in fallIndex.WikiPages)
+        {
+            if (PlayerPrefs.HasKey(page.name) && PlayerPrefs.GetInt(page.name) == 1)
+            {
+                visitedPages.Add(page);
+            }
+        }
+        
+        foreach (WikiPageSO page in springIndex.WikiPages)
+        {
+            if (PlayerPrefs.HasKey(page.name) && PlayerPrefs.GetInt(page.name) == 1)
+            {
+                visitedPages.Add(page);
+            }
+        }
+
+        foreach (WikiPageSO page in summerIndex.WikiPages)
+        {
+            if (PlayerPrefs.HasKey(page.name) && PlayerPrefs.GetInt(page.name) == 1)
+            {
+                visitedPages.Add(page);
+            }            
+        }        
+    } 
 }

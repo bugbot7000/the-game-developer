@@ -13,11 +13,12 @@ public class CursorMover : MonoBehaviour
 {
     public CinemachineCamera mainCam, optionsCam, creditsCam, loadingCam;
     public float mouseH, mouseV, xClamp,yClamp;
-    public GameObject Lamp,Options,LoadingCanvas;
+    public GameObject Lamp,Options,LoadingCanvas,DesktopCanvas,DeleteGameButton;
     public CanvasGroup fadeCanvas;
-    
-    bool inputMouseUp;
+    public TextMeshProUGUI startGameButton;
+
     Collider option;
+    bool continueGame;
     
     void Start()
     {
@@ -25,6 +26,13 @@ public class CursorMover : MonoBehaviour
         mainCam.Priority = 1;
         Cursor.lockState = CursorLockMode.Locked;
         fadeCanvas.DOFade(0.0f, 1.0f).SetEase(Ease.OutCubic);
+
+        if (PlayerPrefs.HasKey("CompletedIntro") && PlayerPrefs.GetInt("CompletedIntro") == 1)
+        {
+            startGameButton.SetText("_continue");
+            continueGame = true;
+            DeleteGameButton.SetActive(true);
+        }
     }
 
     public void StartGame()
@@ -34,7 +42,16 @@ public class CursorMover : MonoBehaviour
         IEnumerator _StartGame()
         {
             GetComponentInParent<Canvas>().enabled = false;
-            LoadingCanvas.SetActive(true);
+            
+            if (continueGame)
+            {
+                DesktopCanvas.SetActive(true);
+            }
+            else
+            {
+                LoadingCanvas.SetActive(true);
+            }
+
             loadingCam.Priority = 2;
 
             yield return new WaitForSeconds(3.0f);
@@ -99,6 +116,14 @@ public class CursorMover : MonoBehaviour
                     #else
                         Application.Quit();   
                     #endif
+                }
+                else if (option.name == "Delete")
+                {
+                    PlayerPrefs.DeleteAll();
+                    startGameButton.SetText("_start");
+                    continueGame = false;
+                    DeleteGameButton.SetActive(false);
+                    option = null;                    
                 }            
             }   
         }
@@ -123,7 +148,7 @@ public class CursorMover : MonoBehaviour
             other.GetComponent<TextMeshProUGUI>().color = Color.white;
         }
 
-        if (other.name == "Exit")
+        if (other.name == "Exit" || other.name == "Delete")
         {
             other.GetComponent<TextMeshProUGUI>().color = Color.red;
         }

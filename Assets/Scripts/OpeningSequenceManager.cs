@@ -29,15 +29,7 @@ public class OpeningSequenceManager : MonoBehaviour
 
         if (skipOpening)
         {
-            Debug.Log("[OpeningSequenceManager] Skipping opening sequence.");
-
-            dreamOS.gameObject.SetActive(true);
-            fade.gameObject.SetActive(false);
-            fullScreenRawImage.parent.gameObject.SetActive(false);
-        }
-        else
-        {
-            StartGame();
+            SkipOpening();
         }
     }
 
@@ -61,6 +53,17 @@ public class OpeningSequenceManager : MonoBehaviour
             .Append(chapterTitleText.DOFade(0, 1.0f).SetEase(Ease.OutCubic));
     }
 
+    public void SkipOpening()
+    {
+        Debug.Log("[OpeningSequenceManager] Skipping opening sequence.");
+
+        dreamOS.gameObject.SetActive(true);
+        fade.gameObject.SetActive(false);
+        fullScreenRawImage.parent.gameObject.SetActive(false);        
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void notificationAndCloseGameSequence()
     {
         DOTween.Sequence()
@@ -79,6 +82,8 @@ public class OpeningSequenceManager : MonoBehaviour
 
     public void CloseGame()
     {
+        PlayerPrefs.SetInt("CompletedIntro", 1);
+        
         fullScreenRawImage.DOScale(Vector3.zero, 1.0f).SetEase(Ease.InOutQuint).OnComplete( () => {
             topBar.gameObject.SetActive(false);
             mouseCursor.gameObject.SetActive(false);
