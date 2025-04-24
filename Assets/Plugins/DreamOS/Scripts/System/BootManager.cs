@@ -24,6 +24,7 @@ namespace Michsky.DreamOS
         public UnityEvent onBootEnd = new UnityEvent();
         public UnityEvent onRebootStart = new UnityEvent();
         public UnityEvent onRebootEnd = new UnityEvent();
+        public UnityEvent onShutDownEnd = new UnityEvent();
 
         // Helpers
         float cachedStartLength = 2;
@@ -118,14 +119,13 @@ namespace Michsky.DreamOS
             if (isShutdownInProgress)
                 return;
 
-            UnityEvent events = new UnityEvent();
-            events.AddListener(delegate 
+            onShutDownEnd.AddListener(delegate 
             {
                 isShutdownInProgress = false; 
                 targetCanvas.gameObject.SetActive(false); 
             });
 
-            DoFadeInAnimation(events);
+            DoFadeInAnimation(onShutDownEnd);
             isShutdownInProgress = true;
         }
 

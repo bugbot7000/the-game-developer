@@ -45,6 +45,7 @@ namespace Michsky.DreamOS
             var onBootEnd = serializedObject.FindProperty("onBootEnd");
             var onRebootStart = serializedObject.FindProperty("onRebootStart");
             var onRebootEnd = serializedObject.FindProperty("onRebootEnd");
+            var onShutDownEnd = serializedObject.FindProperty("onShutDownEnd");
 
             var bootOnEnable = serializedObject.FindProperty("bootOnEnable");
             var fadeFrameSkip = serializedObject.FindProperty("fadeFrameSkip");
@@ -60,6 +61,7 @@ namespace Michsky.DreamOS
                     EditorGUILayout.PropertyField(onBootEnd, new GUIContent("On Boot End"));
                     EditorGUILayout.PropertyField(onRebootStart, new GUIContent("On Reboot Start"));
                     EditorGUILayout.PropertyField(onRebootEnd, new GUIContent("On Reboot End"));
+                    EditorGUILayout.PropertyField(onShutDownEnd, new GUIContent("On Shutdown End"));
                     break;
 
                 case 1:
