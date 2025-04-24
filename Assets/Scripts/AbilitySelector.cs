@@ -7,6 +7,12 @@ using UnityEngine.UI;
 
 public class AbilitySelector : MonoBehaviour
 {
+    public scr_playerController player;
+    private void Start()
+    {
+        player = FindObjectOfType<scr_playerController>();
+    }
+
     public List<DOTweenAnimation> GrowTweens = new();
    // public List<DOTweenAnimation> ShrinkTweens = new();
     public List<GameObject> Skills = new();
@@ -32,37 +38,37 @@ public class AbilitySelector : MonoBehaviour
         {
             PickAbility(0);
             currentAbility = Abilities.Push;
+            player.ChangeFirstSpellEffect(0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             PickAbility(1);
             currentAbility = Abilities.Pull;
+            player.ChangeFirstSpellEffect(1);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             PickAbility(2);
             currentAbility = Abilities.Charm;
+            player.ChangeFirstSpellEffect(2);
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             PickAbility(3);
             currentAbility = Abilities.Slash;
+            player.ChangeFirstSpellEffect(3);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             PickAbility(4);
             currentAbility = Abilities.Freeze;
+            player.ChangeFirstSpellEffect(4);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            CycleShapes();
         }
     }
-
-    private void CycleShapes()
-    {
-        
-    }
+    
 
     private void PickAbility(int index)
     {
@@ -76,7 +82,6 @@ public class AbilitySelector : MonoBehaviour
                 GrowTweens[i].transform.SetSiblingIndex(i);
             }
         }    
-        Debug.Log("Index " + index);
         if(Skills[index].GetComponent<IsAbilitySelected>().isSelected == false)
         {
             Skills[index].GetComponent<IsAbilitySelected>().isSelected = true;
