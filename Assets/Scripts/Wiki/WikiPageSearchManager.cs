@@ -39,6 +39,9 @@ public class WikiPageSearchManager : MonoBehaviour
     [TitleGroup("References")]
     [SerializeField] WindowManager webBrowser;
     [SerializeField] NetworkManager networkManager;
+
+    [TitleGroup("Assets")]
+    [SerializeField] Sprite notificationSprite;
     
     WikiIndex index;
     List<WikiPageSO> visitedPages = new List<WikiPageSO>();
@@ -53,6 +56,9 @@ public class WikiPageSearchManager : MonoBehaviour
     public WikiPageSO LastFoundPageSO { get; private set; }
     public float ProgressToUnlockSpring => progressToUnlockSpring;
     public float ProgressToUnlockSummer => progressToUnlockSummer;
+
+    bool hasShownSpringNotification;
+    bool hasShowSummerNotification;    
 
     void Start()
     {
@@ -79,6 +85,21 @@ public class WikiPageSearchManager : MonoBehaviour
             webBrowser.GetComponent<WebBrowserManager>().OpenPage("wiki.eren.local/archive");    
             networkManager.networkItems[0].networkSpeed = 100;        
         }
+    }
+
+    void Update()
+    {
+        if (SpringUnlocked() && !hasShownSpringNotification)
+        {
+            NotificationManager.CreateNotification(notificationSprite, "New Database Available", "Spring", true);
+            hasShownSpringNotification = true;
+        }
+
+        if (SummerUnlocked() && !hasShowSummerNotification)
+        {
+            NotificationManager.CreateNotification(notificationSprite, "New Database Available", "Summer", true);
+            hasShowSummerNotification = true;
+        }        
     }
 
     public float GetTotalProgress()
