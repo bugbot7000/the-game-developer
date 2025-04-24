@@ -6,6 +6,12 @@ public class ShapeStatusUpdate : MonoBehaviour
     public Animator anim;
     public AbilitySelector Abs;
 
+    scr_playerController player;
+    private void Start()
+    {
+        player = FindObjectOfType<scr_playerController>();
+    }
+    
     private void Update()
     {
         SwitchShape();
@@ -13,22 +19,28 @@ public class ShapeStatusUpdate : MonoBehaviour
 
     void SwitchShape()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (player != null)
         {
-            if (Abs.currentShape == AbilitySelector.Shapes.Swipe)
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                anim.Play("Beam");
-                Abs.currentShape = AbilitySelector.Shapes.Beam;
-            }           
-            else if (Abs.currentShape == AbilitySelector.Shapes.Beam)
-            {
-                anim.Play("Shield");
-                Abs.currentShape = AbilitySelector.Shapes.Shield;
-            }       
-            else if (Abs.currentShape == AbilitySelector.Shapes.Shield)
-            {
-                anim.Play("Swipe");
-                Abs.currentShape = AbilitySelector.Shapes.Swipe;
+                if (Abs.currentShape == AbilitySelector.Shapes.Swipe)
+                {
+                    anim.Play("Beam");
+                    Abs.currentShape = AbilitySelector.Shapes.Beam;
+                    player.SwitchSpell1ToBeam();
+                }
+                else if (Abs.currentShape == AbilitySelector.Shapes.Beam)
+                {
+                    anim.Play("Shield");
+                    Abs.currentShape = AbilitySelector.Shapes.Shield;
+                    player.SwitchSpell1ToShield();
+                }
+                else if (Abs.currentShape == AbilitySelector.Shapes.Shield)
+                {
+                    anim.Play("Swipe");
+                    Abs.currentShape = AbilitySelector.Shapes.Swipe;
+                    player.SwitchSpell1ToSwipe();
+                }
             }
         }
     }

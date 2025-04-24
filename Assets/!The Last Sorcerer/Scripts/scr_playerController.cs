@@ -20,6 +20,10 @@ public class scr_playerController : MonoBehaviour
     public Vector3 currentParticleScale;
     public Vector3 currentParticleRotation;
 
+    // Movement Vars
+    private float acceleration = 10f;
+    private float deceleration = 15f;
+    private float currentSpeed = 0f;
 
 Vector3 velocity;
     //public ParticleSpawner Pspawner;
@@ -109,6 +113,7 @@ Vector3 velocity;
     // Update is called once per frame
     void Update()
     {
+        
         //BeamStopperPositionSetter();
 
         velocity = Vector3.zero;
@@ -375,7 +380,7 @@ Vector3 velocity;
             MakeParticles();
             var copy = Instantiate(spellShape, spellSpawn.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
-            if (spellShape = beam)
+            if (spellShape == beam)
             {
                 Vector3 beamRotation = new Vector3(rotationSetting.x, rotationSetting.y + 90f, rotationSetting.z);
                 copy.transform.eulerAngles = beamRotation;
@@ -591,7 +596,11 @@ Vector3 velocity;
     public void MakeParticles()
     {
         AssignParticles();
-        GameObject spellParticles = Instantiate(currentParticleType, transform);
+        GameObject AttackParticle = Instantiate(currentParticleType, transform);
+        if (equippedSpell == beam)
+        {
+            Destroy(AttackParticle,dTime);
+        }
         //if (equippedSpell == swipe)
         //{
         //    //spellParticles.transform.SetParent(swipeParPos, true);
@@ -647,8 +656,22 @@ Vector3 velocity;
 
     private void FixedUpdate()
     {
-        body.MovePosition(body.position + velocity * mSpd * Time.fixedDeltaTime);
-        transform.eulerAngles = rotationSetting;
+        Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+
+        float targetSpeed = input.magnitude * mSpd;
+        if (targetSpeed > currentSpeed)
+            currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, acceleration * Time.fixedDeltaTime);
+        else
+            currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, deceleration * Time.fixedDeltaTime);
+
+        Vector3 move = input * currentSpeed;
+        body.MovePosition(body.position + move * Time.fixedDeltaTime);
+
+        if (move != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.fixedDeltaTime);
+        }
 
     }
 }
