@@ -7,6 +7,9 @@ public class scr_playerEditSpellShape : MonoBehaviour
     void Start()
     {
         playerController = GetComponent<scr_playerController>();
+
+        playerController.ChangeFirstSpellEffect(0);
+        playerController.SwitchSpell1ToSwipe();
     }
 
     void Update()

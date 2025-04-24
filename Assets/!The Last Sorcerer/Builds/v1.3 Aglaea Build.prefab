@@ -912,7 +912,7 @@ MonoBehaviour:
   dialogue:
     name: Old Man
     sentences:
-    - Our beloved sages have abandoned us... How could it have come to this?
+    - "Our beloved sages have abandoned us... \nHow could it have come to this?"
 --- !u!65 &3494839755532484860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1177,6 +1177,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5499041680031555884}
     m_Modifications:
     - target: {fileID: 1373288206841002456, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 8818834196505910022}
+    - target: {fileID: 1373288206841002456, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
       propertyPath: dmgTxt
       value: 
       objectReference: {fileID: 1150794168285595387}
@@ -1195,6 +1199,10 @@ PrefabInstance:
     - target: {fileID: 1373288206841002456, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
       propertyPath: whatIsPlayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189523781737328098, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2257558068644399440, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1236,12 +1244,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5302194649355981407, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
       propertyPath: m_Name
       value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484121599300810276, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439572127817085592, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8921620868507164617, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
@@ -1256,6 +1276,11 @@ PrefabInstance:
 --- !u!4 &1658054191788195494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2257558068644399440, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
+  m_PrefabInstance: {fileID: 600916753949407222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8818834196505910022 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8229246814670384368, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
   m_PrefabInstance: {fileID: 600916753949407222}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1000170051517184638
@@ -1273,6 +1298,14 @@ PrefabInstance:
     - target: {fileID: 1056971233326599720, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
       propertyPath: m_text
       value: he explains it in the modmagic article in the wiki
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056971233326599720, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
+      propertyPath: m_fontSize
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056971233326599720, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2834181339475905740, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
       propertyPath: m_Name
@@ -1818,6 +1851,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1717100780237513720, guid: 38bd90e99195ad642825662d01ecf253, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849251699255591825, guid: 38bd90e99195ad642825662d01ecf253, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4343799593947693758, guid: 38bd90e99195ad642825662d01ecf253, type: 3}
       propertyPath: m_Drag
       value: 1
@@ -1827,9 +1868,17 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6698087070967232198, guid: 38bd90e99195ad642825662d01ecf253, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698087070967232198, guid: 38bd90e99195ad642825662d01ecf253, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2e08c8eb043b314478410e09676be19a, type: 2}
+    - target: {fileID: 7217069679466399108, guid: 38bd90e99195ad642825662d01ecf253, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7710243323735441388, guid: 38bd90e99195ad642825662d01ecf253, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1910,7 +1959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1056971233326599720, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
       propertyPath: m_text
-      value: eren please fix the wall dash glitch so people don't use it in the maze
+      value: eren please fix the wall dash glitch so people don't use it in the <b>maze</b>
       objectReference: {fileID: 0}
     - target: {fileID: 2834181339475905740, guid: 98e1c1a4a54841941b6827b961807dcc, type: 3}
       propertyPath: m_Name
