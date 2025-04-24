@@ -24,9 +24,9 @@ public class WikiPageSO : ScriptableObject
     [Tooltip("Allows for a page to be searched for by words that are not contained in title, subtitle, or content of the page. Keywords must be in lowercase!")]
     public List<string> AdditionalKeywords;
 
-    List<string> KentoAliasess = new List<string>{"KentoWrites (narrative/puzzles)", "Narrative Chef", "Burning Down Your Kitchen", "Sisyphus Moment", "Kento's Still Writing"};
-    List<string> RoseAliasess = new List<string>{"rosygoldart (art)", "in the (art) trenches", "eepy artiste", "panera rose refresher", "toonity update anti", "punished rose"};
-    List<string> ErenAliasess = new List<string>{"erenlaiii (programming)", "Mooncake Dealer", "beep boop coder [ERROR]", "Mooncake's Indentured Servant", "Flashing Lights Warning", "Lai-ing on the floor"};
+    List<string> KentoAliasess = new List<string>{"KentoWrites (narrative/puzzles)", "Narrative Chef", "Burning Down Your Kitchen", "Sisyphus Moment", "Kento's Still Writing", "Kento “Mister Hustle” Cox", "Kento’s Still Writing", "Kentusle", "Kento (Working)"};
+    List<string> RoseAliasess = new List<string>{"rosygoldart (art)", "in the (art) trenches", "eepy artiste", "panera rose refresher", "toonity update anti", "punished rose", "wilting rose", "rose", "rosygoldart"};
+    List<string> ErenAliasess = new List<string>{"erenlaiii (programming)", "Mooncake Dealer", "beep boop coder [ERROR]", "Mooncake's Indentured Servant", "Mooncake’s Indentured Servant", "Flashing Lights Warning", "Lai-ing on the floor", "Not Lai-king This Job Hunt", "Neverending Coding Problems"};
 
     public bool PageContainsTerm(string term)
     {
