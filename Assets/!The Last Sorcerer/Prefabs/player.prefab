@@ -438,7 +438,7 @@ MonoBehaviour:
   equippedEffect: 0
   equippedFamiliar: {fileID: 6966860391806952505, guid: 36d4e4775467a0b44899d2a3ee58c9e6, type: 3}
   spell2: {fileID: 1430266317827117232, guid: 92f1ce4bc7c107049ac6d595c00d401f, type: 3}
-  spell1: {fileID: 1430266317827117232, guid: 92f1ce4bc7c107049ac6d595c00d401f, type: 3}
+  spell1: {fileID: 8687078719347366435, guid: e910a0cef55459f41bf7a49c6ad55b31, type: 3}
   currentAttack: {fileID: 0}
   charmedThrall: {fileID: 0}
   currentFamiliars: []
@@ -2170,6 +2170,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5092617584671345063, guid: 86036d7962e184f7cb646dacd81b97c1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1534f7504a52c4bd38a84a3f93adf2be, type: 2}
     - target: {fileID: 5185109420145839537, guid: 86036d7962e184f7cb646dacd81b97c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -0.114230916
