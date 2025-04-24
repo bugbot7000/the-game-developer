@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B8_KentoDevlog
+  m_Name: B8_Devlog_Kento
   m_EditorClassIdentifier: 
   PageType: 0
-  Date: 
+  Date: 7/18/2017
   Title: Kento's Devlog #8
   Subtitle: 
   Content: "Kento goes on a rant about how they have to IMMEDIATELY fix this or their

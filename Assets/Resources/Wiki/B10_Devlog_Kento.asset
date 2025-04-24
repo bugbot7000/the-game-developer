@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B7_ErenDevlog
+  m_Name: B10_Devlog_Kento
   m_EditorClassIdentifier: 
   PageType: 0
-  Date: 
-  Title: Eren's Devlog #7
+  Date: 9/12/2017
+  Title: Kento's Devlog #10
   Subtitle: 
-  Content: 'Eren trying to juggle 3 things: working on TLS, getting his teammates
-    to talk to each other like fucking adults, and finding a job in the industry.
-    Mentions not being able to sleep well + frequent headaches
-
-'
+  Content: I fixed the bug.
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

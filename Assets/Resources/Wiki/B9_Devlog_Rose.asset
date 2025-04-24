@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
-  m_Name: B7_RoseDevlog
+  m_Name: B9_Devlog_Rose
   m_EditorClassIdentifier: 
   PageType: 0
-  Date: 
-  Title: Rose's Devlog #7
+  Date: 8/22/2017
+  Title: Rose's Devlog #9
   Subtitle: 
-  Content: "Rose getting very fed up with what she sees as Kento hounding her to
-    spend all her free time on TLS. The nagging doesn\u2019t help because she needs
-    space to cook, and after a few times of telling him to stops she ends up leaving
-    him on read (which prompts more nagging)"
+  Content: "Rose saying that this should never have happened in the first place and
+    that Kento\u2019s overeagerness and jumping the gun put them in this position
+    to begin with. Says that they should give Eren a break and wait for the stable
+    release but in a very detached way (statistic instead of person)"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
