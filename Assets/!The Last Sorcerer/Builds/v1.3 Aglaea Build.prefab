@@ -1925,6 +1925,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3906664088741992847, guid: 38bd90e99195ad642825662d01ecf253, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4343799593947693758, guid: 38bd90e99195ad642825662d01ecf253, type: 3}
       propertyPath: m_Drag
       value: 1
