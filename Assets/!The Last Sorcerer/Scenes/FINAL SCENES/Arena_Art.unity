@@ -176,8 +176,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crimson Phoenix
       objectReference: {fileID: 0}
+    - target: {fileID: 8463200946096902484, guid: 5399185d14afa30458390e803850b145, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 572198821366177906, guid: 5399185d14afa30458390e803850b145, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5399185d14afa30458390e803850b145, type: 3}
