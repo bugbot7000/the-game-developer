@@ -51,6 +51,8 @@ public class WikiPageSearchManager : MonoBehaviour
     public string LastSearchTerm  { get; private set; }
     public WikiPage LastFoundPage { get; private set; }
     public WikiPageSO LastFoundPageSO { get; private set; }
+    public float ProgressToUnlockSpring => progressToUnlockSpring;
+    public float ProgressToUnlockSummer => progressToUnlockSummer;
 
     void Start()
     {
@@ -77,6 +79,25 @@ public class WikiPageSearchManager : MonoBehaviour
             webBrowser.GetComponent<WebBrowserManager>().OpenPage("wiki.eren.local/archive");    
             networkManager.networkItems[0].networkSpeed = 100;        
         }
+    }
+
+    public float GetTotalProgress()
+    {
+        float visited = 0;
+
+        foreach (WikiPageSO wikiPage in fallIndex.WikiPages)
+            if (HasPageBeenVisited(wikiPage))
+                visited++;
+
+        foreach (WikiPageSO wikiPage in springIndex.WikiPages)
+            if (HasPageBeenVisited(wikiPage))
+                visited++; 
+
+        foreach (WikiPageSO wikiPage in summerIndex.WikiPages)
+            if (HasPageBeenVisited(wikiPage))
+                visited++;                 
+
+        return visited / (fallIndex.WikiPages.Count + springIndex.WikiPages.Count + summerIndex.WikiPages.Count);                                               
     }
 
     public float GetFallSemesterProgress()
@@ -110,6 +131,17 @@ public class WikiPageSearchManager : MonoBehaviour
     {
         return GetSpringSemesterProgress() >= progressToUnlockSummer;
     }
+
+    public float GetSummerProgress()
+    {
+        float visited = 0;
+
+        foreach (WikiPageSO wikiPage in summerIndex.WikiPages)
+            if (HasPageBeenVisited(wikiPage))
+                visited++;        
+
+        return visited / summerIndex.WikiPages.Count;
+    }    
 
     public void SetSearchTerm(string term)
     {
