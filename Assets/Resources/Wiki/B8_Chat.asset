@@ -14,13 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 3
   Date: 7/11/2017
-  Title: Archived Chat
+  Title: Archived Chat Log
   Subtitle: 
-  Content: "Eventually the stress and overwork gets to Eren and he passes out during
-    an in person job interview. He\u2019s taken to the emergency room and cleared
-    to go home the same day but the doctor emphasizes that he should just rest and
-    do nothing for a little while + refers him to a therapist \r\n\r\nDevlog is replaced
-    with a long archived chat conversation of shit going down in real time. "
+  Content: "rose: kento im putting my foot down\r\nrose: either you reduce my workload,
+    you reduce your expectations, you hire another artist, or i stop working on this
+    entirely\r\nrose: i am stressed, tired, and fed up from work and you trying to
+    push me around \r\nrose: and on top of that you keep trying to ignore that <mark=#ffff00aa>glitch</mark>
+    even though it came back to haunt us like i said i would\r\nrose: erens barely
+    talked in here too arent you at least mildly concerned about what youre doing
+    to his <mark=#ffff00aa>health</mark>\r\nKento (Working): I\u2019ve been working
+    around the <mark=#ffff00aa>glitch</mark> just fine. Toonity isn\u2019t going
+    to fix our problem for us. \r\nKento (Working): And I expect you to honor the
+    commitment you made to this project. \r\nKento (Working): You can\u2019t tell
+    me you don\u2019t want to at least see this through. \r\nrose: you know kento
+    there\u2019s a manager at revolt that acts exactly like you\r\nrose: demanding
+    things from his team on unrealistic schedules and making his way the only way
+    \r\nrose: you know what happened last week? \r\nrose: he got fired. walked out
+    in front of everyone after half his department quit after realizing they would
+    actually get treated like humans elsewhere  \r\nKento (Working): I see you\u2019re
+    truly found your place at Revolt, then. \r\nKento (Working): A company full of
+    people who would rather sit on their hands all day than actually work towards
+    something they\u2019re passionate about. \r\nKento (Working): No wonder the recent
+    Conference of Champions update was so bad. \r\nNeverending Coding Problems: Guys
+    you can\u2019t keep doing this\r\nNeverending Coding Problems: A talk about expectations
+    and what each one of us can handle is long overdue\r\nNeverending Coding Problems:
+    We can do that now if you two cool down and back off from each other\r\nrose:
+    you want me to back off? \r\nrose: remember how kento literally said last month
+    that you guys only brought me on because i was useful? \r\nrose: clearly you
+    never thought of me as more than a means to end so why bother trying to fix this\r\nNeverending
+    Coding Problems: Rose that isn\u2019t true\r\nNeverending Coding Problems: You
+    know you were one of the first friends I made in the program\r\nNeverending Coding
+    Problems: We\u2019ve genuinely enjoyed having you on the team\r\nrose: \u201Cwe\u201D?
+    dont make me laugh\r\nrose: did you conveniently forget what kento said to me
+    just because you guys are besties\r\nNeverending Coding Problems: Rose I promise
+    he didn\u2019t mean it\r\nrose: speak for him all you want. i\u2019m not stupid
+    enough to believe that\r"
   IsArchivedChat: 1
   ActivatesInteractveChat: 0
   ChatID: 

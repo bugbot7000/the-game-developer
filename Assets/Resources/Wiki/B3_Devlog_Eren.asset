@@ -14,35 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 12/8/2016
-  Title: Crunch and Compromise
-  Subtitle: 
-  Content: "I\u2019ve hit a wall with some coding stuff, so I may as well get this
-    devlog out of the way while I\u2019m trying to clear my head. \n\r\nWe ran into
-    quite a few issues during <mark=#ffff00aa>playtesting</mark>. I expected some
-    of them to pop up, but some of the others were kind of absurd. For example, people
-    kept shooting the tutorial old man so I had to rename him to Adorable Dog. We
-    found a weird bug where if you walked into a specific corner of the <mark=#ffff00aa>maze</mark>
-    the entire game crashed. One poor guy at Playtest Tuesday managed to break Kento\u2019s
-    Toonity installation so badly he had to reinstall the entire program. \n\r\nBut
-    we should have the close to final <mark=#ffff00aa>maze</mark> implemented alongside
-    the <mark=#ffff00aa>minotaur </mark>boss!  We did get some feedback that killing
-    the minotaur with the pull spell was not that intuitive and I can see why: you
-    need to hold shift and press 2 to activate the pull spell, press 2 (without shift)
-    to switch to the beam shape, and then go to a separate platform to pull the minotaur
-    off. \n\nBut once this is fixed we can move on to the rest of the game next semester,
-    starting with the <mark=#ffff00aa>frontier</mark> level Kento has planned. I
-    already expect he\u2019ll have a ton of things for me when we come back. \n\r\nI
-    am a little worried about Kento and Rose though. They seem to have completely
-    opposite philosophies when it comes to gamedev. Kento is a more grindset person,
-    while Rose is really anti-burnout. Rose mentioned after our midterm that she
-    crunched to finish one of her games and it didn\u2019t turn out well, called
-    <mark=#ffff00aa>The Last Knight</mark>. I went and played it and I kind of see
-    what she means, but it was still a really good game. \n\r\nWe did come to an
-    understanding after talking with Clover though, so I really hope it doesn\u2019t
-    spiral out of control in the future. \n\r\nI\u2019m glad we made lots of progress
-    this semester! I was worried that Kento would be more hostile to the idea of
-    one of his brainchildren getting shared with someone that he doesn\u2019t super
-    trust yet but I\u2019m so relieved it\u2019s been working out. \r"
+  Title: Crunch and compromise
+  Subtitle: Eren
+  Content: "- Playtest problem number one: People keep killing the old man\r\n- So
+    I renamed him to \u201Cadorable dog\u201D\r\n- Something tells me even that won\u2019t
+    stop these players though\r\n- Playtests are nice because we get a lot of good
+    feedback but also not so good because that means I have so many random little
+    fixes to keep track of\r\n- We found this other weird <mark=#ffff00aa>bug</mark>
+    where if you walk into a specific corner of the maze, the whole game crashes\r\n-
+    But after I\u2019m done fixing things like that, we should be just about done
+    with the <mark=#ffff00aa>minotaur</mark> boss fight. And I gotta say that\u2019s
+    gonna feel great\r\n- It means we can start thinking about the <mark=#ffff00aa>frontier</mark>
+    level Kento keeps talking about for next semester. He\u2019s got big plans for
+    it and I just know he\u2019s gonna have a bunch of stuff for me to do when I
+    get back from break\r\n- About Kento though\r\n- He and Rose keep having disagreements\r\n-
+    I\u2019m not going to call it fighting, but just like very tense moments talking
+    about crunch and burnout and work load and stuff\r\n- Rose is pretty chill which
+    I like. She keeps talking about this game she made called Last Night. No it\u2019s
+    Last <mark=#ffff00aa>Knight</mark> with a K\r\n- Anyways she was only able to
+    finish because she crunched really hard and it ended up being really bad\r\n-
+    I went and played it and it\u2019s actually like really good? I could kinda see
+    what she meant though\r\n- Anyway, Rose keeps warning us about burnout and wants
+    to uh how did she say it? Underpromise and overdeliver\r\n- But Kento is not
+    like that at all. Kento was born to hustle. Burnout is afraid of him \r\n- I
+    bet he would say something edgy like \u201Call great art is borne in blood\u201D
+    or something like that. \u201CArt is life and life is suffering so suffering
+    is art\u201D \r\n- You get the idea \r\n- I had them both talk to Clover about
+    it and they seem to have come to a mutual understanding? Question mark? I hope
+    slash think so?\r\n- I was also worried that Kento would get weird about letting
+    other people work on his precious narratives even if they\u2019re not doing writing
+    stuff but he\u2019s taking it really well so far. - It\u2019s a happy surprise\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

@@ -14,12 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: '6/20/2017 '
-  Title: Kento's Devlog #7
-  Subtitle: 
-  Content: "Kento getting more and more impatient with Rose\u2019s glacial pace on
-    assets, pouring more and more of his time into TLS (and starts doing kinda strange
-    things like programming an entire alternate magic system). Starts nagging Rose
-    almost daily for updates"
+  Title: Ongoing Struggles
+  Subtitle: Kento
+  Content: "\tA thousand words of story documentation and three puzzle design iterations
+    per day on what I\u2019m now calling the <mark=#ffff00aa>Ritual<mark=#ffff00aa>
+    level, minimum. I\u2019m burning my candle on both ends with all this <mark=#ffff00aa>writing</mark>
+    and my teammates seem barely invested. I guess they\u2019ve already gotten their
+    grade, huh?\n\r\n\tI tried to impress how important keeping up a timely pace
+    for the assets is for Rose, and she outright told me that she\u2019d rather pawn
+    it off onto some yahoo I find on the internet. Is she not aware of the fact that
+    letting her work on <mark=#ffff00aa>Trismegistus</mark> was a huge privilege?
+    Not to mention that their artstyle would absolutely clash with hers. \n\r\n\tI
+    haven\u2019t gotten into any of the companies I\u2019ve interviewed for, so <mark=#ffff00aa>Trismegistus</mark>
+    is my only concern at the moment. The sparse feedback I\u2019ve received suggests
+    that I struggle when I <mark=#ffff00aa>interview</mark>, and that\u2019s why
+    I haven\u2019t received any offers. I\u2019ve gotten the \u201Csoft skills\u201D
+    lecture from faculty before - apparently I tend to be very blunt when it comes
+    to giving or receiving feedback, and most people don\u2019t like being told where
+    they need to improve. I just think they need thicker skin, especially in this
+    sort of creative industry. \n\r\n\tI\u2019m wary of any culture that prioritizes
+    popularity over competence anyway. When most people say \u201Csoft skills\u201D
+    they really mean \u201Care you willing to put up with nonsense management bullshit
+    until you quit or get fired\u201D. That shit is lethal and I want no part in
+    it. \n\r\n\tI\u2019ve long since accepted the eventuality that I\u2019ll need
+    to finish the game without Rose. I wasn\u2019t really prepared to finish it without
+    Eren, but I\u2019m beginning to wonder if we still share the same vision. The
+    whole affair has put me in kind of a dark place, and I\u2019m worried it\u2019s
+    going to start coming through in my writing.\n\r\n\tAnyways, I compiled a new
+    build with what little Eren and Rose have finished. I\u2019m reserving the Golden
+    Dragon title for the final product, so this one is codenamed <mark=#ffff00aa>Jade</mark>.
+    \r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

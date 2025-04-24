@@ -14,31 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 11/25/2016
-  Title: T-Posing Minotaurs and Scope Struggle
-  Subtitle: 
-  Content: "Alright, this is my second devlog. We\u2019ve finally hit the middle
-    of the semester, our midterm progress presentations were last week, and we just
-    got the feedback from that. Though I should probably talk about what I worked
-    on for that milestone first, haha. \n\r\nSince my last devlog, I\u2019ve successfully
-    implemented the <mark=#ffff00aa>modular magic</mark> system, though it is kinda
-    broken still. Most of the components work, but I\u2019m still ironing out some
-    bugs when it comes to actually combining them and using them on overworld objects.
-    The <mark=#ffff00aa>minotaur</mark> fight at the end of the <mark=#ffff00aa>maze</mark>
-    is functional, but still kind of visually sparse, so it's blocked off in this
-    build. We don\u2019t have the animations for them yet, so they just T-pose after
-    you while yelling their boss lines. It\u2019s very funny. \n\r\nI also tried
-    out a new <mark=#ffff00aa>save/load system</mark>, where you can press a key
-    to save, close the game, and then press another key to load your progress after
-    you open it again. I don't remember the exact keys, but I put them in a comment
-    at the end of the maze.\n\nTurns out this was crashing the game, but we only
-    found out because Kento was fooling around in the build right before the deadline.
-    I will have to fix it for the next build.\n\r\nThe faculty\u2019s main concern
-    with our game was scope, aside from a few mechanical things I can fix next week.
-    They thought that Kento might be dreaming a little too big for something that
-    should be done by May, and I suppose they\u2019re right. \n\nI am worried about
-    how Kento is taking the news though. It was already a really big step for him
-    to bring one of his stories out into the open. I hope he doesn\u2019t take it
-    too personally. \r\n"
+  Title: Scope struggles and save system
+  Subtitle: Eren
+  Content: "- Okay so we got feedback on our midterm build but let me just talk about
+    what I did for that first\r\n- Uh so there\u2019s Rose\u2019s <mark=#ffff00aa>modular</mark>
+    magic system. It\u2019s like really jank but it works. It\u2019s there\r\n- You
+    can kill the minotaur boss at the end of the maze by using the pull spell on
+    him a bunch of times. \r\n- Again though it\u2019s like really janky because
+    I showed it to a classmate and they kinda just spammed the spell button and ran
+    around until the <mark=#ffff00aa>minotaur</mark> went flying off the stage\r\n-
+    The level leyour is also there. It\u2019s a little sparse right now but Rose\u2019s
+    stuff wasn\u2019t done in time for the deadline since she didn\u2019t want to
+    pull an allnighter \r\n- Makes sense since we\u2019re still early on but Kento
+    was kinda upset about that\r\n- I also implemented a save and load system \r\n-
+    Right now you can press [KEY] to save and quit\r\n- [OTHER KEY] loads your progress
+    after you open it again and it remembers where you were in the world space of
+    the game \r\n- Anyway it was a whole mess because we almost didn\u2019t catch
+    this critical bug that Kento found while doing honestly I have no idea what in
+    the build like a few hours before we were supposed to submit\r\n- Instead of
+    pressing [KEY] he accidentally pressed [KEY THAT CRASHES THE GAME] instead and
+    the entire thing crashed\r\n- I patched in a hotfix for the deadline but it took
+    me an oolong fuelled 2am bender rubber ducking it that night to finally find
+    the bug\r\n- It was a single equals instead of a double equals which just feels
+    so bad man. I managed to get it all sorted out though\r\n- The faculty pretty
+    much unanimously told us we were going way too big on <mark=#ffff00aa>scope</mark>
+    but it\u2019s okay because we\u2019re still early on in development\r\n- After
+    hearing more about Kento\u2019s grand plans for <mark=#ffff00aa>Trismegistus</mark>
+    I can definitely see where they\u2019re coming from but man Kento did NOT seem
+    to take that feedback too well\r\n- He was civil about it and said he\u2019d
+    think about it but I could tell he felt conflicted about scaling back our game.
+    He was like a cat with its tail twitching \r\n- Our advisor Clover said that
+    we can keep things simple for now and revisit this question of scale sometime
+    next semester\r\n- I\u2019m glad to hear that because it means I can take a step
+    back a little bit\r\n- Gives me more time to grind the new lifetime suit in Momo
+    Magick and watch the like 5 Solaris vods I missed while working on the midterm
+    build\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

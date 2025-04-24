@@ -15,12 +15,14 @@ MonoBehaviour:
   PageType: 2
   Date: 11/10/2016
   Title: Thalia
-  Subtitle: 
-  Content: "thalia is the greek charity of \u201Cabundance\u201D. eren is busy at
-    work with the logic for the <mark=#ffff00aa>minotaur</mark> boss and still hasn't
-    implemented much of rose's art into the engine yet, so in the mean time I made
-    a blockout of the shape of the <mark=#ffff00aa>maze</mark> level. i'm also messing
-    around with the narration, which is giving me new ideas for the lore of the game.\r"
+  Subtitle: Kento
+  Content: "In following with my established naming system, <mark=#ffff00aa>Thalia</mark>
+    is the Greek Charity of abundance. \r\nEren is hard at work creating the logic
+    for our first boss fight and still hasn\u2019t implemented much of Rose\u2019s
+    existing art into the game (not that she had it done in time). \r\nIn the meantime
+    I made a greybox of the level - just placeholder shapes. I\u2019m also messing
+    around with the narration, which is giving me new ideas for the game\u2019s overarching
+    story. \r\nControls are in the build when it\u2019s opened. \r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

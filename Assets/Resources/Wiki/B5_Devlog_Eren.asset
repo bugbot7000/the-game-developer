@@ -14,26 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 3/14/2016
-  Title: 'Re: visual bug'
-  Subtitle: 
-  Content: "So we\u2019ve run into a major visual <mark=#ffff00aa>bug</mark>. There\u2019s
-    lots of artifacting and flashing that makes the game pretty much unviewable (and
-    unplayable), and I\u2019m not sure what\u2019s causing it. It doesn\u2019t show
-    up on everyone\u2019s computers (Kento hasn\u2019t had any issues, but me and
-    Rose haven\u2019t been as lucky), so I\u2019m thinking it\u2019s because of the
-    new Toonity engine update? \n\nI managed to put together a quick fix since I
-    haven\u2019t been able to find anyone talking about it online. Kento was really
-    pushing me to fix the bug fast so all the <mark=#ffff00aa>arena</mark> features
-    could be done for our midterm build though. I set one of the visual parameters
-    to 0 on the skybox to turn the flashing off for now, but we\u2019ll have to actually
-    deal with it at some point. \n\r\nI\u2019ve also been regularly getting <mark=#ffff00aa>headaches</mark>
-    while in the coworking space between classes. I think it\u2019s because the lights
-    there are super bright? I\u2019ve been avoiding that area and pushing through
-    cause I really want this project to be a success. I know I initially was only
-    invested for Kento\u2019s sake, but I\u2019ll admit it\u2019s grown on me and
-    now it\u2019s sort of my baby as well.\n\r\nSuper excited to show this to a wider
-    audience at <mark=#ffff00aa>DGC</mark>! I should check in with Rose about that.
-    \r\n"
+  Title: 'Visual bug '
+  Subtitle: Eren
+  Content: "- Dear diary, there\u2019s a huge <mark=#ffff00aa>bug</mark> that\u2019s
+    destroying our game\r\n- It\u2019s a bunch of flashing lights and weird artifacting
+    and makes the game pretty much unplayable\r\n- The most frustrating part is that
+    it\u2019s only on certain computers so trying to diagnose this thing has been
+    a real headache. I think it might have something to do with the new Toonity engine
+    update? \r\n- Rose wanted to spend a few days getting to the bottom of things
+    but Kento was really concerned about getting the <mark=#ffff00aa>arena</mark>
+    level done in time for the midterm build since he has the <mark=#ffff00aa>sage</mark>
+    fights done already\r\n- Which is understandable but his agitated state really
+    was just stressing me out even more\r\n- I ended up just setting a few parameters
+    on the skybox to zero which turned them off entirely and stopped the flashing\r\n-
+    I\u2019ll have to actually deal with it properly later ugh\r\n- I\u2019m also
+    starting to have headaches again which could be the stress or the lack of sleep\r\n-
+    It\u2019s probably the result of spending too much time in the coworking space
+    between classes working on the game\r\n- The lights in that area are super bright,
+    so I try to avoid it usually but I\u2019ve really been pushing myself lately
+    because I want this game to be a success\r\n- I was just interested in helping
+    Kento realize his vision at first but now that I\u2019ve spent so much time with
+    the game it\u2019s sort of my baby as well\r\n- Still not as baby as Mooncake
+    though\r\n- (DCIM_28374.png)\r\n- I\u2019m excited to finally get this in front
+    of some real players hehe \r\n- I should check in with Rose about that\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

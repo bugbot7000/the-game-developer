@@ -14,29 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 9/16/2016
-  Title: 'magic '
-  Subtitle: 
-  Content: "- excited to be working on trismegistus with eren and kento!! \r\n<indent=5%>-
-    eren does witchcraft with his code that not even i understand</indent>\r\n<indent=5%>-
-    kento\u2019s made really interesting narrative/puzzle stuff in the past and i
-    can\u2019t wait to see what he\u2019s got planned for <mark=#ffff00aa>trismegistus</mark></indent>\r\n-
-    modular magic system was actually an idea i\u2019d been chewing on for a while
-    but i didn\u2019t really have the design knowledge to do it myself\r\n<indent=5%>-
-    the whole a + b = c thing has to consider pretty much every combination</indent>\r\n<indent=5%>-
-    coding for that is way beyond what little i know lmfao</indent>\n<indent=5%>-
-    I did add a space to dash to make it easier to move the character around</indent>\r\n-
-    when i finally figured out what kento was trying to tell me about the narrative
-    it just kinda clicked yknow\r\n- anyways i\u2019ve started working on <mark=#ffff00aa>assets</mark>
+  Title: devlog #1
+  Subtitle: Rose
+  Content: "- excited to be working on <mark=#ffff00aa>trismegistus</mark> with eren
+    and kento!! \r\n<indent=5%>- eren does witchcraft with his code that not even
+    i understand\r\n- kento\u2019s made really interesting narrative/puzzle stuff
+    in the past and i can\u2019t wait to see what he\u2019s got planned for... what
+    did he name it? trigonometry? idk </indent>\r\n- <mark=#ffff00aa>modular</mark>
+    magic system was actually an idea i\u2019d been chewing on for a while but i
+    didn\u2019t really have the design knowledge to do it myself\r\n<indent=5%>-
+    the whole a + b = c thing has to consider pretty much every combination\r\n-
+    coding for that is way beyond what little i know lmfao</indent>\r\n- when i finally
+    figured out what kento was trying to tell me about the narrative it just kinda
+    clicked yknow\r\n- anyways i\u2019ve started working on <mark=#ffff00aa>assets</mark>
     to start building better looking levels, mostly to make it presentable before
     we can take it to playtest tuesdays\r\n<indent=5%>- kento was kinda hesitant
-    to show it off so early but we need to know if the modmagic is working as intended</indent>\r\n-
-    speaking of kento i\u2019m pretty sure this guy is allergic to gamedev best practices\r\n<indent=5%>-
-    i made a kithub for the game bc apparently eren has just been storing this on
-    his personal server???</indent>\r\n<indent=5%>- also kento keeps naming his builds
-    esoteric things.  like based on the greek charities </indent>\n<indent=5%>- i
-    keep telling him they need actual version numbers but it seems like they're only
-    on the downloaded builds</indent>\r\n<indent=5%>- both of em have contributor
-    perms now (though idk if they\u2019ll use em)</indent>\r\n"
+    to show it off so early but we need to know if the <mark=#ffff00aa>modular</mark>
+    magic is working as intended</indent>\r\n- speaking of kento i\u2019m pretty
+    sure this guy is allergic to gamedev best practices\r\n- <indent=5%>i made a
+    kithub for the game bc apparently eren has just been storing this on his personal
+    server???\r\n- also kento keeps naming his builds esoteric things.  like based
+    on the greek charities?? this first one is named <mark=#ffff00aa>aglaea</mark>
+    i think\n- i keep telling him they need actual version numbers so he compromised
+    and added both\r\n- both of em have contributor perms now (though idk if they\u2019ll
+    use em)</indent>\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

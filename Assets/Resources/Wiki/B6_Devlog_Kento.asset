@@ -14,37 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 5/10/2017
-  Title: looking forwards
-  Subtitle: 
-  Content: "The <mark=#ffff00aa>puzzle</mark> designs and dialogue for the <mark=#ffff00aa>arena</mark>
-    are finished, faster than expected actually. I used the extra time to finally
-    draft an <mark=#ffff00aa>ending</mark> to our tale: Our heroic <mark=#ffff00aa>sorcerer</mark>
-    uncovers a terrible secret, a spell gone wrong that transformed the third <mark=#ffff00aa>sage</mark>
-    - his dear friend - into the very <mark=#ffff00aa>necromancer</mark> that hunts
-    him. In the climatic finale, he must step forth with a heavy heart to destroy
-    the evil he brought into the world.\r\n\r\nI struggled with the finer details
-    of it all. Tragedy requires nuance. A tragic hero is one who rises above humankind
+  Title: Looking forward.
+  Subtitle: Kento
+  Content: "\tThe puzzle designs and dialogue for all the levels we\u2019ve been
+    working on are finished, faster than expected actually. I used the extra time
+    to finally draft an ending to our tale: Our heroic <mark=#ffff00aa>sorcerer</mark>
+    uncovers a terrible secret, a desperate healing spell gone wrong that transformed
+    the third <mark=#ffff00aa>sage</mark> - his dear friend - into the very necromancer
+    that haunts the world with his creations. In the climatic finale, he must step
+    forth with a heavy heart to destroy the evil he brought into the world and seek
+    redemption in the flames of combat. Fitting that this build is called Crimson
+    <mark=#ffff00aa>Phoenix</mark>. \r\n\n\tI struggled with the finer details of
+    it all. Tragedy requires nuance. A tragic hero is one who rises above humankind
     before falling far below it. And the change must be shocking and stark for it
     to have maximum impact. Yet it must also avoid being contrived. The shocking
     yet inevitable fall from grace: something of a literary hat trick. I\u2019ve
-    done my best with it. Looking back over the dialogue I\u2019ve written for the
-    <mark=#ffff00aa>necromancer</mark>, I\u2019m struck by how similar his voice
-    is to someone I used to know, years ago. \r\n\r\nI think it\u2019s best I leave
-    it alone: if you manage to channel something raw and real into your story, don\u2019t
-    second guess it.\r\n\r\nI\u2019ve moved on to the more mechanical aspects of
-    the ending. The <mark=#ffff00aa>Sanctum</mark> area is in the early drafts; I\u2019ll
-    come back to it once the dust settles post graduation. My workflow is too chaotic
-    to focus on it for now. Rose likes to make these constant tiny little pushes
-    on KitHub which make clean version control difficult. More than once I\u2019ve
-    started work on what I\u2019ve been told is the latest build only to find I\u2019ve
-    actually run into conflict with some micro-update she\u2019s made. It would be
-    easier if she would just push her work in one wave, so that I could see the full
-    scope of potential conflicts. I doubt she\u2019ll want to work nearly this much
-    after we graduate, so I should have a more stable foundation to work from then.\r\n\r\nThere
-    is one complication: I have a job prospect from Double Lariat Studios. I\u2019ve
-    gotten as far as an interview. I would be foolish to turn down an offer from
-    them, but I intend to negotiate a delay to beginning my position so I can finish
-    <mark=#ffff00aa>Trismegistus</mark>.\r"
+    done my best with it. \n\r\n\tLooking back over the dialogue I\u2019ve written
+    for the necromancer, I\u2019m struck by how similar his voice is to someone I
+    was close to, years ago. I think it\u2019s best I leave it alone: if you manage
+    to channel something raw and real into your story, don\u2019t second guess it.\r\n\r\n\tI\u2019ve
+    moved on to the more mechanical aspects of the ending. The final area, the Sanctum
+    (or <mark=#ffff00aa>Ritual</mark>? Not sure yet), is in the early drafts; I\u2019ll
+    come back to it once the dust settles <mark=#ffff00aa>post-grad</mark>. My workflow
+    is too chaotic to focus on it for now. Rose likes to make these constant tiny
+    little pushes on KitHub which make it hard for me to get the whole picture: more
+    than once I\u2019ve started work on what I\u2019ve been told is the latest build
+    only to find I\u2019ve actually run into conflict with some micro-update she\u2019s
+    made. It would be easier if she would just push her work in one wave, so that
+    I could see the full scope of potential conflicts. I doubt she\u2019ll want to
+    work nearly this much after we graduate, so I should have a more stable foundation
+    to work from then.\r\n\r\n\tThere is one complication: I have a job prospect
+    from Double Lariat Studios. I\u2019ve gotten as far as my second interview. I
+    would be foolish to turn down an offer from them, but I intend to negotiate a
+    delay to beginning my position so I can finish this game.\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

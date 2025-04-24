@@ -14,35 +14,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 5/11/2017
-  Title: 'Showcase! '
-  Subtitle: 
-  Content: "As of just now, our final build for the spring semester and the <mark=#ffff00aa>showcase</mark>
-    next week has been submitted. We\u2019re finally almost free. \n\r\nWell, not
-    that we\u2019re being held at gunpoint to finish our game, but I am so done with
-    being in school. \n\r\nAnyways, after Rose finished all the <mark=#ffff00aa>frontier</mark>
-    and <mark=#ffff00aa>arena assets</mark> and Kento finished with his <mark=#ffff00aa>puzzles</mark>
-    I was able to implement the new levels into Toonity. The current progression
-    of our game is now <mark=#ffff00aa>Maze</mark> > <mark=#ffff00aa>Frontier</mark>
-    > <mark=#ffff00aa>Arena</mark>, with Kento planning a third <mark=#ffff00aa>arena</mark>
-    for after we graduate. We\u2019re about 80% there and plan to be working on <mark=#ffff00aa>Trismegistus</mark>
-    for a few more months once we don\u2019t have to go to class anymore. \n\r\nI
-    still can\u2019t figure out what the deal is with the weird visual <mark=#ffff00aa>bug</mark>
-    we\u2019ve been continuing to get. It seems to have spread to all three of our
-    Toonity installations, and sometimes the game is entirely unplayable when we
-    export builds. Kento managed to get a build that reliably doesn\u2019t do that,
-    but this is going to be a huge problem that we need to iron out sooner rather
-    than later. I think it has something to do with how textures are linked to their
-    models in-engine? I\u2019ve sent the Toonity devs another email, because Clover
-    and all our other professors are equally stumped. \n\r\nAll three of us had a
-    big discussion about post-grad plans the other day as well, just to figure out
-    what our schedules will be looking like over the <mark=#ffff00aa>summer</mark>.
-    I just interviewed with a smaller indie studio called Subliminal for a lead programmer
-    role. I think they\u2019ll offer me the position since they really liked how
-    I handled some of the coding hurdles in <mark=#ffff00aa>Trismegistus</mark>,
-    so here\u2019s hoping. \n\r\nKento and Rose mostly seem to have moved past our
-    big fight a few months ago, but honestly I\u2019m still a little worried about
-    them coming to blows again, especially since once we go solo on this we won\u2019t
-    have regular work time and advising meetings anymore. \r"
+  Title: Showcase
+  Subtitle: Eren
+  Content: "- The Crimson <mark=#ffff00aa>Phoenix</mark> build has been submitted
+    for the end of the class and for the end of year showcase! Huzzah! Hm nope not
+    it uh hooray? Woohoo? Uh let\u2019s just move on\r\n- Look I\u2019m just so done
+    with being in school\r\n- Call it senioritis or whatever but I\u2019m just ready
+    to move on to the next thing\r\n- After Rose finished all the necessary assets
+    and Kento finished with his puzzles I was able to import everything into Toonity
+    with minimal amounts of <mark=#ffff00aa>crunch</mark>\r\n- Kento\u2019s also
+    planning another level for after we graduate\r\n- We\u2019re about 80% there
+    and the current plan is to keep on working on this for just a little bit longer
+    after school ends\r\n- Then I\u2019ll have the rest of the summer to catch up
+    on Solaris vods and campaign for the Momo Magick stylist association election
+    hehe\r\n- I still can\u2019t fix that damn visual <mark=#ffff00aa>bug</mark>
+    ugh\r\n- It\u2019s spread to all three of our Toonity installations and sometimes
+    the game is entirely unplayable when we export builds, doesn't even matter what
+    computer you run it on but other times it\u2019s totally fine\n- Kento has a
+    backup of a build that reliably doesn\u2019t transform into a black and white
+    Pollockian hellscape but this is shaping up to be a really big problem\r\n- And
+    yeah I\u2019ve asked for help but Clover and the rest of our professors are equally
+    stumped\r\n- The Toonity devs asked for more info when I emailed them so we\u2019ll
+    see what they say to my latest protestation\r\n- In the meantime Rose wanted
+    to restructure all of our assets but Kento argued that would take way too much
+    time and basically shot her arguments down\r\n- We also had a big conversation
+    about <mark=#ffff00aa>post-grad</mark> plans\r\n- I interviewed with a small
+    indie studio called Subliminal for a lead programmer role and I\u2019m optimistic
+    because they really seemed to like how I navigated the unique programming challenges
+    associated with the innovative design of our game\u2019s groundbreaking ludonarrative
+    wait ugh there I go again \r\n- What I mean to say is they seemed to appreciate
+    how hard I\u2019ve been working on this project and all the bugs I\u2019ve fixed
+    \r\n- Fucking interview ease. Um sorry Is it okay to say fuck in a dev log? Eh
+    Kento\u2019s probably done it already\r\n- Kento and Rose seem to have cooled
+    down from that argument we all had a few months ago but I can tell they\u2019re
+    still kind of on edge about it\r\n- So I\u2019m still a bit worried about another
+    argument happening again especially since we won\u2019t have scheduled work time
+    and advisor meetings anymore once we graduate\r\n- Rose kept trying to talk to
+    me about what happened and I think she was trying to get me to take her side
+    or something? \r\n- I told her I didn\u2019t want to get involved and she really
+    pressed me for my opinion so I said that I did think she was overstepping a little
+    bit. \r\n- She just went kinda quiet after that so maybe I shouldn\u2019t have
+    told her that\r\n\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

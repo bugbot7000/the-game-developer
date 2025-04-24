@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859e42622e7672a44aa800175ddf1fc3, type: 3}
+  m_Name: B7_Build_Jade
+  m_EditorClassIdentifier: 
+  PageType: 2
+  Date: 6/20/2017
+  Title: Jade
+  Subtitle: Kento
+  Content: "I\u2019ve compiled an in-progress build with\u2026 well, there\u2019s
+    not much. I\u2019ve got a big chunk of the <mark=#ffff00aa>writing</mark> done
+    and the basic skeleton for the <mark=#ffff00aa>Ritual</mark> level (formerly
+    named Sanctum) laid out, but I need Rose to finish her damn assets so Eren can
+    implement them properly. She\u2019s made her displeasure very clear, but I think
+    she needs to start being realistic. \r\nAnyways, I\u2019ve named this build <mark=#ffff00aa>Jade</mark>.
+    Another nod to all our Asian heritages and a precious stone in ancient times. "
+  IsArchivedChat: 0
+  ActivatesInteractveChat: 0
+  ChatID: 
+  ContainsBuild: 1
+  BuildIndex: 0
+  AdditionalKeywords: []

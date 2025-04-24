@@ -14,41 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 9/13/2016
-  Title: a forgotten sorcerer, a remembered dream.
-  Subtitle: 
-  Content: "After a prolonged stay in my imagination, <mark=#ffff00aa>Trismegistus</mark>
+  Title: 'A forgotten sorcerer, a remembered dream. '
+  Subtitle: Kento
+  Content: "\tAfter a prolonged stay in my imagination, <mark=#ffff00aa>Trismegistus</mark>
     now\u2026 exists. In a rudimentary form, at least. Eren and I have elected it
     as our thesis project for the year. There is something innately surreal about
     the work of creating, as distinct from the precursor act of imagining. Once a
     work goes from an idea - the stuff of ether - to material, to something others
     can touch and look at and judge, it\u2019s easy to forget you can no longer change
-    it with a thought. It\u2019s not yours anymore, really.\r\n\r\nBy serendipity
+    it with a thought. It\u2019s not yours anymore, really.\r\n\r\n\tBy serendipity
     (or irony, as the case may be), the story I have outlined is related to that
     idea. Eren - who routinely tries and fails to keep me grounded - has reminded
-    me that we ought to be cautious with scope. We are only a student game. In my
-    opinion nobody who plays Trismegistus will care where it came from if it isn\u2019t
-    a <b>good</b> game. I will bleed on my canvas if I have to.\r\n\r\nI should refocus
-    before I go on another rant. The start of the plot as I have imagined it is that
-    our protagonist is an amnesiac sorcerer waking up in a world that has passed
-    him by, and forgotten the magic of old. The opening section sees them escaping
-    from a <mark=#ffff00aa> maze</mark>, at the center of which they have been imprisoned.
-    They will then go on to consult with two sages and confront the shadows of her
-    past.\r\n\r\nTo be brief, I will simply say that the arc of the story involves
-    discovering our lead character is less innocent than we\u2019ve been led to believe.
-    I\u2019ve drawn inspiration from Planescape: Torment here, a game that leverages
-    the bias of the player to sympathize with their avatar, and then complicates
-    that relationship.\r\n\r\nOur advisor doesn\u2019t see the vision, unfortunately.
-    I had to simplify the idea for her. I think the larger point I\u2019m trying
-    to make about the misuse of power went over her head, but we won her over eventually.
-    Her suggestion was that we bring on a third member to ease the workload: Rose.
-    \r\n\r\nRose\u2019s talent isn\u2019t in question, but I don\u2019t know yet
-    if her artistic priorities are the same as ours. She did contribute a genuinely
-    innovative piece of system design: a <mark=#ffff00aa> modular magic</mark> system.
-    I\u2019ve begun drafting puzzles to put it through its paces and test its limitations.
-    We\u2019ll see whether or not the system affords us the narrative design space
-    we need.\r\n\r\nP.S: Threw a wall into Eren\u2019s test level that can only be
-    destroyed with <mark=#ffff00> \u201CBeam\u201D</mark> shaped spells. Just testing
-    to make sure the collider and tag code is working."
+    me that we ought to be cautious with how big we dream. We are only a student
+    game. In my opinion nobody who plays <mark=#ffff00aa>Trismegistus</mark> will
+    care where it came from if it isn\u2019t a <b>good</b> game. I will bleed on
+    my canvas if I have to.\r\n\r\n\tI should refocus before I go on another rant.
+    The start of the plot as I have imagined it is that our protagonist is an amnesiac
+    <mark=#ffff00aa>sorcerer</mark> waking up in a world that has passed him by,
+    and forgotten the magic of old. The opening section sees them escaping from a
+    maze, at the center of which they have been imprisoned. They will then go on
+    to face the former gods of their world and confront the shadows of their past.\r\n\r\n\tTo
+    be brief, I will simply say that the arc of the story involves discovering our
+    lead character is less innocent than we\u2019ve been led to believe. I\u2019ve
+    drawn inspiration from Planescape: Torment here, a game that leverages the bias
+    of the player to sympathize with their avatar, and then complicates that relationship.\r\n\r\n\tOur
+    advisor doesn\u2019t see the vision, unfortunately. I had to simplify the idea
+    for her. I think the larger point I\u2019m trying to make about the misuse of
+    power went over her head, but we won her over eventually. Her suggestion was
+    that we bring on a third member to ease the workload: Rose. \r\n\r\n\tRose\u2019s
+    talent isn\u2019t in question, but I don\u2019t know yet if her artistic priorities
+    are the same as ours. She did contribute a genuinely innovative piece of system
+    design: a <mark=#ffff00aa>modular</mark> magic system. I\u2019ve begun drafting
+    puzzles to put it through its paces and test its limitations. We\u2019ll see
+    whether or not the system affords us the narrative design space we need.\r\n\r\n\tP.S:
+    Threw a wall into Eren\u2019s test level that can only be destroyed with \u201CBeam\u201D
+    shaped spells. Just testing to make sure the collider and tag code is working.
+    I\u2019ve named the build <mark=#ffff00aa>Aglaea</mark>, after one of the three
+    Greek charities. \r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

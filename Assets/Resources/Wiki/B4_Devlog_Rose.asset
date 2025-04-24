@@ -14,35 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 1/27/2017
-  Title: winter break more like breaking my fucking sanity
-  Subtitle: 
+  Title: devlog #4
+  Subtitle: Rose
   Content: "- why the fuck did kento get mad at me for taking a break during break???\r\n<indent=5%>-
     i saw updates to the kithub pretty much every week and once again kento is just
     throwing work at me without discussing or even telling me about it\r\n- and then
     he got mad at me when i brought it up. like dude if we don\u2019t communicate
-    this project is going to fall apart </indent>\r\n- speaking of break, i wanted
+    this project is going to fall apart</indent> \r\n- speaking of break, i wanted
     to try out a new 3D modeling technique that i didn\u2019t get the chance to during
     the semester\r\n<indent=5%>- mostly bc i didn\u2019t want to break eren\u2019s
-    systems but i also wasn\u2019t sure that it could apply to <mark=#ffff00aa>trismegistus</mark>
-    specifically \r\n- i revived <mark=#ffff00aa>the last knight</mark> to try it
-    out on and it turned out super well so i ended up putting it on my itch page
-    \r\n- but now i know that the technique doesn\u2019t require us to redo all our
-    implementation stuff so i can start using it going forward! </indent>\r\n- work
-    updates: \r\n<indent=5%>- <mark=#ffff00aa>maze</mark> is 95% done. i\u2019m not
-    touching that for now unless it explodes\r\n- my initial plan last month was
-    to do all the <mark=#ffff00aa>frontier assets</mark> and then tackle the <mark=#ffff00aa>arena</mark>
-    stuff but kento is really pushing for me to do the <mark=#ffff00aa>arena</mark>
-    ones so he can test his <mark=#ffff00aa>puzzles</mark>\r\n- i guess i can have
-    a few of them do double duty but it\u2019ll be tough\r\n- <mark=#ffff00aa>modular
-    magic</mark> system still needs final icons but kento said he\u2019s still working
-    out a few things. no eta on that</indent>\r\n- we\u2019re planning to submit
-    for <mark=#ffff00aa>dgc</mark> this year! \r\n<indent=5%>- i\u2019m really worried
-    about the amount of polish we\u2019re gonna get on <mark=#ffff00aa>trismegistus</mark>
-    before then. it needs to be presentable enough for industry professionals not
-    to write it off but kento seems insistent on spreading us thin so he can go play
-    in the sandbox he\u2019s asking us to make for him\r\n- i really don\u2019t want
-    this to reflect badly on all of us (especially eren, who\u2019s being run absolutely
-    ragged) \r\n- i hope we\u2019ll be ready in time\u2026 </indent>\r"
+    systems but i also wasn\u2019t sure that it could apply to our game specifically
+    \r\n- i revived the last knight to try it out on and it turned out super well
+    so i ended up putting it on my website\u2019s games page\r\n- but now i know
+    that the technique doesn\u2019t require us to redo all our implementation stuff
+    so i can start using it going forward! </indent>\r\n- work updates: \r\n<indent=5%>-
+    my initial plan last month was to do all the frontier assets and then tackle
+    the arena stuff but kento is really pushing for me to do the arena ones so he
+    can test his puzzles\r\n- i guess i can have a few of them do double duty but
+    it\u2019ll be tough\r\n- something\u2019s gotta come off of my plate at some
+    point. i\u2019ll bring it up at our next meeting because i do not want to crunch
+    for this game</indent>\r\n- we\u2019re planning to submit to the indie showcase
+    at dgc this year! \r\n<indent=5%>- i\u2019m really worried about the amount of
+    polish we\u2019re gonna get on this before then\r\n- it needs to be presentable
+    enough for industry professionals not to write it off but kento seems insistent
+    on spreading us thin so he can go play in the sandbox he\u2019s asking us to
+    make for him\r\n- if this ends up reflecting badly on us it\u2019ll be 100% his
+    fault\r\n- i just hope we\u2019ll be ready in time\u2026 faunos vods save me
+    </indent>\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

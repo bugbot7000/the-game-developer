@@ -15,12 +15,14 @@ MonoBehaviour:
   PageType: 2
   Date: 5/9/2017
   Title: Crimson Phoenix
-  Subtitle: "spring showcase build finally!!! everything up to the first two arenas
-    is in here and i'm so proud of all the work we've done :) also the fact that
-    we all can graduate i am so tired of school and homework \ncrimson phoenix is
-    a fitting name for this build i think. kento's saving golden dragon for when
-    we launch on vapor"
-  Content: 
+  Subtitle: Rose
+  Content: 'spring showcase build finally!!! everything up to the <mark=#ffff00aa>arena</mark>
+    is in here and i''m so proud of all the work we''ve done :) also the fact that
+    we all can graduate i am so tired of school and homework
+
+    crimson <mark=#ffff00aa>phoenix</mark>
+    is a fitting name for this build i think. kento''s saving golden dragon for when
+    we launch on vapor in a few months'
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

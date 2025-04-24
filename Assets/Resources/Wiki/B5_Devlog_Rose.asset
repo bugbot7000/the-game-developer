@@ -14,34 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 3/16/2017
-  Title: im sorry
-  Subtitle: 
-  Content: "- i\u2019m really, really sorry i forgot to submit for <mark=#ffff00aa>dgc</mark>\r\n<indent=5%>-
-    i swear i wrote the date down correctly but i mixed it up with the tax filing
-    deadline for this year\r\n- i know it doesn\u2019t look great for me since i
-    was really wanting to show something polished at <mark=#ffff00aa>dgc</mark> but
-    i promise i didn\u2019t forget on purpose</indent>\n- but kento seems to have
+  Title: devlog #5
+  Subtitle: Rose
+  Content: "- look i\u2019m sorry i forgot to submit to the <mark=#ffff00aa>dgc</mark>
+    showcase\r\n<indent=5%>- i swear i remembered the date down correctly but i mixed
+    it up with the tax filing deadline for this year  \r\n- yeah it looks bad for
+    me! i know! this is gonna really affect my chances of getting a good job! groveling
+    at your feet isn\u2019t going to turn back time for fucks sake! are you really
+    that bent on torpedoing my self esteem </indent>\r\n- but kento seems to have
     decided in his head that i hate him and his game and am just fucking out to get
     him like his mom did when he was 12 or something\r\n<indent=5%>- dude your 23rd
     birthday was last week you should know better than to lay the blame for your
     trauma on others\r\n- and you know what contributes to my memory problems? information
     overload. large amounts of meaningless deadlines and being endlessly pushy for
     more more more more more\r\n- i was dead set on giving him a piece of my mind
-    right then and there but 1) i felt horrendous already i love rsd and 2) eren
-    timed us BOTH out for something that was clearly his friends fault\r\n- ugh i
-    cant finish this now ill come back tomorrow</indent>\r\n\n\r\nupdate 3/17:\r\n-
-    i figured out why my <mark=#ffff00aa>assets</mark> were causing that visual <mark=#ffff00aa>bug</mark>\r\n<indent=5%>-
+    right then and there but 1) i felt horrendous about myself already and 2) eren
+    timed us BOTH out for something that was clearly his friends fault</indent>\r\n-
+    ugh i cant finish this now ill come back tomorrow\n\r\nupdate 3/17:\r\n- i figured
+    out why my assets were causing that visual <mark=#ffff00aa>bug</mark>\r\n<indent=5%>-
     it was because toonity changed how their assets link into the engine\u2019s systems
-    \r\n- one of the methods i was using to define parameters changed in a really
-    weird way\r\n- i\u2019m gonna have to change how my <mark=#ffff00aa>assets</mark>
-    are structured now\r\n- still haven\u2019t fixed the originals bc i really had
-    to get the <mark=#ffff00aa>frontier</mark> ones done \r\n- eren found a temp
-    fix but we had to take <mark=#ffff00aa>arena</mark> out of the midterm build
-    bc that was where the flashing problem was</indent> \r\n- but i managed to finish
-    the <mark=#ffff00aa>frontier</mark> assets on time without any all nighters\r\n-
-    i can't be forgetting things again this time. i've told a couple of companies
-    i\u2019ve been interviewing with about <mark=#ffff00aa>trismegistus</mark> and
-    if i show them something unpolished it\u2019s on me\r\n"
+    \r\n- still haven\u2019t fixed the originals bc i really had to get the assets
+    i was already working on done \r\n- eren found a temp fix but we had to take
+    a lot of stuff out of the midterm build bc that was where the flashing problem
+    was \r\n- once this deadline has passed i\u2019m going to take a few days to
+    restructure my assets </indent>\r\n- but i managed to finish the frontier assets
+    on time without any all nighters. kento\u2019s precious <mark=#ffff00aa>sorcerer</mark>
+    now has the next leg of his journey available to him in the black <mark=#ffff00aa>tortoise</mark>
+    build\r\n- i can't be forgetting things again this time. i've told a couple of
+    companies i\u2019ve been interviewing with about this game and if i show them
+    something unpolished it\u2019s on me and the rest of the team\r\n<indent=5%>-
+    i\u2019ll be damned if i let kento\u2019s childishness torpedo my job prospects
+    </indent>\r\n- also kento you know i can read your devlogs right? if you\u2019re
+    gonna bitch about me at least do it in your bestie eren\u2019s dms or some shit
+    \r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

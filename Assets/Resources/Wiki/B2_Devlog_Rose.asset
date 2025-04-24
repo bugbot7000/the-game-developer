@@ -14,27 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 11/18/2016
-  Title: midterm conquered
-  Subtitle: 
-  Content: "- midterm check is finally past whew\r\n- list of <mark=#ffff00aa>assets</mark>
-    i've done (standard format): \r\n<indent=5%>- <mark=#ffff00aa>maze</mark> (environmental
-    assets mostly, some tweaks)</indent>\r\n<indent=5%>- <mark=#ffff00aa>minotaur</mark>
-    (model)</indent>\r\n- eren hasn't put them in engine in yet but the blockout
-    <mark=#ffff00aa>maze</mark> kento made will look so much better once he adds
-    them in the next build (did kento say something about merriment?)\r\n- i fuckin
-    pulled an all nighter by mistake while working on the <mark=#ffff00aa>minotaur</mark>
-    model \r\n<indent=5%>- cmon rose you made so much progress on Not Doing That
-    what happened girl</indent>\r\n- when i told the others kento seemed like he
-    wanted to encourage that behavior though which worries me\r\n<indent=5%>- crunch
-    is an industry thing yeah but it\u2019s not good for you long term</indent>\r\n<indent=5%>-
-    i should probably tell them about <mark=#ffff00aa>the last knight</mark> and
-    how i crunched like hell on that only to release something half baked</indent>\r\n-
+  Title: devlog #2
+  Subtitle: Rose
+  Content: "- midterm check is finally past whew\r\n- list of assets i've done (standard
+    format): \r\n<indent=5%>- <mark=#ffff00aa>maze</mark> (environmental assets mostly,
+    some tweaks)\r\n- minotaur (base model, no anims or textures yet)\r\n- <mark=#ffff00aa>modular</mark>
+    magic ui stuff</indent>\r\n- eren hasn't put the maze stuff in engine in yet
+    bc he was busy making the game work but the blockout level kento made will look
+    so much better once hes able to add them\r\n- but i fuckin pulled an all nighter
+    by mistake while working on the <mark=#ffff00aa>minotaur</mark> model \r\n<indent=5%>-
+    cmon rose you made so much progress on Not Doing That what happened girl</indent>\r\n-
+    when i told the others i was pulling back kento seemed like he wanted to encourage
+    that behavior though which worries me\r\n<indent=5%>- crunch is an industry thing
+    yeah but it\u2019s not good for you long term\r\n- i should probably tell them
+    about that one game i crunched like hell on only to release something half baked</indent>\r\n-
     our advisor clover seems to be warning the others away from crunch though which
     is good\r\n<indent=5%>- from what i understand she wants us to focus on broad
-    strokes for now and fill in the details next semester</indent> \r\n<indent=5%>-
-    she also told kento that his planned scope was too big for the time we have so
-    hopefully that also helps reduce that stress</indent>\r\n- i really do wanna
-    make sure that none of us crunch on this to the point where our health suffers\r\n"
+    strokes for now and fill in the details next semester \r\n- she also told kento
+    that his planned <mark=#ffff00aa>scope</mark> was too big for the time we have
+    so hopefully that also helps reduce that stress\r\n- he looked kinda pissed when
+    he heard that though \r\n- don\u2019t get me wrong kento is insanely talented
+    but hes really not great at social things and i feel like he never bothered to
+    learn how to cope</indent> \r\n- i really do wanna make sure that none of us
+    crunch on this to the point where our health suffers but kento seems to think
+    we need to suffer for our art \r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

@@ -14,28 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 9/13/2016
-  Title: Mic Check, Magic, and Managing Kento
-  Subtitle: 
-  Content: "Testing. Hello? Cabbage dumplings. Rendezvous. \n\r\nOkay, good, my mic
-    is working. If I had to return another one again I think I would have combusted.
-    \n\r\nSo, uh, this is my first devlog for our <mark=#ffff00aa>thesis</mark> game
-    for UCP\u2019s game design program, <mark=#ffff00aa>Trismegistus</mark>. That\u2019s
-    what Kento\u2019s named it. He started work on it in his free time a few months
-    ago and asked me to help on some code stuff, but we\u2019ve decided to make it
-    our thesis project alongside Rose, who\u2019s both our good friend. \n\r\nIt\u2019s
-    only been a few weeks, but I\u2019ve already made good progress. I set up a small
-    test level that demonstrates the basic movement, camera and dialogue system.
-    I\u2019ve also started working on the <mark=#ffff00aa>modular magic</mark> system
-    she suggested, but that\u2019s gonna take a while. Kento wanted some way for
-    us to add comments directly to build so I added that too. I had to use it immediately
-    too after Kento added a seemingly random wall in the middle of the test level.\n\r\nI\u2019m
-    a little worried about how Kento is reacting to bringing Rose on, though. I know
-    this is a big step for him, but he already seems a little offput by the amount
-    of initiative Rose is taking. Which I think is great, but he might not be willing
-    to give up primary control of what is still functionally one of his babies. \n\r\nTo
-    be honest, I\u2019m just really hoping we won\u2019t all get overwhelmed with
-    work now, but at the end I just really want to see Kento succeed with his vision
-    for the game more than anything.\r\n"
+  Title: Mic check and managing Kento
+  Subtitle: Eren
+  Content: "- Testing testing one two three. Four five six seven eight nine. Ok great
+    because if I had to go back to Guitar World to return this thing again I would
+    like die\r\n- So dev log! I ended up working with Kento on that thing we\u2019ve
+    been messing around with for a few months\r\n- We used to just call it \u201Cour
+    game\u201D but now it has a name. It\u2019s called Trasmus. Trasmus? <mark=#ffff00aa>Trismegistus</mark>\r\n-
+    I\u2019m gonna have to manually correct that one each time huh\r\n- Kento\u2019s
+    cool and I\u2019m glad he\u2019s letting me work on his baby. He has a very particular
+    way he likes to get things done that\u2019s all I\u2019ll say\r\n- Oh and we
+    brought on Rose, too. For the art\r\n- So far we have a small test level where
+    you can move around a very simple <mark=#ffff00aa>maze</mark>\r\n- Well it\u2019s
+    barely a <mark=#ffff00aa>maze</mark> but it\u2019ll be one soon\r\n- There\u2019s
+    also the very beginnings of the spell system that Rose suggested\r\n- Kento wanted
+    to put comments directly into the game build so that\u2019s in there too\r\n-
+    I had to use that feature basically right away too since Kento decided to drop
+    a random wall right in the middle of the level last night. Lol\r\n- I\u2019m
+    a little bit worried about Kento working with Rose since it was a big step for
+    him to let me work on \u201Chis vision\u201D or whatever he\u2019s got going
+    on in the first place\r\n- And I just worry that he\u2019s not gonna react too
+    well to Rose taking initiative on the project. Creative differences and all that\r\n-
+    Eh one step at a time I guess\r\n- My dad says that that\u2019s kind of what
+    these really artsy people need though. And I can see where he\u2019s coming from\r\n-
+    If we just let Kento run wild and free <mark=#ffff00aa>Trismegistus</mark> would
+    get finished in twenty twenty never\r\n- I\u2019m hopeful that with Rose\u2019s
+    previous game dev experience and Kento\u2019s, uh, unique way of looking at things,
+    we can make something great in just a year\r\n- Even something that aligns with
+    Kento\u2019s grand vision because he\u2019s a lot more creative than me and I
+    really just want to work on cool stuff and bring that vision to life\r\n\r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

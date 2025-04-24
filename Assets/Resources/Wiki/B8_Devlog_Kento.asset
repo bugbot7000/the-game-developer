@@ -14,13 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PageType: 0
   Date: 7/18/2017
-  Title: Kento's Devlog #8
-  Subtitle: 
-  Content: "Kento goes on a rant about how they have to IMMEDIATELY fix this or their
-    timeline for a Steam release will get messed up. Argues that Rose is sabotaging
-    the project and doesn\u2019t want it to get done bc it\u2019s embarrassing (cites
-    the DGC thing). Feels very betrayed by Eren \u201Csiding\u201D with Rose despite
-    him acknowledging the effort it would take to get everything fixed\r"
+  Title: No end to my troubles.
+  Subtitle: Kento
+  Content: "\tI\u2019m happy to report that Rose has formally refused to work on
+    the game as opposed to pretending to work while dragging her feet. It\u2019s
+    always better to know for sure that you can\u2019t depend on someone than to
+    wonder if you can.\r\n\r\n\tIt drives me crazy how she so clearly does not give
+    a shit about the game, how she treats every task relating to it like it's an
+    ordeal, and yet also feels the need to micromanage it while telling me I\u2019M
+    the one doing the micromanaging. The other day she was complaining that it feels
+    more like \u201Cmy game\u201D instead of \u201Cour game\u201D, which is ridiculous
+    considering how hands off she\u2019s been. She\u2019s not invested in it artistically
+    at all, she just wants to mark it as \u2018hers.\u2019 She didn\u2019t do a single
+    word of <mark=#ffff00aa>writing</mark> for the story either - she doesn\u2019t
+    have a grasp on its themes, which is what really matters. I\u2019m ignoring her
+    whining.\r\n\r\n\tEren also seems checked out. I think they\u2019re just exhausted
+    since I know they\u2019ve been having <mark=#ffff00aa>health</mark> issues with
+    bright lights. I\u2019m tired too, so I get it. \r\n\r\n\tIn the meantime I\u2019m
+    gonna try and implement Ritual myself. The code is going to be mangled because
+    I need to work around that bizarre bug. Eren is wary of changing anything about
+    the game\u2019s inner workings too much while it\u2019s still glitched. But I
+    don\u2019t want to lose momentum; we can fix the code later. \r\n\r\n\tIt\u2019s
+    very easy to lose your motivation to finish a game if you walk away from it for
+    too long, and on some level I suspect Eren is looking for a way to \u2018off-board.\u2019
+    They went so far as to suggest we send the entirety of our source code to the
+    Toonity development staff and hope that they\u2019ll decide to fix our stupid
+    <mark=#ffff00aa>glitch</mark> for us free of charge. As if a mega-corporation
+    would even read an email a pair of nobodies sent their way, let alone comb through
+    thousands of lines of code.\r\n\r\n\tI don\u2019t understand Eren\u2019s instinct
+    to defer to authority when they\u2019re in trouble. If I give into this we\u2019ll
+    be sitting on our hands indefinitely while we wait for a fix. The game just won\u2019t
+    get released.\r\n\r\n\tThis defeatism will hurt both of our careers. I don\u2019t
+    want to enable it.\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 

@@ -13,10 +13,26 @@ MonoBehaviour:
   m_Name: B10_Chat
   m_EditorClassIdentifier: 
   PageType: 3
-  Date: 9/12/2017
-  Title: Archived Chat
+  Date: 8/30/2017
+  Title: Archived Chat Log
   Subtitle: 
-  Content: 
+  Content: "rosygoldart: abandoned your precious game already, have you?\r\n[Deleted
+    User]: Since you seem to have given up on it, I\u2019m not going to bother giving
+    the time of day to people who clearly don\u2019t value my ideas and contributions.
+    \r\n[KentoWrites has left the group chat.] \r\nNeverending Coding Problems: Kento\u2026
+    \r\nrosygoldart: eren i appreciate your efforts in trying to keep us together
+    but its too far gone for that now\r\nrosygoldart: kentos already blocked me on
+    everything like the petty bastard he is\r\nrosygoldart: just\u2026 take better
+    care of yourself from now on \r\nrosygoldart: i saw the new build. you really
+    didn\u2019t have to do that\r\nNeverending Coding Problems: Yeah it\u2019s named
+    <mark=#ffff00aa>Nephrite</mark> if you want to take a look but I really get it
+    if you don\u2019t\r\nrosygoldart: i think i will\r\nrosygoldart: just to look
+    back on what i did the past year and some change\r\nrosygoldart: but eren i really
+    hope this doesnt kill your <mark=#ffff00aa>enjoyment</mark> of gamedev\r\nNeverending
+    Coding Problems: I think I need to start being more realistic\r\nNeverending
+    Coding Problems: My job hunt has been nothing but dead ends so I should expand
+    my search\r\nrosygoldart: no i get it\r\nrosygoldart: good luck on whatever you
+    choose to pursue\r\nNeverending Coding Problems: Thank you, Rose. \r"
   IsArchivedChat: 1
   ActivatesInteractveChat: 0
   ChatID: 
