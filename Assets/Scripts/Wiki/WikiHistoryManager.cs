@@ -25,9 +25,8 @@ public class WikiHistoryManager : SerializedMonoBehaviour
     #endregion    
     
     // We initalize arrays with length 4 since our maximum is 4 tabs.
-    [SerializeField, ReadOnly] int[] tabHistoryIndex = {0, 0, 0, 0};
-    [SerializeField, ReadOnly] List<HistoryItem>[] history = 
-        {new List<HistoryItem>(), new List<HistoryItem>(), new List<HistoryItem>(), new List<HistoryItem>(),};
+    [SerializeField, ReadOnly] int[] tabHistoryIndex;
+    [SerializeField, ReadOnly] List<HistoryItem>[] history;
 
     WebBrowserManager webBrowserManager;
 
@@ -36,6 +35,8 @@ public class WikiHistoryManager : SerializedMonoBehaviour
     void Start()
     {
         webBrowserManager = FindFirstObjectByType<WebBrowserManager>();
+        tabHistoryIndex = new int[] {0, 0, 0, 0};
+        history = new List<HistoryItem>[] {new List<HistoryItem>(), new List<HistoryItem>(), new List<HistoryItem>(), new List<HistoryItem>(),};
     }
 
     public void GoBack()
