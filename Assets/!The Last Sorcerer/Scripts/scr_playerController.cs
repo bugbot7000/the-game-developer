@@ -27,6 +27,7 @@ public class scr_playerController : MonoBehaviour
 
 Vector3 velocity;
     //public ParticleSpawner Pspawner;
+    float currentAltitude;
     public Rigidbody body;
     public Animator anim;
     public float mSpd;
@@ -498,13 +499,16 @@ Vector3 velocity;
     void Dash()
     {
         dashing = true;
-        body.constraints = RigidbodyConstraints.FreezePositionY;
-        Debug.Log("Dash");
+        currentAltitude = transform.position.y;
+        body.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationY;
+
         //body.MovePosition(body.position + velocity * dashSpd * Time.deltaTime);
         //body.MovePosition(body.position);
 
         var direction = activeFirePoint.transform.position - body.transform.position;
+        direction = new Vector3(direction.x, 0, direction.z);
         body.AddForce(direction.normalized * dashSpd, ForceMode.Impulse);
+        Debug.Log(direction);
         Invoke(nameof(ResetDash), dashCooldown);
         //body.velocity = Vector3.zero;
         //body.angularVelocity = Vector3.zero;
@@ -517,6 +521,7 @@ Vector3 velocity;
         body.constraints = RigidbodyConstraints.FreezePosition;
         body.constraints = RigidbodyConstraints.None;
         body.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        transform.position = new Vector3(transform.position.x, currentAltitude, transform.position.z);
         dashing = false;
     }
 
