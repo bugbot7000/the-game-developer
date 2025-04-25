@@ -34,7 +34,7 @@ public class WikiHistoryManager : SerializedMonoBehaviour
     
     void Start()
     {
-        webBrowserManager = FindFirstObjectByType<WebBrowserManager>();
+        webBrowserManager = FindFirstObjectByType<WebBrowserManager>(FindObjectsInactive.Include);
         tabHistoryIndex = new int[] {0, 0, 0, 0};
         history = new List<HistoryItem>[] {new List<HistoryItem>(), new List<HistoryItem>(), new List<HistoryItem>(), new List<HistoryItem>(),};
     }
