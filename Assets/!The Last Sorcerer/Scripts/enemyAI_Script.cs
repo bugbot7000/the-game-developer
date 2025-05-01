@@ -521,6 +521,7 @@ public class enemyAI_Script : MonoBehaviour
 
     public void ResetAttack()
     {
+        if (agent != null) { return; }
         if (type == EnemyType.Zombie)
         {
             Rigidbody body = GetComponent<Rigidbody>();
