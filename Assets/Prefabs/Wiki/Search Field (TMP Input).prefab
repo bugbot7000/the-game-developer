@@ -306,6 +306,8 @@ GameObject:
   - component: {fileID: 4934258570820447234}
   - component: {fileID: 2485580447320215811}
   - component: {fileID: 966908262253019732}
+  - component: {fileID: 8948357603011491095}
+  - component: {fileID: 488597161583072427}
   m_Layer: 5
   m_Name: Search Field (TMP Input)
   m_TagString: Untagged
@@ -462,7 +464,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 966908262253019732}
+        m_TargetAssemblyTypeName: WikiSearchButton, Assembly-CSharp
+        m_MethodName: HandleTypingSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -496,6 +510,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6d020bd27fe294f889f0b1a2ed8244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8948357603011491095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536161276592974426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c319e71f4bca1df42be1646aadcab903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterVolume: 1
+  soundEffects:
+  - Name: typing_1
+    AudioClip: {fileID: 8300000, guid: 0e90957f116040e42b9d7a725ec0fa0b, type: 3}
+    Volume: 1
+    AudioSource: {fileID: 0}
+  - Name: typing_2
+    AudioClip: {fileID: 8300000, guid: 8e68bbe7524c62f498b92a731cdc4bae, type: 3}
+    Volume: 1
+    AudioSource: {fileID: 0}
+  - Name: typing_3
+    AudioClip: {fileID: 8300000, guid: 30d6e6c66fb5f8f46ad756d57e6b64e6, type: 3}
+    Volume: 1
+    AudioSource: {fileID: 0}
+  - Name: typing_4
+    AudioClip: {fileID: 8300000, guid: 2f5cfc4433eb0a7488d988d13eae7c07, type: 3}
+    Volume: 1
+    AudioSource: {fileID: 0}
+  - Name: typing_5
+    AudioClip: {fileID: 8300000, guid: 6f175fe4d3bf83740b3068c6bb313961, type: 3}
+    Volume: 1
+    AudioSource: {fileID: 0}
+  - Name: enter_key
+    AudioClip: {fileID: 8300000, guid: 6ccbc9fc495c62b43bcc564164516a57, type: 3}
+    Volume: 1
+    AudioSource: {fileID: 0}
+--- !u!114 &488597161583072427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536161276592974426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9153bf5d963a43c4fb6a0fe329c69d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundsToQueue:
+  - typing_1
+  - typing_2
+  - typing_3
+  - typing_4
+  - typing_5
+  OnAudioPlay:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4657240862551756062
 GameObject:
   m_ObjectHideFlags: 0
