@@ -31,8 +31,16 @@ public class WikiContentPage : MonoBehaviour
     {
         currentPage = wikiPage;
 
-        date.SetText(wikiPage.Date);
         title.SetText(wikiPage.Title);
+
+        if (!string.IsNullOrEmpty(wikiPage.Subtitle))
+        {
+            date.SetText($"{coloredName(wikiPage.Subtitle.Trim())} - {wikiPage.Date}");
+        }
+        else
+        {
+            date.SetText(wikiPage.Date);
+        }
 
         if (wikiPage.IsArchivedChat)
         {
@@ -74,6 +82,14 @@ public class WikiContentPage : MonoBehaviour
         {
             MetaNarrativeManager.Instance.TriggerStorytellerSequence(wikiPage.ChatID);
         }
+    }
+
+    string coloredName(string name)
+    {
+        if      (name == "Eren")  return "<b><color=#0bd400>Eren</color></b>";
+        else if (name == "Rose")  return "<b><color=#c002d1>Rose</color></b>";
+        else if (name == "Kento") return "<b><color=#f5260f>Kento</color></b>";
+        else                      return name;
     }
 
     public void DownloadBuild()
