@@ -142,8 +142,8 @@ Vector3 velocity;
             //activeFirePoint = firePointD;
             rotationSetting = new Vector3(0, 180f, 0f);
         }
-        if (velocity.z != 0 || velocity.x != 0) { anim.SetBool("MOVE", true); }
-        else { anim.SetBool("MOVE", false); }
+        if (velocity.z != 0 || velocity.x != 0) { anim.SetBool("MOVE", true); body.freezeRotation = false; }
+        else { anim.SetBool("MOVE", false); body.freezeRotation = true; }
         if (dashing) { anim.SetBool("DASH", true); }
         else { anim.SetBool("DASH", false); }
 
