@@ -51,11 +51,16 @@ public class scr_spells : MonoBehaviour
             other != null && other.gameObject.CompareTag("Enemy"))
         {
             playerController.BeamAssignment(other.gameObject); // Had to do it like this because Beam Emmitter refuses to acknowledge the existence of the player controller
-            if (PushSpell) { Push(other.gameObject); }
-            else if (PullSpell) { Pull(other.gameObject); }
-            else if (CharmSpell) { Charm(other.gameObject); }
-            else if (SlashSpell) { Slash(other.gameObject); }
-            else if (FreezeSpell) { Freeze(other.gameObject); }
+            if (PushSpell) { Push(other.gameObject); // TODO: Push SFX
+            }
+            else if (PullSpell) { Pull(other.gameObject); // TODO: Pull SFX start
+            }
+            else if (CharmSpell) { Charm(other.gameObject); // TODO: Charm SFX
+            }
+            else if (SlashSpell) { Slash(other.gameObject); // TODO: Slash SFX
+            }
+            else if (FreezeSpell) { Freeze(other.gameObject); // TODO: Freeze SFX
+            }
         }
         else if (other != null && other.gameObject.CompareTag("Sprite"))
         {
@@ -203,6 +208,7 @@ public class scr_spells : MonoBehaviour
         if (slashedObject.GetComponent<scr_health>() != null)
         {
             slashedObject.GetComponent<scr_health>().TakeDamage(slashDamage);
+            // TODO: Character getting cut SFX
         }
     }
 
@@ -260,6 +266,7 @@ public class scr_spells : MonoBehaviour
         playerController.BeamAssignment(playerController.beamStopper);
         if (pulled != null)
         {
+            // TODO: Pull SFX stop
             if (pulled.GetComponent<enemyAI_Script>() != null)
             {
                 pulled.GetComponent<enemyAI_Script>().enabled = true;

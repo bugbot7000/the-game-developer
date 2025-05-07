@@ -25,6 +25,7 @@ public class scr_Arrow : MonoBehaviour
         if (other.CompareTag("Player")) // change to look for the target of ai script
         {
             other.gameObject.GetComponent<scr_health>().TakeDamage(damage);
+            // TODO: Blunt impact sound effect (not a perfect sound for the situation, but servicable)
             Destroy(gameObject);
         }
     }

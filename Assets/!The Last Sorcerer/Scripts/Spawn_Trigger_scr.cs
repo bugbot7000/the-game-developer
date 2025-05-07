@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Spawn_Trigger_scr : MonoBehaviour
@@ -8,7 +9,13 @@ public class Spawn_Trigger_scr : MonoBehaviour
     {
         if (other.gameObject.name == "player")
         {
-            enemySpawner.SetActive(true);
+            StartCoroutine(TurnEnemiesOn());
         }
+    }
+
+    IEnumerator TurnEnemiesOn()
+    {
+        yield return new WaitForSeconds(5);
+        enemySpawner.SetActive(true) ;
     }
 }

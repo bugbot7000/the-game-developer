@@ -142,10 +142,14 @@ Vector3 velocity;
             //activeFirePoint = firePointD;
             rotationSetting = new Vector3(0, 180f, 0f);
         }
-        if (velocity.z != 0 || velocity.x != 0) { anim.SetBool("MOVE", true); body.freezeRotation = false; }
-        else { anim.SetBool("MOVE", false); body.freezeRotation = true; }
-        if (dashing) { anim.SetBool("DASH", true); }
-        else { anim.SetBool("DASH", false); }
+        if (velocity.z != 0 || velocity.x != 0) { anim.SetBool("MOVE", true); body.freezeRotation = false; // TODO: Footsteps start
+}
+        else { anim.SetBool("MOVE", false); body.freezeRotation = true; // TODO: Footsteps sound stops
+        }
+        if (dashing) { anim.SetBool("DASH", true); // TODO: Footsteps sound start
+        }
+        else { anim.SetBool("DASH", false); // TODO: Footsteps sound stop
+        }
 
 
 
@@ -181,7 +185,9 @@ Vector3 velocity;
         }
 
         // Disabling the familiar for now until we more explicitly introduce summoning familiars at some point
-        // if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar); }  
+        // if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar);
+        // // TODO: Summon SFX
+        // } //We also need some particles for the summon 
 
         if (currentAttack != null && !noMove)
         {
@@ -379,6 +385,7 @@ Vector3 velocity;
             }
 
             MakeParticles();
+            // TODO: This needs some sort of generic casting sound, the summon sound should be okay for now
             var copy = Instantiate(spellShape, spellSpawn.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
             if (spellShape == beam)
