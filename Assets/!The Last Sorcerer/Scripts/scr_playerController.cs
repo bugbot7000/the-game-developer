@@ -185,9 +185,12 @@ Vector3 velocity;
         }
 
         // Disabling the familiar for now until we more explicitly introduce summoning familiars at some point
-        // if (Input.GetKeyDown(KeyCode.L) && !dashing) { Summon(equippedFamiliar);
-        // // TODO: Summon SFX
-        // } //We also need some particles for the summon 
+        if (Input.GetKeyDown(KeyCode.L) && !dashing)
+        {
+            Summon(equippedFamiliar);
+            // // TODO: Summon SFX
+            //We also need some particles for the summon 
+        }
 
         if (currentAttack != null && !noMove)
         {
@@ -233,6 +236,29 @@ Vector3 velocity;
         //if (health <= 0f) { Death(); }
 
         CommitSedoku();
+        TrackFamiliarHealth();
+    }
+
+    public void TrackFamiliarHealth() // if this doesn't work we'll try checking for the scr_health's pressence on the object instead
+    {
+        if (familiar1 != null)
+        {
+            scr_health fam1HealthScr = familiar1.GetComponent<scr_health>();
+            if (fam1HealthScr == null) { return; }
+            if(fam1HealthScr.health <= 0f) { familiar1 = null; }
+        }
+        if (familiar2 != null)
+        {
+            scr_health fam2HealthScr = familiar1.GetComponent<scr_health>();
+            if (fam2HealthScr == null) { return; }
+            if (fam2HealthScr.health <= 0f) { familiar1 = null; }
+        }
+        if (familiar3 != null)
+        {
+            scr_health fam3HealthScr = familiar1.GetComponent<scr_health>();
+            if (fam3HealthScr == null) { return; }
+            if (fam3HealthScr.health <= 0f) { familiar1 = null; }
+        }
     }
 
     public void EnableMovement() { noMove = false; }
@@ -328,11 +354,11 @@ Vector3 velocity;
     public bool CheckForOpenFamiliarSlots()
     {
 
-            if (familiar1 == null || familiar2 == null || familiar3 == null)
+         if (familiar1 == null || familiar2 == null || familiar3 == null)
             {
                 return true;
             }
-            else
+         else
             {
                 return false;
             }
