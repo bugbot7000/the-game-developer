@@ -3474,6 +3474,10 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 83f79230a2b54422baf31e997f11836c, type: 3}
     minPitchShift: 0.9
     maxPitchShift: 1.2
+  - EffectType: 0
+    audioClip: {fileID: 8300000, guid: 2f7f66b6fefd7463f87264d8e093ff8e, type: 3}
+    minPitchShift: 0.95
+    maxPitchShift: 1.18
 --- !u!4 &1433608006
 Transform:
   m_ObjectHideFlags: 0
