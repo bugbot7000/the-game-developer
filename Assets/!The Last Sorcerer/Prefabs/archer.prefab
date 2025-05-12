@@ -198,7 +198,7 @@ MonoBehaviour:
   alreadyAttacked: 0
   sightRange: 17
   attackRange: 8
-  retreatRange: 7
+  retreatRange: 6
   retreatDistance: 8
   playerInSightRange: 0
   playerInAttackRange: 0
@@ -208,7 +208,6 @@ MonoBehaviour:
   hitbox: {fileID: 4021277157348844231}
   nose: {fileID: 0}
   mesh: {fileID: 0}
-  animator: {fileID: 0}
   moveAnimThreshold: 0.2
   charmPoints: 0
   arrowPrefab: {fileID: 4264552613321769843, guid: 838c7c2f4020cd541a6304c7d751b3a1, type: 3}

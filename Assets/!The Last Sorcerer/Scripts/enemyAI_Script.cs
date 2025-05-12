@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.Burst.Intrinsics;
 
 public class enemyAI_Script : MonoBehaviour
 {
@@ -96,6 +97,7 @@ public class enemyAI_Script : MonoBehaviour
         if (type == EnemyType.Necromancer) { StartCoroutine(SpawnEnemies()); }
         if (type == EnemyType.Assassin) { visible = false; }
         currentPositionCheck = transform.position;
+        // TODO: Zombie moan starts, but only if type = EnemyType.Zombie
     }
 
     // Update is called once per frame
@@ -186,11 +188,15 @@ public class enemyAI_Script : MonoBehaviour
             if(speed > moveAnimThreshold)
             {
                 anim.SetBool("MOVE", true);
+                // TODO: Footsteps sound start, unless we're of the Ogre type
+                // TODO: Stomping sound starts if we're Ogre type
                 //Debug.Log("MOVING");
             }
             else
             {
                 anim.SetBool("MOVE", false);
+                // TODO: Footsteps sound stop, unless we're of the Ogre type
+                // TODO: Stomping sound starts if we're Ogre type
             }
         }
         previousPositionCheck = currentPositionCheck;
@@ -199,6 +205,12 @@ public class enemyAI_Script : MonoBehaviour
         {
             if (type == EnemyType.Ogre) { agent.enabled = false; } 
         }
+        // Extract Euler angles 
+        Vector3 eulerRotation = gameObject.transform.rotation.eulerAngles;
+        eulerRotation.x = 0f; // Set X rotation to 0
+
+        // Apply the modified rotation
+        gameObject.transform.rotation = Quaternion.Euler(eulerRotation);
     }
 
     public void CharmMe()
@@ -300,18 +312,10 @@ public class enemyAI_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (type != EnemyType.Knight) //Using the knight as a test case for getting rid of old rotation logic
-        //{
-        //    transform.eulerAngles = rotationSetting;
-        //}
-        if (!alreadyAttacked && player != null)
+        if (alreadyAttacked && player != null)
         {
             Vector3 plyerDirection = (player.position - gameObject.transform.position).normalized;
             gameObject.transform.rotation = Quaternion.LookRotation(plyerDirection);
-        }
-        if (mesh != null)
-        {
-            mesh.transform.rotation = gameObject.transform.rotation;
         }
     }
 
@@ -377,6 +381,7 @@ public class enemyAI_Script : MonoBehaviour
         {
             alreadyAttacked = true;
             anim.SetTrigger("ATTACK");
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
         if (!alreadyAttacked && type == EnemyType.Ogre)
         {
@@ -393,6 +398,7 @@ public class enemyAI_Script : MonoBehaviour
             //Invoke(nameof(ResetAttack), timeBetweenAttacks);
 
             anim.SetTrigger("ATTACK");
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
             alreadyAttacked = true;
             agent.speed = 0;
         }
@@ -400,6 +406,7 @@ public class enemyAI_Script : MonoBehaviour
         if (!alreadyAttacked && type == EnemyType.Archer && !playerTooClose) 
         {
             anim.SetTrigger("ATTACK");
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
             agent.speed = 0;
         }
         if (type == EnemyType.DM)
@@ -407,7 +414,7 @@ public class enemyAI_Script : MonoBehaviour
             if (!alreadyAttacked)
             {
                 anim.SetTrigger("ATTACK");
-
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
             }
         }
         if (!alreadyAttacked && type == EnemyType.Necromancer && !playerTooClose)
@@ -442,6 +449,7 @@ public class enemyAI_Script : MonoBehaviour
             body.constraints = RigidbodyConstraints.FreezeRotation;
             agent.speed = 0;
             anim.SetTrigger("ATTACK");
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
             //agent.enabled = false;
 
             //Invoke("KnightAttack", 0.5f);
@@ -485,6 +493,7 @@ public class enemyAI_Script : MonoBehaviour
             arrow.transform.rotation = Quaternion.LookRotation(direction);
         }
         alreadyAttacked = true;
+        // TODO: Arrow shooting sound
         //Invoke(nameof(ResetAttack), timeBetweenAttacks);
     }
 
@@ -512,6 +521,7 @@ public class enemyAI_Script : MonoBehaviour
             GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
             arrow.transform.rotation = Quaternion.LookRotation(direction);
         }
+        // TODO: Necrobolt sound
     }
 
     public void NecromanerBlastPlayAnim()
@@ -521,7 +531,8 @@ public class enemyAI_Script : MonoBehaviour
 
     public void ResetAttack()
     {
-        if (agent != null) { return; }
+        Debug.Log("Resetting enemy attack");
+        if (agent == null) { return; }
         if (type == EnemyType.Zombie)
         {
             Rigidbody body = GetComponent<Rigidbody>();
@@ -592,6 +603,7 @@ public class enemyAI_Script : MonoBehaviour
         //animator.SetBool("isAttacking", true);
 
         anim.SetTrigger("ATTACK");
+        Invoke(nameof(ResetAttack), timeBetweenAttacks);
         //Invoke("AssassinVanish", 3.5f);
 
         // start the animation
@@ -657,6 +669,7 @@ public class enemyAI_Script : MonoBehaviour
         if (spawnedEnemy != null && playerInAttackRange && enemySpawnPoint != null)
         {
             anim.SetBool("CALL", true);
+            // TODO: Summon SFX
         }
         StartCoroutine(SpawnEnemies());
     }

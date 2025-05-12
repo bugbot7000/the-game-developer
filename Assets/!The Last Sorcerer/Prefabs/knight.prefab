@@ -477,8 +477,8 @@ MonoBehaviour:
   alreadyAttacked: 0
   sightRange: 17
   attackRange: 1
-  retreatRange: 10
-  retreatDistance: 8
+  retreatRange: 1
+  retreatDistance: 1
   playerInSightRange: 0
   playerInAttackRange: 0
   playerTooClose: 0
