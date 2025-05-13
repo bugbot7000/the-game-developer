@@ -11,6 +11,7 @@ public class scr_damageOnTrigger : MonoBehaviour
         if (other.gameObject.GetComponent<scr_health>() != null && ((1 << other.gameObject.layer) & WhatIsTarget) != 0)
         {
             other.gameObject.GetComponent<scr_health>().TakeDamage(dmg);
+            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.gen_slash);
             //gameObject.SetActive(false);
         }
     }

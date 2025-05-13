@@ -97,7 +97,13 @@ public class enemyAI_Script : MonoBehaviour
         if (type == EnemyType.Necromancer) { StartCoroutine(SpawnEnemies()); }
         if (type == EnemyType.Assassin) { visible = false; }
         currentPositionCheck = transform.position;
-        // TODO: Zombie moan starts, but only if type = EnemyType.Zombie
+    }
+    void OnEnable()
+    {
+        if (type == EnemyType.Necromancer)
+        {
+            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.necro_laugh);
+        }
     }
 
     // Update is called once per frame
@@ -256,14 +262,6 @@ public class enemyAI_Script : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        //if (type == EnemyType.Sprite)
-        //{
-        //    scr_health.OnPlayerDamaged += SpriteOrbitStop;
-        //}
-    }
-
     private bool PitCheck() // We may need to rethink this for enemies who can jump
     {
         LayerMask layerMask = LayerMask.GetMask("Default");
@@ -406,6 +404,7 @@ public class enemyAI_Script : MonoBehaviour
         if (!alreadyAttacked && type == EnemyType.Archer && !playerTooClose) 
         {
             anim.SetTrigger("ATTACK");
+            //GameAudioManager.Instance.playSFX(GameAudioManager.SFX.arrow_draw); //This might be a problem as attack is called during update
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
             agent.speed = 0;
         }
@@ -467,6 +466,7 @@ public class enemyAI_Script : MonoBehaviour
 
     public void ZombieCharge()
     {
+        //GameAudioManager.Instance.playSFX(GameAudioManager.SFX.zombie_moan);
         damageOnCollide = true;
         //transform.LookAt(player);
         //transform.position = Vector3.MoveTowards(transform.position, player.position, slamSpd);
@@ -491,6 +491,7 @@ public class enemyAI_Script : MonoBehaviour
 
             GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
             arrow.transform.rotation = Quaternion.LookRotation(direction);
+            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.arrow_loose);
         }
         alreadyAttacked = true;
         // TODO: Arrow shooting sound
@@ -504,8 +505,10 @@ public class enemyAI_Script : MonoBehaviour
             gameObject.transform.rotation = Quaternion.LookRotation(direction);
 
             GameObject projectile = Instantiate(arrowPrefab, projectileSpawnPoints[projectileSpawnIndex].position, Quaternion.identity);
+            projectile.GetComponent<scr_Arrow>().DMAtk = true;
             projectile.transform.rotation = Quaternion.LookRotation(direction);
             projectileSpawnIndex = (projectileSpawnIndex + 1) % projectileSpawnPoints.Length;
+            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.rock_crumble);
         }
         alreadyAttacked = true;
         Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -520,8 +523,8 @@ public class enemyAI_Script : MonoBehaviour
 
             GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
             arrow.transform.rotation = Quaternion.LookRotation(direction);
+            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.necro_attack);
         }
-        // TODO: Necrobolt sound
     }
 
     public void NecromanerBlastPlayAnim()
@@ -649,8 +652,9 @@ public class enemyAI_Script : MonoBehaviour
     private IEnumerator JumpToLocation(Transform jumpLocation)
     {
         DMIsJumping = true;
-        //agent.enabled = false;
-        float elapsedTime = 0f;
+        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.rattlesnake_move);
+    //agent.enabled = false;
+    float elapsedTime = 0f;
         Vector3 startingPosition = transform.position;
         while (elapsedTime < DMJumpSpeed)
         {
@@ -688,6 +692,7 @@ public class enemyAI_Script : MonoBehaviour
         if (collision.gameObject.GetComponent<scr_health>() != null && damageOnCollide == true)
         {
             collision.gameObject.GetComponent<scr_health>().TakeDamage(dmg);
+            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.blunt);
             damageOnCollide = false;
             if (dmgTxt != null)
             {

@@ -349,10 +349,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   player: {fileID: 0}
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 3
   alreadyAttacked: 0
   sightRange: 10
-  attackRange: 2
+  attackRange: 3
   retreatRange: 0
   retreatDistance: 0
   playerInSightRange: 0
@@ -394,6 +394,8 @@ MonoBehaviour:
   invincible: 0
   anim: {fileID: 2423227595642438541}
   enemyAI: {fileID: 0}
+  HealthBarFill: {fileID: 0}
+  HealthBarFlash: {fileID: 0}
 --- !u!1001 &8156703454736066245
 PrefabInstance:
   m_ObjectHideFlags: 0

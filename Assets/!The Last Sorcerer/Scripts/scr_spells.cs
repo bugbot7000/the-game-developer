@@ -57,7 +57,7 @@ public class scr_spells : MonoBehaviour
             }
             else if (CharmSpell) { Charm(other.gameObject); // TODO: Charm SFX
             }
-            else if (SlashSpell) { Slash(other.gameObject); // TODO: Slash SFX
+            else if (SlashSpell) { Slash(other.gameObject);
             }
             else if (FreezeSpell) { Freeze(other.gameObject); // TODO: Freeze SFX
             }
@@ -205,10 +205,11 @@ public class scr_spells : MonoBehaviour
 
     public void Slash(GameObject slashedObject)
     {
+        
         if (slashedObject.GetComponent<scr_health>() != null)
         {
             slashedObject.GetComponent<scr_health>().TakeDamage(slashDamage);
-            // TODO: Character getting cut SFX
+            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.gen_slash);
         }
     }
 

@@ -11,6 +11,8 @@ public class scr_health : MonoBehaviour
     public bool invincible = false;
     public Animator anim;
     public enemyAI_Script enemyAI;
+    public GameObject HealthBarFill;
+    public GameObject HealthBarFlash;
 
     public delegate void PlayerDamagedHandler();
     public static event PlayerDamagedHandler OnPlayerDamaged;
@@ -54,10 +56,11 @@ public class scr_health : MonoBehaviour
         Debug.Log("Taken DMG");
         if (anim != null && !gameObject.CompareTag("Player")) 
         {
-            //anim.SetBool("HURT", true);
             anim.SetTrigger("HURT");
             Debug.Log("AM HURT");
             GetComponent<Rigidbody>().freezeRotation = true;
+            if(HealthBarFill != null) { HealthBarFill.GetComponent<HealthBar>().DidTakeDamage(dmgTaken); } //FIXME
+            if (HealthBarFlash != null) { HealthBarFlash.GetComponent<HealthBar>().DidTakeDamage(dmgTaken); } //FIXME
         } 
         if (dmgTxt != null)
         {
@@ -78,6 +81,7 @@ public class scr_health : MonoBehaviour
         anim.SetBool("DEAD", false);
         transform.position = GameObject.Find("RESPAWN").transform.position;
         health = 20;
+        //if (HealthBarFill != null) { HealthBarFill.GetComponent<HealthBar>(); } // We need a way to refill the healthbar when we respawn, but I saw no such method.
     }
 
     public void BeUnhurt()
@@ -106,6 +110,10 @@ public class scr_health : MonoBehaviour
             Debug.Log("Destruction");
             Destroy(gameObject);
         }
+    }
+    public void PlayMinotaurDeathFX()
+    {
+        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.minotaur_death);
     }
 
     public void DisableInvincibility() { invincible = false; }

@@ -6,6 +6,7 @@ public class scr_Arrow : MonoBehaviour
     float speed = 20f;
     float lifetime = 10f;
     float damage = 1f;
+    public bool DMAtk;
     // add reference to enemy ai scrip, assing when instantiaded
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,7 +26,11 @@ public class scr_Arrow : MonoBehaviour
         if (other.CompareTag("Player")) // change to look for the target of ai script
         {
             other.gameObject.GetComponent<scr_health>().TakeDamage(damage);
-            // TODO: Blunt impact sound effect (not a perfect sound for the situation, but servicable)
+            if (DMAtk) { GameAudioManager.Instance.playSFX(GameAudioManager.SFX.rock_crash); }
+            else
+            {
+                GameAudioManager.Instance.playSFX(GameAudioManager.SFX.blunt);
+            }
             Destroy(gameObject);
         }
     }

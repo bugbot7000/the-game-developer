@@ -17,6 +17,11 @@ public class BullshitMiddleManPlayerAnimScr : MonoBehaviour
     public void ActuallStun() { actualFuckingScript.StunMe(); }
     public void ActuallDeStun() { actualFuckingScript.DeStunMe(); }
 
+    public void PlayStepFX()
+    {
+        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.footstep);
+    }
+
 
 
 }

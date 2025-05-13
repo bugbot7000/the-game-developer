@@ -3834,6 +3834,7 @@ GameObject:
   - component: {fileID: 8162804565332567646}
   - component: {fileID: 7568533411508192411}
   - component: {fileID: 7695456795025329152}
+  - component: {fileID: 8811885290291630324}
   m_Layer: 8
   m_Name: necromancer
   m_TagString: Enemy
@@ -3982,7 +3983,7 @@ MonoBehaviour:
   hitbox: {fileID: 7979081663755473800}
   nose: {fileID: 0}
   mesh: {fileID: 0}
-  animator: {fileID: 0}
+  moveAnimThreshold: 1
   charmPoints: 0
   arrowPrefab: {fileID: 674199214884407343, guid: 1738cfb883e449846b0fd0af9a714ad3, type: 3}
   arrowSpawnPoint: {fileID: 8343017472919352078}
@@ -4013,6 +4014,8 @@ MonoBehaviour:
   invincible: 0
   anim: {fileID: 7695456795025329152}
   enemyAI: {fileID: 0}
+  HealthBarFill: {fileID: 0}
+  HealthBarFlash: {fileID: 0}
 --- !u!95 &7695456795025329152
 Animator:
   serializedVersion: 7
@@ -4035,6 +4038,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8811885290291630324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653420804517680028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378940722bc1f794281739ceb7286f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actualFuckingEnemy: {fileID: 0}
+  actualFuckingScript: {fileID: 0}
+  fuckingHealthScript: {fileID: 0}
 --- !u!1 &4708009577228582825
 GameObject:
   m_ObjectHideFlags: 0
