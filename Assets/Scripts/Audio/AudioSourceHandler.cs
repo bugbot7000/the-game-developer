@@ -36,9 +36,13 @@ public class AudioSourceHandler : MonoBehaviour
 
         if (sound != null)
         {
-            sound.AudioSource.volume = masterVolume * sound.Volume;
-            
-            sound.AudioSource.Play();
+            // This check is only really for when someone decides to call this method on Awake, before the AudioSources have been created...
+            if (sound.AudioSource != null)
+            {
+                sound.AudioSource.volume = masterVolume * sound.Volume;
+
+                sound.AudioSource.Play();
+            }
         }
         else
         {
