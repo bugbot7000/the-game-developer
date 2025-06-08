@@ -39,6 +39,36 @@ public class SemesterUnlockRequirements : ScriptableObject
         return true;
     }
 
+    public int MissingRequirementPages()
+    {
+        int missing = 0;
+
+        foreach (WikiPageSO page in WikiRequirements)
+        {
+            if (!WikiPageSearchManager.Instance.HasPageBeenVisited(page))
+            {
+                missing++;
+            }
+        }
+
+        return missing;
+    }
+
+    public int MissingRequirementBuilds()
+    {
+        int missing = 0;
+
+        foreach (string build in BuildRequirements)
+        {
+            if (!GameBuildManager.Instance.HasBuildBeenPlayed(build))
+            {
+                missing++;
+            }
+        }        
+
+        return missing;
+    }
+
     // ✅ Write code to detect if build has played (loop through played build, chek title match if played)
     // ✅ Add warning icons to mark the needed ones in index
     // ✅ Add requirements to wikipage search manager

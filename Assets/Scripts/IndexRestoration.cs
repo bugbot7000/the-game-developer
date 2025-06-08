@@ -2,32 +2,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 using TMPro;
-using Michsky.DreamOS;
 
 public class IndexRestoration : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI titleText;
+    [SerializeField] TextMeshProUGUI mainText;
     [SerializeField] TextMeshProUGUI fallText;
     [SerializeField] Image fallProgressBar;
-    [SerializeField] Image fallUnlockMarker;
     [SerializeField] TextMeshProUGUI springText;
     [SerializeField] Image springProgressBar;
-    [SerializeField] Image springUnlockMarker;
     [SerializeField] TextMeshProUGUI summerText;
     [SerializeField] Image summerProgressBar;
-    [SerializeField] Image summerUnlockMarker;
 
     float barLength = 600f;
 
-    void Start()
-    {
-        fallUnlockMarker.rectTransform.anchoredPosition = new Vector2(barLength * WikiPageSearchManager.Instance.ProgressToUnlockSpring, 0);
-        springUnlockMarker.rectTransform.anchoredPosition = new Vector2(barLength * WikiPageSearchManager.Instance.ProgressToUnlockSummer, 0);
-    }
-    
     void Update()
     {
         titleText.SetText($"Index Restoration - {(int) (WikiPageSearchManager.Instance.GetTotalProgress() * 100)}%");
+        mainText.SetText($"Corrupted index cache entries have been identified.\nManually load corrupted pages and run builds to restore index.\n{WikiPageSearchManager.Instance.GetMissingRequirementsForCurrentChunk()}");
         
         float fallProgress = WikiPageSearchManager.Instance.GetFallSemesterProgress();
         fallText.SetText($"Fall Restoration Progress - {(int) (fallProgress * 100)}%");

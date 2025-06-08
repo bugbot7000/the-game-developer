@@ -127,6 +127,23 @@ public class WikiPageSearchManager : MonoBehaviour
         return false;
     }
 
+    public string GetMissingRequirementsForCurrentChunk()
+    {
+        //TODO: Add condition when ending unlocked ("All has been resotred"?)
+        if (SummerUnlocked())
+        {
+            return $"<b>{endingUnlockRequirements.MissingRequirementPages()}</b> corrupted pages and <b>{endingUnlockRequirements.MissingRequirementBuilds()}</b> builds have yet to be loaded in the current chunk.";
+        }
+        else if (SpringUnlocked())
+        {
+            return $"<b>{summerUnlockRequirements.MissingRequirementPages()}</b> corrupted pages and <b>{summerUnlockRequirements.MissingRequirementBuilds()}</b> builds have yet to be loaded in the current chunk.";
+        }
+        else
+        {
+            return $"<b>{springUnlockRequirements.MissingRequirementPages()}</b> corrupted pages and <b>{springUnlockRequirements.MissingRequirementBuilds()}</b> builds have yet to be loaded in the current chunk.";
+        }
+    }
+
     public float GetTotalProgress()
     {
         float visited = 0;
