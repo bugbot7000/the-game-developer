@@ -159,7 +159,7 @@ public class WikiPageSearchManager : MonoBehaviour
 
     public bool SpringUnlocked()
     {
-        return GetFallSemesterProgress() >= progressToUnlockSpring;
+        return springUnlockRequirements.HaveRequirementsBeenMet();
     }
 
     public float GetSpringSemesterProgress()
@@ -175,7 +175,7 @@ public class WikiPageSearchManager : MonoBehaviour
 
     public bool SummerUnlocked()
     {
-        return GetSpringSemesterProgress() >= progressToUnlockSummer;
+        return summerUnlockRequirements.HaveRequirementsBeenMet();
     }
 
     public float GetSummerProgress()

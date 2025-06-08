@@ -18,13 +18,35 @@ public class SemesterUnlockRequirements : ScriptableObject
         return WikiRequirements.Contains(page) || BuildRequirements.Contains(page.BuildTitle);
     }
 
+    public bool HaveRequirementsBeenMet()
+    {
+        foreach (WikiPageSO page in WikiRequirements)
+        {
+            if (!WikiPageSearchManager.Instance.HasPageBeenVisited(page))
+            {
+                return false;
+            }
+        }
+
+        foreach (string build in BuildRequirements)
+        {
+            if (!GameBuildManager.Instance.HasBuildBeenPlayed(build))
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     // ✅ Write code to detect if build has played (loop through played build, chek title match if played)
     // ✅ Add warning icons to mark the needed ones in index
     // ✅ Add requirements to wikipage search manager
     // ✅ Gamepad emoji to mark if a build has been played
-    // 5. Modify requirements to actually check these new stuff
-    // (where is the index restoration actually running anyways?)
-    // (aha... it works in the page search manager, the index restoration just does visualizatoin)
+    // ✅ Modify requirements to actually check these new stuff
     // 6. rework index restorartion
-    // ....does my save and load system save and load build?
+    // (hide the little bars...)
+    // (rework text...)
+    // (make more explicit the remaining corrupt files)
+    // 7. fix save and load system (needs to save whether a build has been added and plaid)
 }
