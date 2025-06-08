@@ -13,15 +13,18 @@ public class SemesterUnlockRequirements : ScriptableObject
     [TitleGroup("Required Builds")]
     public List<string> BuildRequirements;
 
-    // this is slightly annoying due to my inconsistency in real index vs index in which they were added to the game hub...
-    // easiet way to handle is probably just by creating a helper method in the game build manager
-    // use string, and loop through everything...
+    public bool ContainsPage(WikiPageSO page)
+    {
+        return WikiRequirements.Contains(page) || BuildRequirements.Contains(page.BuildTitle);
+    }
 
-    // i also need to figure out how to visualize this? i honestly don't think that replicating the 
-    // index view in the index restoarion is the best, I like the bards...
-    // maybe a visual indicator in the index page (what icon would make sense? a star, oh maybe the warning emoji),
-    // and a gamepad emoji to indicate you;ve played it? would maybe want to separte that out in the index restorationi too
-    //  and the index restoration is still a bar, but also has a text saying "corrupted files left".
-    // only kind of weird think is i also need to visualize the builds being played
-    // (and not only the index page being loaded)
+    // ✅ Write code to detect if build has played (loop through played build, chek title match if played)
+    // ✅ Add warning icons to mark the needed ones in index
+    // ✅ Add requirements to wikipage search manager
+    // ✅ Gamepad emoji to mark if a build has been played
+    // 5. Modify requirements to actually check these new stuff
+    // (where is the index restoration actually running anyways?)
+    // (aha... it works in the page search manager, the index restoration just does visualizatoin)
+    // 6. rework index restorartion
+    // ....does my save and load system save and load build?
 }

@@ -21,6 +21,8 @@ public class WikiPageSO : ScriptableObject
     public bool ContainsBuild;
     [ShowIf("@ContainsBuild")]
     public int BuildIndex;
+    [ShowIf("@ContainsBuild")]
+    public string BuildTitle;
     [Tooltip("Allows for a page to be searched for by words that are not contained in title, subtitle, or content of the page. Keywords must be in lowercase!")]
     public List<string> AdditionalKeywords;
 

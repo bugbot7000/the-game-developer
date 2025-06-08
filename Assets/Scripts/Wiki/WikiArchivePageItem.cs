@@ -10,6 +10,8 @@ using TMPro;
 
 public class WikiArchivePageItem : SerializedMonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] Image warningIcon;
+    [SerializeField] Image gamepadIcon;
     [SerializeField] Dictionary<WikiPageType, Sprite> sprites;
 
     WikiArchivePage wikiArchivePage;
@@ -27,19 +29,47 @@ public class WikiArchivePageItem : SerializedMonoBehaviour, IPointerEnterHandler
         contentPage = target;
         wikiArchivePage = archivePage;
 
+        if (contentPage.PageType == WikiPageType.Build && contentPage.ContainsBuild)
+        {
+            if (GameBuildManager.Instance.HasBuildBeenPlayed(contentPage.BuildTitle))
+            {
+                gamepadIcon.color = Color.white;
+                warningIcon.enabled = false;
+            }
+
+            if (!WikiPageSearchManager.Instance.IsPageRequirement(contentPage))
+            {
+                warningIcon.enabled = false;
+            }            
+        }
+        else
+        {
+            gamepadIcon.enabled = false;
+        }
+
         if (WikiPageSearchManager.Instance.HasPageBeenVisited(contentPage))
         {
             image.color = Color.white;
-             
+
             TextMeshProUGUI textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
             textMeshPro.SetText(target.Title);
             textMeshPro.color = Color.black;
 
             visited = true;
+
+            if (contentPage.PageType != WikiPageType.Build)
+            {
+                warningIcon.enabled = false;
+            }
         }
         else
         {
             visited = false;
+
+            if (!WikiPageSearchManager.Instance.IsPageRequirement(contentPage))
+            {
+                warningIcon.enabled = false;
+            }
         }
     }
 

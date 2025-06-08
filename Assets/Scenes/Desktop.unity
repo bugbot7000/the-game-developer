@@ -15515,7 +15515,13 @@ MonoBehaviour:
   fallIndex: {fileID: 11400000, guid: 0a62479d898065742b53677801eb85b4, type: 2}
   springIndex: {fileID: 11400000, guid: dc477784c159af842a3df98ad7fba667, type: 2}
   summerIndex: {fileID: 11400000, guid: c16161762edc14f46b455e280902763c, type: 2}
-  enableWikiDebug: 0
+  enableWikiDebug: 1
+  debugFall: 0
+  debugSpring: 0
+  debugSummer: 0
+  springUnlockRequirements: {fileID: 11400000, guid: dbcd89396753c6942b0ca42496cd11b4, type: 2}
+  summerUnlockRequirements: {fileID: 11400000, guid: c4a395fedce534a4db609f41304fb051, type: 2}
+  endingUnlockRequirements: {fileID: 11400000, guid: c22f61b7b50f8744786e565c5d76fd99, type: 2}
   maxSearchResults: 6
   progressToUnlockSpring: 0.6
   progressToUnlockSummer: 0.7
@@ -44801,7 +44807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2548916245056620365, guid: 1fc5682c147667f479e7552c42b54232, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 2560262124296507651, guid: 1fc5682c147667f479e7552c42b54232, type: 3}
       propertyPath: targetCanvas
@@ -46009,7 +46015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5192813470262725042, guid: 1fc5682c147667f479e7552c42b54232, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 111.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5192813470262725042, guid: 1fc5682c147667f479e7552c42b54232, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -46313,7 +46319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5861389658814032791, guid: 1fc5682c147667f479e7552c42b54232, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 111.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5861389658814032791, guid: 1fc5682c147667f479e7552c42b54232, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -48058,7 +48064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049518757172178697, guid: fec1ced1cad809d44b9524cde2f812d6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 1113724112230128833, guid: fec1ced1cad809d44b9524cde2f812d6, type: 3}
       propertyPath: m_Color.b
@@ -55426,7 +55432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3223537549120070692, guid: 2dae2b80ad392ed4f803e2190e954053, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 111.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3223537549120070692, guid: 2dae2b80ad392ed4f803e2190e954053, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -55558,7 +55564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3889716800177489409, guid: 2dae2b80ad392ed4f803e2190e954053, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 111.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3889716800177489409, guid: 2dae2b80ad392ed4f803e2190e954053, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -61331,7 +61337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3952349906498393342, guid: 0a4c2ee0e8ea08f4ea76d41771fb5e65, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 3952349906741684064, guid: 0a4c2ee0e8ea08f4ea76d41771fb5e65, type: 3}
       propertyPath: mpManager
@@ -66475,7 +66481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5586452692009155973, guid: e950fd541d21571458dd36097e65f9a2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 5586452692279022236, guid: e950fd541d21571458dd36097e65f9a2, type: 3}
       propertyPath: m_fontColor.b
@@ -76673,7 +76679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7408397455861135336, guid: 9c710fdc0be981049ae300196c0eb7f1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 7408397455873567612, guid: 9c710fdc0be981049ae300196c0eb7f1, type: 3}
       propertyPath: m_fontColor.b
@@ -77648,7 +77654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 945394513599046049, guid: 480258cdbe52bcd4b896f0ac5108928a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 91.92
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 945394513599046049, guid: 480258cdbe52bcd4b896f0ac5108928a, type: 3}
       propertyPath: m_SizeDelta.y
@@ -77808,7 +77814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1936648385430947079, guid: 480258cdbe52bcd4b896f0ac5108928a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 140.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1936648385430947079, guid: 480258cdbe52bcd4b896f0ac5108928a, type: 3}
       propertyPath: m_SizeDelta.y
@@ -78004,7 +78010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3908521458660182633, guid: 480258cdbe52bcd4b896f0ac5108928a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 164.16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3908521458660182633, guid: 480258cdbe52bcd4b896f0ac5108928a, type: 3}
       propertyPath: m_SizeDelta.y
@@ -78588,7 +78594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4531956019940102887, guid: 480258cdbe52bcd4b896f0ac5108928a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 77.73
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4531956019940102887, guid: 480258cdbe52bcd4b896f0ac5108928a, type: 3}
       propertyPath: m_SizeDelta.y

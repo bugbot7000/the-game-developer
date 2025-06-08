@@ -34,6 +34,7 @@ public class GameBuildManager : MonoBehaviour
     List<int> addedBuildIndices = new List<int>();
     List<GameObject> addedBuilds = new List<GameObject>();
     List<bool> hasBuildBeenPlayed = new List<bool>();
+    List<string> addedBuildNames = new List<string>();
 
     int enabledBuild = -1;
 
@@ -105,6 +106,19 @@ public class GameBuildManager : MonoBehaviour
         return hasBuildBeenPlayed[index];
     }
 
+    public bool HasBuildBeenPlayed(string name)
+    {
+        for (int i = 0; i < hasBuildBeenPlayed.Count; i++)
+        {
+            if (hasBuildBeenPlayed[i] && addedBuildNames[i] == name)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     [Button]
     public void AddGameBuildToHub(int buildIndex)
     {
@@ -113,6 +127,7 @@ public class GameBuildManager : MonoBehaviour
             gameHubManager.AddGameToLibrary(builds[buildIndex]);
             addedBuilds.Add(gamePrefabs[buildIndex]);
             addedBuildIndices.Add(buildIndex);
+            addedBuildNames.Add(builds[buildIndex].gameTitle);
             hasBuildBeenPlayed.Add(false);
         }
     }

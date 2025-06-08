@@ -30,6 +30,14 @@ public class WikiPageSearchManager : MonoBehaviour
     [SerializeField] WikiIndexSO springIndex;
     [SerializeField] WikiIndexSO summerIndex;
     [SerializeField] bool enableWikiDebug;
+    [SerializeField, ShowIf("@enableWikiDebug")] bool debugFall;
+    [SerializeField, ShowIf("@enableWikiDebug")] bool debugSpring;
+    [SerializeField, ShowIf("@enableWikiDebug")] bool debugSummer;
+
+    [TitleGroup("Requirements")]
+    [SerializeField] SemesterUnlockRequirements springUnlockRequirements;
+    [SerializeField] SemesterUnlockRequirements summerUnlockRequirements;
+    [SerializeField] SemesterUnlockRequirements endingUnlockRequirements;
 
     [TitleGroup("Parameters")]
     [SerializeField] int maxSearchResults = 3;  
@@ -66,21 +74,30 @@ public class WikiPageSearchManager : MonoBehaviour
         {
             Debug.Log("[WikiPageSearchManager] Wiki debug enabled.");
 
-            foreach (WikiPageSO wikiPage in fallIndex.WikiPages)
+            if (debugFall)
             {
-                visitedPages.Add(wikiPage);
+                foreach (WikiPageSO wikiPage in fallIndex.WikiPages)
+                {
+                    visitedPages.Add(wikiPage);
+                }
             }
 
-            foreach (WikiPageSO wikiPage in springIndex.WikiPages)
+            if (debugSpring)
             {
-                visitedPages.Add(wikiPage);
+                foreach (WikiPageSO wikiPage in springIndex.WikiPages)
+                {
+                    visitedPages.Add(wikiPage);
+                }
             }
 
-            foreach (WikiPageSO wikiPage in summerIndex.WikiPages)
+            if (debugSummer)
             {
-                visitedPages.Add(wikiPage);
-            }            
-
+                foreach (WikiPageSO wikiPage in summerIndex.WikiPages)
+                {
+                    visitedPages.Add(wikiPage);
+                }  
+            }
+          
             webBrowser.OpenWindow();
             webBrowser.GetComponent<WebBrowserManager>().OpenPage("wiki.eren.local/archive");    
             networkManager.networkItems[0].networkSpeed = 100;        
@@ -102,6 +119,14 @@ public class WikiPageSearchManager : MonoBehaviour
         }        
     }
 
+    public bool IsPageRequirement(WikiPageSO page)
+    {
+        if (springUnlockRequirements.ContainsPage(page) || summerUnlockRequirements.ContainsPage(page) || endingUnlockRequirements.ContainsPage(page))
+            return true;
+
+        return false;
+    }
+
     public float GetTotalProgress()
     {
         float visited = 0;
@@ -112,13 +137,13 @@ public class WikiPageSearchManager : MonoBehaviour
 
         foreach (WikiPageSO wikiPage in springIndex.WikiPages)
             if (HasPageBeenVisited(wikiPage))
-                visited++; 
+                visited++;
 
         foreach (WikiPageSO wikiPage in summerIndex.WikiPages)
             if (HasPageBeenVisited(wikiPage))
-                visited++;                 
+                visited++;
 
-        return visited / (fallIndex.WikiPages.Count + springIndex.WikiPages.Count + summerIndex.WikiPages.Count);                                               
+        return visited / (fallIndex.WikiPages.Count + springIndex.WikiPages.Count + summerIndex.WikiPages.Count);
     }
 
     public float GetFallSemesterProgress()
