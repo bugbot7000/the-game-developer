@@ -68,15 +68,4 @@ public class SemesterUnlockRequirements : ScriptableObject
 
         return missing;
     }
-
-    // ✅ Write code to detect if build has played (loop through played build, chek title match if played)
-    // ✅ Add warning icons to mark the needed ones in index
-    // ✅ Add requirements to wikipage search manager
-    // ✅ Gamepad emoji to mark if a build has been played
-    // ✅ Modify requirements to actually check these new stuff
-    // 6. rework index restorartion
-    // (hide the little bars...)
-    // (rework text...)
-    // (make more explicit the remaining corrupt files)
-    // 7. fix save and load system (needs to save whether a build has been added and plaid)
 }

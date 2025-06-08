@@ -22,7 +22,8 @@ public class GameLoadSaveManager : MonoBehaviour
                 FindFirstObjectByType<WikiPageSearchManager>().Load();
                 FindFirstObjectByType<NotepadManager>(FindObjectsInactive.Include)
                     .UpdateFirstNoteContent(PlayerPrefs.GetString("notepad"));
-            }   
+                FindFirstObjectByType<GameBuildManager>().Load();
+            }
             else
             {
                 FindFirstObjectByType<OpeningSequenceManager>().StartGame();

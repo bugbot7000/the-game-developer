@@ -22,8 +22,8 @@ public class GameBuildManager : MonoBehaviour
             Destroy(this);
         }
     }
-    #endregion    
-    
+    #endregion
+
     [SerializeField] bool enableBuildDebug;
     [SerializeField] List<string> chatOnBuild = new List<string>();
     [SerializeField, SceneObjectsOnly] GameObject[] gamePrefabs;
@@ -58,6 +58,7 @@ public class GameBuildManager : MonoBehaviour
     {
         addedBuilds[build].SetActive(true);
         hasBuildBeenPlayed[build] = true;
+        PlayerPrefs.SetInt($"PlayedBuild{build+1}", 1);
 
         enabledBuild = build;
 
@@ -120,7 +121,7 @@ public class GameBuildManager : MonoBehaviour
     }
 
     [Button]
-    public void AddGameBuildToHub(int buildIndex)
+    public void AddGameBuildToHub(int buildIndex, bool save=true)
     {
         if (!addedBuilds.Contains(gamePrefabs[buildIndex]))
         {
@@ -129,6 +130,31 @@ public class GameBuildManager : MonoBehaviour
             addedBuildIndices.Add(buildIndex);
             addedBuildNames.Add(builds[buildIndex].gameTitle);
             hasBuildBeenPlayed.Add(false);
+
+            if (save)
+            {
+                SaveNewBuild(buildIndex);
+            }
+        }
+    }
+
+    public void SaveNewBuild(int newBuildIndex)
+    {
+        int index = addedBuilds.Count;
+
+        PlayerPrefs.SetInt($"AddedBuild{index}", newBuildIndex);
+        PlayerPrefs.SetInt($"PlayedBuild{index}", 0);
+    }
+
+    public void Load()
+    {
+        for (int i = 1; i < 10; i++)
+        {
+            if (PlayerPrefs.HasKey($"AddedBuild{i}"))
+            {
+                AddGameBuildToHub(PlayerPrefs.GetInt($"AddedBuild{i}"), false);
+                hasBuildBeenPlayed[i - 1] = PlayerPrefs.GetInt($"PlayedBuild{i}") == 1 ? true : false;
+            }
         }
     }
 }
