@@ -70,7 +70,7 @@ namespace Michsky.DreamOS
         {
             if (dateFormat == DateFormat.DD_MM_YYYY) { textObj.text = string.Format("{0}.{1}.{2}", DateAndTimeManager.instance.currentDay, DateAndTimeManager.instance.currentMonth, DateAndTimeManager.instance.currentYear); }
             else if (dateFormat == DateFormat.MM_DD_YYYY) { textObj.text = string.Format("{0}.{1}.{2}", DateAndTimeManager.instance.currentMonth, DateAndTimeManager.instance.currentDay, DateAndTimeManager.instance.currentYear); }
-            else if (dateFormat == DateFormat.YYYY_MM_DD) { textObj.text = string.Format("{0}.{1}.{2}", DateAndTimeManager.instance.currentYear, DateAndTimeManager.instance.currentMonth, DateAndTimeManager.instance.currentDay); }
+            else if (dateFormat == DateFormat.YYYY_MM_DD) { textObj.text = string.Format("2024.{0}.{1}", DateAndTimeManager.instance.currentMonth, DateAndTimeManager.instance.currentDay); }
         }
     }
 }
