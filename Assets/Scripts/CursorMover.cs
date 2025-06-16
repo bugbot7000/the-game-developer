@@ -15,6 +15,7 @@ public class CursorMover : MonoBehaviour
     public float mouseH, mouseV, xClamp,yClamp;
     public GameObject Lamp,Options,LoadingCanvas,DesktopCanvas,DeleteGameButton;
     public CanvasGroup fadeCanvas;
+    public GameObject loadingSpinner;
     public TextMeshProUGUI startGameButton;
 
     Collider option;
@@ -58,7 +59,18 @@ public class CursorMover : MonoBehaviour
 
             yield return fadeCanvas.DOFade(1.0f, 1.0f).SetEase(Ease.OutCubic).WaitForCompletion();
 
-            SceneManager.LoadScene(1);
+            loadingSpinner.SetActive(true);
+
+            // We let the game feel like it's actually loading for a sec before the real load stalls the animation.
+            yield return new WaitForSeconds(2.0f);
+
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+
+            // Wait until the asynchronous scene fully loads
+            while (!asyncLoad.isDone)
+            {
+                yield return null;
+            }            
         }
     }
 
