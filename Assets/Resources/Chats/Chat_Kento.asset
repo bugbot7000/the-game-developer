@@ -30,14 +30,15 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "After how she tore our group to shreds for her own means?\r\r"
+  - messageContent: "After how she tore our group to shreds for her own means?\r\r\r"
     objectType: 0
     messageAuthor: 1
     sentTime: 11:10 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: "You\u2019re better than this, Eren. "
+  - messageContent: 'Come on, Eren. I thought we were both trying to leave that in
+      the past. '
     objectType: 0
     messageAuthor: 1
     sentTime: 11:11 AM
@@ -59,8 +60,8 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: 'She was the one stalling the entire project in the first place
-      by childishly refusing to work on the game! '
+  - messageContent: "Yeah, I won\u2019t deny that, but she was the one stalling the
+      entire project in the first place by childishly refusing to work on the game! "
     objectType: 0
     messageAuthor: 1
     sentTime: 11:18 AM
@@ -75,7 +76,8 @@ MonoBehaviour:
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: Kento please
+  - messageContent: "Yeah and my free trial of death didn\u2019t contribute anything
+      towards that either\r\nKento you\u2019re getting stuck in old habits again\r"
     objectType: 0
     messageAuthor: 0
     sentTime: 11:20 AM
@@ -106,23 +108,24 @@ MonoBehaviour:
     imageMessage: {fileID: 0}
     messageKey: 
   - messageContent: "Then why is she the one getting accolades and awards left and
-      right when I can\u2019t even find my footing in this industry after all these
-      years?"
+      right when I\u2019m only starting to find my footing in this industry after
+      all these years?"
     objectType: 0
     messageAuthor: 1
     sentTime: 11:24 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: 'Trismegistus was MY story to begin with. '
+  - messageContent: "I know I\u2019ve wasted a lot of time but Trismegistus was MY
+      story to begin with. "
     objectType: 0
     messageAuthor: 1
     sentTime: 11:26 AM
     audioMessage: {fileID: 0}
     imageMessage: {fileID: 0}
     messageKey: 
-  - messageContent: 'Why is she the one getting rewarded when all she does is follow
-      the herd? '
+  - messageContent: "Why is she the one getting rewarded when all she\u2019s ever
+      done is follow the herd like everyone else? "
     objectType: 0
     messageAuthor: 1
     sentTime: 11:27 AM

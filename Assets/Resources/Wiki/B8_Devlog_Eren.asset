@@ -48,10 +48,11 @@ MonoBehaviour:
     thing is it seems like it\u2019s just artificial light\r\n- When I actually go
     outside and touch grass, I\u2019m totally fine with the sunlight\r\n- I think
     nature might be trying to tell me something about my <mark=#ffff00aa>health</mark>
-    lol\r"
+    lol\n- (go_touch_grass.png)\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 0
   BuildIndex: 0
+  BuildTitle: 
   AdditionalKeywords: []
