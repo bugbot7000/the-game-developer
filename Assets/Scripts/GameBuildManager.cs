@@ -52,6 +52,9 @@ public class GameBuildManager : MonoBehaviour
                 AddGameBuildToHub(i);
             }
         }
+
+        // We always add Ralia's Lament.
+        AddGameBuildToHub(builds.Length - 1);
     }
 
     public void EnableGameBuild(int build)
