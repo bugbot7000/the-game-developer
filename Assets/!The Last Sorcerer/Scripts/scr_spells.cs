@@ -209,7 +209,7 @@ public class scr_spells : MonoBehaviour
         if (slashedObject.GetComponent<scr_health>() != null)
         {
             slashedObject.GetComponent<scr_health>().TakeDamage(slashDamage);
-            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.gen_slash);
+            GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.gen_slash);
         }
     }
 

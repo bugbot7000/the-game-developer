@@ -20,25 +20,25 @@ public class Bullshit_Middle_Man_Enemy_Anim_Scr : MonoBehaviour
     public void ResetFuckingAttack() { actualFuckingScript.ResetAttack(); }
     public void PlayFootstepsFX()
     {
-        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.footstep);
+        GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.footstep);
     }
-    public void PlaySlashFX() { GameAudioManager.Instance.playSFX(GameAudioManager.SFX.weapon_swing); }
-    public void PlaySummonFX() { GameAudioManager.Instance.playSFX(GameAudioManager.SFX.ghostly_fire_summon); }
-    public void PlayMoanFX() { GameAudioManager.Instance.playSFX(GameAudioManager.SFX.zombie_moan); }
+    public void PlaySlashFX() { GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.weapon_swing); }
+    public void PlaySummonFX() { GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.ghostly_fire_summon); }
+    public void PlayMoanFX() { GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.zombie_moan); }
     public void PlayNecroDeathFX()
     {
-        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.necro_die);
+        GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.necro_die);
     }
     public void PlayMinoDeathFX()
     {
-        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.minotaur_death);
+        GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.minotaur_death);
     }
     public void PlayMinoStomp()
     {
-        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.mino_stomp);
+        GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.mino_stomp);
     }
     public void PlayMinoSnarlFX()
     {
-        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.bull_snarl);
+        GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.bull_snarl);
     }
 }

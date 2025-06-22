@@ -19,7 +19,7 @@ public class BullshitMiddleManPlayerAnimScr : MonoBehaviour
 
     public void PlayStepFX()
     {
-        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.footstep);
+        GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.footstep);
     }
 
 

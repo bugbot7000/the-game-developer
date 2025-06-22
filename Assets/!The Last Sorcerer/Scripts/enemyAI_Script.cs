@@ -102,7 +102,7 @@ public class enemyAI_Script : MonoBehaviour
     {
         if (type == EnemyType.Necromancer)
         {
-            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.necro_laugh);
+            GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.necro_laugh);
         }
     }
 
@@ -404,7 +404,7 @@ public class enemyAI_Script : MonoBehaviour
         if (!alreadyAttacked && type == EnemyType.Archer && !playerTooClose) 
         {
             anim.SetTrigger("ATTACK");
-            //GameAudioManager.Instance.playSFX(GameAudioManager.SFX.arrow_draw); //This might be a problem as attack is called during update
+            //GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.arrow_draw); //This might be a problem as attack is called during update
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
             agent.speed = 0;
         }
@@ -466,7 +466,7 @@ public class enemyAI_Script : MonoBehaviour
 
     public void ZombieCharge()
     {
-        //GameAudioManager.Instance.playSFX(GameAudioManager.SFX.zombie_moan);
+        //GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.zombie_moan);
         damageOnCollide = true;
         //transform.LookAt(player);
         //transform.position = Vector3.MoveTowards(transform.position, player.position, slamSpd);
@@ -491,7 +491,7 @@ public class enemyAI_Script : MonoBehaviour
 
             GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
             arrow.transform.rotation = Quaternion.LookRotation(direction);
-            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.arrow_loose);
+            GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.arrow_loose);
         }
         alreadyAttacked = true;
         // TODO: Arrow shooting sound
@@ -508,7 +508,7 @@ public class enemyAI_Script : MonoBehaviour
             projectile.GetComponent<scr_Arrow>().DMAtk = true;
             projectile.transform.rotation = Quaternion.LookRotation(direction);
             projectileSpawnIndex = (projectileSpawnIndex + 1) % projectileSpawnPoints.Length;
-            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.rock_crumble);
+            GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.rock_crumble);
         }
         alreadyAttacked = true;
         Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -523,7 +523,7 @@ public class enemyAI_Script : MonoBehaviour
 
             GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
             arrow.transform.rotation = Quaternion.LookRotation(direction);
-            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.necro_attack);
+            GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.necro_attack);
         }
     }
 
@@ -652,7 +652,7 @@ public class enemyAI_Script : MonoBehaviour
     private IEnumerator JumpToLocation(Transform jumpLocation)
     {
         DMIsJumping = true;
-        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.rattlesnake_move);
+        GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.rattlesnake_move);
     //agent.enabled = false;
     float elapsedTime = 0f;
         Vector3 startingPosition = transform.position;
@@ -692,7 +692,7 @@ public class enemyAI_Script : MonoBehaviour
         if (collision.gameObject.GetComponent<scr_health>() != null && damageOnCollide == true)
         {
             collision.gameObject.GetComponent<scr_health>().TakeDamage(dmg);
-            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.blunt);
+            GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.blunt);
             damageOnCollide = false;
             if (dmgTxt != null)
             {

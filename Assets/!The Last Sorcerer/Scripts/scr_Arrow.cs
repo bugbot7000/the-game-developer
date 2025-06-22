@@ -26,10 +26,10 @@ public class scr_Arrow : MonoBehaviour
         if (other.CompareTag("Player")) // change to look for the target of ai script
         {
             other.gameObject.GetComponent<scr_health>().TakeDamage(damage);
-            if (DMAtk) { GameAudioManager.Instance.playSFX(GameAudioManager.SFX.rock_crash); }
+            if (DMAtk) { GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.rock_crash); }
             else
             {
-                GameAudioManager.Instance.playSFX(GameAudioManager.SFX.blunt);
+                GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.blunt);
             }
             Destroy(gameObject);
         }

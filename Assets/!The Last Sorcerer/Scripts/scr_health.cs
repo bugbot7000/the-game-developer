@@ -113,7 +113,7 @@ public class scr_health : MonoBehaviour
     }
     public void PlayMinotaurDeathFX()
     {
-        GameAudioManager.Instance.playSFX(GameAudioManager.SFX.minotaur_death);
+        GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.minotaur_death);
     }
 
     public void DisableInvincibility() { invincible = false; }

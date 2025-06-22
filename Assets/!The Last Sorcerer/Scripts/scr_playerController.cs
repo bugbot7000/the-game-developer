@@ -410,7 +410,7 @@ Vector3 velocity;
             }
 
             MakeParticles();
-            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.ghostly_fire_summon);
+            GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.ghostly_fire_summon);
             var copy = Instantiate(spellShape, spellSpawn.position, Quaternion.identity);
             copy.transform.eulerAngles = rotationSetting;
             if (spellShape == beam)
@@ -421,7 +421,7 @@ Vector3 velocity;
             currentAttack = copy;
             if (type == SpellType.Push)
             {
-                GameAudioManager.Instance.playSFX(GameAudioManager.SFX.push_perc);
+                GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.push_perc);
                 var copyScript = copy.GetComponent<scr_spells>();
                 copyScript.PushSpell = true;
                 copyScript.PullSpell = false;
@@ -440,7 +440,7 @@ Vector3 velocity;
             }
             else if (type == SpellType.Pull)
             {
-                GameAudioManager.Instance.playSFX(GameAudioManager.SFX.pull_sfx);
+                GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.pull_sfx);
                 var copyScript = copy.GetComponent<scr_spells>();
                 copyScript.PushSpell = false;
                 copyScript.PullSpell = true;
@@ -459,7 +459,7 @@ Vector3 velocity;
             }
             else if (type == SpellType.Charm) //AND HERE
             {
-                GameAudioManager.Instance.playSFX(GameAudioManager.SFX.charm_choir);
+                GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.charm_choir);
                 var copyScript = copy.GetComponent<scr_spells>();
                 copyScript.PushSpell = false;
                 copyScript.PullSpell = false;
@@ -469,7 +469,7 @@ Vector3 velocity;
             }
             else if (type == SpellType.Slash) 
             {
-                GameAudioManager.Instance.playSFX(GameAudioManager.SFX.knife_sharpen);
+                GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.knife_sharpen);
                 var copyScript = copy.GetComponent<scr_spells>();
                 copyScript.PushSpell = false;
                 copyScript.PullSpell = false;
@@ -479,7 +479,7 @@ Vector3 velocity;
             }
             else if (type == SpellType.Freeze)
             {
-                GameAudioManager.Instance.playSFX(GameAudioManager.SFX.ice_crack);
+                GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.ice_crack);
                 var copyScript = copy.GetComponent<scr_spells>();
                 copyScript.PushSpell = false;
                 copyScript.PullSpell = false;
@@ -514,7 +514,7 @@ Vector3 velocity;
         {
             if (!CheckForOpenFamiliarSlots()) { DestroyFamiliar(); }
             var copy = Instantiate(familiar, activeFirePoint.transform.position, Quaternion.identity);
-            GameAudioManager.Instance.playSFX(GameAudioManager.SFX.ghostly_fire_summon);
+            GameAudioManager.Instance?.playSFX(GameAudioManager.SFX.ghostly_fire_summon);
             if (copy.GetComponent<enemyAI_Script>() != null) 
             {
                 Debug.Log("Summoned enemy");
