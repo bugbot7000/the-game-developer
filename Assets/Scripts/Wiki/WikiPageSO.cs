@@ -27,7 +27,7 @@ public class WikiPageSO : ScriptableObject
     public List<string> AdditionalKeywords;
 
     List<string> KentoAliasess = new List<string>{"KentoWrites (narrative/puzzles)", "Narrative Chef", "Burning Down Your Kitchen", "Sisyphus Moment", "Kento's Still Writing", "Kento “Mister Hustle” Cox", "Kento’s Still Writing", "Kentusle", "Kento (Working)"};
-    List<string> RoseAliasess = new List<string>{"rosygoldart (art)", "in the (art) trenches", "eepy artiste", "panera rose refresher", "toonity update anti", "punished rose", "wilting rose", "rose", "rosygoldart"};
+    List<string> RoseAliases = new List<string>{"rosygoldart (art)", "in the (art) trenches", "eepy artiste", "panera rose refresher", "toonity update anti", "punished rose", "wilting rose", "rose", "rosygoldart", "wilted rose"};
     List<string> ErenAliasess = new List<string>{"erenlaiii (programming)", "Mooncake Dealer", "beep boop coder [ERROR]", "Mooncake's Indentured Servant", "Mooncake’s Indentured Servant", "Flashing Lights Warning", "Lai-ing on the floor", "Not Lai-king This Job Hunt", "Neverending Coding Problems"};
 
     public bool PageContainsTerm(string term)
@@ -57,7 +57,7 @@ public class WikiPageSO : ScriptableObject
             {
                 name = $"<color=#f5260f>{name}</color>";
             }
-            else if (RoseAliasess.Contains(name))
+            else if (RoseAliases.Contains(name))
             {
                 name = $"<color=#c002d1>{name}</color>";
             }
