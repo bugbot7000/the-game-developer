@@ -7,12 +7,12 @@ public class IsAbilitySelected : MonoBehaviour
 
     public void Played()
     {
-        Debug.Log("Played");
+        // Debug.Log("Played");
     }
 
     public void Stopped()
     {
-        Debug.Log("Stopre");
+        // Debug.Log("Stopre");
     }
     
 }
