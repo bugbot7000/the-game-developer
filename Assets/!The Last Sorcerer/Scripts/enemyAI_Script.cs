@@ -272,7 +272,6 @@ public class enemyAI_Script : MonoBehaviour
         }
         else
         {
-            Debug.Log("OVER PIT");
             return true;
         }
     }
