@@ -16,13 +16,13 @@ MonoBehaviour:
   Date: 9/1/2017
   Title: Nephrite
   Subtitle: Eren
-  Content: 'Bug fixes.
-
-
-    [BUILD DATA CORRUPTED] '
+  Content: Fixed the bug that was crashing the Aventurine build. Kento was working
+    on a Ritual level but for reason the game exits if I try to set it as the first
+    scene, so I just made the player start in the maze.
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
-  ContainsBuild: 0
-  BuildIndex: 0
+  ContainsBuild: 1
+  BuildIndex: 6
+  BuildTitle: '"Nephrite" (9/1/2017)'
   AdditionalKeywords: []
