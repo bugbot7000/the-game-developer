@@ -691,7 +691,7 @@ Vector3 velocity;
 
     public void CommitSedoku()
     {
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.Escape)) // 
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Escape))
         {
             gameObject.GetComponent<scr_health>().health = 0f;
         }
