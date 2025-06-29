@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveConversation: 0
   useDynamicMessages: 0
-  useStoryTeller: 0
+  useStoryTeller: 1
   messageList:
   - messageContent: "You\u2019re playing THAT game??"
     objectType: 0
@@ -133,4 +133,148 @@ MonoBehaviour:
     imageMessage: {fileID: 0}
     messageKey: 
   dynamicMessages: []
-  storyTeller: []
+  storyTeller:
+  - itemID: KEN_0
+    messageAuthor: 1
+    messageContent: "Hey, I\u2019m sorry I ranted at you earlier. I got a little
+      frustrated about old problems and lashed out. "
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: Don't worry about it too much
+      replyContent: "Don't worry about it too much\nI know you\u2019ve been trying
+        to do better lately"
+      replyFeedback: "Yeah, who knew that reconnecting with Fernanda would change
+        so much. \r\nGave me a lot more perspective than my snot-nosed 8-year-old
+        self would have gotten. \r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: KEN_1
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: 
+  - itemID: KEN_1
+    messageAuthor: 1
+    messageContent: "I\u2019m still working on the perspective bit to be honest with
+      you. "
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: Yeah I know
+      replyContent: "\rYou mentioned something about surgery last time I think\r\nHow
+        did that go?\r"
+      replyFeedback: "Well, she can start using the cane next week. We\u2019re gonna
+        try and see if we can make an outing out of it. \r\nMe and a couple other
+        mutual friends thought we could go to the park with my dog. \r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: KEN_2
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: 
+  - itemID: KEN_2
+    messageAuthor: 1
+    messageContent: "She\u2019s never going to have full mobility like us, but she
+      told me that having any ability to walk without crutches is like a dream come
+      true for her. "
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: You mentioned that before I think
+      replyContent: "How it\u2019s about the little victories before you can even
+        think of the big ones"
+      replyFeedback: "Yeah. \r\nI guess my big victory is being able to think about
+        Rose and Trismegistus without feeling bitter about it. \r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: KEN_3
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: 
+  - itemID: KEN_3
+    messageAuthor: 1
+    messageContent: "And I kinda backslid earlier. I guess today\u2019s little victory
+      is realizing that I did. "
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: "I\u2019m proud of you Kento"
+      replyContent: "I\u2019m proud of you Kento\r\nYou\u2019ve come a pretty long
+        way\r"
+      replyFeedback: I have, I suppose.
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: KEN_4
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: 
+  - itemID: KEN_4
+    messageAuthor: 1
+    messageContent: "What about you though? \r\nI know you had a rough couple of
+      years after graduating, and then the pandemic hit, but you haven\u2019t coded
+      for fun in years, right? \r"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: Funny you should say that
+      replyContent: "Another friend of mine was just talking to me about that\r\nI
+        guess I just don\u2019t know where to start\r"
+      replyFeedback: "I\u2019d offer to help, but I don\u2019t know either. \r\n\u2026Rose
+        would probably know though. \r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: KEN_5
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: 
+  - itemID: KEN_5
+    messageAuthor: 0
+    messageContent: "Wait you\u2019re right"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: "I don\u2019t know if..."
+      replyContent: "I don\u2019t know if she\u2019d entertain a random message from
+        me out of the blue though\r\nWe didn\u2019t part on bad terms but it\u2019s
+        been 8 years \r"
+      replyFeedback: "You might as well give it a shot. \r\nWorst case scenario is
+        you get no reply, and you look elsewhere for advice. \r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: KEN_6
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: 
+  - itemID: KEN_6
+    messageAuthor: 1
+    messageContent: "I\u2019d have never admitted it back in the day, but Rose knew
+      her stuff. Probably still does. "
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: "I suppose one short message couldn\u2019t hurt"
+      replyContent: "I suppose one short message couldn\u2019t hurt\r\nYou don\u2019t
+        suppose she\u2019s still using her old Disagreement account do you\r\nOh
+        wait it shows that she\u2019s online lol\r"
+      replyFeedback: "Well, there you go. \r\nGood luck. I still don\u2019t have
+        the guts to message her again. \n\r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: 
+      briefKey: 
+      contentKey: 
+      feedbackKey: ROSE
+    messageKey: 

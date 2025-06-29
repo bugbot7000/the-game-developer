@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,6 +6,8 @@ namespace Michsky.DreamOS
 {
     public class DynamicMessageHandler : MonoBehaviour
     {
+        public static Action EndingCall;
+
         [HideInInspector] public MessagingManager manager;
         GameObject messageTimerObject;
 
@@ -83,7 +86,7 @@ namespace Michsky.DreamOS
         IEnumerator FinishStoryTeller(float timer, int layoutIndex)
         {
             yield return new WaitForSeconds(timer);
-          
+
             // Find the chat layout
             ChatLayoutPreset layout = manager.chatViewer.Find(manager.chatList[layoutIndex].chatTitle).GetComponent<ChatLayoutPreset>();
 
@@ -93,6 +96,9 @@ namespace Michsky.DreamOS
             // Create the message
             manager.CreateIndividualMessage(layout, manager.chatList[layoutIndex].chatAsset.storyTeller[manager.storyTellerIndex].replies[manager.stItemIndex].replyFeedback, tempLocKey);
 
+            // Hack: Using lockkey as a way to trigger another event
+            manager.StartCoroutine(CheckForSpecialEvents(tempLocKey));
+
             if (!string.IsNullOrEmpty(manager.chatList[layoutIndex].chatAsset.storyTeller[manager.storyTellerIndex].replies[manager.stItemIndex].callAfter))
             {
                 manager.CreateStoryTeller(manager.chatList[layoutIndex].chatTitle, manager.chatList[layoutIndex].chatAsset.storyTeller[manager.storyTellerIndex].replies[manager.stItemIndex].callAfter);
@@ -100,6 +106,26 @@ namespace Michsky.DreamOS
 
             Destroy(messageTimerObject);
             Destroy(gameObject);
+        }
+
+        // Nothing better than hard-coding some stuff for the ending...
+        IEnumerator CheckForSpecialEvents(string id)
+        {
+            yield return new WaitForSeconds(5.0f);
+
+            if (id == "KENTO")
+            {
+                manager.CreateStoryTeller("Kento", "KEN_0");
+            }
+            else if (id == "ROSE")
+            {
+                manager.EnableChat("Rose");
+                manager.CreateStoryTeller("Rose", "THE_END");
+            }
+            else if (id == "ROLL_CREDITS")
+            {
+                EndingCall?.Invoke();
+            }
         }
     }
 }

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ca2ddbf6e022748a2db98a0c813735, type: 3}
+  m_Name: Chat_Rose
+  m_EditorClassIdentifier: 
+  saveConversation: 0
+  useDynamicMessages: 0
+  useStoryTeller: 1
+  messageList:
+  - messageContent: "[Ralia\u2019s Lament out now on Vapor!]"
+    objectType: 1
+    messageAuthor: 0
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+    messageKey: 
+  dynamicMessages: []
+  storyTeller:
+  - itemID: THE_END
+    messageAuthor: 0
+    messageContent: "Hey Rose! Sorry for the message out of the blue but I\u2019ve
+      been meaning to get back into games programming"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: Any advice on where to start?
+      replyContent: Any advice on where to start?
+      replyFeedback: eren!!! how have you been
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: 
+      briefKey: 
+      contentKey: 
+      feedbackKey: ROLL_CREDITS
+    messageKey: 

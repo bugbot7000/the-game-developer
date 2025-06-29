@@ -213,3 +213,233 @@ MonoBehaviour:
       contentKey: 
       feedbackKey: 
     messageKey: SEQ3_1
+  - itemID: END_0
+    messageAuthor: 1
+    messageContent: "its been a while \r\nwhatd you think? \r"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: Well...
+      replyContent: "I didn\u2019t realize a lot of things about our group until
+        I went and looked back on the wiki honestly"
+      replyFeedback: such as?
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_1
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_1
+    messageAuthor: 0
+    messageContent: "Well for starters my attempts at peacekeeping were probably
+      just making things worse\r"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: I can imagine how both Kento and Rose felt
+      replyContent: "Some guy who\u2019s never experienced what they have coming
+        in and telling them how to feel"
+      replyFeedback: "oogh yeah i can see how that would be uh\r\nless than ideal\r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_2
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_2
+    messageAuthor: 0
+    messageContent: "But even if I kept quiet I can\u2019t help but feel like the
+      outcome would still have been the same\r"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: If I did everything differently really
+      replyContent: "If I did everything differently really\nIt was a people conflict
+        instead of a project conflict and I don\u2019t think I realized that back
+        then"
+      replyFeedback: "how bad did it get?\r\ni know youve mentioned the part where
+        you ended up in the er but idk much more than that\r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_3
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_3
+    messageAuthor: 0
+    messageContent: Well aside from my free trial of death there was no other bodily
+      harm I think
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: I still talk to Kento
+      replyContent: "I still talk to Kento but we\u2019re definitely not as close
+        as we used to be \r\nOther than Rose\u2019s Tweeter posts I haven\u2019t
+        heard much of anything from her \r"
+      replyFeedback: and thats when you decided to stop looking for gamedev jobs?
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_4
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_4
+    messageAuthor: 0
+    messageContent: "Well not exactly at that point\r\nBut around that time yeah
+      \r"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: I just kept hitting dead ends
+      replyContent: "I just kept hitting dead ends and I was running out of savings\r\nMooncake
+        had to eat\r"
+      replyFeedback: "yeah i remember the job market around that time was hot ass\r\nnothing
+        like a pet to make you rethink setting yourself on fire for your dream\r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_5
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_5
+    messageAuthor: 0
+    messageContent: "She\u2019s getting older too"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: Her 12th birthday is next month
+      replyContent: Her 12th birthday is next month so I gotta start prepping for
+        all those hefty vet bills
+      replyFeedback: why didnt you stick with it as a hobby though?
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_6
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_6
+    messageAuthor: 1
+    messageContent: "plenty of hobbyist devs out there releasing wacky shit these
+      days\r\nand i remember you really liked games programming \r"
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: Well
+      replyContent: "In the beginning it was just needing some space from the situation\r\nAnd
+        then things dragged on and life got in the way and Mooncake got really sick
+        right before the pandemic and I just kinda let it slip away from me\r\nThen
+        I got promoted and the programming at my job took over I guess\r"
+      replyFeedback: didnt you automate a big part of that without telling your boss
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_7
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_7
+    messageAuthor: 0
+    messageContent: I mean yeah I did
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: I guess...
+      replyContent: I guess I have been trying to find something to fill my time
+        with recently
+      replyFeedback: like reading your old development wiki on company time?
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_8
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_8
+    messageAuthor: 0
+    messageContent: Lol yeah
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: I mean
+      replyContent: "I mean I have been meaning to brush up on some programming skills\nCouldn\u2019t
+        hurt to make some simple stuff as practice"
+      replyFeedback: "thats the spirit\r\ndont push yourself though yeah?\r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_9
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_9
+    messageAuthor: 1
+    messageContent: i dont think you get a second free trial of death that shits
+      probably permanent after
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: I would say...
+      replyContent: "I would say there\u2019s only one way to find out but I don\u2019t
+        think I can message you if I\u2019m dead\r\nAlso Mooncake would be very sad
+        if I kicked it\r"
+      replyFeedback: idk she seemed very charmed by me when i came over last week
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: END_10
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: END_10
+    messageAuthor: 0
+    messageContent: Huh
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: That was only because you had treats
+      replyContent: That was only because you had treats
+      replyFeedback: speak for yourself i know true love when i see it
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: FINAL_0
+      briefKey: 
+      contentKey: 
+      feedbackKey: 
+    messageKey: SEQ3_1
+  - itemID: FINAL_0
+    messageAuthor: 0
+    messageContent: Whatever you say
+    messageLatency: 1
+    messageTimer: 1.5
+    replies:
+    - replyID: 
+      replyBrief: Might as well uninstall the game now
+      replyContent: Might as well uninstall the game now
+      replyFeedback: "oh wait, i dont know if you saw but theres been some rumors
+        about a hidden room in the finale of ralias lament?\r\ntheres a section of
+        the back wall that asks you for a password? \r\nno one has any idea what
+        it is tho\r"
+      feedbackLatency: 1
+      feedbackTimer: 1.5
+      callAfter: 
+      briefKey: 
+      contentKey: 
+      feedbackKey: KENTO
+    messageKey: SEQ3_1
