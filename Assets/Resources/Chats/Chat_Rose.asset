@@ -33,7 +33,7 @@ MonoBehaviour:
     messageTimer: 1.5
     replies:
     - replyID: 
-      replyBrief: Any advice on where to start?
+      replyBrief: 'Any advice on where to start? [ENDING]'
       replyContent: Any advice on where to start?
       replyFeedback: eren!!! how have you been
       feedbackLatency: 1

@@ -66,7 +66,8 @@ public class WikiPageSearchManager : MonoBehaviour
     public float ProgressToUnlockSummer => progressToUnlockSummer;
 
     bool hasShownSpringNotification;
-    bool hasShowSummerNotification;    
+    bool hasShowSummerNotification;
+    bool hasStartedEnding;    
 
     void Start()
     {
@@ -116,7 +117,14 @@ public class WikiPageSearchManager : MonoBehaviour
         {
             NotificationManager.CreateNotification(notificationSprite, "New Database Available", "Summer", true);
             hasShowSummerNotification = true;
-        }        
+        }
+
+        if (EndUnlocked() && !hasStartedEnding)
+        {
+            MetaNarrativeManager.Instance.TriggerStorytellerSequence("END_0");
+
+            hasStartedEnding = true;
+        }
     }
 
     public bool IsPageRequirement(WikiPageSO page)
@@ -129,8 +137,11 @@ public class WikiPageSearchManager : MonoBehaviour
 
     public string GetMissingRequirementsForCurrentChunk()
     {
-        //TODO: Add condition when ending unlocked ("All has been resotred"?)
-        if (SummerUnlocked())
+        if (EndUnlocked())
+        {
+            return "Index restoration program complete.";
+        }
+        else if (SummerUnlocked())
         {
             return $"<b>{endingUnlockRequirements.MissingRequirementPages()}</b> corrupted pages and <b>{endingUnlockRequirements.MissingRequirementBuilds()}</b> builds have yet to be loaded in the current chunk.";
         }
@@ -176,7 +187,7 @@ public class WikiPageSearchManager : MonoBehaviour
 
     public bool SpringUnlocked()
     {
-        return springUnlockRequirements.HaveRequirementsBeenMet();
+        return debugFall || springUnlockRequirements.HaveRequirementsBeenMet();
     }
 
     public float GetSpringSemesterProgress()
@@ -192,7 +203,12 @@ public class WikiPageSearchManager : MonoBehaviour
 
     public bool SummerUnlocked()
     {
-        return summerUnlockRequirements.HaveRequirementsBeenMet();
+        return debugSpring || summerUnlockRequirements.HaveRequirementsBeenMet();
+    }
+
+    public bool EndUnlocked()
+    {
+        return endingUnlockRequirements.HaveRequirementsBeenMet();
     }
 
     public float GetSummerProgress()
@@ -201,7 +217,7 @@ public class WikiPageSearchManager : MonoBehaviour
 
         foreach (WikiPageSO wikiPage in summerIndex.WikiPages)
             if (HasPageBeenVisited(wikiPage))
-                visited++;        
+                visited++;
 
         return visited / summerIndex.WikiPages.Count;
     }    
