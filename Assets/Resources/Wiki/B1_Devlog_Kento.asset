@@ -48,12 +48,13 @@ MonoBehaviour:
     puzzles to put it through its paces and test its limitations. We\u2019ll see
     whether or not the system affords us the narrative design space we need.\r\n\r\n\tP.S:
     Threw a wall into Eren\u2019s test level that can only be destroyed with \u201CBeam\u201D
-    shaped spells. Just testing to make sure the collider and tag code is working.
-    I\u2019ve named the build <mark=#ffff00aa>Aglaea</mark>, after one of the three
-    Greek charities. \r\n"
+    shaped spells (pressing 2 sets the spell then J casts it). Just testing to make
+    sure the collider and tag code is working. I\u2019ve named the build <mark=#ffff00aa>Aglaea</mark>,
+    after one of the three Greek charities. \r\n"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 0
   BuildIndex: 0
+  BuildTitle: 
   AdditionalKeywords: []

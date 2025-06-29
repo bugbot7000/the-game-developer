@@ -20,26 +20,26 @@ MonoBehaviour:
     Just because\u2026 fuck it, ya know? Might feel good to smash the canvas. But
     I couldn\u2019t do it. I hovered right over the recycle bin, but I couldn\u2019t
     let it drop. I hid it behind a convoluted keyboard shortcut, not even Eren knows
-    it\u2019s there; it\u2019s easy to miss on a commit, and it looks like he ended
-    up fixing my code and making one last build called <mark=#ffff00aa>Nephrite</mark>.
-    I should thank him for that. \n\r\n\tNot sure what I\u2019m doing with myself
-    now. Still bad at every <mark=#ffff00aa>interview</mark> I go to. I\u2019m not
-    a herd animal, never have been. \n\r\n\tBut who knows? Maybe I\u2019ll get kicked
-    out of the house and stuck as a wage slave, have a couple kids I can pass all
-    my mediocrity down to, and spend the rest of my life pretending to fit in. It
-    would probably make my mom think I was happy, since she measures happiness via
-    checklist instead of actual <mark=#ffff00aa>enjoyment</mark>.\n\r\n\tI had a
-    very close friendship with a girl named Fernanda in grade school. Nicest kid
-    I\u2019d ever met. She needed crutches to get around, so she couldn\u2019t play
-    any games where you needed to run. One time during recess when most of the other
-    kids were playing some variant of tag. The rules were that if you managed to
-    run all the way around the big track field and then back inside the school, you
-    were safe.\n\r\n\tThere was this one kid, Dean, who was maybe a head taller than
-    everyone else. The others usually went along with whatever he said. And that
-    day he said \u2018the crippled girl\u2019 couldn\u2019t play. So I stood in front
-    of the school entrance and pushed every kid who got close. I got a bloody nose
-    and detention for my trouble. I think Dean got a lecture.\n\r\n\tThat was the
-    first time my mom said I act like it\u2019s \u2018me against the world.\u2019
+    it\u2019s there; it\u2019s easy to miss on the KitHub commit where I added the
+    shortcut, and it looks like he ended up fixing my code and making one last build
+    called <mark=#ffff00aa>Nephrite</mark>. I should thank him for that. \n\r\n\tNot
+    sure what I\u2019m doing with myself now. Still bad at every <mark=#ffff00aa>interview</mark>
+    I go to. I\u2019m not a herd animal, never have been. \n\r\n\tBut who knows?
+    Maybe I\u2019ll get kicked out of the house and stuck as a wage slave, have a
+    couple kids I can pass all my mediocrity down to, and spend the rest of my life
+    pretending to fit in. It would probably make my mom think I was happy, since
+    she measures happiness via checklist instead of actual <mark=#ffff00aa>enjoyment</mark>.\n\r\n\tI
+    had a very close friendship with a girl named Fernanda in grade school. Nicest
+    kid I\u2019d ever met. She needed crutches to get around, so she couldn\u2019t
+    play any games where you needed to run. One time during recess when most of the
+    other kids were playing some variant of tag. The rules were that if you managed
+    to run all the way around the big track field and then back inside the school,
+    you were safe.\n\r\n\tThere was this one kid, Dean, who was maybe a head taller
+    than everyone else. The others usually went along with whatever he said. And
+    that day he said \u2018the crippled girl\u2019 couldn\u2019t play. So I stood
+    in front of the school entrance and pushed every kid who got close. I got a bloody
+    nose and detention for my trouble. I think Dean got a lecture.\n\r\n\tThat was
+    the first time my mom said I act like it\u2019s \u2018me against the world.\u2019
     The one good thing my dad ever did was say she was wrong that day. I trusted
     him back then. I trusted him, Fernanda, and pretty much nobody else. Eventually
     Fernanda and I lost touch, and my dad lost interest in most things, me included.\n\r\n\tI
@@ -52,4 +52,5 @@ MonoBehaviour:
   ChatID: 
   ContainsBuild: 0
   BuildIndex: 0
+  BuildTitle: 
   AdditionalKeywords: []

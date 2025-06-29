@@ -33,29 +33,32 @@ MonoBehaviour:
     as a special thanks if it weren\u2019t for the bad news \r\n- Which is that I
     really don\u2019t think this game is gonna happen anymore\r\n- While I was gone
     Kento and Rose decided to go scorched earth in the group chat\r\n- I\u2019m choosing
-    not to archive that because it was really really bad and got very personal on
-    both ends\r\n- I\u2019m super bummed out about it which sounds a bit anticlimactic
-    to say but I just can\u2019t find the words\r\n- I\u2019m just really sad\r\n-
-    I guess I just kind of maybe had a bit of a hunch that things were gonna end
-    up like this\r\n- Especially without the guidance and structure of UCP\r\n- Kento
-    and Rose are both great and they\u2019re more like each other than they think
-    \r\n- I really think that there might have been a way that this all could have
-    worked out\r\n- I keep thinking that maybe if I had only done this thing or that
-    thing or some other thing we could\u2019ve all gotten along and held it together
-    until the game is complete\r\n- I did notice Kento\u2019s failed <mark=#ffff00aa>Aventurine</mark>
-    build from shortly before my free death trial and went to see if it was an easy
-    fix\r\n- Turns out he called the wrong function and the game was getting stuck
-    in a death loop\r\n- It also has some of Kento\u2019s cryptic KitHub commits
-    in there\r\n- I basically included everything as long as it didn\u2019t break
-    the game\r\n- I don\u2019t really know the full extent of what\u2019s in there
-    anymore and I really can\u2019t be bothered to comb through Kento\u2019s messy
-    code any further to see what he added\n- The build is called <mark=#ffff00aa>Nephrite</mark>\r\n-
-    In the meantime this dead end job search and my health are really putting things
-    into perspective for me\r\n- I suppose it\u2019s time to grow up and get a real
-    person job \r\n- Mooncake\u2019s gotta eat after all\r"
+    to delete that from the server archive because it was really really bad and got
+    very personal on both ends\r\n- I\u2019m super bummed out about it which sounds
+    a bit anticlimactic to say but I just can\u2019t find the words\r\n- I\u2019m
+    just really sad\r\n- I guess I just kind of maybe had a bit of a hunch that things
+    were gonna end up like this\r\n- Especially without the guidance and structure
+    of UCP\r\n- Kento and Rose are both great and they\u2019re more like each other
+    than they think \r\n- I really think that there might have been a way that this
+    all could have worked out\r\n- I keep thinking that maybe if I had only done
+    this thing or that thing or some other thing we could\u2019ve all gotten along
+    and held it together until the game is complete\r\n- I did notice Kento\u2019s
+    failed <mark=#ffff00aa>Aventurine</mark> build from shortly before my free death
+    trial and went to see if it was an easy fix\r\n- Turns out he called the wrong
+    function and the game was getting stuck in a death loop\r\n- It also has some
+    of Kento\u2019s cryptic KitHub commits in there\n- Like, there's one that just
+    says \"space 123 space 1 shift shift\"?\r\n- I basically included everything
+    as long as it didn\u2019t break the game\r\n- I don\u2019t really know the full
+    extent of what\u2019s in there anymore and I really can\u2019t be bothered to
+    comb through Kento\u2019s messy code any further to see what he added\n- The
+    build is called <mark=#ffff00aa>Nephrite</mark>\r\n- In the meantime this dead
+    end job search and my health are really putting things into perspective for me\r\n-
+    I suppose it\u2019s time to grow up and get a real person job \r\n- Mooncake\u2019s
+    gotta eat after all\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
   ContainsBuild: 0
   BuildIndex: 0
+  BuildTitle: 
   AdditionalKeywords: []

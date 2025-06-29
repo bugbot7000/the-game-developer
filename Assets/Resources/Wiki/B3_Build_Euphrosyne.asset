@@ -18,9 +18,11 @@ MonoBehaviour:
   Subtitle: Eren
   Content: "I finally combined Rose's minotaur model with Kento's level design and
     the result looks great! The particle system Rose designed really makes the spells
-    pop hehe\r\nKento mentioned that this title stood for merriment but muttered
-    something ironic about the last charity ending up on this build. Not sure what
-    that was about\r"
+    pop hehe We also put in the new interface for spells where you can select the
+    spell of a shape\nThe save and load system was causing too much issues so we
+    had to remove it for now sadly \r\nKento mentioned that this title stood for
+    merriment but muttered something ironic about the last charity ending up on this
+    build. Not sure what that was about\r"
   IsArchivedChat: 0
   ActivatesInteractveChat: 0
   ChatID: 
