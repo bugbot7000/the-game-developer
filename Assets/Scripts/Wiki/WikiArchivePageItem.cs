@@ -29,18 +29,27 @@ public class WikiArchivePageItem : SerializedMonoBehaviour, IPointerEnterHandler
         contentPage = target;
         wikiArchivePage = archivePage;
 
-        if (contentPage.PageType == WikiPageType.Build && contentPage.ContainsBuild)
+        if (contentPage.PageType == WikiPageType.Build)
         {
-            if (GameBuildManager.Instance.HasBuildBeenPlayed(contentPage.BuildTitle))
+            if (contentPage.ContainsBuild)
             {
-                gamepadIcon.color = Color.white;
-                warningIcon.enabled = false;
-            }
+                if (GameBuildManager.Instance.HasBuildBeenPlayed(contentPage.BuildTitle))
+                {
+                    gamepadIcon.color = Color.white;
+                    warningIcon.enabled = false;
+                }
 
-            if (!WikiPageSearchManager.Instance.IsPageRequirement(contentPage))
+                if (!WikiPageSearchManager.Instance.IsPageRequirement(contentPage))
+                {
+                    warningIcon.enabled = false;
+                }
+            }
+            // For corrupt build pages that have a build description but no build you can play.
+            else
             {
                 warningIcon.enabled = false;
-            }            
+                gamepadIcon.enabled = false;
+            }
         }
         else
         {
